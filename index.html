@@ -135,7 +135,7 @@
                 </div>
 
                 <div class="flex-shrink-0 flex items-center space-x-3 ml-4">
-                    <button class="h-9 border mt-4 mb-2 border-primary-green text-primary-green text-sm font-semibold rounded-lg flex items-center justify-center hover:bg-green-50 px-4">
+                    <button class="h-9 border mt-4 mb-2 border-[#0C3168] text-[#0C3168] text-sm font-semibold rounded-lg flex items-center justify-center hover:bg-green-50 px-4">
                         Sell Your Service
                     </button>
                     <button class="h-9 mt-4 mb-2 bg-[#0C3168] text-white text-sm font-semibold rounded-lg flex items-center justify-center hover:bg-opacity-90 px-4">
@@ -1457,66 +1457,117 @@
         <!-- Bikes and mototcycles Section end -->
 
     </main>
-    <div class="flex bg-[#dfdddd] gap-50 pt-10 pb-10">      <!-- Logo -->
-  <div class="w-full xl:w-auto flex justify-center xl:justify-start xl:pl-20 mb-5 xl:mb-0">
-    <img src="./burgerlab-logoblack.svg" class="h-[150px] xl:h-[220px]" alt=""> 
-  </div>
+<footer class="bg-[#0C3168] text-white">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-10">
 
-  <!-- Information Links -->
-  <div class="w-1/2 sm:w-1/3 xl:w-auto mb-5 xl:mb-0 text-center xl:text-left">
-    <ul class="leading-10">
-      <li class="font-bold text-xl mb-3">ABOUT US</li>
-      <li>FAQ</li>
-      <li>Anti Scam</li>
-      <li>Term of use</li>
-      <li>Privacy Policy</li>
-      <li>Contact Us</li>
-      <li>Sitemap</li>
-    </ul>
-  </div>
+    <!-- ✅ Mobile/Tablet (sm, md, lg): 2 Rows Layout -->
+    <div class="flex  flex-wrap  gap-8 lg:hidden">
+      <!-- Row 1: ABOUT US + MY ACCOUNT -->
+      <div class="w-full flex   gap-8">
+        <!-- ABOUT US -->
+        <div class="w-full sm:w-1/2 text-left">
+          <ul class="leading-10">
+            <li class="font-bold text-xl mb-3">ABOUT US</li>
+            <li>FAQ</li>
+            <li>Anti Scam</li>
+            <li>Term of use</li>
+            <li>Privacy Policy</li>
+            <li>Contact Us</li>
+            <li>Sitemap</li>
+          </ul>
+        </div>
+        <!-- MY ACCOUNT -->
+        <div class="w-full sm:w-1/2 text-left">
+          <ul class="leading-10">
+            <li class="font-bold text-xl mb-3">MY ACCOUNT</li>
+            <li>Login</li>
+            <li>Register</li>
+          </ul>
+        </div>
+      </div>
 
-  <!-- Contact & Social -->
-  <div class="w-1/2 sm:w-1/3 xl:w-auto text-center xl:text-left mb-5 xl:mb-0">
-    <ul class="leading-10">
-      <li class="font-bold text-xl mb-3">MY ACCOUNT</li>
-      <li>Login</li>
-      <li>Register</li>
-    </ul>
-  </div>
+      <!-- Row 2: Miljaega + Social -->
+      <div class="w-full flex gap-8 mt-5">
+        <!-- Miljaega -->
+        <div class="w-full sm:w-1/2 text-left">
+          <ul class="leading-10">
+            <li class="font-bold text-xl mb-3">Miljaega</li>
+            <li>Inspected by miljaega</li>
+            <li>Featured by miljaega</li>
+            <li>Recomended by miljaega</li>
+          </ul>
+        </div>
+        <!-- Social -->
+        <div class="w-full sm:w-1/2 text-left leading-15">
+          <ul>
+            <li class="font-bold text-xl mb-3">FOLLOW US</li>
+          </ul>
+          <div class="flex mt-3 gap-5">
+            <img src="./images/fb.svg" class="h-10" alt="">
+            <img src="./images/insta.svg" class="h-10" alt="">
+            <img src="./images/twitter.svg" class="h-10" alt="">
+            <img src="./images/youtube.svg" class="h-10" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
 
-   <div class="w-1/2 sm:w-1/3 xl:w-auto mb-5 xl:mb-0 text-center xl:text-left">
-    <ul class="leading-10">
-      <li class="font-bold text-xl mb-3">Miljaega</li>
-      <li>Inspected by miljaega</li>
-      <li>Featured by miljaega</li>
-      <li>Recomended by miljaega</li>
-   
-    </ul>
-  </div>
+    <!-- ✅ XL and Up: Original 4-column Layout -->
+    <div class="hidden lg:flex lg:flex-wrap xl:justify-between xl:gap-8">
+      <!-- ABOUT US -->
+      <div class="w-full sm:w-1/2 xl:w-auto mb-5 xl:mb-0  xl:text-left">
+        <ul class="leading-10">
+          <li class="font-bold text-xl mb-3">ABOUT US</li>
+          <li>FAQ</li>
+          <li>Anti Scam</li>
+          <li>Term of use</li>
+          <li>Privacy Policy</li>
+          <li>Contact Us</li>
+          <li>Sitemap</li>
+        </ul>
+      </div>
+      <!-- MY ACCOUNT -->
+      <div class="w-full sm:w-1/2 xl:w-auto text-left mb-5 xl:mb-0">
+        <ul class="leading-10">
+          <li class="font-bold text-xl mb-3">MY ACCOUNT</li>
+          <li>Login</li>
+          <li>Register</li>
+        </ul>
+      </div>
+      <!-- Miljaega -->
+      <div class="w-full sm:w-1/2 xl:w-auto mb-5 xl:mb-0 text-left">
+        <ul class="leading-10">
+          <li class="font-bold text-xl mb-3">Miljaega</li>
+          <li>Inspected by miljaega</li>
+          <li>Featured by miljaega</li>
+          <li>Recomended by miljaega</li>
+        </ul>
+      </div>
+      <!-- Social -->
+      <div class="w-full sm:w-1/2 xl:w-auto text-left mb-5 xl:mb-0 leading-15">
+        <ul>
+          <li class="font-bold text-xl mb-3">FOLLOW US</li>
+        </ul>
+        <div class="flex  justify-start mt-3 gap-5">
+          <img src="./images/fb.svg" class="h-10" alt="">
+          <img src="./images/insta.svg" class="h-10" alt="">
+          <img src="./images/twitter.svg" class="h-10" alt="">
+          <img src="./images/youtube.svg" class="h-10" alt="">
+        </div>
+      </div>
+    </div>
 
- <div class="w-1/2 sm:w-1/3 xl:w-auto text-center xl:text-left mb-5 xl:mb-0 leading-15">
-    <ul>
-      <li class="font-bold text-xl mb-3">FOLLOW US</li>
-    </ul>
-    <div class="flex justify-center xl:justify-start mt-3 gap-5">
-    <img src="./images/fb.svg" class="h-10" alt="">
-    <img src="./images/insta.svg" class="h-10" alt="">
-    <img src="./images/twitter.svg" class="h-10" alt="">
-    <img src="./images/youtube.svg" class="h-10" alt="">
+    <!-- Footer bottom -->
+    <div class="text-center border-t-2 border-white mt-10 pt-5 text-sm">
+      <p>© Copyright 2025 Miljaega <br>Powered by The Tech Creators</p>
     </div>
   </div>
+</footer>
 
-</div>
-</div>
-    <footer class="bg-[#0C3168] text-white">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 text-center border-t-3 border-t-[white]">
-            <p>© Copyright 2025 Miljaega <br>Powered by The Tech Creators</p>
-        </div>
-    </footer>
 
     <!-- Add Alpine JS for dropdown functionality -->
-    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
-  <script src="./js/miljaega-homepage.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+ <script src="./js/miljaega-homepage.js"></script>
 </body>
 
 </html>
