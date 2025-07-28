@@ -1,0 +1,1432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Miljaega.pk - Local Classifieds and Services</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Lalezar&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+   <link rel="stylesheet" href="./Css/miljaega-homepage.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="bg-gray-50">
+<!-- Header -->
+<header class="bg-white shadow-sm fixed top-0 z-50 w-full">
+    <div class="mx-auto relative py-3 container px-4 sm:px-6">
+        <div class="flex justify-between items-center py-3">
+            <!-- Left: Logo -->
+            <div class="flex-shrink-0">
+                <a class="text-2xl font-bold text-primary-green" href="#" style="font-family: 'Poppins', sans-serif;">
+                    Miljaega.pk
+                </a>
+            </div>
+<!-- Center: Nav Bar (Visible only on XL and above) -->
+<nav class="hidden xl:flex absolute left-1/2 transform -translate-x-1/2 space-x-6 text-sm font-medium text-gray-600">
+    <a href="#" class="flex flex-col items-center gap-2 hover:text-primary-green">
+        <img src="./images/second-hand.png" alt="Used Items" class="w-6 h-6 object-contain"> Used
+    </a>
+    <a href="#" class="flex flex-col items-center gap-2 hover:text-primary-green">
+        <img src="./images/new.png" alt="New Items" class="w-6 h-6 object-contain"> New
+    </a>
+    <a href="#" class="flex flex-col items-center gap-2 hover:text-primary-green">
+        <img src="./images/exchange.png" alt="Exchange" class="w-6 h-6 object-contain"> Exchange
+    </a>
+    <a href="#" class="flex flex-col items-center gap-2 hover:text-primary-green">
+        <img src="./images/rent.png" alt="Rentals" class="w-6 h-6 object-contain"> Rentals
+    </a>
+</nav>
+
+            <!-- Right: Hamburger Menu (Visible on sm and md) -->
+            <button id="mobileMenuToggle" class="block xl:hidden text-gray-700 hover:text-primary-green focus:outline-none">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2"
+                     viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                          d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+    </div>
+</header>
+<!-- Mobile Menu Dropdown -->
+<div id="mobileMenu" class="xl:hidden hidden bg-white shadow-md fixed top-[72px] w-full z-40 transition-all duration-300 ease-in-out">
+    <div class="px-4 py-4 space-y-4 text-sm font-medium text-gray-700">
+        <!-- Center Nav Items (from header) -->
+        <div class="flex justify-around text-center gap-2">
+            <a href="#" class="flex flex-col items-center gap-1 hover:text-primary-green">
+                <img src="./images/second-hand.png" alt="Used Items" class="w-6 h-6 object-contain"> Used
+            </a>
+            <a href="#" class="flex flex-col items-center gap-1 hover:text-primary-green">
+                <img src="./images/new.png" alt="New Items" class="w-6 h-6 object-contain"> New
+            </a>
+            <a href="#" class="flex flex-col items-center gap-1 hover:text-primary-green">
+                <img src="./images/exchange.png" alt="Exchange" class="w-6 h-6 object-contain"> Exchange
+            </a>
+            <a href="#" class="flex flex-col items-center gap-1 hover:text-primary-green">
+                <img src="./images/rent.png" alt="Rentals" class="w-6 h-6 object-contain"> Rentals
+            </a>
+        </div>
+
+        <!-- Categories Row Items -->
+        <div class="space-y-2 pt-2 border-t border-gray-200">
+            <a href="#" class="block hover:text-primary-green">Trending 🔥</a>
+            <a href="#" class="block hover:text-primary-green">Mobile Phones</a>
+            <a href="#" class="block hover:text-primary-green">Motorcycles</a>
+            <a href="#" class="block hover:text-primary-green">Electronics</a>
+            <a href="#" class="block hover:text-primary-green">Jobs</a>
+            <a href="#" class="block hover:text-primary-green">Furniture</a>
+            <a href="#" class="block hover:text-primary-green">Fashion</a>
+            <a href="#" class="block hover:text-primary-green">Services</a>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="space-y-2 pt-2 border-t border-gray-200">
+            <button class="w-full border border-primary-green text-primary-green text-sm font-semibold rounded-lg py-2 hover:bg-green-50">
+                Sell Your Service
+            </button>
+            <button class="w-full bg-primary-green text-white text-sm font-semibold rounded-lg py-2 hover:bg-opacity-90">
+                Sell Your Items 
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Spacer to avoid overlap -->
+<div class="pt-[72px] lg:pt-[128px]"></div>
+
+<!-- Categories Row -->
+<div class="bg-white shadow-sm fixed top-[72px] z-40 w-full hidden xl:block">
+    <div class="container mx-auto">
+        <div class="relative group">
+            <div class="flex items-center">
+                <div class="flex-1 overflow-x-auto scrollbar-hide py-3">
+                    <div class="flex space-x-4 min-w-max">
+                        <a href="#" class="flex-shrink-0 font-medium text-gray-700 hover:text-primary-green whitespace-nowrap flex items-center">
+                            Trending 🔥
+                        </a>
+                        <div class="relative group" x-data="{ open: false }" @mouseenter="open = true" @mouseleave="open = false">
+                            <button class="font-medium text-gray-700 hover:text-primary-green whitespace-nowrap flex items-center">
+                                Mobile Phones
+                                <svg class="w-4 h-4 ml-1 text-gray-400 group-hover:text-primary-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                            <div class="absolute left-0 mt-1 w-[800px] bg-white shadow-xl rounded-md p-4 hidden group-hover:block z-50 border border-gray-200"
+                                x-show="open" @click.away="open = false">
+                                <!-- Dropdown content -->
+                            </div>
+                        </div>
+                        <a href="#" class="flex-shrink-0 font-medium text-gray-700 hover:text-primary-green whitespace-nowrap">Motorcycles</a>
+                        <a href="#" class="flex-shrink-0 font-medium text-gray-700 hover:text-primary-green whitespace-nowrap">Electronics</a>
+                        <a href="#" class="flex-shrink-0 font-medium text-gray-700 hover:text-primary-green whitespace-nowrap">Jobs</a>
+                        <a href="#" class="flex-shrink-0 font-medium text-gray-700 hover:text-primary-green whitespace-nowrap">Furniture</a>
+                        <a href="#" class="flex-shrink-0 font-medium text-gray-700 hover:text-primary-green whitespace-nowrap">Fashion</a>
+                        <a href="#" class="flex-shrink-0 font-medium text-gray-700 hover:text-primary-green whitespace-nowrap">Services</a>
+                    </div>
+                </div>
+
+                <div class="flex-shrink-0 flex items-center space-x-3 ml-4">
+                    <button class="h-9 border mt-4 mb-2 border-primary-green text-primary-green text-sm font-semibold rounded-lg flex items-center justify-center hover:bg-green-50 px-4">
+                        Sell Your Service
+                    </button>
+                    <button class="h-9 mt-4 mb-2 bg-primary-green text-white text-sm font-semibold rounded-lg flex items-center justify-center hover:bg-opacity-90 px-4">
+                        Sell Your Items 
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Spacer to avoid overlap -->
+<div class="pt-[128px]"></div> <!-- Header (72px) + Categories (56px) = ~128px -->
+
+<!-- Your content continues here -->
+
+   
+    <!-- Combined Section -->
+    <section class="relative h-[300px] w-full overflow-hidden hidden<!-- Hero Video Section -->
+<section class="relative h-[300px] w-full overflow-hidden">
+  <!-- Background Video -->
+  <video autoplay muted loop playsinline class="absolute top-0 left-0 w-full h-full object-cover z-0">
+    <source src="images/video.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Dark overlay -->
+  <div class="absolute top-0 left-0 w-full h-full bg-black bg-opacity-50 z-10"></div>
+
+  <!-- Content -->
+  <div class="relative z-20 flex flex-col items-center justify-center h-full text-center px-4 sm:px-6 md:px-10">
+    <h1 class="text-yellow-400 text-5xl md:text-6xl font-bold mb-2 drop-shadow-lg" style="font-family: 'Lalezar', cursive;">
+      Jo Chahiye, Sab Yahan
+    </h1>
+    <h2 class="text-red-500 text-5xl md:text-6xl font-bold mb-6 drop-shadow-lg" style="font-family: 'Lalezar', cursive;">
+      Miljaega!
+    </h2>
+
+    <!-- Search Bar -->
+    <div class="w-full max-w-4xl">
+      <div class="flex flex-col md:flex-row justify-center items-center gap-4 w-full px-2">
+        <!-- Location Dropdown -->
+        <div class="relative w-full md:w-1/3">
+          <span class="material-icons absolute left-4 top-9 -translate-y-1/2 text-green-600 text-xl">location_on</span>
+          <select class="w-full py-3 pl-12 pr-4 text-gray-700 bg-white border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-green text-sm">
+            <option selected>Pakistan</option>
+            <option>India</option>
+            <option>UAE</option>
+          </select>
+        </div>
+
+        <!-- Search Input -->
+        <div class="relative flex-grow w-full">
+          <input class="w-full py-3 pl-4 pr-28 text-sm text-gray-700 bg-white border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-green"
+                 placeholder="Find Cars, Mobile Phones and more…" type="text" />
+          
+          <!-- Voice Search -->
+          <button type="button" class="absolute right-28 top-9 -translate-y-1/2 p-1 text-gray-500 hover:text-blue-600 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M7 4a3 3 0 016 0v4a3 3 0 11-6 0V4zm4 10.93A7.001 7.001 0 0017 8a1 1 0 10-2 0A5 5 0 015 8a1 1 0 00-2 0 7.001 7.001 0 006 6.93V17H6a1 1 0 100 2h8a1 1 0 100-2h-3v-2.07z" clip-rule="evenodd" />
+            </svg>
+          </button>
+
+          <!-- Search Button -->
+          <button class="absolute right-0 top-0 h-full px-5 bg-primary-green text-white text-sm font-semibold rounded-r-lg flex items-center justify-center hover:bg-opacity-90">
+            <span class="material-icons text-white text-base mr-1">search</span>Search
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Main Section -->
+<main class="mt-7">
+  <!-- Banner Section -->
+  <section class="mb-8 px-4 sm:px-6 md:px-10">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+      <!-- Example Banner Cards (repeat yours) -->
+      <div class="card relative p-0 overflow-hidden rounded-lg shadow-lg h-40 flex flex-col">
+        <div class="relative w-full h-40">
+          <img src="./images/services.webp" alt="Properties" class="w-full h-full object-cover" />
+          <div class="absolute inset-0 bg-black bg-opacity-75 flex flex-col justify-end p-3">
+            <h3 class="text-2xl font-bold text-white">Local Services</h3>
+            <div class="mt-1 flex flex-wrap gap-1 text-xs text-white">
+              <a class="hover:underline" href="#">Electricians</a><span>/</span>
+              <a class="hover:underline" href="#">Plumbers</a><span>/</span>
+              <a class="hover:underline" href="#">Glass Workers</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Repeat other banner cards -->
+    </div>
+  </section>
+
+  <!-- Categories Section -->
+  <section class="mb-8 px-4 sm:px-6 md:px-10">
+    <div class="flex justify-between items-center mb-6">
+      <h2 class="text-3xl font-bold text-gray-800" style="font-family: 'Poppins', sans-serif;">Categories</h2>
+    </div>
+    <div></div>
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+      <!-- Example Category Card -->
+      <a href="#" class="flex flex-col items-center p-4 rounded-lg border border-gray-200 hover:border-primary-green hover:shadow-md group transition-all duration-300">
+        <div class="p-3 rounded-full mb-3 bg-blue-50 group-hover:bg-blue-100 transition-colors duration-300">
+          <img src="https://cdn-icons-png.flaticon.com/512/15/15874.png" alt="Mobile Phones" class="w-8 h-8" />
+        </div>
+        <h3 class="font-semibold text-gray-800 text-center mb-1">Mobile Phones</h3>
+        <span class="text-xs text-gray-500 group-hover:text-primary-green">12,345 ads</span>
+      </a>
+      <!-- Repeat other category cards -->
+    </div>
+
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+      <!-- Example Category Card -->
+      <a href="#" class="flex flex-col items-center p-4 rounded-lg border border-gray-200 hover:border-primary-green hover:shadow-md group transition-all duration-300">
+        <div class="p-3 rounded-full mb-3 bg-blue-50 group-hover:bg-blue-100 transition-colors duration-300">
+          <img src="https://cdn-icons-png.flaticon.com/512/15/15874.png" alt="Mobile Phones" class="w-8 h-8" />
+        </div>
+        <h3 class="font-semibold text-gray-800 text-center mb-1">Mobile Phones</h3>
+        <span class="text-xs text-gray-500 group-hover:text-primary-green">12,345 ads</span>
+      </a>
+      <!-- Repeat other category cards -->
+    </div>
+
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+      <!-- Example Category Card -->
+      <a href="#" class="flex flex-col items-center p-4 rounded-lg border border-gray-200 hover:border-primary-green hover:shadow-md group transition-all duration-300">
+        <div class="p-3 rounded-full mb-3 bg-blue-50 group-hover:bg-blue-100 transition-colors duration-300">
+          <img src="https://cdn-icons-png.flaticon.com/512/15/15874.png" alt="Mobile Phones" class="w-8 h-8" />
+        </div>
+        <h3 class="font-semibold text-gray-800 text-center mb-1">Mobile Phones</h3>
+        <span class="text-xs text-gray-500 group-hover:text-primary-green">12,345 ads</span>
+      </a>
+      <!-- Repeat other category cards -->
+    </div>
+
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+      <!-- Example Category Card -->
+      <a href="#" class="flex flex-col items-center p-4 rounded-lg border border-gray-200 hover:border-primary-green hover:shadow-md group transition-all duration-300">
+        <div class="p-3 rounded-full mb-3 bg-blue-50 group-hover:bg-blue-100 transition-colors duration-300">
+          <img src="https://cdn-icons-png.flaticon.com/512/15/15874.png" alt="Mobile Phones" class="w-8 h-8" />
+        </div>
+        <h3 class="font-semibold text-gray-800 text-center mb-1">Mobile Phones</h3>
+        <span class="text-xs text-gray-500 group-hover:text-primary-green">12,345 ads</span>
+      </a>
+      <!-- Repeat other category cards -->
+    </div>
+
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+      <!-- Example Category Card -->
+      <a href="#" class="flex flex-col items-center p-4 rounded-lg border border-gray-200 hover:border-primary-green hover:shadow-md group transition-all duration-300">
+        <div class="p-3 rounded-full mb-3 bg-blue-50 group-hover:bg-blue-100 transition-colors duration-300">
+          <img src="https://cdn-icons-png.flaticon.com/512/15/15874.png" alt="Mobile Phones" class="w-8 h-8" />
+        </div>
+        <h3 class="font-semibold text-gray-800 text-center mb-1">Mobile Phones</h3>
+        <span class="text-xs text-gray-500 group-hover:text-primary-green">12,345 ads</span>
+      </a>
+      <!-- Repeat other category cards -->
+    </div>
+
+
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+      <!-- Example Category Card -->
+      <a href="#" class="flex flex-col items-center p-4 rounded-lg border border-gray-200 hover:border-primary-green hover:shadow-md group transition-all duration-300">
+        <div class="p-3 rounded-full mb-3 bg-blue-50 group-hover:bg-blue-100 transition-colors duration-300">
+          <img src="https://cdn-icons-png.flaticon.com/512/15/15874.png" alt="Mobile Phones" class="w-8 h-8" />
+        </div>
+        <h3 class="font-semibold text-gray-800 text-center mb-1">Mobile Phones</h3>
+        <span class="text-xs text-gray-500 group-hover:text-primary-green">12,345 ads</span>
+      </a>
+      <!-- Repeat other category cards -->
+    </div>
+
+
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+      <!-- Example Category Card -->
+      <a href="#" class="flex flex-col items-center p-4 rounded-lg border border-gray-200 hover:border-primary-green hover:shadow-md group transition-all duration-300">
+        <div class="p-3 rounded-full mb-3 bg-blue-50 group-hover:bg-blue-100 transition-colors duration-300">
+          <img src="https://cdn-icons-png.flaticon.com/512/15/15874.png" alt="Mobile Phones" class="w-8 h-8" />
+        </div>
+        <h3 class="font-semibold text-gray-800 text-center mb-1">Mobile Phones</h3>
+        <span class="text-xs text-gray-500 group-hover:text-primary-green">12,345 ads</span>
+      </a>
+      <!-- Repeat other category cards -->
+    </div>
+
+
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+      <!-- Example Category Card -->
+      <a href="#" class="flex flex-col items-center p-4 rounded-lg border border-gray-200 hover:border-primary-green hover:shadow-md group transition-all duration-300">
+        <div class="p-3 rounded-full mb-3 bg-blue-50 group-hover:bg-blue-100 transition-colors duration-300">
+          <img src="https://cdn-icons-png.flaticon.com/512/15/15874.png" alt="Mobile Phones" class="w-8 h-8" />
+        </div>
+        <h3 class="font-semibold text-gray-800 text-center mb-1">Mobile Phones</h3>
+        <span class="text-xs text-gray-500 group-hover:text-primary-green">12,345 ads</span>
+      </a>
+      <!-- Repeat other category cards -->
+    </div>
+  </section>
+</main>
+
+      
+        <!-- Cars Section -->
+        <section class="mb-16">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-3xl font-bold text-gray-800" style="font-family: 'Poppins', sans-serif;">Cars</h2>
+                <a class="text-blue-600 font-semibold hover:underline" href="#">View More</a>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Card 1 -->
+                <div class="card overflow-hidden rounded-lg shadow border border-gray-200 bg-white">
+                    <!-- Image section with favorite icon -->
+                    <div class="relative">
+                        <img alt="Plot for sale in Mumtaz City" class="w-full h-48 object-cover"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJVyoDHq6-QKW5YaYpzcFKKbSWZZ2q6USwpkj3Gr70xIeZGNH6Railf-Qbu1pGL0cUNn0AXXhNEX_ypUUcaHoVyvc2MzjsECJilJK7pTFetWlfyueuITmuCcvobReb0bqi4ejdXsvF4kLg1jPmYpD9_ZrN-gqDBILh-wJ2W_9iM1Z16RyPpwQeR3HaLa1avnoXogDJ_AOvUD2IJQckVSYVRC6F-QEOIZQRUVdpboMdCVp_jxKo-KZINKTjSMNWU3EJkthEAKuRu7Fr" />
+
+                        <!-- Favorite (heart) icon -->
+                        <button
+                            class="absolute top-3 right-4 inline-flex items-center gap-1 bg-white/10 text-black px-3 py-1 rounded-full shadow-lg backdrop-blur-sm hover:text-red-500 transition">
+                            <span class="material-icons text-base">favorite_border</span>
+                            <span class="text-xs font-medium">favorite</span>
+                        </button>
+                    </div>
+
+                    <!-- Card content -->
+                    <div class="p-4 flex flex-col flex-grow">
+
+                        <!-- Username left, Verified & Trusted badges right -->
+                        <div class="flex justify-between items-center mb-1">
+                            <div class="flex items-center space-x-2">
+                                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="User"
+                                    class="w-6 h-6 rounded-full object-cover" />
+                                <span class="text-sm font-medium text-gray-700">Alisha</span>
+                            </div>
+
+                            <!-- Right badges -->
+                            <div class="flex items-center space-x-2">
+                                <span
+                                    class="bg-green-100 text-green-600 text-xs font-semibold px-2 py-0.5 rounded">Verified</span>
+                                <span
+                                    class="bg-blue-100 text-blue-600 text-xs font-semibold px-2 py-0.5 rounded">Trusted</span>
+                            </div>
+                        </div>
+
+                        <h3 class="text-md font-semibold text-gray-800 mt-2">
+                            8 Marla Residential Plot for Sale in Mumtaz City
+                        </h3>
+
+                        <p class="text-xl font-bold text-gray-900 mt-2">Rs 1.10 Crore</p>
+                        <p class="text-sm text-gray-500 mt-1">Mumtaz City - Chanab Block, Islamabad</p>
+                        <div class="flex-grow"></div>
+                        <p class="text-xs text-gray-400 mt-5 text-right">1 day ago</p>
+                    </div>
+                </div>
+
+                <!-- card 1 end -->
+                <!-- Card 2 -->
+                <div class="card overflow-hidden rounded-lg shadow border border-gray-200 bg-white">
+                    <!-- Image section with favorite icon -->
+                    <div class="relative">
+                        <img alt="Plot for sale in Mumtaz City" class="w-full h-48 object-cover"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJVyoDHq6-QKW5YaYpzcFKKbSWZZ2q6USwpkj3Gr70xIeZGNH6Railf-Qbu1pGL0cUNn0AXXhNEX_ypUUcaHoVyvc2MzjsECJilJK7pTFetWlfyueuITmuCcvobReb0bqi4ejdXsvF4kLg1jPmYpD9_ZrN-gqDBILh-wJ2W_9iM1Z16RyPpwQeR3HaLa1avnoXogDJ_AOvUD2IJQckVSYVRC6F-QEOIZQRUVdpboMdCVp_jxKo-KZINKTjSMNWU3EJkthEAKuRu7Fr" />
+
+                        <!-- Favorite (heart) icon -->
+                        <button
+                            class="absolute top-3 right-4 inline-flex items-center gap-1 bg-white/10 text-black px-3 py-1 rounded-full shadow-lg backdrop-blur-sm hover:text-red-500 transition">
+                            <span class="material-icons text-base">favorite_border</span>
+                            <span class="text-xs font-medium">favorite</span>
+                        </button>
+                    </div>
+
+                    <!-- Card content -->
+                    <div class="p-4 flex flex-col flex-grow">
+
+                        <!-- Username left, Verified & Trusted badges right -->
+                        <div class="flex justify-between items-center mb-1">
+                            <div class="flex items-center space-x-2">
+                                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="User"
+                                    class="w-6 h-6 rounded-full object-cover" />
+                                <span class="text-sm font-medium text-gray-700">Alisha</span>
+                            </div>
+
+                            <!-- Right badges -->
+                            <div class="flex items-center space-x-2">
+                                <span
+                                    class="bg-green-100 text-green-600 text-xs font-semibold px-2 py-0.5 rounded">Verified</span>
+                                <!-- <span class="bg-blue-100 text-blue-600 text-xs font-semibold px-2 py-0.5 rounded">Trusted</span> -->
+                            </div>
+                        </div>
+
+                        <h3 class="text-md font-semibold text-gray-800 mt-2">
+                            8 Marla Residential Plot for Sale in Mumtaz City
+                        </h3>
+
+                        <p class="text-xl font-bold text-gray-900 mt-2">Rs 1.10 Crore</p>
+                        <p class="text-sm text-gray-500 mt-1">Mumtaz City - Chanab Block, Islamabad</p>
+                        <div class="flex-grow"></div>
+                        <p class="text-xs text-gray-400 mt-5 text-right">1 day ago</p>
+                    </div>
+                </div>
+                <!-- Card 2 end -->
+                <!-- Card 3 -->
+                <div class="card overflow-hidden rounded-lg shadow border border-gray-200 bg-white">
+                    <!-- Image section with favorite icon -->
+                    <div class="relative">
+                        <img alt="Plot for sale in Mumtaz City" class="w-full h-48 object-cover"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJVyoDHq6-QKW5YaYpzcFKKbSWZZ2q6USwpkj3Gr70xIeZGNH6Railf-Qbu1pGL0cUNn0AXXhNEX_ypUUcaHoVyvc2MzjsECJilJK7pTFetWlfyueuITmuCcvobReb0bqi4ejdXsvF4kLg1jPmYpD9_ZrN-gqDBILh-wJ2W_9iM1Z16RyPpwQeR3HaLa1avnoXogDJ_AOvUD2IJQckVSYVRC6F-QEOIZQRUVdpboMdCVp_jxKo-KZINKTjSMNWU3EJkthEAKuRu7Fr" />
+
+                        <!-- Favorite (heart) icon -->
+                        <button
+                            class="absolute top-3 right-4 inline-flex items-center gap-1 bg-white/10 text-black px-3 py-1 rounded-full shadow-lg backdrop-blur-sm hover:text-red-500 transition">
+                            <span class="material-icons text-base">favorite_border</span>
+                            <span class="text-xs font-medium">favorite</span>
+                        </button>
+                    </div>
+
+                    <!-- Card content -->
+                    <div class="p-4 flex flex-col flex-grow">
+
+                        <!-- Username left, Verified & Trusted badges right -->
+                        <div class="flex justify-between items-center mb-1">
+                            <div class="flex items-center space-x-2">
+                                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="User"
+                                    class="w-6 h-6 rounded-full object-cover" />
+                                <span class="text-sm font-medium text-gray-700">Alisha</span>
+                            </div>
+
+                            <!-- Right badges -->
+                            <div class="flex items-center space-x-2">
+                                <!-- <span class="bg-green-100 text-green-600 text-xs font-semibold px-2 py-0.5 rounded">Verified</span> -->
+                                <span
+                                    class="bg-blue-100 text-blue-600 text-xs font-semibold px-2 py-0.5 rounded">Trusted</span>
+                            </div>
+                        </div>
+
+                        <h3 class="text-md font-semibold text-gray-800 mt-2">
+                            8 Marla Residential Plot for Sale in Mumtaz City
+                        </h3>
+
+                        <p class="text-xl font-bold text-gray-900 mt-2">Rs 1.10 Crore</p>
+                        <p class="text-sm text-gray-500 mt-1">Mumtaz City - Chanab Block, Islamabad</p>
+                        <div class="flex-grow"></div>
+                        <p class="text-xs text-gray-400 mt-5 text-right">1 day ago</p>
+                    </div>
+                </div>
+                <!-- Card 3 end -->
+                <!-- Card 4 -->
+                <div class="card overflow-hidden rounded-lg shadow border border-gray-200 bg-white">
+                    <!-- Image section with favorite icon -->
+                    <div class="relative">
+                        <img alt="Plot for sale in Mumtaz City" class="w-full h-48 object-cover"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJVyoDHq6-QKW5YaYpzcFKKbSWZZ2q6USwpkj3Gr70xIeZGNH6Railf-Qbu1pGL0cUNn0AXXhNEX_ypUUcaHoVyvc2MzjsECJilJK7pTFetWlfyueuITmuCcvobReb0bqi4ejdXsvF4kLg1jPmYpD9_ZrN-gqDBILh-wJ2W_9iM1Z16RyPpwQeR3HaLa1avnoXogDJ_AOvUD2IJQckVSYVRC6F-QEOIZQRUVdpboMdCVp_jxKo-KZINKTjSMNWU3EJkthEAKuRu7Fr" />
+
+                        <!-- Favorite (heart) icon -->
+                        <button
+                            class="absolute top-3 right-4 inline-flex items-center gap-1 bg-white/10 text-black px-3 py-1 rounded-full shadow-lg backdrop-blur-sm hover:text-red-500 transition">
+                            <span class="material-icons text-base">favorite_border</span>
+                            <span class="text-xs font-medium">favorite</span>
+                        </button>
+                    </div>
+
+                    <!-- Card content -->
+                    <div class="p-4 flex flex-col flex-grow">
+
+                        <!-- Username left, Verified & Trusted badges right -->
+                        <div class="flex justify-between items-center mb-1">
+                            <div class="flex items-center space-x-2">
+                                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="User"
+                                    class="w-6 h-6 rounded-full object-cover" />
+                                <span class="text-sm font-medium text-gray-700">Alisha</span>
+                            </div>
+
+                            <!-- Right badges -->
+                            <div class="flex items-center space-x-2">
+                                <!-- <span class="bg-green-100 text-green-600 text-xs font-semibold px-2 py-0.5 rounded">Verified</span> -->
+                                <!-- <span class="bg-blue-100 text-blue-600 text-xs font-semibold px-2 py-0.5 rounded">Trusted</span> -->
+                            </div>
+                        </div>
+
+                        <h3 class="text-md font-semibold text-gray-800 mt-2">
+                            8 Marla Residential Plot for Sale in Mumtaz City
+                        </h3>
+
+                        <p class="text-xl font-bold text-gray-900 mt-2">Rs 1.10 Crore</p>
+                        <p class="text-sm text-gray-500 mt-1">Mumtaz City - Chanab Block, Islamabad</p>
+                        <div class="flex-grow"></div>
+                        <p class="text-xs text-gray-400 mt-5 text-right">1 day ago</p>
+                    </div>
+                </div>
+                <!-- Card 4 end -->
+            </div>
+        </section>
+        <!-- Cars section End -->
+
+        <!-- Lands and Plots Section -->
+        <section class="mb-16">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-3xl font-bold text-gray-800" style="font-family: 'Poppins', sans-serif;">Properties</h2>
+                <a class="text-blue-600 font-semibold hover:underline" href="#">View More</a>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Card 1 -->
+                <div class="card overflow-hidden rounded-lg shadow border border-gray-200 bg-white">
+                    <!-- Image section with favorite icon -->
+                    <div class="relative">
+                        <img alt="Plot for sale in Mumtaz City" class="w-full h-48 object-cover"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJVyoDHq6-QKW5YaYpzcFKKbSWZZ2q6USwpkj3Gr70xIeZGNH6Railf-Qbu1pGL0cUNn0AXXhNEX_ypUUcaHoVyvc2MzjsECJilJK7pTFetWlfyueuITmuCcvobReb0bqi4ejdXsvF4kLg1jPmYpD9_ZrN-gqDBILh-wJ2W_9iM1Z16RyPpwQeR3HaLa1avnoXogDJ_AOvUD2IJQckVSYVRC6F-QEOIZQRUVdpboMdCVp_jxKo-KZINKTjSMNWU3EJkthEAKuRu7Fr" />
+
+                        <!-- Favorite (heart) icon -->
+                        <button
+                            class="absolute top-3 right-4 inline-flex items-center gap-1 bg-white/10 text-black px-3 py-1 rounded-full shadow-lg backdrop-blur-sm hover:text-red-500 transition">
+                            <span class="material-icons text-base">favorite_border</span>
+                            <span class="text-xs font-medium">favorite</span>
+                        </button>
+                    </div>
+
+                    <!-- Card content -->
+                    <div class="p-4 flex flex-col flex-grow">
+
+                        <!-- Username left, Verified & Trusted badges right -->
+                        <div class="flex justify-between items-center mb-1">
+                            <div class="flex items-center space-x-2">
+                                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="User"
+                                    class="w-6 h-6 rounded-full object-cover" />
+                                <span class="text-sm font-medium text-gray-700">Alisha</span>
+                            </div>
+
+                            <!-- Right badges -->
+                            <div class="flex items-center space-x-2">
+                                <span
+                                    class="bg-green-100 text-green-600 text-xs font-semibold px-2 py-0.5 rounded">Verified</span>
+                                <span
+                                    class="bg-blue-100 text-blue-600 text-xs font-semibold px-2 py-0.5 rounded">Trusted</span>
+                            </div>
+                        </div>
+
+                        <h3 class="text-md font-semibold text-gray-800 mt-2">
+                            8 Marla Residential Plot for Sale in Mumtaz City
+                        </h3>
+
+                        <p class="text-xl font-bold text-gray-900 mt-2">Rs 1.10 Crore</p>
+                        <p class="text-sm text-gray-500 mt-1">Mumtaz City - Chanab Block, Islamabad</p>
+                        <div class="flex-grow"></div>
+                        <p class="text-xs text-gray-400 mt-5 text-right">1 day ago</p>
+                    </div>
+                </div>
+
+                <!-- card 1 end -->
+                <!-- Card 2 -->
+                <div class="card overflow-hidden rounded-lg shadow border border-gray-200 bg-white">
+                    <!-- Image section with favorite icon -->
+                    <div class="relative">
+                        <img alt="Plot for sale in Mumtaz City" class="w-full h-48 object-cover"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJVyoDHq6-QKW5YaYpzcFKKbSWZZ2q6USwpkj3Gr70xIeZGNH6Railf-Qbu1pGL0cUNn0AXXhNEX_ypUUcaHoVyvc2MzjsECJilJK7pTFetWlfyueuITmuCcvobReb0bqi4ejdXsvF4kLg1jPmYpD9_ZrN-gqDBILh-wJ2W_9iM1Z16RyPpwQeR3HaLa1avnoXogDJ_AOvUD2IJQckVSYVRC6F-QEOIZQRUVdpboMdCVp_jxKo-KZINKTjSMNWU3EJkthEAKuRu7Fr" />
+
+                        <!-- Favorite (heart) icon -->
+                        <button
+                            class="absolute top-3 right-4 inline-flex items-center gap-1 bg-white/10 text-black px-3 py-1 rounded-full shadow-lg backdrop-blur-sm hover:text-red-500 transition">
+                            <span class="material-icons text-base">favorite_border</span>
+                            <span class="text-xs font-medium">favorite</span>
+                        </button>
+                    </div>
+
+                    <!-- Card content -->
+                    <div class="p-4 flex flex-col flex-grow">
+
+                        <!-- Username left, Verified & Trusted badges right -->
+                        <div class="flex justify-between items-center mb-1">
+                            <div class="flex items-center space-x-2">
+                                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="User"
+                                    class="w-6 h-6 rounded-full object-cover" />
+                                <span class="text-sm font-medium text-gray-700">Alisha</span>
+                            </div>
+
+                            <!-- Right badges -->
+                            <div class="flex items-center space-x-2">
+                                <span
+                                    class="bg-green-100 text-green-600 text-xs font-semibold px-2 py-0.5 rounded">Verified</span>
+                                <!-- <span class="bg-blue-100 text-blue-600 text-xs font-semibold px-2 py-0.5 rounded">Trusted</span> -->
+                            </div>
+                        </div>
+
+                        <h3 class="text-md font-semibold text-gray-800 mt-2">
+                            8 Marla Residential Plot for Sale in Mumtaz City
+                        </h3>
+
+                        <p class="text-xl font-bold text-gray-900 mt-2">Rs 1.10 Crore</p>
+                        <p class="text-sm text-gray-500 mt-1">Mumtaz City - Chanab Block, Islamabad</p>
+                        <div class="flex-grow"></div>
+                        <p class="text-xs text-gray-400 mt-5 text-right">1 day ago</p>
+                    </div>
+                </div>
+                <!-- Card 2 end -->
+                <!-- Card 3 -->
+                <div class="card overflow-hidden rounded-lg shadow border border-gray-200 bg-white">
+                    <!-- Image section with favorite icon -->
+                    <div class="relative">
+                        <img alt="Plot for sale in Mumtaz City" class="w-full h-48 object-cover"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJVyoDHq6-QKW5YaYpzcFKKbSWZZ2q6USwpkj3Gr70xIeZGNH6Railf-Qbu1pGL0cUNn0AXXhNEX_ypUUcaHoVyvc2MzjsECJilJK7pTFetWlfyueuITmuCcvobReb0bqi4ejdXsvF4kLg1jPmYpD9_ZrN-gqDBILh-wJ2W_9iM1Z16RyPpwQeR3HaLa1avnoXogDJ_AOvUD2IJQckVSYVRC6F-QEOIZQRUVdpboMdCVp_jxKo-KZINKTjSMNWU3EJkthEAKuRu7Fr" />
+
+                        <!-- Favorite (heart) icon -->
+                        <button
+                            class="absolute top-3 right-4 inline-flex items-center gap-1 bg-white/10 text-black px-3 py-1 rounded-full shadow-lg backdrop-blur-sm hover:text-red-500 transition">
+                            <span class="material-icons text-base">favorite_border</span>
+                            <span class="text-xs font-medium">favorite</span>
+                        </button>
+                    </div>
+
+                    <!-- Card content -->
+                    <div class="p-4 flex flex-col flex-grow">
+
+                        <!-- Username left, Verified & Trusted badges right -->
+                        <div class="flex justify-between items-center mb-1">
+                            <div class="flex items-center space-x-2">
+                                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="User"
+                                    class="w-6 h-6 rounded-full object-cover" />
+                                <span class="text-sm font-medium text-gray-700">Alisha</span>
+                            </div>
+
+                            <!-- Right badges -->
+                            <div class="flex items-center space-x-2">
+                                <!-- <span class="bg-green-100 text-green-600 text-xs font-semibold px-2 py-0.5 rounded">Verified</span> -->
+                                <span
+                                    class="bg-blue-100 text-blue-600 text-xs font-semibold px-2 py-0.5 rounded">Trusted</span>
+                            </div>
+                        </div>
+
+                        <h3 class="text-md font-semibold text-gray-800 mt-2">
+                            8 Marla Residential Plot for Sale in Mumtaz City
+                        </h3>
+
+                        <p class="text-xl font-bold text-gray-900 mt-2">Rs 1.10 Crore</p>
+                        <p class="text-sm text-gray-500 mt-1">Mumtaz City - Chanab Block, Islamabad</p>
+                        <div class="flex-grow"></div>
+                        <p class="text-xs text-gray-400 mt-5 text-right">1 day ago</p>
+                    </div>
+                </div>
+                <!-- Card 3 end -->
+                <!-- Card 4 -->
+                <div class="card overflow-hidden rounded-lg shadow border border-gray-200 bg-white">
+                    <!-- Image section with favorite icon -->
+                    <div class="relative">
+                        <img alt="Plot for sale in Mumtaz City" class="w-full h-48 object-cover"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJVyoDHq6-QKW5YaYpzcFKKbSWZZ2q6USwpkj3Gr70xIeZGNH6Railf-Qbu1pGL0cUNn0AXXhNEX_ypUUcaHoVyvc2MzjsECJilJK7pTFetWlfyueuITmuCcvobReb0bqi4ejdXsvF4kLg1jPmYpD9_ZrN-gqDBILh-wJ2W_9iM1Z16RyPpwQeR3HaLa1avnoXogDJ_AOvUD2IJQckVSYVRC6F-QEOIZQRUVdpboMdCVp_jxKo-KZINKTjSMNWU3EJkthEAKuRu7Fr" />
+
+                        <!-- Favorite (heart) icon -->
+                        <button
+                            class="absolute top-3 right-4 inline-flex items-center gap-1 bg-white/10 text-black px-3 py-1 rounded-full shadow-lg backdrop-blur-sm hover:text-red-500 transition">
+                            <span class="material-icons text-base">favorite_border</span>
+                            <span class="text-xs font-medium">favorite</span>
+                        </button>
+                    </div>
+
+                    <!-- Card content -->
+                    <div class="p-4 flex flex-col flex-grow">
+
+                        <!-- Username left, Verified & Trusted badges right -->
+                        <div class="flex justify-between items-center mb-1">
+                            <div class="flex items-center space-x-2">
+                                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="User"
+                                    class="w-6 h-6 rounded-full object-cover" />
+                                <span class="text-sm font-medium text-gray-700">Alisha</span>
+                            </div>
+
+                            <!-- Right badges -->
+                            <div class="flex items-center space-x-2">
+                                <!-- <span class="bg-green-100 text-green-600 text-xs font-semibold px-2 py-0.5 rounded">Verified</span> -->
+                                <!-- <span class="bg-blue-100 text-blue-600 text-xs font-semibold px-2 py-0.5 rounded">Trusted</span> -->
+                            </div>
+                        </div>
+
+                        <h3 class="text-md font-semibold text-gray-800 mt-2">
+                            8 Marla Residential Plot for Sale in Mumtaz City
+                        </h3>
+
+                        <p class="text-xl font-bold text-gray-900 mt-2">Rs 1.10 Crore</p>
+                        <p class="text-sm text-gray-500 mt-1">Mumtaz City - Chanab Block, Islamabad</p>
+                        <div class="flex-grow"></div>
+                        <p class="text-xs text-gray-400 mt-5 text-right">1 day ago</p>
+                    </div>
+                </div>
+                <!-- Card 4 end -->
+            </div>
+        </section>
+        <!-- Lands and Plots Section end -->
+
+
+        <!-- Mobiles Section -->
+        <section class="mb-16">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-3xl font-bold text-gray-800" style="font-family: 'Poppins', sans-serif;">Mobile Phones
+                </h2>
+                <a class="text-blue-600 font-semibold hover:underline" href="#">View More</a>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Card 1 -->
+                <div class="card overflow-hidden rounded-lg shadow border border-gray-200 bg-white">
+                    <!-- Image section with favorite icon -->
+                    <div class="relative">
+                        <img alt="Plot for sale in Mumtaz City" class="w-full h-48 object-cover"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJVyoDHq6-QKW5YaYpzcFKKbSWZZ2q6USwpkj3Gr70xIeZGNH6Railf-Qbu1pGL0cUNn0AXXhNEX_ypUUcaHoVyvc2MzjsECJilJK7pTFetWlfyueuITmuCcvobReb0bqi4ejdXsvF4kLg1jPmYpD9_ZrN-gqDBILh-wJ2W_9iM1Z16RyPpwQeR3HaLa1avnoXogDJ_AOvUD2IJQckVSYVRC6F-QEOIZQRUVdpboMdCVp_jxKo-KZINKTjSMNWU3EJkthEAKuRu7Fr" />
+
+                        <!-- Favorite (heart) icon -->
+                        <button
+                            class="absolute top-3 right-4 inline-flex items-center gap-1 bg-white/10 text-black px-3 py-1 rounded-full shadow-lg backdrop-blur-sm hover:text-red-500 transition">
+                            <span class="material-icons text-base">favorite_border</span>
+                            <span class="text-xs font-medium">favorite</span>
+                        </button>
+
+                    </div>
+
+                    <!-- Card content -->
+                    <div class="p-4 flex flex-col flex-grow">
+
+                        <!-- Username left, Verified & Trusted badges right -->
+                        <div class="flex justify-between items-center mb-1">
+                            <div class="flex items-center space-x-2">
+                                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="User"
+                                    class="w-6 h-6 rounded-full object-cover" />
+                                <span class="text-sm font-medium text-gray-700">Alisha</span>
+                            </div>
+
+                            <!-- Right badges -->
+                            <div class="flex items-center space-x-2">
+                                <span
+                                    class="bg-green-100 text-green-600 text-xs font-semibold px-2 py-0.5 rounded">Verified</span>
+                                <span
+                                    class="bg-blue-100 text-blue-600 text-xs font-semibold px-2 py-0.5 rounded">Trusted</span>
+                            </div>
+                        </div>
+
+                        <h3 class="text-md font-semibold text-gray-800 mt-2">
+                            8 Marla Residential Plot for Sale in Mumtaz City
+                        </h3>
+
+                        <p class="text-xl font-bold text-gray-900 mt-2">Rs 1.10 Crore</p>
+                        <p class="text-sm text-gray-500 mt-1">Mumtaz City - Chanab Block, Islamabad</p>
+                        <div class="flex-grow"></div>
+                        <p class="text-xs text-gray-400 mt-5 text-right">1 day ago</p>
+                    </div>
+                </div>
+
+                <!-- card 1 end -->
+                <!-- Card 2 -->
+                <div class="card overflow-hidden rounded-lg shadow border border-gray-200 bg-white">
+                    <!-- Image section with favorite icon -->
+                    <div class="relative">
+                        <img alt="Plot for sale in Mumtaz City" class="w-full h-48 object-cover"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJVyoDHq6-QKW5YaYpzcFKKbSWZZ2q6USwpkj3Gr70xIeZGNH6Railf-Qbu1pGL0cUNn0AXXhNEX_ypUUcaHoVyvc2MzjsECJilJK7pTFetWlfyueuITmuCcvobReb0bqi4ejdXsvF4kLg1jPmYpD9_ZrN-gqDBILh-wJ2W_9iM1Z16RyPpwQeR3HaLa1avnoXogDJ_AOvUD2IJQckVSYVRC6F-QEOIZQRUVdpboMdCVp_jxKo-KZINKTjSMNWU3EJkthEAKuRu7Fr" />
+
+                        <!-- Favorite (heart) icon -->
+                        <button
+                            class="absolute top-3 right-4 inline-flex items-center gap-1 bg-white/10 text-black px-3 py-1 rounded-full shadow-lg backdrop-blur-sm hover:text-red-500 transition">
+                            <span class="material-icons text-base">favorite_border</span>
+                            <span class="text-xs font-medium">favorite</span>
+                        </button>
+                    </div>
+
+                    <!-- Card content -->
+                    <div class="p-4 flex flex-col flex-grow">
+
+                        <!-- Username left, Verified & Trusted badges right -->
+                        <div class="flex justify-between items-center mb-1">
+                            <div class="flex items-center space-x-2">
+                                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="User"
+                                    class="w-6 h-6 rounded-full object-cover" />
+                                <span class="text-sm font-medium text-gray-700">Alisha</span>
+                            </div>
+
+                            <!-- Right badges -->
+                            <div class="flex items-center space-x-2">
+                                <span
+                                    class="bg-green-100 text-green-600 text-xs font-semibold px-2 py-0.5 rounded">Verified</span>
+                                <!-- <span class="bg-blue-100 text-blue-600 text-xs font-semibold px-2 py-0.5 rounded">Trusted</span> -->
+                            </div>
+                        </div>
+
+                        <h3 class="text-md font-semibold text-gray-800 mt-2">
+                            8 Marla Residential Plot for Sale in Mumtaz City
+                        </h3>
+
+                        <p class="text-xl font-bold text-gray-900 mt-2">Rs 1.10 Crore</p>
+                        <p class="text-sm text-gray-500 mt-1">Mumtaz City - Chanab Block, Islamabad</p>
+                        <div class="flex-grow"></div>
+                        <p class="text-xs text-gray-400 mt-5 text-right">1 day ago</p>
+                    </div>
+                </div>
+                <!-- Card 2 end -->
+                <!-- Card 3 -->
+                <div class="card overflow-hidden rounded-lg shadow border border-gray-200 bg-white">
+                    <!-- Image section with favorite icon -->
+                    <div class="relative">
+                        <img alt="Plot for sale in Mumtaz City" class="w-full h-48 object-cover"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJVyoDHq6-QKW5YaYpzcFKKbSWZZ2q6USwpkj3Gr70xIeZGNH6Railf-Qbu1pGL0cUNn0AXXhNEX_ypUUcaHoVyvc2MzjsECJilJK7pTFetWlfyueuITmuCcvobReb0bqi4ejdXsvF4kLg1jPmYpD9_ZrN-gqDBILh-wJ2W_9iM1Z16RyPpwQeR3HaLa1avnoXogDJ_AOvUD2IJQckVSYVRC6F-QEOIZQRUVdpboMdCVp_jxKo-KZINKTjSMNWU3EJkthEAKuRu7Fr" />
+
+                        <!-- Favorite (heart) icon -->
+                        <button
+                            class="absolute top-3 right-4 inline-flex items-center gap-1 bg-white/10 text-black px-3 py-1 rounded-full shadow-lg backdrop-blur-sm hover:text-red-500 transition">
+                            <span class="material-icons text-base">favorite_border</span>
+                            <span class="text-xs font-medium">favorite</span>
+                        </button>
+                    </div>
+
+                    <!-- Card content -->
+                    <div class="p-4 flex flex-col flex-grow">
+
+                        <!-- Username left, Verified & Trusted badges right -->
+                        <div class="flex justify-between items-center mb-1">
+                            <div class="flex items-center space-x-2">
+                                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="User"
+                                    class="w-6 h-6 rounded-full object-cover" />
+                                <span class="text-sm font-medium text-gray-700">Alisha</span>
+                            </div>
+
+                            <!-- Right badges -->
+                            <div class="flex items-center space-x-2">
+                                <!-- <span class="bg-green-100 text-green-600 text-xs font-semibold px-2 py-0.5 rounded">Verified</span> -->
+                                <span
+                                    class="bg-blue-100 text-blue-600 text-xs font-semibold px-2 py-0.5 rounded">Trusted</span>
+                            </div>
+                        </div>
+
+                        <h3 class="text-md font-semibold text-gray-800 mt-2">
+                            8 Marla Residential Plot for Sale in Mumtaz City
+                        </h3>
+
+                        <p class="text-xl font-bold text-gray-900 mt-2">Rs 1.10 Crore</p>
+                        <p class="text-sm text-gray-500 mt-1">Mumtaz City - Chanab Block, Islamabad</p>
+                        <div class="flex-grow"></div>
+                        <p class="text-xs text-gray-400 mt-5 text-right">1 day ago</p>
+                    </div>
+                </div>
+                <!-- Card 3 end -->
+                <!-- Card 4 -->
+                <div class="card overflow-hidden rounded-lg shadow border border-gray-200 bg-white">
+                    <!-- Image section with favorite icon -->
+                    <div class="relative">
+                        <img alt="Plot for sale in Mumtaz City" class="w-full h-48 object-cover"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJVyoDHq6-QKW5YaYpzcFKKbSWZZ2q6USwpkj3Gr70xIeZGNH6Railf-Qbu1pGL0cUNn0AXXhNEX_ypUUcaHoVyvc2MzjsECJilJK7pTFetWlfyueuITmuCcvobReb0bqi4ejdXsvF4kLg1jPmYpD9_ZrN-gqDBILh-wJ2W_9iM1Z16RyPpwQeR3HaLa1avnoXogDJ_AOvUD2IJQckVSYVRC6F-QEOIZQRUVdpboMdCVp_jxKo-KZINKTjSMNWU3EJkthEAKuRu7Fr" />
+
+                        <!-- Favorite (heart) icon -->
+                        <button
+                            class="absolute top-3 right-4 inline-flex items-center gap-1 bg-white/10 text-black px-3 py-1 rounded-full shadow-lg backdrop-blur-sm hover:text-red-500 transition">
+                            <span class="material-icons text-base">favorite_border</span>
+                            <span class="text-xs font-medium">favorite</span>
+                        </button>
+                    </div>
+
+                    <!-- Card content -->
+                    <div class="p-4 flex flex-col flex-grow">
+
+                        <!-- Username left, Verified & Trusted badges right -->
+                        <div class="flex justify-between items-center mb-1">
+                            <div class="flex items-center space-x-2">
+                                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="User"
+                                    class="w-6 h-6 rounded-full object-cover" />
+                                <span class="text-sm font-medium text-gray-700">Alisha</span>
+                            </div>
+
+                            <!-- Right badges -->
+                            <div class="flex items-center space-x-2">
+                                <!-- <span class="bg-green-100 text-green-600 text-xs font-semibold px-2 py-0.5 rounded">Verified</span> -->
+                                <!-- <span class="bg-blue-100 text-blue-600 text-xs font-semibold px-2 py-0.5 rounded">Trusted</span> -->
+                            </div>
+                        </div>
+
+                        <h3 class="text-md font-semibold text-gray-800 mt-2">
+                            8 Marla Residential Plot for Sale in Mumtaz City
+                        </h3>
+
+                        <p class="text-xl font-bold text-gray-900 mt-2">Rs 1.10 Crore</p>
+                        <p class="text-sm text-gray-500 mt-1">Mumtaz City - Chanab Block, Islamabad</p>
+                        <div class="flex-grow"></div>
+                        <p class="text-xs text-gray-400 mt-5 text-right">1 day ago</p>
+                    </div>
+                </div>
+                <!-- Card 4 end -->
+            </div>
+        </section>
+        <!-- Lands and Plots Section end -->
+
+
+        <!-- Local Services Section -->
+        <section class="mb-16">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-3xl font-bold text-gray-800" style="font-family: 'Poppins', sans-serif;">Local Services
+                </h2>
+                <a class="text-blue-600 font-semibold hover:underline" href="#">View More</a>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Card 1 -->
+
+                <div class="card flex flex-col overflow-hidden rounded-lg shadow border border-gray-200 bg-white">
+                    <!-- Image section with favorite icon -->
+                    <div class="relative">
+                        <img alt="Plot for sale in Mumtaz City" class="w-full h-48 object-cover"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJVyoDHq6-QKW5YaYpzcFKKbSWZZ2q6USwpkj3Gr70xIeZGNH6Railf-Qbu1pGL0cUNn0AXXhNEX_ypUUcaHoVyvc2MzjsECJilJK7pTFetWlfyueuITmuCcvobReb0bqi4ejdXsvF4kLg1jPmYpD9_ZrN-gqDBILh-wJ2W_9iM1Z16RyPpwQeR3HaLa1avnoXogDJ_AOvUD2IJQckVSYVRC6F-QEOIZQRUVdpboMdCVp_jxKo-KZINKTjSMNWU3EJkthEAKuRu7Fr" />
+
+                        <!-- Favorite button -->
+                        <button
+                            class="absolute top-3 right-4 inline-flex items-center gap-1 bg-white/10 text-black px-3 py-1 rounded-full shadow-lg backdrop-blur-sm hover:text-red-500 transition">
+                            <span class="material-icons text-base">favorite_border</span>
+                            <span class="text-xs font-medium">favorite</span>
+                        </button>
+                    </div>
+
+                    <!-- Card content -->
+                    <div class="p-4 flex flex-col">
+                        <!-- Username & badges -->
+                        <div class="flex justify-between items-start mb-1">
+                            <div>
+                                <div class="flex items-center space-x-2">
+                                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="User"
+                                        class="w-6 h-6 rounded-full object-cover" />
+                                    <span class="text-sm font-medium text-gray-700">Alisha</span>
+                                </div>
+
+                                <!-- Level badge -->
+                                <div
+                                    class="mt-2 inline-flex items-center gap-1 text-[10px] font-semibold px-2 py-0.5 rounded-full bg-yellow-50 text-yellow-800 border border-yellow-200">
+                                    <span class="material-icons text-[12px] text-yellow-700">verified</span>
+                                    Level 1
+                                </div>
+
+                            </div>
+
+                            <!-- Verification badges -->
+                            <div class="flex items-center space-x-2">
+                                <span
+                                    class="bg-green-100 text-green-600 text-xs font-semibold px-2 py-0.5 rounded">Verified</span>
+                                <span
+                                    class="bg-blue-100 text-blue-600 text-xs font-semibold px-2 py-0.5 rounded">Trusted</span>
+                            </div>
+                        </div>
+
+                        <!-- Title & Location -->
+                        <h3 class="text-md font-semibold text-gray-800 mt-1">Electrician</h3>
+                        <p class="text-sm text-gray-500">Mumtaz City - Chanab Block, Islamabad</p>
+
+                        <!-- Footer with orders, rating, and time -->
+                        <div class="flex items-center justify-between text-[11px] text-gray-600 mt-4">
+                            <div class="flex items-center">
+                                <span>125 Orders</span>
+                                <div class="flex items-center space-x-0.5 ml-3">
+                                    <span class="material-icons text-yellow-500 text-[13px]">star</span>
+                                    <span class="font-medium">4.8</span>
+                                </div>
+                            </div>
+
+                            <p class="text-xs text-gray-400">1 day ago</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- card 1 end -->
+
+
+
+
+
+
+                <!-- Card 2 -->
+                <div class="card flex flex-col overflow-hidden rounded-lg shadow border border-gray-200 bg-white">
+                    <!-- Image section with favorite icon -->
+                    <div class="relative">
+                        <img alt="Plot for sale in Mumtaz City" class="w-full h-48 object-cover"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJVyoDHq6-QKW5YaYpzcFKKbSWZZ2q6USwpkj3Gr70xIeZGNH6Railf-Qbu1pGL0cUNn0AXXhNEX_ypUUcaHoVyvc2MzjsECJilJK7pTFetWlfyueuITmuCcvobReb0bqi4ejdXsvF4kLg1jPmYpD9_ZrN-gqDBILh-wJ2W_9iM1Z16RyPpwQeR3HaLa1avnoXogDJ_AOvUD2IJQckVSYVRC6F-QEOIZQRUVdpboMdCVp_jxKo-KZINKTjSMNWU3EJkthEAKuRu7Fr" />
+
+                        <!-- Favorite button -->
+                        <button
+                            class="absolute top-3 right-4 inline-flex items-center gap-1 bg-white/10 text-black px-3 py-1 rounded-full shadow-lg backdrop-blur-sm hover:text-red-500 transition">
+                            <span class="material-icons text-base">favorite_border</span>
+                            <span class="text-xs font-medium">favorite</span>
+                        </button>
+                    </div>
+
+                    <!-- Card content -->
+                    <div class="p-4 flex flex-col">
+                        <!-- Username & badges -->
+                        <div class="flex justify-between items-start mb-1">
+                            <div>
+                                <div class="flex items-center space-x-2">
+                                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="User"
+                                        class="w-6 h-6 rounded-full object-cover" />
+                                    <span class="text-sm font-medium text-gray-700">Alisha</span>
+                                </div>
+
+                                <!-- Level badge -->
+                                <div
+                                    class="mt-2 inline-flex items-center gap-1 text-[10px] font-semibold px-2 py-0.5 rounded-full bg-[#f5f5f5] text-[#62646a] border border-gray-300">
+                                    <span class="material-icons text-[12px] text-[#1dbf73]">verified</span>
+                                    Top Rated
+                                </div>
+                            </div>
+
+                            <!-- Verification badges -->
+                            <div class="flex items-center space-x-2">
+                                <span
+                                    class="bg-green-100 text-green-600 text-xs font-semibold px-2 py-0.5 rounded">Verified</span>
+                                <!-- <span class="bg-blue-100 text-blue-600 text-xs font-semibold px-2 py-0.5 rounded">Trusted</span> -->
+                            </div>
+                        </div>
+
+                        <!-- Title & Location -->
+                        <h3 class="text-md font-semibold text-gray-800 mt-1">Electrician</h3>
+                        <p class="text-sm text-gray-500">Mumtaz City - Chanab Block, Islamabad</p>
+
+                        <!-- Footer with orders, rating, and time -->
+                        <div class="flex items-center justify-between text-[11px] text-gray-600 mt-4">
+                            <div class="flex items-center">
+                                <span>125 Orders</span>
+                                <div class="flex items-center space-x-0.5 ml-3">
+                                    <span class="material-icons text-yellow-500 text-[13px]">star</span>
+                                    <span class="font-medium">4.8</span>
+                                </div>
+                            </div>
+
+                            <p class="text-xs text-gray-400">1 day ago</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 2 end -->
+                <!-- Card 3 -->
+                <div class="card flex flex-col overflow-hidden rounded-lg shadow border border-gray-200 bg-white">
+                    <!-- Image section with favorite icon -->
+                    <div class="relative">
+                        <img alt="Plot for sale in Mumtaz City" class="w-full h-48 object-cover"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJVyoDHq6-QKW5YaYpzcFKKbSWZZ2q6USwpkj3Gr70xIeZGNH6Railf-Qbu1pGL0cUNn0AXXhNEX_ypUUcaHoVyvc2MzjsECJilJK7pTFetWlfyueuITmuCcvobReb0bqi4ejdXsvF4kLg1jPmYpD9_ZrN-gqDBILh-wJ2W_9iM1Z16RyPpwQeR3HaLa1avnoXogDJ_AOvUD2IJQckVSYVRC6F-QEOIZQRUVdpboMdCVp_jxKo-KZINKTjSMNWU3EJkthEAKuRu7Fr" />
+
+                        <!-- Favorite button -->
+                        <button
+                            class="absolute top-3 right-4 inline-flex items-center gap-1 bg-white/10 text-black px-3 py-1 rounded-full shadow-lg backdrop-blur-sm hover:text-red-500 transition">
+                            <span class="material-icons text-base">favorite_border</span>
+                            <span class="text-xs font-medium">favorite</span>
+                        </button>
+                    </div>
+
+                    <!-- Card content -->
+                    <div class="p-4 flex flex-col">
+                        <!-- Username & badges -->
+                        <div class="flex justify-between items-start mb-1">
+                            <div>
+                                <div class="flex items-center space-x-2">
+                                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="User"
+                                        class="w-6 h-6 rounded-full object-cover" />
+                                    <span class="text-sm font-medium text-gray-700">Alisha</span>
+                                </div>
+
+                                <!-- Level badge -->
+                                <div
+                                    class="mt-2 inline-flex items-center gap-1 text-[10px] font-semibold px-2 py-0.5 rounded-full bg-orange-50 text-orange-700 border border-orange-200">
+                                    <span class="material-icons text-[12px] text-orange-600">fiber_new</span>
+                                    New
+                                </div>
+                            </div>
+
+                            <!-- Verification badges -->
+                            <div class="flex items-center space-x-2">
+                                <span
+                                    class="bg-green-100 text-green-600 text-xs font-semibold px-2 py-0.5 rounded">Verified</span>
+                                <!-- <span class="bg-blue-100 text-blue-600 text-xs font-semibold px-2 py-0.5 rounded">Trusted</span> -->
+                            </div>
+                        </div>
+
+                        <!-- Title & Location -->
+                        <h3 class="text-md font-semibold text-gray-800 mt-1">Electrician</h3>
+                        <p class="text-sm text-gray-500">Mumtaz City - Chanab Block, Islamabad</p>
+
+                        <!-- Footer with orders, rating, and time -->
+                        <div class="flex items-center justify-between text-[11px] text-gray-600 mt-4">
+                            <div class="flex items-center">
+                                <span>125 Orders</span>
+                                <div class="flex items-center space-x-0.5 ml-3">
+                                    <span class="material-icons text-yellow-500 text-[13px]">star</span>
+                                    <span class="font-medium">4.8</span>
+                                </div>
+                            </div>
+
+                            <p class="text-xs text-gray-400">1 day ago</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 3 end -->
+                <!-- Card 4 -->
+                <div class="card flex flex-col overflow-hidden rounded-lg shadow border border-gray-200 bg-white">
+                    <!-- Image section with favorite icon -->
+                    <div class="relative">
+                        <img alt="Plot for sale in Mumtaz City" class="w-full h-48 object-cover"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJVyoDHq6-QKW5YaYpzcFKKbSWZZ2q6USwpkj3Gr70xIeZGNH6Railf-Qbu1pGL0cUNn0AXXhNEX_ypUUcaHoVyvc2MzjsECJilJK7pTFetWlfyueuITmuCcvobReb0bqi4ejdXsvF4kLg1jPmYpD9_ZrN-gqDBILh-wJ2W_9iM1Z16RyPpwQeR3HaLa1avnoXogDJ_AOvUD2IJQckVSYVRC6F-QEOIZQRUVdpboMdCVp_jxKo-KZINKTjSMNWU3EJkthEAKuRu7Fr" />
+
+                        <!-- Favorite button -->
+                        <button
+                            class="absolute top-3 right-4 inline-flex items-center gap-1 bg-white/10 text-black px-3 py-1 rounded-full shadow-lg backdrop-blur-sm hover:text-red-500 transition">
+                            <span class="material-icons text-base">favorite_border</span>
+                            <span class="text-xs font-medium">favorite</span>
+                        </button>
+                    </div>
+
+                    <!-- Card content -->
+                    <div class="p-4 flex flex-col">
+                        <!-- Username & badges -->
+                        <div class="flex justify-between items-start mb-1">
+                            <div>
+                                <div class="flex items-center space-x-2">
+                                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="User"
+                                        class="w-6 h-6 rounded-full object-cover" />
+                                    <span class="text-sm font-medium text-gray-700">Alisha</span>
+                                </div>
+
+                                <!-- Level badge -->
+                                <div
+                                    class="mt-2 inline-flex items-center gap-1 text-[10px] font-semibold px-2 py-0.5 rounded-full bg-purple-100 text-purple-700 border border-purple-300">
+                                    <span class="material-icons text-[12px] text-purple-600">verified</span>
+                                    Level 2
+                                </div>
+
+                            </div>
+
+                            <!-- Verification badges -->
+                            <div class="flex items-center space-x-2">
+                                <!-- <span class="bg-green-100 text-green-600 text-xs font-semibold px-2 py-0.5 rounded">Verified</span> -->
+                                <span
+                                    class="bg-blue-100 text-blue-600 text-xs font-semibold px-2 py-0.5 rounded">Trusted</span>
+                            </div>
+                        </div>
+
+                        <!-- Title & Location -->
+                        <h3 class="text-md font-semibold text-gray-800 mt-1">Electrician</h3>
+                        <p class="text-sm text-gray-500">Mumtaz City - Chanab Block, Islamabad</p>
+
+                        <!-- Footer with orders, rating, and time -->
+                        <div class="flex items-center justify-between text-[11px] text-gray-600 mt-4">
+                            <div class="flex items-center">
+                                <span>125 Orders</span>
+                                <div class="flex items-center space-x-0.5 ml-3">
+                                    <span class="material-icons text-yellow-500 text-[13px]">star</span>
+                                    <span class="font-medium">4.8</span>
+                                </div>
+                            </div>
+
+                            <p class="text-xs text-gray-400">1 day ago</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 4 end -->
+            </div>
+        </section>
+        <!-- Lands and Plots Section end -->
+
+
+        <!-- Mobiles Section -->
+        <section class="mb-16">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-3xl font-bold text-gray-800" style="font-family: 'Poppins', sans-serif;">Bikes &
+                    Motorcycles</h2>
+                <a class="text-blue-600 font-semibold hover:underline" href="#">View More</a>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Card 1 -->
+                <div class="card overflow-hidden rounded-lg shadow border border-gray-200 bg-white">
+                    <!-- Image section with favorite icon & used label -->
+                    <div class="relative">
+                        <img alt="Plot for sale in Mumtaz City" class="w-full h-48 object-cover"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJVyoDHq6-QKW5YaYpzcFKKbSWZZ2q6USwpkj3Gr70xIeZGNH6Railf-Qbu1pGL0cUNn0AXXhNEX_ypUUcaHoVyvc2MzjsECJilJK7pTFetWlfyueuITmuCcvobReb0bqi4ejdXsvF4kLg1jPmYpD9_ZrN-gqDBILh-wJ2W_9iM1Z16RyPpwQeR3HaLa1avnoXogDJ_AOvUD2IJQckVSYVRC6F-QEOIZQRUVdpboMdCVp_jxKo-KZINKTjSMNWU3EJkthEAKuRu7Fr" />
+
+                        <!-- Used badge (left corner) -->
+                        <div class="absolute top-3 left-0">
+                            <div class="relative">
+                                <div
+                                    class="bg-yellow-500 text-white text-[10px] font-bold px-3 py-1 pr-4 rounded-r-full shadow-md relative z-10">
+                                    Used
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Favorite (heart) icon (right corner) -->
+                        <button
+                            class="absolute top-3 right-4 inline-flex items-center gap-1 bg-white/10 text-black px-3 py-1 rounded-full shadow-lg backdrop-blur-sm hover:text-red-500 transition">
+                            <span class="material-icons text-base">favorite_border</span>
+                            <span class="text-xs font-medium">favorite</span>
+                        </button>
+                    </div>
+
+                    <!-- Card content (unchanged) -->
+                    <div class="p-4 flex flex-col flex-grow">
+                        <!-- Username and badges -->
+                        <div class="flex justify-between items-center mb-1">
+                            <div class="flex items-center space-x-2">
+                                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="User"
+                                    class="w-6 h-6 rounded-full object-cover" />
+                                <span class="text-sm font-medium text-gray-700">Alisha</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <span
+                                    class="bg-green-100 text-green-600 text-xs font-semibold px-2 py-0.5 rounded">Verified</span>
+                                <span
+                                    class="bg-blue-100 text-blue-600 text-xs font-semibold px-2 py-0.5 rounded">Trusted</span>
+                            </div>
+                        </div>
+
+                        <h3 class="text-md font-semibold text-gray-800 mt-2">
+                            8 Marla Residential Plot for Sale in Mumtaz City
+                        </h3>
+
+                        <p class="text-xl font-bold text-gray-900 mt-2">Rs 1.10 Crore</p>
+                        <p class="text-sm text-gray-500 mt-1">Mumtaz City - Chanab Block, Islamabad</p>
+                        <div class="flex-grow"></div>
+                        <p class="text-xs text-gray-400 mt-5 text-right">1 day ago</p>
+                    </div>
+                </div>
+
+
+                <!-- card 1 end -->
+                <!-- Card 2 -->
+                <div class="card overflow-hidden rounded-lg shadow border border-gray-200 bg-white">
+                    <!-- Image section with favorite icon & used label -->
+                    <div class="relative">
+                        <img alt="Plot for sale in Mumtaz City" class="w-full h-48 object-cover"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJVyoDHq6-QKW5YaYpzcFKKbSWZZ2q6USwpkj3Gr70xIeZGNH6Railf-Qbu1pGL0cUNn0AXXhNEX_ypUUcaHoVyvc2MzjsECJilJK7pTFetWlfyueuITmuCcvobReb0bqi4ejdXsvF4kLg1jPmYpD9_ZrN-gqDBILh-wJ2W_9iM1Z16RyPpwQeR3HaLa1avnoXogDJ_AOvUD2IJQckVSYVRC6F-QEOIZQRUVdpboMdCVp_jxKo-KZINKTjSMNWU3EJkthEAKuRu7Fr" />
+
+                        <!-- Used badge (left corner) -->
+                        <div class="absolute top-3 left-0">
+                            <div class="relative">
+                                <div
+                                    class="bg-blue-500 text-white text-[10px] font-bold px-3 py-1 pr-4 rounded-r-full shadow-md relative z-10">
+                                    New
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Favorite (heart) icon (right corner) -->
+                        <button
+                            class="absolute top-3 right-4 inline-flex items-center gap-1 bg-white/10 text-black px-3 py-1 rounded-full shadow-lg backdrop-blur-sm hover:text-red-500 transition">
+                            <span class="material-icons text-base">favorite_border</span>
+                            <span class="text-xs font-medium">favorite</span>
+                        </button>
+                    </div>
+
+                    <!-- Card content (unchanged) -->
+                    <div class="p-4 flex flex-col flex-grow">
+                        <!-- Username and badges -->
+                        <div class="flex justify-between items-center mb-1">
+                            <div class="flex items-center space-x-2">
+                                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="User"
+                                    class="w-6 h-6 rounded-full object-cover" />
+                                <span class="text-sm font-medium text-gray-700">Alisha</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <span
+                                    class="bg-green-100 text-green-600 text-xs font-semibold px-2 py-0.5 rounded">Verified</span>
+                                <span
+                                    class="bg-blue-100 text-blue-600 text-xs font-semibold px-2 py-0.5 rounded">Trusted</span>
+                            </div>
+                        </div>
+
+                        <h3 class="text-md font-semibold text-gray-800 mt-2">
+                            8 Marla Residential Plot for Sale in Mumtaz City
+                        </h3>
+
+                        <p class="text-xl font-bold text-gray-900 mt-2">Rs 1.10 Crore</p>
+                        <p class="text-sm text-gray-500 mt-1">Mumtaz City - Chanab Block, Islamabad</p>
+                        <div class="flex-grow"></div>
+                        <p class="text-xs text-gray-400 mt-5 text-right">1 day ago</p>
+                    </div>
+                </div>
+
+                <!-- Card 2 end -->
+                <!-- Card 3 -->
+                <div class="card overflow-hidden rounded-lg shadow border border-gray-200 bg-white">
+                    <!-- Image section with favorite icon & used label -->
+                    <div class="relative">
+                        <img alt="Plot for sale in Mumtaz City" class="w-full h-48 object-cover"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJVyoDHq6-QKW5YaYpzcFKKbSWZZ2q6USwpkj3Gr70xIeZGNH6Railf-Qbu1pGL0cUNn0AXXhNEX_ypUUcaHoVyvc2MzjsECJilJK7pTFetWlfyueuITmuCcvobReb0bqi4ejdXsvF4kLg1jPmYpD9_ZrN-gqDBILh-wJ2W_9iM1Z16RyPpwQeR3HaLa1avnoXogDJ_AOvUD2IJQckVSYVRC6F-QEOIZQRUVdpboMdCVp_jxKo-KZINKTjSMNWU3EJkthEAKuRu7Fr" />
+
+                        <!-- Used badge (left corner) -->
+                        <div class="absolute top-3 left-0">
+                            <div class="relative">
+                                <div
+                                    class="bg-orange-500 text-white text-[10px] font-bold px-3 py-1 pr-4 rounded-r-full shadow-md relative z-10">
+                                    Rental
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Favorite (heart) icon (right corner) -->
+                        <button
+                            class="absolute top-3 right-4 inline-flex items-center gap-1 bg-white/10 text-black px-3 py-1 rounded-full shadow-lg backdrop-blur-sm hover:text-red-500 transition">
+                            <span class="material-icons text-base">favorite_border</span>
+                            <span class="text-xs font-medium">favorite</span>
+                        </button>
+                    </div>
+
+                    <!-- Card content (unchanged) -->
+                    <div class="p-4 flex flex-col flex-grow">
+                        <!-- Username and badges -->
+                        <div class="flex justify-between items-center mb-1">
+                            <div class="flex items-center space-x-2">
+                                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="User"
+                                    class="w-6 h-6 rounded-full object-cover" />
+                                <span class="text-sm font-medium text-gray-700">Alisha</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <span
+                                    class="bg-green-100 text-green-600 text-xs font-semibold px-2 py-0.5 rounded">Verified</span>
+                                <span
+                                    class="bg-blue-100 text-blue-600 text-xs font-semibold px-2 py-0.5 rounded">Trusted</span>
+                            </div>
+                        </div>
+
+                        <h3 class="text-md font-semibold text-gray-800 mt-2">
+                            8 Marla Residential Plot for Sale in Mumtaz City
+                        </h3>
+
+                        <p class="text-xl font-bold text-gray-900 mt-2">Rs 1.10 Crore</p>
+                        <p class="text-sm text-gray-500 mt-1">Mumtaz City - Chanab Block, Islamabad</p>
+                        <div class="flex-grow"></div>
+                        <p class="text-xs text-gray-400 mt-5 text-right">1 day ago</p>
+                    </div>
+                </div>
+
+                <!-- Card 3 end -->
+                <!-- Card 4 -->
+                <div class="card overflow-hidden rounded-lg shadow border border-gray-200 bg-white">
+                    <!-- Image section with favorite icon & used label -->
+                    <div class="relative">
+                        <img alt="Plot for sale in Mumtaz City" class="w-full h-48 object-cover"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJVyoDHq6-QKW5YaYpzcFKKbSWZZ2q6USwpkj3Gr70xIeZGNH6Railf-Qbu1pGL0cUNn0AXXhNEX_ypUUcaHoVyvc2MzjsECJilJK7pTFetWlfyueuITmuCcvobReb0bqi4ejdXsvF4kLg1jPmYpD9_ZrN-gqDBILh-wJ2W_9iM1Z16RyPpwQeR3HaLa1avnoXogDJ_AOvUD2IJQckVSYVRC6F-QEOIZQRUVdpboMdCVp_jxKo-KZINKTjSMNWU3EJkthEAKuRu7Fr" />
+
+                        <!-- Used badge (left corner) -->
+                        <div class="absolute top-3 left-0">
+                            <div class="relative">
+                                <div
+                                    class="bg-purple-500 text-white text-[10px] font-bold px-3 py-1 pr-4 rounded-r-full shadow-md relative z-10">
+                                    Exchange
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Favorite (heart) icon (right corner) -->
+                        <button
+                            class="absolute top-3 right-4 inline-flex items-center gap-1 bg-white/10 text-black px-3 py-1 rounded-full shadow-lg backdrop-blur-sm hover:text-red-500 transition">
+                            <span class="material-icons text-base">favorite_border</span>
+                            <span class="text-xs font-medium">favorite</span>
+                        </button>
+                    </div>
+
+                    <!-- Card content (unchanged) -->
+                    <div class="p-4 flex flex-col flex-grow">
+                        <!-- Username and badges -->
+                        <div class="flex justify-between items-center mb-1">
+                            <div class="flex items-center space-x-2">
+                                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="User"
+                                    class="w-6 h-6 rounded-full object-cover" />
+                                <span class="text-sm font-medium text-gray-700">Alisha</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <span
+                                    class="bg-green-100 text-green-600 text-xs font-semibold px-2 py-0.5 rounded">Verified</span>
+                                <span
+                                    class="bg-blue-100 text-blue-600 text-xs font-semibold px-2 py-0.5 rounded">Trusted</span>
+                            </div>
+                        </div>
+
+                        <h3 class="text-md font-semibold text-gray-800 mt-2">
+                            8 Marla Residential Plot for Sale in Mumtaz City
+                        </h3>
+
+                        <p class="text-xl font-bold text-gray-900 mt-2">Rs 1.10 Crore</p>
+                        <p class="text-sm text-gray-500 mt-1">Mumtaz City - Chanab Block, Islamabad</p>
+                        <div class="flex-grow"></div>
+                        <p class="text-xs text-gray-400 mt-5 text-right">1 day ago</p>
+                    </div>
+                </div>
+
+                <!-- Card 4 end -->
+            </div>
+        </section>
+        <!-- Lands and Plots Section end -->
+
+    </main>
+    <footer class="bg-gray-800 text-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 text-center">
+            <p>© 2024 Miljaega.pk. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Add Alpine JS for dropdown functionality -->
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+  <script src="./js/miljaega-homepage.js"></script>
+</body>
+
+</html>

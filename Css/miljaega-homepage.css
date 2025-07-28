@@ -1,0 +1,78 @@
+ :root {
+            --primary-green: #0B6847;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+        }
+        .text-primary-green {
+            color: var(--primary-green);
+        }
+        .bg-primary-green {
+      background-color: #003E3E;
+    }
+        .border-primary-green {
+            border-color: var(--primary-green);
+        }
+        .card {
+            @apply bg-white rounded-lg shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1),0_2px_4px_-2px_rgba(0,0,0,0.1)] transition-transform duration-200;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .verified-badge {
+            @apply text-blue-600 text-base;
+        }
+
+
+        /* Sell Button */
+        ._520955ba {
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.fbf39733 {
+  background-color: #ffffff; /* Green background */
+  border: none;
+  cursor: pointer;
+}
+
+._6257aca6 {
+  object-fit: contain;
+  z-index: 1;
+}
+
+._948d9e0a {
+  position: relative;
+  z-index: 2;
+}
+
+._27a68d65 {
+  display: flex;
+  align-items: center;
+}
+
+.b2e0090c {
+  padding: 8px 16px;
+}
+
+._371e9918 {
+  color: white;
+}
+
+._6041419a {
+  margin-right: 8px;
+}
+
+._8206696c {
+  font-weight: 900;
+}
+
+.b7af14b4 {
+  font-size: 12px;
+}
+
+.dd240920 {
+  line-height: 1.5;
+}
