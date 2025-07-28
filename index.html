@@ -147,14 +147,11 @@
     </div>
 </div>
 
-<!-- Spacer to avoid overlap -->
-<div class="pt-[128px]"></div> <!-- Header (72px) + Categories (56px) = ~128px -->
-
 <!-- Your content continues here -->
 
    
     <!-- Combined Section -->
-    <section class="relative h-[300px] w-full overflow-hidden ">
+    <section class="relative h-[300px] w-full overflow-hidden mt-0 pt-0">
         <!-- Background Video -->
         <video autoplay muted loop playsinline class="absolute top-0 left-0 w-full h-full object-cover z-0 ">
             <source src="images/video.mp4" type="video/mp4" />
@@ -440,22 +437,15 @@
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
       <!-- Card 1 -->
-      <div class="card overflow-hidden rounded-lg shadow border border-gray-200 bg-white">
-        <!-- Image section with favorite icon -->
+      <div class="card overflow-hidden rounded-lg shadow border border-gray-200 bg-white transform transition-transform duration-300 ease-in-out hover:scale-[1.02]">
         <div class="relative">
           <img alt="Car for sale" class="w-full h-48 object-cover"
             src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJVyoDHq6-QKW5YaYpzcFKKbSWZZ2q6USwpkj3Gr70xIeZGNH6Railf-Qbu1pGL0cUNn0AXXhNEX_ypUUcaHoVyvc2MzjsECJilJK7pTFetWlfyueuITmuCcvobReb0bqi4ejdXsvF4kLg1jPmYpD9_ZrN-gqDBILh-wJ2W_9iM1Z16RyPpwQeR3HaLa1avnoXogDJ_AOvUD2IJQckVSYVRC6F-QEOIZQRUVdpboMdCVp_jxKo-KZINKTjSMNWU3EJkthEAKuRu7Fr" />
-
-          <!-- Favorite icon -->
-          <button
-            class="absolute top-3 right-4 inline-flex items-center gap-1 bg-white/10 text-black px-3 py-1 rounded-full shadow-lg backdrop-blur-sm hover:text-red-500 transition"
-            aria-label="Add to favorites">
+          <button class="absolute top-3 right-4 inline-flex items-center gap-1 bg-white/10 text-black px-3 py-1 rounded-full shadow-lg backdrop-blur-sm hover:text-red-500 transition" aria-label="Add to favorites">
             <span class="material-icons text-base">favorite_border</span>
             <span class="text-xs font-medium">favorite</span>
           </button>
         </div>
-
-        <!-- Card content -->
         <div class="p-4 flex flex-col flex-grow">
           <div class="flex justify-between items-center mb-1">
             <div class="flex items-center space-x-2">
@@ -463,17 +453,12 @@
                 class="w-6 h-6 rounded-full object-cover" />
               <span class="text-sm font-medium text-gray-700">Alisha</span>
             </div>
-
             <div class="flex items-center space-x-2">
               <span class="bg-green-100 text-green-600 text-xs font-semibold px-2 py-0.5 rounded">Verified</span>
               <span class="bg-blue-100 text-blue-600 text-xs font-semibold px-2 py-0.5 rounded">Trusted</span>
             </div>
           </div>
-
-          <h3 class="text-md font-semibold text-gray-800 mt-2">
-            8 Marla Residential Plot for Sale in Mumtaz City
-          </h3>
-
+          <h3 class="text-md font-semibold text-gray-800 mt-2">8 Marla Residential Plot for Sale in Mumtaz City</h3>
           <p class="text-xl font-bold text-gray-900 mt-2">Rs 1.10 Crore</p>
           <p class="text-sm text-gray-500 mt-1">Mumtaz City - Chanab Block, Islamabad</p>
           <div class="flex-grow"></div>
@@ -483,19 +468,15 @@
       <!-- End Card 1 -->
 
       <!-- Card 2 -->
-      <div class="card overflow-hidden rounded-lg shadow border border-gray-200 bg-white">
+      <div class="card overflow-hidden rounded-lg shadow border border-gray-200 bg-white transform transition-transform duration-300 ease-in-out hover:scale-[1.02]">
         <div class="relative">
           <img alt="Car for sale" class="w-full h-48 object-cover"
             src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJVyoDHq6-QKW5YaYpzcFKKbSWZZ2q6USwpkj3Gr70xIeZGNH6Railf-Qbu1pGL0cUNn0AXXhNEX_ypUUcaHoVyvc2MzjsECJilJK7pTFetWlfyueuITmuCcvobReb0bqi4ejdXsvF4kLg1jPmYpD9_ZrN-gqDBILh-wJ2W_9iM1Z16RyPpwQeR3HaLa1avnoXogDJ_AOvUD2IJQckVSYVRC6F-QEOIZQRUVdpboMdCVp_jxKo-KZINKTjSMNWU3EJkthEAKuRu7Fr" />
-
-          <button
-            class="absolute top-3 right-4 inline-flex items-center gap-1 bg-white/10 text-black px-3 py-1 rounded-full shadow-lg backdrop-blur-sm hover:text-red-500 transition"
-            aria-label="Add to favorites">
+          <button class="absolute top-3 right-4 inline-flex items-center gap-1 bg-white/10 text-black px-3 py-1 rounded-full shadow-lg backdrop-blur-sm hover:text-red-500 transition" aria-label="Add to favorites">
             <span class="material-icons text-base">favorite_border</span>
             <span class="text-xs font-medium">favorite</span>
           </button>
         </div>
-
         <div class="p-4 flex flex-col flex-grow">
           <div class="flex justify-between items-center mb-1">
             <div class="flex items-center space-x-2">
@@ -503,16 +484,11 @@
                 class="w-6 h-6 rounded-full object-cover" />
               <span class="text-sm font-medium text-gray-700">Alisha</span>
             </div>
-
             <div class="flex items-center space-x-2">
               <span class="bg-green-100 text-green-600 text-xs font-semibold px-2 py-0.5 rounded">Verified</span>
             </div>
           </div>
-
-          <h3 class="text-md font-semibold text-gray-800 mt-2">
-            8 Marla Residential Plot for Sale in Mumtaz City
-          </h3>
-
+          <h3 class="text-md font-semibold text-gray-800 mt-2">8 Marla Residential Plot for Sale in Mumtaz City</h3>
           <p class="text-xl font-bold text-gray-900 mt-2">Rs 1.10 Crore</p>
           <p class="text-sm text-gray-500 mt-1">Mumtaz City - Chanab Block, Islamabad</p>
           <div class="flex-grow"></div>
@@ -522,19 +498,15 @@
       <!-- End Card 2 -->
 
       <!-- Card 3 -->
-      <div class="card overflow-hidden rounded-lg shadow border border-gray-200 bg-white">
+      <div class="card overflow-hidden rounded-lg shadow border border-gray-200 bg-white transform transition-transform duration-300 ease-in-out hover:scale-[1.02]">
         <div class="relative">
           <img alt="Car for sale" class="w-full h-48 object-cover"
             src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJVyoDHq6-QKW5YaYpzcFKKbSWZZ2q6USwpkj3Gr70xIeZGNH6Railf-Qbu1pGL0cUNn0AXXhNEX_ypUUcaHoVyvc2MzjsECJilJK7pTFetWlfyueuITmuCcvobReb0bqi4ejdXsvF4kLg1jPmYpD9_ZrN-gqDBILh-wJ2W_9iM1Z16RyPpwQeR3HaLa1avnoXogDJ_AOvUD2IJQckVSYVRC6F-QEOIZQRUVdpboMdCVp_jxKo-KZINKTjSMNWU3EJkthEAKuRu7Fr" />
-
-          <button
-            class="absolute top-3 right-4 inline-flex items-center gap-1 bg-white/10 text-black px-3 py-1 rounded-full shadow-lg backdrop-blur-sm hover:text-red-500 transition"
-            aria-label="Add to favorites">
+          <button class="absolute top-3 right-4 inline-flex items-center gap-1 bg-white/10 text-black px-3 py-1 rounded-full shadow-lg backdrop-blur-sm hover:text-red-500 transition" aria-label="Add to favorites">
             <span class="material-icons text-base">favorite_border</span>
             <span class="text-xs font-medium">favorite</span>
           </button>
         </div>
-
         <div class="p-4 flex flex-col flex-grow">
           <div class="flex justify-between items-center mb-1">
             <div class="flex items-center space-x-2">
@@ -542,16 +514,11 @@
                 class="w-6 h-6 rounded-full object-cover" />
               <span class="text-sm font-medium text-gray-700">Alisha</span>
             </div>
-
             <div class="flex items-center space-x-2">
               <span class="bg-blue-100 text-blue-600 text-xs font-semibold px-2 py-0.5 rounded">Trusted</span>
             </div>
           </div>
-
-          <h3 class="text-md font-semibold text-gray-800 mt-2">
-            8 Marla Residential Plot for Sale in Mumtaz City
-          </h3>
-
+          <h3 class="text-md font-semibold text-gray-800 mt-2">8 Marla Residential Plot for Sale in Mumtaz City</h3>
           <p class="text-xl font-bold text-gray-900 mt-2">Rs 1.10 Crore</p>
           <p class="text-sm text-gray-500 mt-1">Mumtaz City - Chanab Block, Islamabad</p>
           <div class="flex-grow"></div>
@@ -561,19 +528,15 @@
       <!-- End Card 3 -->
 
       <!-- Card 4 -->
-      <div class="card overflow-hidden rounded-lg shadow border border-gray-200 bg-white">
+      <div class="card overflow-hidden rounded-lg shadow border border-gray-200 bg-white transform transition-transform duration-300 ease-in-out hover:scale-[1.02]transform transition-transform duration-300 ease-in-out hover:scale-[1.02]">
         <div class="relative">
           <img alt="Car for sale" class="w-full h-48 object-cover"
             src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJVyoDHq6-QKW5YaYpzcFKKbSWZZ2q6USwpkj3Gr70xIeZGNH6Railf-Qbu1pGL0cUNn0AXXhNEX_ypUUcaHoVyvc2MzjsECJilJK7pTFetWlfyueuITmuCcvobReb0bqi4ejdXsvF4kLg1jPmYpD9_ZrN-gqDBILh-wJ2W_9iM1Z16RyPpwQeR3HaLa1avnoXogDJ_AOvUD2IJQckVSYVRC6F-QEOIZQRUVdpboMdCVp_jxKo-KZINKTjSMNWU3EJkthEAKuRu7Fr" />
-
-          <button
-            class="absolute top-3 right-4 inline-flex items-center gap-1 bg-white/10 text-black px-3 py-1 rounded-full shadow-lg backdrop-blur-sm hover:text-red-500 transition"
-            aria-label="Add to favorites">
+          <button class="absolute top-3 right-4 inline-flex items-center gap-1 bg-white/10 text-black px-3 py-1 rounded-full shadow-lg backdrop-blur-sm hover:text-red-500 transition" aria-label="Add to favorites">
             <span class="material-icons text-base">favorite_border</span>
             <span class="text-xs font-medium">favorite</span>
           </button>
         </div>
-
         <div class="p-4 flex flex-col flex-grow">
           <div class="flex justify-between items-center mb-1">
             <div class="flex items-center space-x-2">
@@ -581,16 +544,11 @@
                 class="w-6 h-6 rounded-full object-cover" />
               <span class="text-sm font-medium text-gray-700">Alisha</span>
             </div>
-
             <div class="flex items-center space-x-2">
               <!-- No badges -->
             </div>
           </div>
-
-          <h3 class="text-md font-semibold text-gray-800 mt-2">
-            8 Marla Residential Plot for Sale in Mumtaz City
-          </h3>
-
+          <h3 class="text-md font-semibold text-gray-800 mt-2">8 Marla Residential Plot for Sale in Mumtaz City</h3>
           <p class="text-xl font-bold text-gray-900 mt-2">Rs 1.10 Crore</p>
           <p class="text-sm text-gray-500 mt-1">Mumtaz City - Chanab Block, Islamabad</p>
           <div class="flex-grow"></div>
@@ -617,7 +575,7 @@
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
 
       <!-- Card 1 -->
-      <div class="card overflow-hidden rounded-lg shadow border border-gray-200 bg-white">
+      <div class="card overflow-hidden rounded-lg shadow border border-gray-200 bg-white transform transition-transform duration-300 ease-in-out hover:scale-[1.02]">
         <div class="relative">
           <img
             alt="Plot for sale in Mumtaz City"
@@ -662,7 +620,7 @@
       <!-- Card 1 End -->
 
       <!-- Card 2 -->
-      <div class="card overflow-hidden rounded-lg shadow border border-gray-200 bg-white">
+      <div class="card overflow-hidden rounded-lg shadow border border-gray-200 bg-white transform transition-transform duration-300 ease-in-out hover:scale-[1.02]">
         <div class="relative">
           <img
             alt="Plot for sale in Mumtaz City"
@@ -707,7 +665,7 @@
       <!-- Card 2 End -->
 
       <!-- Card 3 -->
-      <div class="card overflow-hidden rounded-lg shadow border border-gray-200 bg-white">
+      <div class="card overflow-hidden rounded-lg shadow border border-gray-200 bg-white transform transition-transform duration-300 ease-in-out hover:scale-[1.02]">
         <div class="relative">
           <img
             alt="Plot for sale in Mumtaz City"
@@ -752,7 +710,7 @@
       <!-- Card 3 End -->
 
       <!-- Card 4 -->
-      <div class="card overflow-hidden rounded-lg shadow border border-gray-200 bg-white">
+      <div class="card overflow-hidden rounded-lg shadow border border-gray-200 bg-white transform transition-transform duration-300 ease-in-out hover:scale-[1.02]">
         <div class="relative">
           <img
             alt="Plot for sale in Mumtaz City"
@@ -811,7 +769,7 @@
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                 <!-- Card 1 -->
-                <div class="card overflow-hidden rounded-lg shadow border border-gray-200 bg-white">
+                <div class="card overflow-hidden rounded-lg shadow border border-gray-200 bg-white transform transition-transform duration-300 ease-in-out hover:scale-[1.02]">
                     <!-- Image section with favorite icon -->
                     <div class="relative">
                         <img alt="Plot for sale in Mumtaz City" class="w-full h-48 object-cover"
@@ -859,7 +817,7 @@
 
                 <!-- card 1 end -->
                 <!-- Card 2 -->
-                <div class="card overflow-hidden rounded-lg shadow border border-gray-200 bg-white">
+                <div class="card overflow-hidden rounded-lg shadow border border-gray-200 bg-white transform transition-transform duration-300 ease-in-out hover:scale-[1.02]">
                     <!-- Image section with favorite icon -->
                     <div class="relative">
                         <img alt="Plot for sale in Mumtaz City" class="w-full h-48 object-cover"
@@ -904,7 +862,7 @@
                 </div>
                 <!-- Card 2 end -->
                 <!-- Card 3 -->
-                <div class="card overflow-hidden rounded-lg shadow border border-gray-200 bg-white">
+                <div class="card overflow-hidden rounded-lg shadow border border-gray-200 bg-white transform transition-transform duration-300 ease-in-out hover:scale-[1.02]">
                     <!-- Image section with favorite icon -->
                     <div class="relative">
                         <img alt="Plot for sale in Mumtaz City" class="w-full h-48 object-cover"
@@ -949,7 +907,7 @@
                 </div>
                 <!-- Card 3 end -->
                 <!-- Card 4 -->
-                <div class="card overflow-hidden rounded-lg shadow border border-gray-200 bg-white">
+                <div class="card overflow-hidden rounded-lg shadow border border-gray-200 bg-white transform transition-transform duration-300 ease-in-out hover:scale-[1.02]">
                     <!-- Image section with favorite icon -->
                     <div class="relative">
                         <img alt="Plot for sale in Mumtaz City" class="w-full h-48 object-cover"
@@ -1009,7 +967,7 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                 <!-- Card 1 -->
 
-                <div class="card flex flex-col overflow-hidden rounded-lg shadow border border-gray-200 bg-white">
+                <div class="card flex flex-col overflow-hidden rounded-lg shadow border border-gray-200 bg-white transform transition-transform duration-300 ease-in-out hover:scale-[1.02]">
                     <!-- Image section with favorite icon -->
                     <div class="relative">
                         <img alt="Plot for sale in Mumtaz City" class="w-full h-48 object-cover"
@@ -1079,7 +1037,7 @@
 
 
                 <!-- Card 2 -->
-                <div class="card flex flex-col overflow-hidden rounded-lg shadow border border-gray-200 bg-white">
+                <div class="card flex flex-col overflow-hidden rounded-lg shadow border border-gray-200 bg-white transform transition-transform duration-300 ease-in-out hover:scale-[1.02]">
                     <!-- Image section with favorite icon -->
                     <div class="relative">
                         <img alt="Plot for sale in Mumtaz City" class="w-full h-48 object-cover"
@@ -1140,7 +1098,7 @@
                 </div>
                 <!-- Card 2 end -->
                 <!-- Card 3 -->
-                <div class="card flex flex-col overflow-hidden rounded-lg shadow border border-gray-200 bg-white">
+                <div class="card flex flex-col overflow-hidden rounded-lg shadow border border-gray-200 bg-white transform transition-transform duration-300 ease-in-out hover:scale-[1.02]">
                     <!-- Image section with favorite icon -->
                     <div class="relative">
                         <img alt="Plot for sale in Mumtaz City" class="w-full h-48 object-cover"
@@ -1201,7 +1159,7 @@
                 </div>
                 <!-- Card 3 end -->
                 <!-- Card 4 -->
-                <div class="card flex flex-col overflow-hidden rounded-lg shadow border border-gray-200 bg-white">
+                <div class="card flex flex-col overflow-hidden rounded-lg shadow border border-gray-200 bg-white transform transition-transform duration-300 ease-in-out hover:scale-[1.02]">
                     <!-- Image section with favorite icon -->
                     <div class="relative">
                         <img alt="Plot for sale in Mumtaz City" class="w-full h-48 object-cover"
@@ -1277,7 +1235,7 @@
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                 <!-- Card 1 -->
-                <div class="card overflow-hidden rounded-lg shadow border border-gray-200 bg-white">
+                <div class="card overflow-hidden rounded-lg shadow border border-gray-200 bg-white transform transition-transform duration-300 ease-in-out hover:scale-[1.02]">
                     <!-- Image section with favorite icon & used label -->
                     <div class="relative">
                         <img alt="Plot for sale in Mumtaz City" class="w-full h-48 object-cover"
@@ -1332,7 +1290,7 @@
 
                 <!-- card 1 end -->
                 <!-- Card 2 -->
-                <div class="card overflow-hidden rounded-lg shadow border border-gray-200 bg-white">
+                <div class="card overflow-hidden rounded-lg shadow border border-gray-200 bg-white transform transition-transform duration-300 ease-in-out hover:scale-[1.02]">
                     <!-- Image section with favorite icon & used label -->
                     <div class="relative">
                         <img alt="Plot for sale in Mumtaz City" class="w-full h-48 object-cover"
@@ -1386,7 +1344,7 @@
 
                 <!-- Card 2 end -->
                 <!-- Card 3 -->
-                <div class="card overflow-hidden rounded-lg shadow border border-gray-200 bg-white">
+                <div class="card overflow-hidden rounded-lg shadow border border-gray-200 bg-white transform transition-transform duration-300 ease-in-out hover:scale-[1.02]">
                     <!-- Image section with favorite icon & used label -->
                     <div class="relative">
                         <img alt="Plot for sale in Mumtaz City" class="w-full h-48 object-cover"
@@ -1440,7 +1398,7 @@
 
                 <!-- Card 3 end -->
                 <!-- Card 4 -->
-                <div class="card overflow-hidden rounded-lg shadow border border-gray-200 bg-white">
+                <div class="card overflow-hidden rounded-lg shadow border border-gray-200 bg-white transform transition-transform duration-300 ease-in-out hover:scale-[1.02]">
                     <!-- Image section with favorite icon & used label -->
                     <div class="relative">
                         <img alt="Plot for sale in Mumtaz City" class="w-full h-48 object-cover"
@@ -1499,9 +1457,56 @@
         <!-- Bikes and mototcycles Section end -->
 
     </main>
-    <footer class="bg-gray-800 text-white">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 text-center">
-            <p>© 2024 Miljaega.pk. All rights reserved.</p>
+    <div class="flex bg-[#dfdddd] gap-50 pt-10 pb-10">      <!-- Logo -->
+  <div class="w-full xl:w-auto flex justify-center xl:justify-start xl:pl-20 mb-5 xl:mb-0">
+    <img src="./burgerlab-logoblack.svg" class="h-[150px] xl:h-[220px]" alt=""> 
+  </div>
+
+  <!-- Information Links -->
+  <div class="w-1/2 sm:w-1/3 xl:w-auto mb-5 xl:mb-0 text-center xl:text-left">
+    <ul class="text-white">
+      <li class="font-bold text-xl mb-3">About Us</li>
+      <li class="text-[15px]">Our Values</li>
+      <li>Our Location</li>
+      <li>Lab's Story</li>
+      <li>Restaurant Jobs</li>
+    </ul>
+  </div>
+
+  <!-- Contact & Social -->
+  <div class="w-1/2 sm:w-1/3 xl:w-auto text-center xl:text-left mb-5 xl:mb-0">
+    <ul class="text-white">
+      <li class="font-bold text-xl mb-3">Contact Us</li>
+      <li>021 111 112 522</li>
+    </ul>
+    <div class="flex justify-center xl:justify-start mt-3">
+      <i class="fa-brands fa-facebook-f bg-black text-white rounded-full text-xl p-3 me-3"></i>
+      <i class="fa-brands fa-instagram bg-black text-white rounded-full text-xl p-3"></i>
+    </div>
+  </div>
+
+  <!-- Phone Image -->
+  <div class="w-full xl:w-auto flex justify-center xl:justify-start mb-5 xl:mb-0">
+    <img class="h-[200px] xl:h-[280px] w-[120px] xl:w-[160px]" src="./phonefooter.webp" alt="">
+  </div>
+
+  <!-- App Promo -->
+  <div class="w-full xl:w-auto text-center xl:text-left text-white mt-5 xl:mt-0 xl:pr-20">
+    <h2 class="text-[24px] xl:text-[28px] font-bold">Get The App!</h2>
+    <p class="text-[16px] xl:text-[18px] w-full xl:w-[240px] mx-auto xl:mx-0">
+      App is where the fun is! It's Easy, Fast and Convenient.
+    </p>
+    <div class="flex justify-center xl:justify-start mt-4">
+      <img src="./app store.png" class="h-[35px] me-2" alt="">
+      <img src="./google play.png" class="h-[35px]" alt="">
+    </div>
+  </div>
+
+</div>
+</div>
+    <footer class="bg-primary-green text-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 text-center border-t-3 border-t-[white]">
+            <p>©Copyright 2025 Miljaega <br>Powered by The Tech Creators</p>
         </div>
     </footer>
 
