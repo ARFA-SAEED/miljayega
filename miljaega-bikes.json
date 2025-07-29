@@ -1,0 +1,50 @@
+[
+  {
+    "image": "./images/cardimage.png",
+    "image2": "https://randomuser.me/api/portraits/women/44.jpg",
+    "name": "Alisha",
+    "title": "8 Marla Residential Plot for Sale in Mumtaz City",
+    "price": "Rs 1.10 Crore",
+    "address": "Mumtaz City - Chanab Block, Islamabad",
+    "day": "1 day ago",
+    "verified": "Verified",
+    "label": "Used",
+    "trusted": "Trusted"
+  },
+  {
+    "image": "./images/cardimage.png",
+    "image2": "https://randomuser.me/api/portraits/women/44.jpg",
+    "name": "Alisha",
+    "title": "8 Marla Residential Plot for Sale in Mumtaz City",
+    "price": "Rs 1.10 Crore",
+    "address": "Mumtaz City - Chanab Block, Islamabad",
+    "day": "1 day ago",
+    "verified": "Verified",
+    "label": "New",
+    "trusted": "Trusted"
+  },
+  {
+    "image": "./images/cardimage.png",
+    "image2": "https://randomuser.me/api/portraits/women/44.jpg",
+    "name": "Alisha",
+    "title": "8 Marla Residential Plot for Sale in Mumtaz City",
+    "price": "Rs 1.10 Crore",
+    "address": "Mumtaz City - Chanab Block, Islamabad",
+    "day": "1 day ago",
+    "verified": "Verified",
+    "label": "Rental",
+    "trusted": "Trusted"
+  },
+  {
+    "image": "./images/cardimage.png",
+    "image2": "https://randomuser.me/api/portraits/women/44.jpg",
+    "name": "Alisha",
+    "title": "8 Marla Residential Plot for Sale in Mumtaz City",
+    "price": "Rs 1.10 Crore",
+    "address": "Mumtaz City - Chanab Block, Islamabad",
+    "day": "1 day ago",
+    "verified": "Verified",
+    "label": "Exchange",
+    "trusted": "Trusted"
+  }
+]

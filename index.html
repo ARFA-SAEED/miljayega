@@ -14,141 +14,165 @@
     <link href="https://fonts.googleapis.com/css2?family=Lalezar&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
-   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-   <link rel="stylesheet" href="./Css/miljaega-homepage.css">
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="./Css/miljaega-homepage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+<style>
+    body {
+        background-color: rgb(17, 17, 78);
+    }
+</style>
+
 <body class="bg-gray-50">
-<!-- Header -->
-<header class="bg-white shadow-sm fixed top-0 z-50 w-full">
-    <div class="mx-auto relative py-3 container px-4 sm:px-6">
-        <div class="flex justify-between items-center py-3">
-            <!-- Left: Logo -->
-            <div class="flex-shrink-0">
-                <a class="text-2xl font-bold text-primary-green" href="#" style="font-family: 'Poppins', sans-serif;">
-                   <img src="./images/logo.svg" alt="">
+    <!-- Header -->
+    <header class="bg-white shadow-sm fixed top-0 z-50 w-full">
+        <div class="mx-auto relative py-3 container px-4 sm:px-6">
+            <div class="flex justify-between items-center py-3">
+                <!-- Left: Logo -->
+                <div class="flex-shrink-0">
+                    <a class="text-2xl font-bold text-primary-green" href="#"
+                        style="font-family: 'Poppins', sans-serif;">
+                        <img src="./images/logo.svg" alt="">
+                    </a>
+                </div>
+                <!-- Center: Nav Bar (Visible only on XL and above) -->
+                <nav
+                    class="hidden xl:flex absolute left-1/2 transform justify-content-center -translate-x-1/2 space-x-6 ms-33 text-sm font-medium text-gray-600">
+                    <a href="#" class="flex flex-col items-center gap-2 hover:text-primary-green">
+                        <img src="./images/second-hand.png" alt="Used Items" class="w-6 h-6 object-contain"> Used
+                    </a>
+                    <a href="#" class="flex flex-col items-center gap-2 hover:text-primary-green">
+                        <img src="./images/new.png" alt="New Items" class="w-6 h-6 object-contain"> New
+                    </a>
+                    <a href="#" class="flex flex-col items-center gap-2 hover:text-primary-green">
+                        <img src="./images/exchange.png" alt="Exchange" class="w-6 h-6 object-contain"> Exchange
+                    </a>
+                    <a href="#" class="flex flex-col items-center gap-2 hover:text-primary-green">
+                        <img src="./images/rent.png" alt="Rentals" class="w-6 h-6 object-contain"> Rentals
+                    </a>
+                </nav>
+
+                <!-- Right: Hamburger Menu (Visible on sm and md) -->
+                <button id="mobileMenuToggle"
+                    class="block xl:hidden text-gray-700 hover:text-primary-green focus:outline-none">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+    <!-- Mobile Menu Dropdown -->
+    <div id="mobileMenu" class="xl:hidden hidden bg-white shadow-md fixed top-[72px] w-full z-40">
+        <div class="px-4 py-4 space-y-4 text-sm font-medium text-gray-700">
+            <!-- Center Nav Items (from header) -->
+            <div class="flex justify-around text-center gap-2">
+                <a href="#" class="flex flex-col items-center gap-1 hover:text-primary-green">
+                    <img src="./images/second-hand.png" alt="Used Items" class="w-6 h-6 object-contain"> Used
+                </a>
+                <a href="#" class="flex flex-col items-center gap-1 hover:text-primary-green">
+                    <img src="./images/new.png" alt="New Items" class="w-6 h-6 object-contain"> New
+                </a>
+                <a href="#" class="flex flex-col items-center gap-1 hover:text-primary-green">
+                    <img src="./images/exchange.png" alt="Exchange" class="w-6 h-6 object-contain"> Exchange
+                </a>
+                <a href="#" class="flex flex-col items-center gap-1 hover:text-primary-green">
+                    <img src="./images/rent.png" alt="Rentals" class="w-6 h-6 object-contain"> Rentals
                 </a>
             </div>
-<!-- Center: Nav Bar (Visible only on XL and above) -->
-<nav class="hidden xl:flex absolute left-1/2 transform justify-content-center -translate-x-1/2 space-x-6 ms-33 text-sm font-medium text-gray-600">
-    <a href="#" class="flex flex-col items-center gap-2 hover:text-primary-green">
-        <img src="./images/second-hand.png" alt="Used Items" class="w-6 h-6 object-contain"> Used
-    </a>
-    <a href="#" class="flex flex-col items-center gap-2 hover:text-primary-green">
-        <img src="./images/new.png" alt="New Items" class="w-6 h-6 object-contain"> New
-    </a>
-    <a href="#" class="flex flex-col items-center gap-2 hover:text-primary-green">
-        <img src="./images/exchange.png" alt="Exchange" class="w-6 h-6 object-contain"> Exchange
-    </a>
-    <a href="#" class="flex flex-col items-center gap-2 hover:text-primary-green">
-        <img src="./images/rent.png" alt="Rentals" class="w-6 h-6 object-contain"> Rentals
-    </a>
-</nav>
 
-            <!-- Right: Hamburger Menu (Visible on sm and md) -->
-            <button id="mobileMenuToggle" class="block xl:hidden text-gray-700 hover:text-primary-green focus:outline-none">
-                <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2"
-                     viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                          d="M4 6h16M4 12h16M4 18h16"></path>
-                </svg>
-            </button>
+            <!-- Categories Row Items -->
+            <div class="space-y-2 pt-2 border-t border-gray-200">
+                <a href="#" class="block hover:text-primary-green">Trending 🔥</a>
+                <a href="#" class="block hover:text-primary-green">Mobile Phones</a>
+                <a href="#" class="block hover:text-primary-green">Motorcycles</a>
+                <a href="#" class="block hover:text-primary-green">Electronics</a>
+                <a href="#" class="block hover:text-primary-green">Jobs</a>
+                <a href="#" class="block hover:text-primary-green">Furniture</a>
+                <a href="#" class="block hover:text-primary-green">Fashion</a>
+                <a href="#" class="block hover:text-primary-green">Services</a>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="space-y-2 pt-2 border-t border-gray-200">
+                <button
+                    class="w-full border border-primary-green text-primary-green text-sm font-semibold rounded-lg py-2 hover:bg-green-50">
+                    Sell Your Service
+                </button>
+                <button
+                    class="w-full bg-[#0C3168] text-white text-sm font-semibold rounded-lg py-2 hover:bg-opacity-90">
+                    Post Free Adds
+                </button>
+            </div>
         </div>
     </div>
-</header>
-<!-- Mobile Menu Dropdown -->
-<div id="mobileMenu" class="xl:hidden hidden bg-white shadow-md fixed top-[72px] w-full z-40">
-    <div class="px-4 py-4 space-y-4 text-sm font-medium text-gray-700">
-        <!-- Center Nav Items (from header) -->
-        <div class="flex justify-around text-center gap-2">
-            <a href="#" class="flex flex-col items-center gap-1 hover:text-primary-green">
-                <img src="./images/second-hand.png" alt="Used Items" class="w-6 h-6 object-contain"> Used
-            </a>
-            <a href="#" class="flex flex-col items-center gap-1 hover:text-primary-green">
-                <img src="./images/new.png" alt="New Items" class="w-6 h-6 object-contain"> New
-            </a>
-            <a href="#" class="flex flex-col items-center gap-1 hover:text-primary-green">
-                <img src="./images/exchange.png" alt="Exchange" class="w-6 h-6 object-contain"> Exchange
-            </a>
-            <a href="#" class="flex flex-col items-center gap-1 hover:text-primary-green">
-                <img src="./images/rent.png" alt="Rentals" class="w-6 h-6 object-contain"> Rentals
-            </a>
-        </div>
 
-        <!-- Categories Row Items -->
-        <div class="space-y-2 pt-2 border-t border-gray-200">
-            <a href="#" class="block hover:text-primary-green">Trending 🔥</a>
-            <a href="#" class="block hover:text-primary-green">Mobile Phones</a>
-            <a href="#" class="block hover:text-primary-green">Motorcycles</a>
-            <a href="#" class="block hover:text-primary-green">Electronics</a>
-            <a href="#" class="block hover:text-primary-green">Jobs</a>
-            <a href="#" class="block hover:text-primary-green">Furniture</a>
-            <a href="#" class="block hover:text-primary-green">Fashion</a>
-            <a href="#" class="block hover:text-primary-green">Services</a>
-        </div>
+    <!-- Spacer to avoid overlap -->
+    <div class="pt-[72px] lg:pt-[128px]"></div>
 
-        <!-- Action Buttons -->
-        <div class="space-y-2 pt-2 border-t border-gray-200">
-            <button class="w-full border border-primary-green text-primary-green text-sm font-semibold rounded-lg py-2 hover:bg-green-50">
-                Sell Your Service
-            </button>
-            <button class="w-full bg-[#0C3168] text-white text-sm font-semibold rounded-lg py-2 hover:bg-opacity-90">
-               Post Free Adds
-            </button>
-        </div>
-    </div>
-</div>
-
-<!-- Spacer to avoid overlap -->
-<div class="pt-[72px] lg:pt-[128px]"></div>
-
-<!-- Categories Row -->
-<div class="bg-white shadow-sm fixed top-[72px] z-40 w-full hidden xl:block">
-    <div class="container mx-auto">
-        <div class="relative group">
-            <div class="flex items-center">
-                <div class="flex-1 overflow-x-auto scrollbar-hide py-3">
-                    <div class="flex space-x-4 min-w-max">
-                        <a href="#" class="flex-shrink-0 font-medium text-gray-700 hover:text-primary-green whitespace-nowrap flex items-center">
-                            Trending 🔥
-                        </a>
-                        <div class="relative group" x-data="{ open: false }" @mouseenter="open = true" @mouseleave="open = false">
-                            <button class="font-medium text-gray-700 hover:text-primary-green whitespace-nowrap flex items-center">
-                                Mobile Phones
-                                <svg class="w-4 h-4 ml-1 text-gray-400 group-hover:text-primary-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                                </svg>
-                            </button>
-                            <div class="absolute left-0 mt-1 w-[800px] bg-white shadow-xl rounded-md p-4 hidden group-hover:block z-50 border border-gray-200"
-                                x-show="open" @click.away="open = false">
-                                <!-- Dropdown content -->
+    <!-- Categories Row -->
+    <div class="bg-white shadow-sm fixed top-[72px] z-40 w-full hidden xl:block">
+        <div class="container mx-auto">
+            <div class="relative group">
+                <div class="flex items-center">
+                    <div class="flex-1 overflow-x-auto scrollbar-hide py-3">
+                        <div class="flex space-x-4 min-w-max">
+                            <a href="#"
+                                class="flex-shrink-0 font-medium text-gray-700 hover:text-primary-green whitespace-nowrap flex items-center">
+                                Trending 🔥
+                            </a>
+                            <div class="relative group" x-data="{ open: false }" @mouseenter="open = true"
+                                @mouseleave="open = false">
+                                <button
+                                    class="font-medium text-gray-700 hover:text-primary-green whitespace-nowrap flex items-center">
+                                    Mobile Phones
+                                    <svg class="w-4 h-4 ml-1 text-gray-400 group-hover:text-primary-green" fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 9l-7 7-7-7"></path>
+                                    </svg>
+                                </button>
+                                <div class="absolute left-0 mt-1 w-[800px] bg-white shadow-xl rounded-md p-4 hidden group-hover:block z-50 border border-gray-200"
+                                    x-show="open" @click.away="open = false">
+                                    <!-- Dropdown content -->
+                                </div>
                             </div>
+                            <a href="#"
+                                class="flex-shrink-0 font-medium text-gray-700 hover:text-primary-green whitespace-nowrap">Motorcycles</a>
+                            <a href="#"
+                                class="flex-shrink-0 font-medium text-gray-700 hover:text-primary-green whitespace-nowrap">Electronics</a>
+                            <a href="#"
+                                class="flex-shrink-0 font-medium text-gray-700 hover:text-primary-green whitespace-nowrap">Jobs</a>
+                            <a href="#"
+                                class="flex-shrink-0 font-medium text-gray-700 hover:text-primary-green whitespace-nowrap">Furniture</a>
+                            <a href="#"
+                                class="flex-shrink-0 font-medium text-gray-700 hover:text-primary-green whitespace-nowrap">Fashion</a>
+                            <a href="#"
+                                class="flex-shrink-0 font-medium text-gray-700 hover:text-primary-green whitespace-nowrap">Services</a>
                         </div>
-                        <a href="#" class="flex-shrink-0 font-medium text-gray-700 hover:text-primary-green whitespace-nowrap">Motorcycles</a>
-                        <a href="#" class="flex-shrink-0 font-medium text-gray-700 hover:text-primary-green whitespace-nowrap">Electronics</a>
-                        <a href="#" class="flex-shrink-0 font-medium text-gray-700 hover:text-primary-green whitespace-nowrap">Jobs</a>
-                        <a href="#" class="flex-shrink-0 font-medium text-gray-700 hover:text-primary-green whitespace-nowrap">Furniture</a>
-                        <a href="#" class="flex-shrink-0 font-medium text-gray-700 hover:text-primary-green whitespace-nowrap">Fashion</a>
-                        <a href="#" class="flex-shrink-0 font-medium text-gray-700 hover:text-primary-green whitespace-nowrap">Services</a>
                     </div>
-                </div>
 
-                <div class="flex-shrink-0 flex items-center space-x-3 ml-4">
-                    <button class="h-9 border mt-4 mb-2 border-[#0C3168] text-[#0C3168] text-sm font-semibold rounded-lg flex items-center justify-center hover:bg-green-50 px-4">
-                        Sell Your Service
-                    </button>
-                    <button class="h-9 mt-4 mb-2 bg-[#0C3168] text-white text-sm font-semibold rounded-lg flex items-center justify-center hover:bg-opacity-90 px-4">
-                       Post Free Adds
-                    </button>
+                    <div class="flex-shrink-0 flex items-center space-x-3 ml-4">
+                        <button
+                            class="h-9 border mt-4 mb-2 border-[#0C3168] text-[#0C3168] text-sm font-semibold rounded-lg flex items-center justify-center hover:bg-green-50 px-4">
+                            Sell Your Service
+                        </button>
+                        <button
+                            class="h-9 mt-4 mb-2 bg-[#0C3168] text-white text-sm font-semibold rounded-lg flex items-center justify-center hover:bg-opacity-90 px-4">
+                            Post Free Adds
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
-<!-- Your content continues here -->
+    <!-- Your content continues here -->
 
-   
+
     <!-- Combined Section -->
     <section class="relative h-[300px] w-full overflow-hidden mt-0 pt-0">
         <!-- Background Video -->
@@ -214,267 +238,306 @@
         </div>
     </section>
 
-   <main class="container mx-auto mt-7">
-  <!-- Banner Section with Responsive Horizontal Spacing -->
-  <section class="mb-8">
-    <div class="px-4 sm:px-6 md:px-8">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+    <main class="container mx-auto mt-7">
+        <!-- Banner Section with Responsive Horizontal Spacing -->
+        <section class="mb-8">
+            <div class="px-4 sm:px-6 md:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
 
-        <!-- Local Services Card -->
-        <div
-          class="card relative p-0 overflow-hidden rounded-lg shadow-lg h-40 flex flex-col transform transition-transform duration-300 ease-in-out hover:scale-[1.02]">
-          <div class="relative w-full h-40">
-            <img src="./images/services.webp" alt="Local Services" class="w-full h-full object-cover" />
-            <div class="absolute inset-0 bg-black bg-opacity-75 flex flex-col justify-end p-3">
-              <h3 class="text-2xl font-bold text-white">Local Services</h3>
-              <div class="mt-1 flex flex-wrap gap-1 text-xs text-white">
-                <a class="hover:underline" href="#">Electricians</a><span>/</span>
-                <a class="hover:underline" href="#">Plumbers</a><span>/</span>
-                <a class="hover:underline" href="#">Glass Workers</a>
-              </div>
+                    <!-- Local Services Card -->
+                    <div
+                        class="card relative p-0 overflow-hidden rounded-lg shadow-lg h-40 flex flex-col transform transition-transform duration-300 ease-in-out hover:scale-[1.02]">
+                        <div class="relative w-full h-40">
+                            <img src="./images/services.webp" alt="Local Services" class="w-full h-full object-cover" />
+                            <div class="absolute inset-0 bg-black bg-opacity-75 flex flex-col justify-end p-3">
+                                <h3 class="text-2xl font-bold text-white">Local Services</h3>
+                                <div class="mt-1 flex flex-wrap gap-1 text-xs text-white">
+                                    <a class="hover:underline" href="#">Electricians</a><span>/</span>
+                                    <a class="hover:underline" href="#">Plumbers</a><span>/</span>
+                                    <a class="hover:underline" href="#">Glass Workers</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Freelancers Card -->
+                    <div
+                        class="card relative p-0 overflow-hidden rounded-lg shadow-lg h-40 flex flex-col transform transition-transform duration-300 ease-in-out hover:scale-[1.02]">
+                        <div class="relative w-full h-40">
+                            <img src="./images/services.webp" alt="Freelancers" class="w-full h-full object-cover" />
+                            <div class="absolute inset-0 bg-black bg-opacity-75 flex flex-col justify-end p-3">
+                                <h3 class="text-2xl font-bold text-white">Freelancers</h3>
+                                <div class="mt-1 flex flex-wrap gap-1 text-xs text-white">
+                                    <a class="hover:underline" href="#">Electricians</a><span>/</span>
+                                    <a class="hover:underline" href="#">Plumbers</a><span>/</span>
+                                    <a class="hover:underline" href="#">Glass Workers</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Properties Card -->
+                    <div
+                        class="card relative p-0 overflow-hidden rounded-lg shadow-lg h-40 flex flex-col transform transition-transform duration-300 ease-in-out hover:scale-[1.02]">
+                        <div class="relative w-full h-40">
+                            <img src="./images/services.webp" alt="Properties" class="w-full h-full object-cover" />
+                            <div class="absolute inset-0 bg-black bg-opacity-75 flex flex-col justify-end p-3">
+                                <h3 class="text-2xl font-bold text-white">Properties</h3>
+                                <div class="mt-1 flex flex-wrap gap-1 text-xs text-white">
+                                    <a class="hover:underline" href="#">Electricians</a><span>/</span>
+                                    <a class="hover:underline" href="#">Plumbers</a><span>/</span>
+                                    <a class="hover:underline" href="#">Glass Workers</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Motors Card -->
+                    <div
+                        class="card relative p-0 overflow-hidden rounded-lg shadow-lg h-40 flex flex-col transform transition-transform duration-300 ease-in-out hover:scale-[1.02]">
+                        <div class="relative w-full h-40">
+                            <img src="./images/services.webp" alt="Motors" class="w-full h-full object-cover" />
+                            <div class="absolute inset-0 bg-black bg-opacity-75 flex flex-col justify-end p-3">
+                                <h3 class="text-2xl font-bold text-white">Motors</h3>
+                                <div class="mt-1 flex flex-wrap gap-1 text-xs text-white">
+                                    <a class="hover:underline" href="#">Electricians</a><span>/</span>
+                                    <a class="hover:underline" href="#">Plumbers</a><span>/</span>
+                                    <a class="hover:underline" href="#">Glass Workers</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Classified Ads Card -->
+                    <div
+                        class="card relative p-0 overflow-hidden rounded-lg shadow-lg h-40 flex flex-col transform transition-transform duration-300 ease-in-out hover:scale-[1.02]">
+                        <div class="relative w-full h-40">
+                            <img src="./images/services.webp" alt="Classified Ads" class="w-full h-full object-cover" />
+                            <div class="absolute inset-0 bg-black bg-opacity-75 flex flex-col justify-end p-3">
+                                <h3 class="text-2xl font-bold text-white">Classified Ads</h3>
+                                <div class="mt-1 flex flex-wrap gap-1 text-xs text-white">
+                                    <a class="hover:underline" href="#">Electricians</a><span>/</span>
+                                    <a class="hover:underline" href="#">Plumbers</a><span>/</span>
+                                    <a class="hover:underline" href="#">Glass Workers</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
             </div>
-          </div>
-        </div>
+        </section>
 
-        <!-- Freelancers Card -->
-        <div
-          class="card relative p-0 overflow-hidden rounded-lg shadow-lg h-40 flex flex-col transform transition-transform duration-300 ease-in-out hover:scale-[1.02]">
-          <div class="relative w-full h-40">
-            <img src="./images/services.webp" alt="Freelancers" class="w-full h-full object-cover" />
-            <div class="absolute inset-0 bg-black bg-opacity-75 flex flex-col justify-end p-3">
-              <h3 class="text-2xl font-bold text-white">Freelancers</h3>
-              <div class="mt-1 flex flex-wrap gap-1 text-xs text-white">
-                <a class="hover:underline" href="#">Electricians</a><span>/</span>
-                <a class="hover:underline" href="#">Plumbers</a><span>/</span>
-                <a class="hover:underline" href="#">Glass Workers</a>
-              </div>
+
+
+
+        <section class="mb-8">
+            <div class="px-4 sm:px-6 md:px-8">
+                <div class="flex justify-between items-center mb-6">
+                    <h2 class="text-3xl font-bold text-[#0C3168]" style="font-family: 'Poppins', sans-serif;">Categories
+                    </h2>
+                </div>
+
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+
+                    <!-- Mobile Phones -->
+                    <a href="#"
+                        class="flex flex-col items-center p-4 rounded-lg transition-all duration-300 border border-gray-200 hover:border-primary-green hover:shadow-md group"
+                        aria-label="Mobile Phones">
+                        <div
+                            class="p-3 rounded-full mb-3 transition-colors duration-300 bg-blue-50 group-hover:bg-blue-100">
+                            <img src="https://cdn-icons-png.flaticon.com/512/15/15874.png" alt="Mobile Phones Icon"
+                                class="w-8 h-8">
+                        </div>
+                        <h3 class="font-semibold text-gray-800 text-center mb-1">Mobile Phones</h3>
+                        <span class="text-xs text-gray-500 group-hover:text-primary-green">12,345 ads</span>
+                    </a>
+
+                    <!-- Vehicles -->
+                    <a href="#"
+                        class="flex flex-col items-center p-4 rounded-lg transition-all duration-300 border border-gray-200 hover:border-primary-green hover:shadow-md group"
+                        aria-label="Vehicles">
+                        <div
+                            class="p-3 rounded-full mb-3 transition-colors duration-300 bg-green-50 group-hover:bg-green-100">
+                            <i class="fa-solid fa-car text-2xl text-green-700"></i>
+                        </div>
+                        <h3 class="font-semibold text-gray-800 text-center mb-1">Vehicles</h3>
+                        <span class="text-xs text-gray-500 group-hover:text-primary-green">8,765 ads</span>
+                    </a>
+
+                    <!-- Property -->
+                    <a href="#"
+                        class="flex flex-col items-center p-4 rounded-lg transition-all duration-300 border border-gray-200 hover:border-primary-green hover:shadow-md group"
+                        aria-label="Property">
+                        <div
+                            class="p-3 rounded-full mb-3 transition-colors duration-300 bg-purple-50 group-hover:bg-purple-100">
+                            <i class="fa-solid fa-house text-2xl text-purple-700"></i>
+                        </div>
+                        <h3 class="font-semibold text-gray-800 text-center mb-1">Property</h3>
+                        <span class="text-xs text-gray-500 group-hover:text-primary-green">5,432 ads</span>
+                    </a>
+
+                    <!-- Electronics -->
+                    <a href="#"
+                        class="flex flex-col items-center p-4 rounded-lg transition-all duration-300 border border-gray-200 hover:border-primary-green hover:shadow-md group"
+                        aria-label="Electronics">
+                        <div
+                            class="p-3 rounded-full mb-3 transition-colors duration-300 bg-yellow-50 group-hover:bg-yellow-100">
+                            <i class="fa-solid fa-plug text-2xl text-yellow-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-gray-800 text-center mb-1">Electronics</h3>
+                        <span class="text-xs text-gray-500 group-hover:text-primary-green">7,890 ads</span>
+                    </a>
+
+                    <!-- Services -->
+                    <a href="#"
+                        class="flex flex-col items-center p-4 rounded-lg transition-all duration-300 border border-gray-200 hover:border-primary-green hover:shadow-md group"
+                        aria-label="Services">
+                        <div
+                            class="p-3 rounded-full mb-3 transition-colors duration-300 bg-red-50 group-hover:bg-red-100">
+                            <i class="fa-solid fa-bell-concierge text-2xl text-red-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-gray-800 text-center mb-1">Services</h3>
+                        <span class="text-xs text-gray-500 group-hover:text-primary-green">3,210 ads</span>
+                    </a>
+
+                    <!-- Jobs -->
+                    <a href="#"
+                        class="flex flex-col items-center p-4 rounded-lg transition-all duration-300 border border-gray-200 hover:border-primary-green hover:shadow-md group"
+                        aria-label="Jobs">
+                        <div
+                            class="p-3 rounded-full mb-3 transition-colors duration-300 bg-indigo-50 group-hover:bg-indigo-100">
+                            <i class="fa-solid fa-user-doctor text-2xl text-indigo-700"></i>
+                        </div>
+                        <h3 class="font-semibold text-gray-800 text-center mb-1">Jobs</h3>
+                        <span class="text-xs text-gray-500 group-hover:text-primary-green">2,345 ads</span>
+                    </a>
+
+                    <!-- Animals -->
+                    <a href="#"
+                        class="flex flex-col items-center p-4 rounded-lg transition-all duration-300 border border-gray-200 hover:border-primary-green hover:shadow-md group"
+                        aria-label="Animals">
+                        <div
+                            class="p-3 rounded-full mb-3 transition-colors duration-300 bg-pink-50 group-hover:bg-pink-100">
+                            <i class="fa-solid fa-dog text-2xl text-pink-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-gray-800 text-center mb-1">Animals</h3>
+                        <span class="text-xs text-gray-500 group-hover:text-primary-green">1,234 ads</span>
+                    </a>
+
+                    <!-- Furniture -->
+                    <a href="#"
+                        class="flex flex-col items-center p-4 rounded-lg transition-all duration-300 border border-gray-200 hover:border-primary-green hover:shadow-md group"
+                        aria-label="Furniture">
+                        <div
+                            class="p-3 rounded-full mb-3 transition-colors duration-300 bg-orange-50 group-hover:bg-orange-100">
+                            <i class="fa-solid fa-couch text-2xl text-orange-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-gray-800 text-center mb-1">Furniture</h3>
+                        <span class="text-xs text-gray-500 group-hover:text-primary-green">4,567 ads</span>
+                    </a>
+
+                    <!-- Fashion -->
+                    <a href="#"
+                        class="flex flex-col items-center p-4 rounded-lg transition-all duration-300 border border-gray-200 hover:border-primary-green hover:shadow-md group"
+                        aria-label="Fashion">
+                        <div
+                            class="p-3 rounded-full mb-3 transition-colors duration-300 bg-teal-50 group-hover:bg-teal-100">
+                            <i class="fa-solid fa-shirt text-2xl text-teal-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-gray-800 text-center mb-1">Fashion</h3>
+                        <span class="text-xs text-gray-500 group-hover:text-primary-green">6,789 ads</span>
+                    </a>
+
+                    <!-- Books -->
+                    <a href="#"
+                        class="flex flex-col items-center p-4 rounded-lg transition-all duration-300 border border-gray-200 hover:border-primary-green hover:shadow-md group"
+                        aria-label="Books">
+                        <div
+                            class="p-3 rounded-full mb-3 transition-colors duration-300 bg-amber-50 group-hover:bg-amber-100">
+                            <i class="fa-solid fa-book text-2xl text-amber-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-gray-800 text-center mb-1">Books</h3>
+                        <span class="text-xs text-gray-500 group-hover:text-primary-green">987 ads</span>
+                    </a>
+
+                    <!-- Kids -->
+                    <a href="#"
+                        class="flex flex-col items-center p-4 rounded-lg transition-all duration-300 border border-gray-200 hover:border-primary-green hover:shadow-md group"
+                        aria-label="Kids">
+                        <div
+                            class="p-3 rounded-full mb-3 transition-colors duration-300 bg-cyan-50 group-hover:bg-cyan-100">
+                            <i class="fa-solid fa-children text-2xl text-cyan-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-gray-800 text-center mb-1">Kids</h3>
+                        <span class="text-xs text-gray-500 group-hover:text-primary-green">1,543 ads</span>
+                    </a>
+
+                    <!-- More -->
+                    <a href="#"
+                        class="flex flex-col items-center p-4 rounded-lg transition-all duration-300 border border-gray-200 hover:border-primary-green hover:shadow-md group"
+                        aria-label="More Categories">
+                        <div
+                            class="p-3 rounded-full mb-3 transition-colors duration-300 bg-gray-50 group-hover:bg-gray-100">
+                            <i class="fa-solid fa-arrow-right text-2xl text-gray-700"></i>
+                        </div>
+                        <h3 class="font-semibold text-gray-800 text-center mb-1">More</h3>
+                        <span class="text-xs text-gray-500 group-hover:text-primary-green">View all</span>
+                    </a>
+
+                </div>
             </div>
-          </div>
-        </div>
+        </section>
+        <!-- Cars Section -->
+        <section class="mb-16">
+            <div class="px-4 sm:px-6 md:px-8">
+                <div class="flex justify-between items-center mb-6">
+                    <h2 class="text-3xl font-bold text-[#0C3168]" style="font-family: 'Poppins', sans-serif;">Cars</h2>
+                    <a class="text-blue-600 font-semibold hover:underline" href="#">View More</a>
+                </div>
 
-        <!-- Properties Card -->
-        <div
-          class="card relative p-0 overflow-hidden rounded-lg shadow-lg h-40 flex flex-col transform transition-transform duration-300 ease-in-out hover:scale-[1.02]">
-          <div class="relative w-full h-40">
-            <img src="./images/services.webp" alt="Properties" class="w-full h-full object-cover" />
-            <div class="absolute inset-0 bg-black bg-opacity-75 flex flex-col justify-end p-3">
-              <h3 class="text-2xl font-bold text-white">Properties</h3>
-              <div class="mt-1 flex flex-wrap gap-1 text-xs text-white">
-                <a class="hover:underline" href="#">Electricians</a><span>/</span>
-                <a class="hover:underline" href="#">Plumbers</a><span>/</span>
-                <a class="hover:underline" href="#">Glass Workers</a>
-              </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8" id="mycards">
+
+                </div>
             </div>
-          </div>
-        </div>
+        </section>
+        <!-- Cars Section End -->
 
-        <!-- Motors Card -->
-        <div
-          class="card relative p-0 overflow-hidden rounded-lg shadow-lg h-40 flex flex-col transform transition-transform duration-300 ease-in-out hover:scale-[1.02]">
-          <div class="relative w-full h-40">
-            <img src="./images/services.webp" alt="Motors" class="w-full h-full object-cover" />
-            <div class="absolute inset-0 bg-black bg-opacity-75 flex flex-col justify-end p-3">
-              <h3 class="text-2xl font-bold text-white">Motors</h3>
-              <div class="mt-1 flex flex-wrap gap-1 text-xs text-white">
-                <a class="hover:underline" href="#">Electricians</a><span>/</span>
-                <a class="hover:underline" href="#">Plumbers</a><span>/</span>
-                <a class="hover:underline" href="#">Glass Workers</a>
-              </div>
+
+        <!-- Properties Section -->
+        <section class="mb-16">
+            <div class="px-4 sm:px-6 md:px-8">
+                <div class="flex justify-between items-center mb-6">
+                    <h2 class="text-3xl font-bold text-[#0C3168]" style="font-family: 'Poppins', sans-serif;">
+                        Properties
+                    </h2>
+                    <a class="text-blue-600 font-semibold hover:underline" href="#">View More</a>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8" id="mycardsproperties">
+
+
+
+                </div>
             </div>
-          </div>
-        </div>
-
-        <!-- Classified Ads Card -->
-        <div
-          class="card relative p-0 overflow-hidden rounded-lg shadow-lg h-40 flex flex-col transform transition-transform duration-300 ease-in-out hover:scale-[1.02]">
-          <div class="relative w-full h-40">
-            <img src="./images/services.webp" alt="Classified Ads" class="w-full h-full object-cover" />
-            <div class="absolute inset-0 bg-black bg-opacity-75 flex flex-col justify-end p-3">
-              <h3 class="text-2xl font-bold text-white">Classified Ads</h3>
-              <div class="mt-1 flex flex-wrap gap-1 text-xs text-white">
-                <a class="hover:underline" href="#">Electricians</a><span>/</span>
-                <a class="hover:underline" href="#">Plumbers</a><span>/</span>
-                <a class="hover:underline" href="#">Glass Workers</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-
-
-
-      <section class="mb-8">
-  <div class="px-4 sm:px-6 md:px-8">
-    <div class="flex justify-between items-center mb-6">
-      <h2 class="text-3xl font-bold text-gray-800" style="font-family: 'Poppins', sans-serif;">Categories</h2>
-    </div>
-    
-    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
-      
-      <!-- Mobile Phones -->
-      <a href="#" class="flex flex-col items-center p-4 rounded-lg transition-all duration-300 border border-gray-200 hover:border-primary-green hover:shadow-md group" aria-label="Mobile Phones">
-        <div class="p-3 rounded-full mb-3 transition-colors duration-300 bg-blue-50 group-hover:bg-blue-100">
-          <img src="https://cdn-icons-png.flaticon.com/512/15/15874.png" alt="Mobile Phones Icon" class="w-8 h-8">
-        </div>
-        <h3 class="font-semibold text-gray-800 text-center mb-1">Mobile Phones</h3>
-        <span class="text-xs text-gray-500 group-hover:text-primary-green">12,345 ads</span>
-      </a>
-
-      <!-- Vehicles -->
-      <a href="#" class="flex flex-col items-center p-4 rounded-lg transition-all duration-300 border border-gray-200 hover:border-primary-green hover:shadow-md group" aria-label="Vehicles">
-        <div class="p-3 rounded-full mb-3 transition-colors duration-300 bg-green-50 group-hover:bg-green-100">
-          <i class="fa-solid fa-car text-2xl text-green-700"></i>
-        </div>
-        <h3 class="font-semibold text-gray-800 text-center mb-1">Vehicles</h3>
-        <span class="text-xs text-gray-500 group-hover:text-primary-green">8,765 ads</span>
-      </a>
-
-      <!-- Property -->
-      <a href="#" class="flex flex-col items-center p-4 rounded-lg transition-all duration-300 border border-gray-200 hover:border-primary-green hover:shadow-md group" aria-label="Property">
-        <div class="p-3 rounded-full mb-3 transition-colors duration-300 bg-purple-50 group-hover:bg-purple-100">
-          <i class="fa-solid fa-house text-2xl text-purple-700"></i>
-        </div>
-        <h3 class="font-semibold text-gray-800 text-center mb-1">Property</h3>
-        <span class="text-xs text-gray-500 group-hover:text-primary-green">5,432 ads</span>
-      </a>
-
-      <!-- Electronics -->
-      <a href="#" class="flex flex-col items-center p-4 rounded-lg transition-all duration-300 border border-gray-200 hover:border-primary-green hover:shadow-md group" aria-label="Electronics">
-        <div class="p-3 rounded-full mb-3 transition-colors duration-300 bg-yellow-50 group-hover:bg-yellow-100">
-          <i class="fa-solid fa-plug text-2xl text-yellow-600"></i>
-        </div>
-        <h3 class="font-semibold text-gray-800 text-center mb-1">Electronics</h3>
-        <span class="text-xs text-gray-500 group-hover:text-primary-green">7,890 ads</span>
-      </a>
-
-      <!-- Services -->
-      <a href="#" class="flex flex-col items-center p-4 rounded-lg transition-all duration-300 border border-gray-200 hover:border-primary-green hover:shadow-md group" aria-label="Services">
-        <div class="p-3 rounded-full mb-3 transition-colors duration-300 bg-red-50 group-hover:bg-red-100">
-          <i class="fa-solid fa-bell-concierge text-2xl text-red-600"></i>
-        </div>
-        <h3 class="font-semibold text-gray-800 text-center mb-1">Services</h3>
-        <span class="text-xs text-gray-500 group-hover:text-primary-green">3,210 ads</span>
-      </a>
-
-      <!-- Jobs -->
-      <a href="#" class="flex flex-col items-center p-4 rounded-lg transition-all duration-300 border border-gray-200 hover:border-primary-green hover:shadow-md group" aria-label="Jobs">
-        <div class="p-3 rounded-full mb-3 transition-colors duration-300 bg-indigo-50 group-hover:bg-indigo-100">
-          <i class="fa-solid fa-user-doctor text-2xl text-indigo-700"></i>
-        </div>
-        <h3 class="font-semibold text-gray-800 text-center mb-1">Jobs</h3>
-        <span class="text-xs text-gray-500 group-hover:text-primary-green">2,345 ads</span>
-      </a>
-
-      <!-- Animals -->
-      <a href="#" class="flex flex-col items-center p-4 rounded-lg transition-all duration-300 border border-gray-200 hover:border-primary-green hover:shadow-md group" aria-label="Animals">
-        <div class="p-3 rounded-full mb-3 transition-colors duration-300 bg-pink-50 group-hover:bg-pink-100">
-          <i class="fa-solid fa-dog text-2xl text-pink-600"></i>
-        </div>
-        <h3 class="font-semibold text-gray-800 text-center mb-1">Animals</h3>
-        <span class="text-xs text-gray-500 group-hover:text-primary-green">1,234 ads</span>
-      </a>
-
-      <!-- Furniture -->
-      <a href="#" class="flex flex-col items-center p-4 rounded-lg transition-all duration-300 border border-gray-200 hover:border-primary-green hover:shadow-md group" aria-label="Furniture">
-        <div class="p-3 rounded-full mb-3 transition-colors duration-300 bg-orange-50 group-hover:bg-orange-100">
-          <i class="fa-solid fa-couch text-2xl text-orange-600"></i>
-        </div>
-        <h3 class="font-semibold text-gray-800 text-center mb-1">Furniture</h3>
-        <span class="text-xs text-gray-500 group-hover:text-primary-green">4,567 ads</span>
-      </a>
-
-      <!-- Fashion -->
-      <a href="#" class="flex flex-col items-center p-4 rounded-lg transition-all duration-300 border border-gray-200 hover:border-primary-green hover:shadow-md group" aria-label="Fashion">
-        <div class="p-3 rounded-full mb-3 transition-colors duration-300 bg-teal-50 group-hover:bg-teal-100">
-          <i class="fa-solid fa-shirt text-2xl text-teal-600"></i>
-        </div>
-        <h3 class="font-semibold text-gray-800 text-center mb-1">Fashion</h3>
-        <span class="text-xs text-gray-500 group-hover:text-primary-green">6,789 ads</span>
-      </a>
-
-      <!-- Books -->
-      <a href="#" class="flex flex-col items-center p-4 rounded-lg transition-all duration-300 border border-gray-200 hover:border-primary-green hover:shadow-md group" aria-label="Books">
-        <div class="p-3 rounded-full mb-3 transition-colors duration-300 bg-amber-50 group-hover:bg-amber-100">
-          <i class="fa-solid fa-book text-2xl text-amber-600"></i>
-        </div>
-        <h3 class="font-semibold text-gray-800 text-center mb-1">Books</h3>
-        <span class="text-xs text-gray-500 group-hover:text-primary-green">987 ads</span>
-      </a>
-
-      <!-- Kids -->
-      <a href="#" class="flex flex-col items-center p-4 rounded-lg transition-all duration-300 border border-gray-200 hover:border-primary-green hover:shadow-md group" aria-label="Kids">
-        <div class="p-3 rounded-full mb-3 transition-colors duration-300 bg-cyan-50 group-hover:bg-cyan-100">
-          <i class="fa-solid fa-children text-2xl text-cyan-600"></i>
-        </div>
-        <h3 class="font-semibold text-gray-800 text-center mb-1">Kids</h3>
-        <span class="text-xs text-gray-500 group-hover:text-primary-green">1,543 ads</span>
-      </a>
-
-      <!-- More -->
-      <a href="#" class="flex flex-col items-center p-4 rounded-lg transition-all duration-300 border border-gray-200 hover:border-primary-green hover:shadow-md group" aria-label="More Categories">
-        <div class="p-3 rounded-full mb-3 transition-colors duration-300 bg-gray-50 group-hover:bg-gray-100">
-          <i class="fa-solid fa-arrow-right text-2xl text-gray-700"></i>
-        </div>
-        <h3 class="font-semibold text-gray-800 text-center mb-1">More</h3>
-        <span class="text-xs text-gray-500 group-hover:text-primary-green">View all</span>
-      </a>
-
-    </div>
-  </div>
-</section>
-<!-- Cars Section -->
-<section class="mb-16">
-  <div class="px-4 sm:px-6 md:px-8">
-    <div class="flex justify-between items-center mb-6">
-      <h2 class="text-3xl font-bold text-gray-800" style="font-family: 'Poppins', sans-serif;">Cars</h2>
-      <a class="text-blue-600 font-semibold hover:underline" href="#">View More</a>
-    </div>
-
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8" id="mycards">
-    
-    </div>
-  </div>
-</section>
-<!-- Cars Section End -->
-
-
-       <!-- Properties Section -->
-<section class="mb-16">
-  <div class="px-4 sm:px-6 md:px-8">
-    <div class="flex justify-between items-center mb-6">
-      <h2 class="text-3xl font-bold text-gray-800" style="font-family: 'Poppins', sans-serif;">
-        Properties
-      </h2>
-      <a class="text-blue-600 font-semibold hover:underline" href="#">View More</a>
-    </div>
-
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8" id="mycardsproperties">
-
-     
-
-    </div>
-  </div>
-</section>
-<!-- Properties Section End -->
+        </section>
+        <!-- Properties Section End -->
 
 
         <!-- Mobile Phones Section -->
         <section class="mb-16">
-              <div class="px-4 sm:px-6 md:px-8">
-            <div class="flex justify-between items-center mb-6">
-                <h2 class="text-3xl font-bold text-gray-800" style="font-family: 'Poppins', sans-serif;">Mobile Phones
-                </h2>
-                <a class="text-blue-600 font-semibold hover:underline" href="#">View More</a>
-            </div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8" id="mycardsmobile">
-            
+            <div class="px-4 sm:px-6 md:px-8">
+                <div class="flex justify-between items-center mb-6">
+                    <h2 class="text-3xl font-bold text-[#0C3168]" style="font-family: 'Poppins', sans-serif;">Mobile
+                        Phones
+                    </h2>
+                    <a class="text-blue-600 font-semibold hover:underline" href="#">View More</a>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8" id="mycardsmobile">
 
-                <!-- Card 4 end -->
-                 </div>
+
+                    <!-- Card 4 end -->
+                </div>
             </div>
         </section>
         <!-- Mobuile Phones Section end -->
@@ -482,618 +545,162 @@
 
         <!-- Local Services Section -->
         <section class="mb-16">
-                 <div class="px-4 sm:px-6 md:px-8">
-            <div class="flex justify-between items-center mb-6">
-                <h2 class="text-3xl font-bold text-gray-800" style="font-family: 'Poppins', sans-serif;">Local Services
-                </h2>
-                <a class="text-blue-600 font-semibold hover:underline" href="#">View More</a>
+            <div class="px-4 sm:px-6 md:px-8">
+                <div class="flex justify-between items-center mb-6">
+                    <h2 class="text-3xl font-bold text-[#0C3168]" style="font-family: 'Poppins', sans-serif;">Local
+                        Services
+                    </h2>
+                    <a class="text-blue-600 font-semibold hover:underline" href="#">View More</a>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8" id="mycardslocal">
+
+                </div>
             </div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- Card 1 -->
-
-                <div class="card flex flex-col overflow-hidden rounded-lg shadow border border-gray-200 bg-white transform transition-transform duration-300 ease-in-out hover:scale-[1.02]">
-                    <!-- Image section with favorite icon -->
-                    <div class="relative">
-                        <img alt="Plot for sale in Mumtaz City" class="w-full h-48 object-cover"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJVyoDHq6-QKW5YaYpzcFKKbSWZZ2q6USwpkj3Gr70xIeZGNH6Railf-Qbu1pGL0cUNn0AXXhNEX_ypUUcaHoVyvc2MzjsECJilJK7pTFetWlfyueuITmuCcvobReb0bqi4ejdXsvF4kLg1jPmYpD9_ZrN-gqDBILh-wJ2W_9iM1Z16RyPpwQeR3HaLa1avnoXogDJ_AOvUD2IJQckVSYVRC6F-QEOIZQRUVdpboMdCVp_jxKo-KZINKTjSMNWU3EJkthEAKuRu7Fr" />
-
-                        <!-- Favorite button -->
-                        <button
-                            class="absolute top-3 right-4 inline-flex items-center gap-1 bg-white/10 text-black px-3 py-1 rounded-full shadow-lg backdrop-blur-sm hover:text-red-500 transition">
-                            <span class="material-icons text-base">favorite_border</span>
-                            <span class="text-xs font-medium">favorite</span>
-                        </button>
-                    </div>
-
-                    <!-- Card content -->
-                    <div class="p-4 flex flex-col">
-                        <!-- Username & badges -->
-                        <div class="flex justify-between items-start mb-1">
-                            <div>
-                                <div class="flex items-center space-x-2">
-                                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="User"
-                                        class="w-6 h-6 rounded-full object-cover" />
-                                    <span class="text-sm font-medium text-gray-700">Alisha</span>
-                                </div>
-
-                                <!-- Level badge -->
-                                <div
-                                    class="mt-2 inline-flex items-center gap-1 text-[10px] font-semibold px-2 py-0.5 rounded-full bg-yellow-50 text-yellow-800 border border-yellow-200">
-                                    <span class="material-icons text-[12px] text-yellow-700">verified</span>
-                                    Level 1
-                                </div>
-
-                            </div>
-
-                            <!-- Verification badges -->
-                            <div class="flex items-center space-x-2">
-                                <span
-                                    class="bg-green-100 text-green-600 text-xs font-semibold px-2 py-0.5 rounded">Verified</span>
-                                <span
-                                    class="bg-blue-100 text-blue-600 text-xs font-semibold px-2 py-0.5 rounded">Trusted</span>
-                            </div>
-                        </div>
-
-                        <!-- Title & Location -->
-                        <h3 class="text-md font-semibold text-gray-800 mt-1">Electrician</h3>
-                        <p class="text-sm text-gray-500">Mumtaz City - Chanab Block, Islamabad</p>
-
-                        <!-- Footer with orders, rating, and time -->
-                        <div class="flex items-center justify-between text-[11px] text-gray-600 mt-4">
-                            <div class="flex items-center">
-                                <span>125 Orders</span>
-                                <div class="flex items-center space-x-0.5 ml-3">
-                                    <span class="material-icons text-yellow-500 text-[13px]">star</span>
-                                    <span class="font-medium">4.8</span>
-                                </div>
-                            </div>
-
-                            <p class="text-xs text-gray-400">1 day ago</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- card 1 end -->
 
 
 
 
 
 
-                <!-- Card 2 -->
-                <div class="card flex flex-col overflow-hidden rounded-lg shadow border border-gray-200 bg-white transform transition-transform duration-300 ease-in-out hover:scale-[1.02]">
-                    <!-- Image section with favorite icon -->
-                    <div class="relative">
-                        <img alt="Plot for sale in Mumtaz City" class="w-full h-48 object-cover"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJVyoDHq6-QKW5YaYpzcFKKbSWZZ2q6USwpkj3Gr70xIeZGNH6Railf-Qbu1pGL0cUNn0AXXhNEX_ypUUcaHoVyvc2MzjsECJilJK7pTFetWlfyueuITmuCcvobReb0bqi4ejdXsvF4kLg1jPmYpD9_ZrN-gqDBILh-wJ2W_9iM1Z16RyPpwQeR3HaLa1avnoXogDJ_AOvUD2IJQckVSYVRC6F-QEOIZQRUVdpboMdCVp_jxKo-KZINKTjSMNWU3EJkthEAKuRu7Fr" />
 
-                        <!-- Favorite button -->
-                        <button
-                            class="absolute top-3 right-4 inline-flex items-center gap-1 bg-white/10 text-black px-3 py-1 rounded-full shadow-lg backdrop-blur-sm hover:text-red-500 transition">
-                            <span class="material-icons text-base">favorite_border</span>
-                            <span class="text-xs font-medium">favorite</span>
-                        </button>
-                    </div>
-
-                    <!-- Card content -->
-                    <div class="p-4 flex flex-col">
-                        <!-- Username & badges -->
-                        <div class="flex justify-between items-start mb-1">
-                            <div>
-                                <div class="flex items-center space-x-2">
-                                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="User"
-                                        class="w-6 h-6 rounded-full object-cover" />
-                                    <span class="text-sm font-medium text-gray-700">Alisha</span>
-                                </div>
-
-                                <!-- Level badge -->
-                                <div
-                                    class="mt-2 inline-flex items-center gap-1 text-[10px] font-semibold px-2 py-0.5 rounded-full bg-[#f5f5f5] text-[#62646a] border border-gray-300">
-                                    <span class="material-icons text-[12px] text-[#1dbf73]">verified</span>
-                                    Top Rated
-                                </div>
-                            </div>
-
-                            <!-- Verification badges -->
-                            <div class="flex items-center space-x-2">
-                                <span
-                                    class="bg-green-100 text-green-600 text-xs font-semibold px-2 py-0.5 rounded">Verified</span>
-                                <!-- <span class="bg-blue-100 text-blue-600 text-xs font-semibold px-2 py-0.5 rounded">Trusted</span> -->
-                            </div>
-                        </div>
-
-                        <!-- Title & Location -->
-                        <h3 class="text-md font-semibold text-gray-800 mt-1">Electrician</h3>
-                        <p class="text-sm text-gray-500">Mumtaz City - Chanab Block, Islamabad</p>
-
-                        <!-- Footer with orders, rating, and time -->
-                        <div class="flex items-center justify-between text-[11px] text-gray-600 mt-4">
-                            <div class="flex items-center">
-                                <span>125 Orders</span>
-                                <div class="flex items-center space-x-0.5 ml-3">
-                                    <span class="material-icons text-yellow-500 text-[13px]">star</span>
-                                    <span class="font-medium">4.8</span>
-                                </div>
-                            </div>
-
-                            <p class="text-xs text-gray-400">1 day ago</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Card 2 end -->
-                <!-- Card 3 -->
-                <div class="card flex flex-col overflow-hidden rounded-lg shadow border border-gray-200 bg-white transform transition-transform duration-300 ease-in-out hover:scale-[1.02]">
-                    <!-- Image section with favorite icon -->
-                    <div class="relative">
-                        <img alt="Plot for sale in Mumtaz City" class="w-full h-48 object-cover"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJVyoDHq6-QKW5YaYpzcFKKbSWZZ2q6USwpkj3Gr70xIeZGNH6Railf-Qbu1pGL0cUNn0AXXhNEX_ypUUcaHoVyvc2MzjsECJilJK7pTFetWlfyueuITmuCcvobReb0bqi4ejdXsvF4kLg1jPmYpD9_ZrN-gqDBILh-wJ2W_9iM1Z16RyPpwQeR3HaLa1avnoXogDJ_AOvUD2IJQckVSYVRC6F-QEOIZQRUVdpboMdCVp_jxKo-KZINKTjSMNWU3EJkthEAKuRu7Fr" />
-
-                        <!-- Favorite button -->
-                        <button
-                            class="absolute top-3 right-4 inline-flex items-center gap-1 bg-white/10 text-black px-3 py-1 rounded-full shadow-lg backdrop-blur-sm hover:text-red-500 transition">
-                            <span class="material-icons text-base">favorite_border</span>
-                            <span class="text-xs font-medium">favorite</span>
-                        </button>
-                    </div>
-
-                    <!-- Card content -->
-                    <div class="p-4 flex flex-col">
-                        <!-- Username & badges -->
-                        <div class="flex justify-between items-start mb-1">
-                            <div>
-                                <div class="flex items-center space-x-2">
-                                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="User"
-                                        class="w-6 h-6 rounded-full object-cover" />
-                                    <span class="text-sm font-medium text-gray-700">Alisha</span>
-                                </div>
-
-                                <!-- Level badge -->
-                                <div
-                                    class="mt-2 inline-flex items-center gap-1 text-[10px] font-semibold px-2 py-0.5 rounded-full bg-orange-50 text-orange-700 border border-orange-200">
-                                    <span class="material-icons text-[12px] text-orange-600">fiber_new</span>
-                                    New
-                                </div>
-                            </div>
-
-                            <!-- Verification badges -->
-                            <div class="flex items-center space-x-2">
-                                <span
-                                    class="bg-green-100 text-green-600 text-xs font-semibold px-2 py-0.5 rounded">Verified</span>
-                                <!-- <span class="bg-blue-100 text-blue-600 text-xs font-semibold px-2 py-0.5 rounded">Trusted</span> -->
-                            </div>
-                        </div>
-
-                        <!-- Title & Location -->
-                        <h3 class="text-md font-semibold text-gray-800 mt-1">Electrician</h3>
-                        <p class="text-sm text-gray-500">Mumtaz City - Chanab Block, Islamabad</p>
-
-                        <!-- Footer with orders, rating, and time -->
-                        <div class="flex items-center justify-between text-[11px] text-gray-600 mt-4">
-                            <div class="flex items-center">
-                                <span>125 Orders</span>
-                                <div class="flex items-center space-x-0.5 ml-3">
-                                    <span class="material-icons text-yellow-500 text-[13px]">star</span>
-                                    <span class="font-medium">4.8</span>
-                                </div>
-                            </div>
-
-                            <p class="text-xs text-gray-400">1 day ago</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Card 3 end -->
-                <!-- Card 4 -->
-                <div class="card flex flex-col overflow-hidden rounded-lg shadow border border-gray-200 bg-white transform transition-transform duration-300 ease-in-out hover:scale-[1.02]">
-                    <!-- Image section with favorite icon -->
-                    <div class="relative">
-                        <img alt="Plot for sale in Mumtaz City" class="w-full h-48 object-cover"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJVyoDHq6-QKW5YaYpzcFKKbSWZZ2q6USwpkj3Gr70xIeZGNH6Railf-Qbu1pGL0cUNn0AXXhNEX_ypUUcaHoVyvc2MzjsECJilJK7pTFetWlfyueuITmuCcvobReb0bqi4ejdXsvF4kLg1jPmYpD9_ZrN-gqDBILh-wJ2W_9iM1Z16RyPpwQeR3HaLa1avnoXogDJ_AOvUD2IJQckVSYVRC6F-QEOIZQRUVdpboMdCVp_jxKo-KZINKTjSMNWU3EJkthEAKuRu7Fr" />
-
-                        <!-- Favorite button -->
-                        <button
-                            class="absolute top-3 right-4 inline-flex items-center gap-1 bg-white/10 text-black px-3 py-1 rounded-full shadow-lg backdrop-blur-sm hover:text-red-500 transition">
-                            <span class="material-icons text-base">favorite_border</span>
-                            <span class="text-xs font-medium">favorite</span>
-                        </button>
-                    </div>
-
-                    <!-- Card content -->
-                    <div class="p-4 flex flex-col">
-                        <!-- Username & badges -->
-                        <div class="flex justify-between items-start mb-1">
-                            <div>
-                                <div class="flex items-center space-x-2">
-                                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="User"
-                                        class="w-6 h-6 rounded-full object-cover" />
-                                    <span class="text-sm font-medium text-gray-700">Alisha</span>
-                                </div>
-
-                                <!-- Level badge -->
-                                <div
-                                    class="mt-2 inline-flex items-center gap-1 text-[10px] font-semibold px-2 py-0.5 rounded-full bg-purple-100 text-purple-700 border border-purple-300">
-                                    <span class="material-icons text-[12px] text-purple-600">verified</span>
-                                    Level 2
-                                </div>
-
-                            </div>
-
-                            <!-- Verification badges -->
-                            <div class="flex items-center space-x-2">
-                                <!-- <span class="bg-green-100 text-green-600 text-xs font-semibold px-2 py-0.5 rounded">Verified</span> -->
-                                <span
-                                    class="bg-blue-100 text-blue-600 text-xs font-semibold px-2 py-0.5 rounded">Trusted</span>
-                            </div>
-                        </div>
-
-                        <!-- Title & Location -->
-                        <h3 class="text-md font-semibold text-gray-800 mt-1">Electrician</h3>
-                        <p class="text-sm text-gray-500">Mumtaz City - Chanab Block, Islamabad</p>
-
-                        <!-- Footer with orders, rating, and time -->
-                        <div class="flex items-center justify-between text-[11px] text-gray-600 mt-4">
-                            <div class="flex items-center">
-                                <span>125 Orders</span>
-                                <div class="flex items-center space-x-0.5 ml-3">
-                                    <span class="material-icons text-yellow-500 text-[13px]">star</span>
-                                    <span class="font-medium">4.8</span>
-                                </div>
-                            </div>
-
-                            <p class="text-xs text-gray-400">1 day ago</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Card 4 end -->
-            </div>
         </section>
         <!-- Local Services Section end -->
 
 
         <!-- Bikes and mototcycles Section -->
         <section class="mb-16">
-                 <div class="px-4 sm:px-6 md:px-8">
-            <div class="flex justify-between items-center mb-6">
-                <h2 class="text-3xl font-bold text-gray-800" style="font-family: 'Poppins', sans-serif;">Bikes &
-                    Motorcycles</h2>
-                <a class="text-blue-600 font-semibold hover:underline" href="#">View More</a>
-            </div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- Card 1 -->
-                <div class="card overflow-hidden rounded-lg shadow border border-gray-200 bg-white transform transition-transform duration-300 ease-in-out hover:scale-[1.02]">
-                    <!-- Image section with favorite icon & used label -->
-                    <div class="relative">
-                        <img alt="Plot for sale in Mumtaz City" class="w-full h-48 object-cover"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJVyoDHq6-QKW5YaYpzcFKKbSWZZ2q6USwpkj3Gr70xIeZGNH6Railf-Qbu1pGL0cUNn0AXXhNEX_ypUUcaHoVyvc2MzjsECJilJK7pTFetWlfyueuITmuCcvobReb0bqi4ejdXsvF4kLg1jPmYpD9_ZrN-gqDBILh-wJ2W_9iM1Z16RyPpwQeR3HaLa1avnoXogDJ_AOvUD2IJQckVSYVRC6F-QEOIZQRUVdpboMdCVp_jxKo-KZINKTjSMNWU3EJkthEAKuRu7Fr" />
-
-                        <!-- Used badge (left corner) -->
-                        <div class="absolute top-3 left-0">
-                            <div class="relative">
-                                <div
-                                    class="bg-yellow-500 text-white text-[10px] font-bold px-3 py-1 pr-4 rounded-r-full shadow-md relative z-10">
-                                    Used
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Favorite (heart) icon (right corner) -->
-                        <button
-                            class="absolute top-3 right-4 inline-flex items-center gap-1 bg-white/10 text-black px-3 py-1 rounded-full shadow-lg backdrop-blur-sm hover:text-red-500 transition">
-                            <span class="material-icons text-base">favorite_border</span>
-                            <span class="text-xs font-medium">favorite</span>
-                        </button>
-                    </div>
-
-                    <!-- Card content (unchanged) -->
-                    <div class="p-4 flex flex-col flex-grow">
-                        <!-- Username and badges -->
-                        <div class="flex justify-between items-center mb-1">
-                            <div class="flex items-center space-x-2">
-                                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="User"
-                                    class="w-6 h-6 rounded-full object-cover" />
-                                <span class="text-sm font-medium text-gray-700">Alisha</span>
-                            </div>
-                            <div class="flex items-center space-x-2">
-                                <span
-                                    class="bg-green-100 text-green-600 text-xs font-semibold px-2 py-0.5 rounded">Verified</span>
-                                <span
-                                    class="bg-blue-100 text-blue-600 text-xs font-semibold px-2 py-0.5 rounded">Trusted</span>
-                            </div>
-                        </div>
-
-                        <h3 class="text-md font-semibold text-gray-800 mt-2">
-                            8 Marla Residential Plot for Sale in Mumtaz City
-                        </h3>
-
-                        <p class="text-xl font-bold text-gray-900 mt-2">Rs 1.10 Crore</p>
-                        <p class="text-sm text-gray-500 mt-1">Mumtaz City - Chanab Block, Islamabad</p>
-                        <div class="flex-grow"></div>
-                        <p class="text-xs text-gray-400 mt-5 text-right">1 day ago</p>
-                    </div>
+            <div class="px-4 sm:px-6 md:px-8">
+                <div class="flex justify-between items-center mb-6">
+                    <h2 class="text-3xl font-bold text-[#0C3168]" style="font-family: 'Poppins', sans-serif;">Bikes &
+                        Motorcycles</h2>
+                    <a class="text-blue-600 font-semibold hover:underline" href="#">View More</a>
                 </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8" id="mycardsbikes">
 
 
-                <!-- card 1 end -->
-                <!-- Card 2 -->
-                <div class="card overflow-hidden rounded-lg shadow border border-gray-200 bg-white transform transition-transform duration-300 ease-in-out hover:scale-[1.02]">
-                    <!-- Image section with favorite icon & used label -->
-                    <div class="relative">
-                        <img alt="Plot for sale in Mumtaz City" class="w-full h-48 object-cover"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJVyoDHq6-QKW5YaYpzcFKKbSWZZ2q6USwpkj3Gr70xIeZGNH6Railf-Qbu1pGL0cUNn0AXXhNEX_ypUUcaHoVyvc2MzjsECJilJK7pTFetWlfyueuITmuCcvobReb0bqi4ejdXsvF4kLg1jPmYpD9_ZrN-gqDBILh-wJ2W_9iM1Z16RyPpwQeR3HaLa1avnoXogDJ_AOvUD2IJQckVSYVRC6F-QEOIZQRUVdpboMdCVp_jxKo-KZINKTjSMNWU3EJkthEAKuRu7Fr" />
-
-                        <!-- Used badge (left corner) -->
-                        <div class="absolute top-3 left-0">
-                            <div class="relative">
-                                <div
-                                    class="bg-blue-500 text-white text-[10px] font-bold px-3 py-1 pr-4 rounded-r-full shadow-md relative z-10">
-                                    New
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Favorite (heart) icon (right corner) -->
-                        <button
-                            class="absolute top-3 right-4 inline-flex items-center gap-1 bg-white/10 text-black px-3 py-1 rounded-full shadow-lg backdrop-blur-sm hover:text-red-500 transition">
-                            <span class="material-icons text-base">favorite_border</span>
-                            <span class="text-xs font-medium">favorite</span>
-                        </button>
-                    </div>
-
-                    <!-- Card content (unchanged) -->
-                    <div class="p-4 flex flex-col flex-grow">
-                        <!-- Username and badges -->
-                        <div class="flex justify-between items-center mb-1">
-                            <div class="flex items-center space-x-2">
-                                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="User"
-                                    class="w-6 h-6 rounded-full object-cover" />
-                                <span class="text-sm font-medium text-gray-700">Alisha</span>
-                            </div>
-                            <div class="flex items-center space-x-2">
-                                <span
-                                    class="bg-green-100 text-green-600 text-xs font-semibold px-2 py-0.5 rounded">Verified</span>
-                                <span
-                                    class="bg-blue-100 text-blue-600 text-xs font-semibold px-2 py-0.5 rounded">Trusted</span>
-                            </div>
-                        </div>
-
-                        <h3 class="text-md font-semibold text-gray-800 mt-2">
-                            8 Marla Residential Plot for Sale in Mumtaz City
-                        </h3>
-
-                        <p class="text-xl font-bold text-gray-900 mt-2">Rs 1.10 Crore</p>
-                        <p class="text-sm text-gray-500 mt-1">Mumtaz City - Chanab Block, Islamabad</p>
-                        <div class="flex-grow"></div>
-                        <p class="text-xs text-gray-400 mt-5 text-right">1 day ago</p>
-                    </div>
                 </div>
-
-                <!-- Card 2 end -->
-                <!-- Card 3 -->
-                <div class="card overflow-hidden rounded-lg shadow border border-gray-200 bg-white transform transition-transform duration-300 ease-in-out hover:scale-[1.02]">
-                    <!-- Image section with favorite icon & used label -->
-                    <div class="relative">
-                        <img alt="Plot for sale in Mumtaz City" class="w-full h-48 object-cover"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJVyoDHq6-QKW5YaYpzcFKKbSWZZ2q6USwpkj3Gr70xIeZGNH6Railf-Qbu1pGL0cUNn0AXXhNEX_ypUUcaHoVyvc2MzjsECJilJK7pTFetWlfyueuITmuCcvobReb0bqi4ejdXsvF4kLg1jPmYpD9_ZrN-gqDBILh-wJ2W_9iM1Z16RyPpwQeR3HaLa1avnoXogDJ_AOvUD2IJQckVSYVRC6F-QEOIZQRUVdpboMdCVp_jxKo-KZINKTjSMNWU3EJkthEAKuRu7Fr" />
-
-                        <!-- Used badge (left corner) -->
-                        <div class="absolute top-3 left-0">
-                            <div class="relative">
-                                <div
-                                    class="bg-orange-500 text-white text-[10px] font-bold px-3 py-1 pr-4 rounded-r-full shadow-md relative z-10">
-                                    Rental
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Favorite (heart) icon (right corner) -->
-                        <button
-                            class="absolute top-3 right-4 inline-flex items-center gap-1 bg-white/10 text-black px-3 py-1 rounded-full shadow-lg backdrop-blur-sm hover:text-red-500 transition">
-                            <span class="material-icons text-base">favorite_border</span>
-                            <span class="text-xs font-medium">favorite</span>
-                        </button>
-                    </div>
-
-                    <!-- Card content (unchanged) -->
-                    <div class="p-4 flex flex-col flex-grow">
-                        <!-- Username and badges -->
-                        <div class="flex justify-between items-center mb-1">
-                            <div class="flex items-center space-x-2">
-                                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="User"
-                                    class="w-6 h-6 rounded-full object-cover" />
-                                <span class="text-sm font-medium text-gray-700">Alisha</span>
-                            </div>
-                            <div class="flex items-center space-x-2">
-                                <span
-                                    class="bg-green-100 text-green-600 text-xs font-semibold px-2 py-0.5 rounded">Verified</span>
-                                <span
-                                    class="bg-blue-100 text-blue-600 text-xs font-semibold px-2 py-0.5 rounded">Trusted</span>
-                            </div>
-                        </div>
-
-                        <h3 class="text-md font-semibold text-gray-800 mt-2">
-                            8 Marla Residential Plot for Sale in Mumtaz City
-                        </h3>
-
-                        <p class="text-xl font-bold text-gray-900 mt-2">Rs 1.10 Crore</p>
-                        <p class="text-sm text-gray-500 mt-1">Mumtaz City - Chanab Block, Islamabad</p>
-                        <div class="flex-grow"></div>
-                        <p class="text-xs text-gray-400 mt-5 text-right">1 day ago</p>
-                    </div>
-                </div>
-
-                <!-- Card 3 end -->
-                <!-- Card 4 -->
-                <div class="card overflow-hidden rounded-lg shadow border border-gray-200 bg-white transform transition-transform duration-300 ease-in-out hover:scale-[1.02]">
-                    <!-- Image section with favorite icon & used label -->
-                    <div class="relative">
-                        <img alt="Plot for sale in Mumtaz City" class="w-full h-48 object-cover"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJVyoDHq6-QKW5YaYpzcFKKbSWZZ2q6USwpkj3Gr70xIeZGNH6Railf-Qbu1pGL0cUNn0AXXhNEX_ypUUcaHoVyvc2MzjsECJilJK7pTFetWlfyueuITmuCcvobReb0bqi4ejdXsvF4kLg1jPmYpD9_ZrN-gqDBILh-wJ2W_9iM1Z16RyPpwQeR3HaLa1avnoXogDJ_AOvUD2IJQckVSYVRC6F-QEOIZQRUVdpboMdCVp_jxKo-KZINKTjSMNWU3EJkthEAKuRu7Fr" />
-
-                        <!-- Used badge (left corner) -->
-                        <div class="absolute top-3 left-0">
-                            <div class="relative">
-                                <div
-                                    class="bg-purple-500 text-white text-[10px] font-bold px-3 py-1 pr-4 rounded-r-full shadow-md relative z-10">
-                                    Exchange
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Favorite (heart) icon (right corner) -->
-                        <button
-                            class="absolute top-3 right-4 inline-flex items-center gap-1 bg-white/10 text-black px-3 py-1 rounded-full shadow-lg backdrop-blur-sm hover:text-red-500 transition">
-                            <span class="material-icons text-base">favorite_border</span>
-                            <span class="text-xs font-medium">favorite</span>
-                        </button>
-                    </div>
-
-                    <!-- Card content (unchanged) -->
-                    <div class="p-4 flex flex-col flex-grow">
-                        <!-- Username and badges -->
-                        <div class="flex justify-between items-center mb-1">
-                            <div class="flex items-center space-x-2">
-                                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="User"
-                                    class="w-6 h-6 rounded-full object-cover" />
-                                <span class="text-sm font-medium text-gray-700">Alisha</span>
-                            </div>
-                            <div class="flex items-center space-x-2">
-                                <span
-                                    class="bg-green-100 text-green-600 text-xs font-semibold px-2 py-0.5 rounded">Verified</span>
-                                <span
-                                    class="bg-blue-100 text-blue-600 text-xs font-semibold px-2 py-0.5 rounded">Trusted</span>
-                            </div>
-                        </div>
-
-                        <h3 class="text-md font-semibold text-gray-800 mt-2">
-                            8 Marla Residential Plot for Sale in Mumtaz City
-                        </h3>
-
-                        <p class="text-xl font-bold text-gray-900 mt-2">Rs 1.10 Crore</p>
-                        <p class="text-sm text-gray-500 mt-1">Mumtaz City - Chanab Block, Islamabad</p>
-                        <div class="flex-grow"></div>
-                        <p class="text-xs text-gray-400 mt-5 text-right">1 day ago</p>
-                    </div>
-                </div>
-
-                <!-- Card 4 end -->
-            </div>
             </div>
         </section>
         <!-- Bikes and mototcycles Section end -->
 
     </main>
-<footer class="bg-[#0C3168] text-white">
-  <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-10">
+    <footer class="bg-[#0C3168] text-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-10">
 
-    <!-- ✅ Mobile/Tablet (sm, md, lg): 2 Rows Layout -->
-    <div class="flex  flex-wrap gap-8 lg:hidden">
-      <!-- Row 1: ABOUT US + MY ACCOUNT -->
-      <div class="w-full flex   gap-8">
-        <!-- ABOUT US -->
-        <div class="w-full ms-10 md:ms-0 sm:w-1/2 text-left">
-          <ul class="leading-10">
-            <li class="font-bold text-xl mb-3">ABOUT US</li>
-            <li>FAQ</li>
-            <li>Anti Scam</li>
-            <li>Term of use</li>
-            <li>Privacy Policy</li>
-            <li>Contact Us</li>
-            <li>Sitemap</li>
-          </ul>
-        </div>
-        <!-- MY ACCOUNT -->
-        <div class="w-full ms-20 md:ms-60 sm:w-1/2 text-left">
-          <ul class="leading-10">
-            <li class="font-bold text-xl mb-3">MY ACCOUNT</li>
-            <li>Login</li>
-            <li>Register</li>
-          </ul>
-        </div>
-      </div>
+            <!-- ✅ Mobile/Tablet (sm, md, lg): 2 Rows Layout -->
+            <div class="flex  flex-wrap gap-8 lg:hidden">
+                <!-- Row 1: ABOUT US + MY ACCOUNT -->
+                <div class="w-full flex   gap-8">
+                    <!-- ABOUT US -->
+                    <div class="w-full ms-10 md:ms-0 sm:w-1/2 text-left">
+                        <ul class="leading-10">
+                            <li class="font-bold text-xl mb-3">ABOUT US</li>
+                            <li>FAQ</li>
+                            <li>Anti Scam</li>
+                            <li>Term of use</li>
+                            <li>Privacy Policy</li>
+                            <li>Contact Us</li>
+                            <li>Sitemap</li>
+                        </ul>
+                    </div>
+                    <!-- MY ACCOUNT -->
+                    <div class="w-full ms-20 md:ms-60 sm:w-1/2 text-left">
+                        <ul class="leading-10">
+                            <li class="font-bold text-xl mb-3">MY ACCOUNT</li>
+                            <li>Login</li>
+                            <li>Register</li>
+                        </ul>
+                    </div>
+                </div>
 
-      <!-- Row 2: Miljaega + Social -->
-      <div class="w-full flex gap-8 mt-5">
-        <!-- Miljaega -->
-        <div class="w-full sm:w-1/2 ms-10 md:ms-0 text-left">
-          <ul class="leading-10">
-            <li class="font-bold text-xl mb-3">Miljaega</li>
-            <li>Inspected by miljaega</li>
-            <li>Featured by miljaega</li>
-            <li>Recomended by miljaega</li>
-          </ul>
-        </div>
-        <!-- Social -->
-        <div class="w-full ms-20 md:ms-60  sm:w-1/2 text-left leading-15">
-          <ul>
-            <li class="font-bold text-xl  mb-3">FOLLOW US</li>
-          </ul>
-          <div class=" ms-8 md:ms-0 sm:flex-wrap md:flex mt-3 gap-5">
-            <img src="./images/fb.svg" class="h-10 mb-2" alt="">
-            <img src="./images/insta.svg" class="h-10 mb-2" alt="">
-            <img src="./images/twitter.svg" class="h-10 mb-2" alt="">
-            <img src="./images/youtube.svg" class="h-10 mb-2" alt="">
-          </div>
-        </div>
-      </div>
-    </div>
+                <!-- Row 2: Miljaega + Social -->
+                <div class="w-full flex gap-8 mt-5">
+                    <!-- Miljaega -->
+                    <div class="w-full sm:w-1/2 ms-10 md:ms-0 text-left">
+                        <ul class="leading-10">
+                            <li class="font-bold text-xl mb-3">Miljaega</li>
+                            <li>Inspected by miljaega</li>
+                            <li>Featured by miljaega</li>
+                            <li>Recomended by miljaega</li>
+                        </ul>
+                    </div>
+                    <!-- Social -->
+                    <div class="w-full ms-20 md:ms-60  sm:w-1/2 text-left leading-15">
+                        <ul>
+                            <li class="font-bold text-xl  mb-3">FOLLOW US</li>
+                        </ul>
+                        <div class=" ms-8 md:ms-0 sm:flex-wrap md:flex mt-3 gap-5">
+                            <img src="./images/fb.svg" class="h-10 mb-2" alt="">
+                            <img src="./images/insta.svg" class="h-10 mb-2" alt="">
+                            <img src="./images/twitter.svg" class="h-10 mb-2" alt="">
+                            <img src="./images/youtube.svg" class="h-10 mb-2" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-    <!-- ✅ XL and Up: Original 4-column Layout -->
-    <div class="hidden lg:block lg:flex lg:justify-between xl:gap-8">
-      <!-- ABOUT US -->
-      <div class="w-full sm:w-1/2 xl:w-auto mb-5 xl:mb-0  xl:text-left">
-        <ul class="leading-10">
-          <li class="font-bold text-xl mb-3">ABOUT US</li>
-          <li>FAQ</li>
-          <li>Anti Scam</li>
-          <li>Term of use</li>
-          <li>Privacy Policy</li>
-          <li>Contact Us</li>
-          <li>Sitemap</li>
-        </ul>
-      </div>
-      <!-- MY ACCOUNT -->
-      <div class="w-full sm:w-1/2 xl:w-auto text-left mb-5 xl:mb-0">
-        <ul class="leading-10">
-          <li class="font-bold text-xl mb-3">MY ACCOUNT</li>
-          <li>Login</li>
-          <li>Register</li>
-        </ul>
-      </div>
-      <!-- Miljaega -->
-      <div class="w-full sm:w-1/2 xl:w-auto mb-5 xl:mb-0 text-left">
-        <ul class="leading-10">
-          <li class="font-bold text-xl mb-3">Miljaega</li>
-          <li>Inspected by miljaega</li>
-          <li>Featured by miljaega</li>
-          <li>Recomended by miljaega</li>
-        </ul>
-      </div>
-      <!-- Social -->
-      <div class="w-full sm:w-1/2 xl:w-auto text-left mb-5 xl:mb-0 leading-15">
-        <ul>
-          <li class="font-bold text-xl mb-3">FOLLOW US</li>
-        </ul>
-        <div class="flex  ustify-start mt-3 gap-5">
-          <img src="./images/fb.svg" class="h-10" alt="">
-          <img src="./images/insta.svg" class="h-10" alt="">
-          <img src="./images/twitter.svg" class="h-10" alt="">
-          <img src="./images/youtube.svg" class="h-10" alt="">
-        </div>
-      </div>
-    </div>
+            <!-- ✅ XL and Up: Original 4-column Layout -->
+            <div class="hidden lg:block lg:flex lg:justify-between xl:gap-8">
+                <!-- ABOUT US -->
+                <div class="w-full sm:w-1/2 xl:w-auto mb-5 xl:mb-0  xl:text-left">
+                    <ul class="leading-10">
+                        <li class="font-bold text-xl mb-3">ABOUT US</li>
+                        <li>FAQ</li>
+                        <li>Anti Scam</li>
+                        <li>Term of use</li>
+                        <li>Privacy Policy</li>
+                        <li>Contact Us</li>
+                        <li>Sitemap</li>
+                    </ul>
+                </div>
+                <!-- MY ACCOUNT -->
+                <div class="w-full sm:w-1/2 xl:w-auto text-left mb-5 xl:mb-0">
+                    <ul class="leading-10">
+                        <li class="font-bold text-xl mb-3">MY ACCOUNT</li>
+                        <li>Login</li>
+                        <li>Register</li>
+                    </ul>
+                </div>
+                <!-- Miljaega -->
+                <div class="w-full sm:w-1/2 xl:w-auto mb-5 xl:mb-0 text-left">
+                    <ul class="leading-10">
+                        <li class="font-bold text-xl mb-3">Miljaega</li>
+                        <li>Inspected by miljaega</li>
+                        <li>Featured by miljaega</li>
+                        <li>Recomended by miljaega</li>
+                    </ul>
+                </div>
+                <!-- Social -->
+                <div class="w-full sm:w-1/2 xl:w-auto text-left mb-5 xl:mb-0 leading-15">
+                    <ul>
+                        <li class="font-bold text-xl mb-3">FOLLOW US</li>
+                    </ul>
+                    <div class="flex  ustify-start mt-3 gap-5">
+                        <img src="./images/fb.svg" class="h-10" alt="">
+                        <img src="./images/insta.svg" class="h-10" alt="">
+                        <img src="./images/twitter.svg" class="h-10" alt="">
+                        <img src="./images/youtube.svg" class="h-10" alt="">
+                    </div>
+                </div>
+            </div>
 
-    <!-- Footer bottom -->
-    <div class="text-center border-t-2 border-white mt-10 pt-5 text-sm">
-      <p>© Copyright 2025 Miljaega <br>Powered by The Tech Creators</p>
-    </div>
-  </div>
-</footer>
+            <!-- Footer bottom -->
+            <div class="text-center border-t-2 border-white mt-10 pt-5 text-sm">
+                <p>© Copyright 2025 Miljaega <br>Powered by The Tech Creators</p>
+            </div>
+        </div>
+    </footer>
 
 
     <!-- Add Alpine JS for dropdown functionality -->
- <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
- <script src="./js/miljaega-homepage.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+    <script src="./js/miljaega-homepage.js"></script>
+
 </body>
 <script src="./js/cars.js"></script>
 <script src="./js/properties.js"></script>
 <script src="./js/mobile.js"></script>
+<script src="./js/local services.js"></script>
+<script src="./js/bikes.js"></script>
+
 </html>
