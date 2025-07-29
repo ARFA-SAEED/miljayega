@@ -392,18 +392,41 @@
 
 
 
-        <section class="mb-8">
+        <section class="mb-8 ">
             <div class="mx-auto relative py-3 container">
-                <div class="flex justify-between items-center mb-6">
-                    <h2 class="text-3xl font-bold text-[#0C3168]" style="font-family: 'Poppins', sans-serif;">Categories
+                <div class="flex mb-8" id="tabContainer">
+                    <div class="arrow-tab bg-[#e5e7eb] text-white z-10 relative active">
+
+                        <span class="z-10 relative">ALL</span>
+                    </div>
+                    <div class="arrow-tab bg-[#e5e7eb] text-black relative">
+
+                        <span class="z-10 relative">NEW</span>
+                    </div>
+                    <div class="arrow-tab bg-[#e5e7eb] text-black relative">
+                        <span class="z-10 relative">USED</span>
+                    </div>
+                    <div class="arrow-tab bg-[#e5e7eb] text-black relative">
+
+                        <span class="z-10 relative">RENT</span>
+                    </div>
+                    <div class="arrow-tab bg-[#e5e7eb] text-black relative">
+
+                        <span class="z-10 relative">EXCHANGE</span>
+                    </div>
+                </div>
+                <div class="flex justify-between items-center ">
+                    <h2 class="text-3xl font-bold text-[#0C3168] border border-gray-300 p-4 pe-[1253px]"
+                        style="font-family: 'Poppins', sans-serif;">All
+                        Categories
                     </h2>
                 </div>
 
-                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 ">
 
                     <!-- Mobile Phones -->
                     <a href="#"
-                        class="flex flex-col items-center p-4 rounded-lg transition-all duration-300 border border-gray-200 hover:border-primary-green hover:shadow-md group"
+                        class="flex flex-col items-center p-4  transition-all duration-300 border border-gray-300  hover:border-primary-green hover:shadow-md group"
                         aria-label="Mobile Phones">
                         <div
                             class="p-3 rounded-full mb-3 transition-colors duration-300 bg-blue-50 group-hover:bg-blue-100">
@@ -411,24 +434,22 @@
                                 class="w-8 h-8">
                         </div>
                         <h3 class="font-semibold text-gray-800 text-center mb-1">Mobile Phones</h3>
-                        <span class="text-xs text-gray-500 group-hover:text-primary-green">12,345 ads</span>
                     </a>
 
                     <!-- Vehicles -->
                     <a href="#"
-                        class="flex flex-col items-center p-4 rounded-lg transition-all duration-300 border border-gray-200 hover:border-primary-green hover:shadow-md group"
+                        class="flex flex-col items-center p-4  transition-all duration-300 border border-gray-300  hover:border-primary-green hover:shadow-md group"
                         aria-label="Vehicles">
                         <div
                             class="p-3 rounded-full mb-3 transition-colors duration-300 bg-green-50 group-hover:bg-green-100">
                             <i class="fa-solid fa-car text-2xl text-green-700"></i>
                         </div>
                         <h3 class="font-semibold text-gray-800 text-center mb-1">Vehicles</h3>
-                        <span class="text-xs text-gray-500 group-hover:text-primary-green">8,765 ads</span>
                     </a>
 
                     <!-- Property -->
                     <a href="#"
-                        class="flex flex-col items-center p-4 rounded-lg transition-all duration-300 border border-gray-200 hover:border-primary-green hover:shadow-md group"
+                        class="flex flex-col items-center p-4  transition-all duration-300 border border-gray-300  hover:border-primary-green hover:shadow-md group"
                         aria-label="Property">
                         <div
                             class="p-3 rounded-full mb-3 transition-colors duration-300 bg-purple-50 group-hover:bg-purple-100">
@@ -440,110 +461,101 @@
 
                     <!-- Electronics -->
                     <a href="#"
-                        class="flex flex-col items-center p-4 rounded-lg transition-all duration-300 border border-gray-200 hover:border-primary-green hover:shadow-md group"
+                        class="flex flex-col items-center p-4  transition-all duration-300 border border-gray-300  hover:border-primary-green hover:shadow-md group"
                         aria-label="Electronics">
                         <div
                             class="p-3 rounded-full mb-3 transition-colors duration-300 bg-yellow-50 group-hover:bg-yellow-100">
                             <i class="fa-solid fa-plug text-2xl text-yellow-600"></i>
                         </div>
                         <h3 class="font-semibold text-gray-800 text-center mb-1">Electronics</h3>
-                        <span class="text-xs text-gray-500 group-hover:text-primary-green">7,890 ads</span>
                     </a>
 
                     <!-- Services -->
                     <a href="#"
-                        class="flex flex-col items-center p-4 rounded-lg transition-all duration-300 border border-gray-200 hover:border-primary-green hover:shadow-md group"
+                        class="flex flex-col items-center p-4  transition-all duration-300 border border-gray-300  hover:border-primary-green hover:shadow-md group"
                         aria-label="Services">
                         <div
                             class="p-3 rounded-full mb-3 transition-colors duration-300 bg-red-50 group-hover:bg-red-100">
                             <i class="fa-solid fa-bell-concierge text-2xl text-red-600"></i>
                         </div>
                         <h3 class="font-semibold text-gray-800 text-center mb-1">Services</h3>
-                        <span class="text-xs text-gray-500 group-hover:text-primary-green">3,210 ads</span>
                     </a>
 
                     <!-- Jobs -->
                     <a href="#"
-                        class="flex flex-col items-center p-4 rounded-lg transition-all duration-300 border border-gray-200 hover:border-primary-green hover:shadow-md group"
+                        class="flex flex-col items-center p-4  transition-all duration-300 border border-gray-300  hover:border-primary-green hover:shadow-md group"
                         aria-label="Jobs">
                         <div
                             class="p-3 rounded-full mb-3 transition-colors duration-300 bg-indigo-50 group-hover:bg-indigo-100">
                             <i class="fa-solid fa-user-doctor text-2xl text-indigo-700"></i>
                         </div>
                         <h3 class="font-semibold text-gray-800 text-center mb-1">Jobs</h3>
-                        <span class="text-xs text-gray-500 group-hover:text-primary-green">2,345 ads</span>
                     </a>
 
                     <!-- Animals -->
                     <a href="#"
-                        class="flex flex-col items-center p-4 rounded-lg transition-all duration-300 border border-gray-200 hover:border-primary-green hover:shadow-md group"
+                        class="flex flex-col items-center p-4  transition-all duration-300 border border-gray-300  hover:border-primary-green hover:shadow-md group"
                         aria-label="Animals">
                         <div
                             class="p-3 rounded-full mb-3 transition-colors duration-300 bg-pink-50 group-hover:bg-pink-100">
                             <i class="fa-solid fa-dog text-2xl text-pink-600"></i>
                         </div>
                         <h3 class="font-semibold text-gray-800 text-center mb-1">Animals</h3>
-                        <span class="text-xs text-gray-500 group-hover:text-primary-green">1,234 ads</span>
                     </a>
 
                     <!-- Furniture -->
                     <a href="#"
-                        class="flex flex-col items-center p-4 rounded-lg transition-all duration-300 border border-gray-200 hover:border-primary-green hover:shadow-md group"
+                        class="flex flex-col items-center p-4  transition-all duration-300 border border-gray-300  hover:border-primary-green hover:shadow-md group"
                         aria-label="Furniture">
                         <div
                             class="p-3 rounded-full mb-3 transition-colors duration-300 bg-orange-50 group-hover:bg-orange-100">
                             <i class="fa-solid fa-couch text-2xl text-orange-600"></i>
                         </div>
                         <h3 class="font-semibold text-gray-800 text-center mb-1">Furniture</h3>
-                        <span class="text-xs text-gray-500 group-hover:text-primary-green">4,567 ads</span>
                     </a>
 
                     <!-- Fashion -->
                     <a href="#"
-                        class="flex flex-col items-center p-4 rounded-lg transition-all duration-300 border border-gray-200 hover:border-primary-green hover:shadow-md group"
+                        class="flex flex-col items-center p-4  transition-all duration-300 border border-gray-300  hover:border-primary-green hover:shadow-md group"
                         aria-label="Fashion">
                         <div
                             class="p-3 rounded-full mb-3 transition-colors duration-300 bg-teal-50 group-hover:bg-teal-100">
                             <i class="fa-solid fa-shirt text-2xl text-teal-600"></i>
                         </div>
                         <h3 class="font-semibold text-gray-800 text-center mb-1">Fashion</h3>
-                        <span class="text-xs text-gray-500 group-hover:text-primary-green">6,789 ads</span>
                     </a>
 
                     <!-- Books -->
                     <a href="#"
-                        class="flex flex-col items-center p-4 rounded-lg transition-all duration-300 border border-gray-200 hover:border-primary-green hover:shadow-md group"
+                        class="flex flex-col items-center p-4  transition-all duration-300 border border-gray-300  hover:border-primary-green hover:shadow-md group"
                         aria-label="Books">
                         <div
                             class="p-3 rounded-full mb-3 transition-colors duration-300 bg-amber-50 group-hover:bg-amber-100">
                             <i class="fa-solid fa-book text-2xl text-amber-600"></i>
                         </div>
                         <h3 class="font-semibold text-gray-800 text-center mb-1">Books</h3>
-                        <span class="text-xs text-gray-500 group-hover:text-primary-green">987 ads</span>
                     </a>
 
                     <!-- Kids -->
                     <a href="#"
-                        class="flex flex-col items-center p-4 rounded-lg transition-all duration-300 border border-gray-200 hover:border-primary-green hover:shadow-md group"
+                        class="flex flex-col items-center p-4  transition-all duration-300 border border-gray-300  hover:border-primary-green hover:shadow-md group"
                         aria-label="Kids">
                         <div
                             class="p-3 rounded-full mb-3 transition-colors duration-300 bg-cyan-50 group-hover:bg-cyan-100">
                             <i class="fa-solid fa-children text-2xl text-cyan-600"></i>
                         </div>
                         <h3 class="font-semibold text-gray-800 text-center mb-1">Kids</h3>
-                        <span class="text-xs text-gray-500 group-hover:text-primary-green">1,543 ads</span>
                     </a>
 
                     <!-- More -->
                     <a href="#"
-                        class="flex flex-col items-center p-4 rounded-lg transition-all duration-300 border border-gray-200 hover:border-primary-green hover:shadow-md group"
+                        class="flex flex-col items-center p-4  transition-all duration-300 border border-gray-300 hover:border-primary-green hover:shadow-md group"
                         aria-label="More Categories">
                         <div
                             class="p-3 rounded-full mb-3 transition-colors duration-300 bg-gray-50 group-hover:bg-gray-100">
                             <i class="fa-solid fa-arrow-right text-2xl text-gray-700"></i>
                         </div>
                         <h3 class="font-semibold text-gray-800 text-center mb-1">More</h3>
-                        <span class="text-xs text-gray-500 group-hover:text-primary-green">View all</span>
                     </a>
 
                 </div>
