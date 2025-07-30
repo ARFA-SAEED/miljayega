@@ -24,7 +24,7 @@ fetch("miljaega-motors.json")
       </span>
     </div>
 
-    <h2 class="text-lg font-bold text-gray-800 text-center sm:text-left sm:ml-4">
+    <h2 class="text-lg font-bold text-gray-800 text-center sm:text-left mt-5 md:mt-0 sm:ml-4">
       ${mcards.title}
     </h2>
   </div>
@@ -34,11 +34,11 @@ fetch("miljaega-motors.json")
   <img 
   src="./images/car.jpg" 
   alt="Car"
-  class="w-full sm:w-[160px] h-auto max-h-[160px] object-contain rounded-md"
+  class="h-[120px] mt-0 md:mt-8 ms-22 md:ms-10"
 />
 
     <!-- Text Content -->
-    <div class="flex-grow ms-23 lg:ms-50">
+    <div class="flex-grow   ms-0  md:ms-10">
       <p class="text-sm text-gray-600">${mcards.description}</p>
       <p class="text-sm text-gray-800 mt-2">${mcards.location}</p>
       <div class="grid grid-cols-2 gap-3 mt-3 text-sm text-gray-700 max-w-xs">
@@ -52,8 +52,8 @@ fetch("miljaega-motors.json")
   </div>
 
   <!-- Bottom: Update Time + Price + Button -->
-  <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mt-6">
-    <p class="text-xs text-gray-500">${mcards.updated}</p>
+  <div class="flex flex-col sm:flex-row sm:items-center  sm:gap-37 md:gap-65  mt-6">
+    <p class="text-xs text-gray-500 ">${mcards.updated}</p>
     <div class="flex flex-col sm:flex-row sm:items-center gap-4">
       <span class="text-lg font-bold text-gray-900">${mcards.price_pkr}</span>
       <button class="bg-blue-900 hover:bg-opacity-90 text-white px-4 py-2 rounded-md text-[13px] font-medium">
