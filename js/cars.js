@@ -1,4 +1,4 @@
-fetch("miljaega-homepage.json")
+fetch("miljaega-cars.json")
   .then((response) => response.json())
   .then((data) => {
     console.log(data);

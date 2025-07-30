@@ -118,8 +118,9 @@
             </div>
         </div>
     </header>
+
     <!-- Mobile Menu Dropdown -->
-    <div id="mobileMenu" class="xl:hidden hidden bg-white shadow-md fixed top-[72px] w-full z-40">
+    <div id="mobileMenu" class="xl:hidden hidden bg-white shadow-md fixed top-[px] w-full z-40">
         <div class="px-4 py-4 space-y-4 text-sm font-medium text-gray-700">
             <!-- Center Nav Items (from header) -->
             <div class="flex justify-around text-center gap-2">
@@ -138,21 +139,31 @@
             </div>
 
             <!-- Categories Row Items -->
-            <div class="space-y-2 pt-2 border-t border-gray-200">
-                <a href="#" class="block hover:text-primary-green">Trending 🔥</a>
-                <a href="#" class="block hover:text-primary-green">Mobile Phones</a>
-                <a href="#" class="block hover:text-primary-green">Motorcycles</a>
-                <a href="#" class="block hover:text-primary-green">Electronics</a>
-                <a href="#" class="block hover:text-primary-green">Jobs</a>
-                <a href="#" class="block hover:text-primary-green">Furniture</a>
-                <a href="#" class="block hover:text-primary-green">Fashion</a>
-                <a href="#" class="block hover:text-primary-green">Services</a>
+            <div class="space-y-2 pt-2 border-t border-gray-200 ">
+                <a href="#"
+                    class="block hover:text-primary-green pb-2 hover:ps-3 pt-3 hover:bg-[rgb(220,228,245)]">Trending
+                    🔥</a>
+                <a href="#"
+                    class="block hover:text-primary-green pb-2 hover:ps-3 pt-2 hover:bg-[rgb(220,228,245)]">Mobile
+                    Phones</a>
+                <a href="#"
+                    class="block hover:text-primary-green pb-2 hover:ps-3 pt-2 hover:bg-[rgb(220,228,245)]">Motorcycles</a>
+                <a href="#"
+                    class="block hover:text-primary-green pb-2 pt-2 hover:ps-3 hover:bg-[rgb(220,228,245)] ">Electronics</a>
+                <a href="#"
+                    class="block hover:text-primary-green hover:ps-3 pb-2 pt-2 hover:bg-[rgb(220,228,245)]">Jobs</a>
+                <a href="#"
+                    class="block hover:text-primary-green hover:ps-3 pb-2 pt-2 hover:bg-[rgb(220,228,245)]">Furniture</a>
+                <a href="#"
+                    class="block hover:text-primary-green hover:ps-3 pb-2 pt-2 hover:bg-[rgb(220,228,245)]">Fashion</a>
+                <a href="#"
+                    class="block hover:text-primary-green pb-2 pt-2 hover:ps-3 hover:bg-[rgb(220,228,245)]">Services</a>
             </div>
 
             <!-- Action Buttons -->
             <div class="space-y-2 pt-2 border-t border-gray-200">
                 <button
-                    class="w-full border border-primary-green text-primary-green text-sm font-semibold rounded-lg py-2 hover:bg-green-50">
+                    class="w-full border border-[#0C3168]   hover:bg-[rgb(220,228,245)] text-[#0C3168] text-sm font-semibold rounded-lg py-2 hover:bg-bl-50">
                     Sell Your Service
                 </button>
                 <button
@@ -164,7 +175,7 @@
     </div>
 
     <!-- Spacer to avoid overlap -->
-    <div class="pt-[72px] lg:pt-[128px]"></div>
+    <div class="pt-[72px] "></div>
 
     <!-- Categories Row -->
     <div class="bg-white shadow-sm fixed top-[72px] z-40 w-full hidden xl:block">
@@ -210,7 +221,7 @@
 
                     <div class="flex-shrink-0 ms-105 flex items-center space-x-3">
                         <button
-                            class="h-9 border mt-4 mb-2 border-[#0C3168]  hover:bg-[rgb(220,228,245)] text-[#0C3168] text-sm font-semibold rounded-lg flex items-center justify-center hover:bg- px-4">
+                            class="h-9 border mt-4 mb-2 border-[#0C3168] ps-3 pe-3  hover:bg-[rgb(220,228,245)] text-[#0C3168] text-sm font-semibold rounded-lg flex items-center justify-center hover:bg-px-4">
                             Sell Your Service
                         </button>
                         <button
@@ -225,7 +236,7 @@
 
     <!-- Your content continues here -->
 
-    <section class="relative w-full overflow-hidden mt-0 pt-0 min-h-[400px]">
+    <section class="relative w-full overflow-hidden mt-0 pt-0 min-h-[400px] lg:pt-20">
         <!-- Background Video -->
         <video autoplay muted loop playsinline class="absolute top-0 left-0 w-full h-full object-cover z-0">
             <source src="images/video.mp4" type="video/mp4" />
@@ -286,17 +297,24 @@
 
                         <!-- Search Button -->
                         <button
-                            class="absolute right-0 top-0 h-full px-5 bg-[#0C3168] text-white text-sm font-semibold rounded-r-lg flex items-center justify-center hover:bg-opacity-70">
+                            class="absolute right-0 top-0 h-full px-5 bg-[#0C3168] text-white text-sm font-semibold rounded-r-[6px] flex items-center justify-center hover:bg-opacity-70">
                             <span class="material-icons text-white text-base mr-1">search</span>Search
                         </button>
                     </div>
                 </div>
             </div>
 
-            <!-- Robot GIF -->
-            <div class="w-[180px] h-[180px] flex items-center justify-center">
-                <img src="./images/Robot-Bot 3D.gif" alt="Robot Bot" class="w-full h-full object-contain" />
+            <!-- Robot GIF and Ask AI button -->
+            <div class="flex flex-col items-center w-[180px] gap-4">
+                <div class="w-[180px] h-[180px] flex items-center justify-center">
+                    <img src="./images/Robot-Bot 3D.gif" alt="Robot Bot" class="w-full h-full object-contain" />
+                </div>
+                <button
+                    class="bg-yellow-400 font-bold py-2 px-5 rounded-[10px] shadow-md hover:bg-[white] hover:text-[#0C3168] transition-all duration-300 text-sm ps-5 pe-5 ms-3">
+                    <span class="material-icons align-middle mr-2">smart_toy</span> Ask AI
+                </button>
             </div>
+
         </div>
     </section>
 
@@ -454,7 +472,6 @@
                             <i class="fa-solid fa-house text-2xl text-purple-700"></i>
                         </div>
                         <h3 class="font-semibold text-gray-800 text-center mb-1">Property</h3>
-                        <span class="text-xs text-gray-500 group-hover:text-primary-green">5,432 ads</span>
                     </a>
 
                     <!-- Electronics -->
@@ -559,18 +576,90 @@
             </div>
         </section>
 
+        <!-- Local Services Section -->
+        <section class="mb-16">
+            <div class="mx-auto relative py-3 container">
+                <div class="flex justify-between items-center mb-6">
+                    <h2 class="text-3xl font-bold text-[#0C3168]" style="font-family: 'Poppins', sans-serif;">Local
+                        Services
+                    </h2>
+                    <a class="text-blue-600 font-semibold hover:underline" href="#">View More</a>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8" id="mycardslocal">
+
+                </div>
+            </div>
+
+        </section>
+        <!-- Local Services Section end -->
+
 
         <!-- Cars Section -->
         <section class="mb-16">
             <div class="mx-auto relative py-3 container">
                 <div class="flex justify-between items-center mb-6">
-                    <h2 class="text-3xl font-bold text-[#0C3168]" style="font-family: 'Poppins', sans-serif;">Cars</h2>
+                    <h2 class="text-3xl font-bold text-[#0C3168]" style="font-family: 'Poppins', sans-serif;">
+                        Cars
+                    </h2>
                     <a class="text-blue-600 font-semibold hover:underline" href="#">View More</a>
                 </div>
+                <div class="flex  mt-10"> <!-- Outer container to center -->
+                    <div class="bg-white p-5 rounded-[20px] shadow-md shadow-[rgb(220,228,245)]-500 w-full max-w-3xl">
 
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8" id="mycards">
+                        <!-- Top row: badges + favourite + heading -->
+                        <div class="flex items-center justify-between flex-wrap gap-4">
+                            <div class="flex h-[25px] gap-3 flex-wrap items-center">
+                                <span
+                                    class="bg-green-100 text-green-600 text-xs font-semibold px-3 py-1 rounded">verified</span>
+                                <span
+                                    class="bg-blue-100 text-blue-600 text-xs font-semibold px-2 py-1 rounded">trusted</span>
+                            </div>
+                            <span
+                                class="flex items-center ms-[120px] pt-1 pb-1 rounded-[20px] text-black px-3 font-bold text-[12px] shadow-lg backdrop-blur-sm hover:text-red-500 transition cursor-pointer">
+                                <i class="fa-solid fa-heart mb-1 mt-1 me-2"></i>favourite
+                            </span>
+                            <h2 class="text-lg font-bold text-gray-800 flex-grow text-center md:text-left ">Honda
+                                Civic
+                                Rebirth 2015 VT1 Oriel</h2>
 
+
+                        </div>
+
+                        <!-- Middle row: image + details -->
+                        <div class="flex flex-col w-full md:flex-row mt-6 gap-30">
+                            <img src="./images/car.jpg" alt="Car"
+                                class=" ms-5  mt-10 h-[120px] w-full md:w-[250px] object-cover rounded-md" />
+
+                            <div class="flex-grow">
+                                <p class="text-sm text-gray-600 ">Prosmatec 1.8 i-VTEC for Sale</p>
+                                <p class="text-sm text-gray-800 mt-2">Lahore</p>
+
+                                <div class="grid grid-cols-2 gap-2 mt-3 text-sm text-gray-700 max-w-xs">
+                                    <div>2015</div>
+                                    <div>111,454 km</div>
+                                    <div>Petrol</div>
+                                    <div>1800 cc</div>
+                                    <div>Automatic</div>
+                                </div>
+
+
+                            </div>
+                        </div>
+
+                        <!-- Bottom row: price + button -->
+                        <div class="flex  items-center ">
+                            <p class="text-xs text-gray-500 ">Updated 1 minute ago</p>
+                            <span class="text-lg font-bold text-gray-900 ms-67">PKR 39.5 lacs</span>
+                            <button
+                                class="bg-blue-900 hover:bg-opacity-90 text-white px-4 py-2 ms-10 rounded-md text-[13px] font-medium">
+                                Show Phone No.
+                            </button>
+                        </div>
+
+                    </div>
                 </div>
+
+            </div>
             </div>
         </section>
         <!-- Cars Section End -->
@@ -613,25 +702,6 @@
             </div>
         </section>
         <!-- Mobuile Phones Section end -->
-
-
-        <!-- Local Services Section -->
-        <section class="mb-16">
-            <div class="mx-auto relative py-3 container">
-                <div class="flex justify-between items-center mb-6">
-                    <h2 class="text-3xl font-bold text-[#0C3168]" style="font-family: 'Poppins', sans-serif;">Local
-                        Services
-                    </h2>
-                    <a class="text-blue-600 font-semibold hover:underline" href="#">View More</a>
-                </div>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8" id="mycardslocal">
-
-                </div>
-            </div>
-
-        </section>
-        <!-- Local Services Section end -->
-
 
         <!-- Bikes and mototcycles Section -->
         <section class="mb-16">
