@@ -54,7 +54,7 @@ fetch("miljaega-motors.json")
   <!-- Bottom: Update Time + Price + Button -->
   <div class="flex flex-col sm:flex-row sm:items-center  sm:gap-37 md:gap-65  mt-6">
     <p class="text-xs text-gray-500 ">${mcards.updated}</p>
-    <div class="flex flex-col sm:flex-row sm:items-center gap-4">
+    <div class="flex flex-col sm:flex-row sm:items-center gap-9">
       <span class="text-lg font-bold text-gray-900">${mcards.price_pkr}</span>
       <button class="bg-blue-900 hover:bg-opacity-90 text-white px-4 py-2 rounded-md text-[13px] font-medium">
         ${mcards.Show_phone}
