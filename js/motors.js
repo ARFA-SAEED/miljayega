@@ -5,56 +5,104 @@ fetch("miljaega-motors.json")
     container.innerHTML = "";
 
     data.slice(0, 2).forEach((car) => {
-      container.innerHTML += `
-        <div class="w-full lg:w-[48%] mb-6">
-          <div class="bg-white p-5 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+      container.innerHTML += `<div class="w-full lg:w-[48%] mb-6">
+  <div class="bg-white p-5 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 h-full flex flex-col">
 
-            <!-- Top: badges and favourite aligned right -->
-            <div class="flex items-center justify-between gap-3">
-              <div class="flex gap-3 items-center">
-                ${car.Verified ? `<span class="bg-green-100 text-green-600 text-xs font-semibold px-3 py-1 rounded">${car.Verified}</span>` : ""}
-                ${car.Trusted ? `<span class="bg-blue-100 text-blue-600 text-xs font-semibold px-2 py-1 rounded">${car.Trusted}</span>` : ""}
-              </div>
-              <span class="ml-auto flex items-center text-[12px] font-bold px-3 py-1 rounded-[20px] shadow-lg backdrop-blur-sm hover:text-red-500 cursor-pointer transition">
-                <i class="fa-solid fa-heart me-2"></i>Favourite
-              </span>
-            </div>
+    <!-- Top section with title and action buttons -->
+    <div class="flex justify-between items-start mb-2">
+      <div>
+        <h2 class="text-lg font-bold text-blue-900">${car.Name}</h2>
+        <p class="text-sm text-gray-600 mt-1 line-clamp-2">${car.Details}</p>
+      </div>
+      
+      <div class="flex items-center gap-3">
+        <button class="flex items-center text-xs font-bold px-3.5 py-1.5 rounded-full bg-gradient-to-r from-gray-50 to-white text-rose-500 border border-rose-200 shadow-sm hover:shadow-md hover:bg-rose-50 hover:text-rose-600 transition-all duration-200 group">
+          <i class="fa-solid fa-heart me-2 group-hover:scale-110 transition-transform duration-200"></i> Save
+        </button>
+      </div>
+    </div>
 
-            <!-- Middle: image left, content aligned under heading -->
-            <div class="flex flex-col sm:flex-row items-start gap-5 mt-6">
-              <img
-                src="${car.Pictures[0]}"
-                alt="${car.Name}"
-                class="h-[130px] lg:h-[230px] w-auto object-cover rounded-lg"
-              />
-              <div class="flex flex-col flex-grow">
-                <h2 class="text-lg font-bold text-gray-800">${car.Name}</h2>
-                <p class="text-sm text-gray-600 mt-2">${car.Details}</p>
-                <p class="text-sm text-gray-800 mt-1">${car.Address}</p>
-                <div class="grid grid-cols-2 gap-3 mt-3 text-sm text-gray-700 max-w-xs">
-                  <div><span class="font-semibold">Model:</span> ${car.Model}</div>
-                  <div><span class="font-semibold">KM Driven:</span> ${car.KMDriven}</div>
-                  <div><span class="font-semibold">Fuel Type:</span> ${car.FuelType}</div>
-                  <div><span class="font-semibold">Engine:</span> ${car.EngineCapacity}</div>
-                  <div><span class="font-semibold">Transmission:</span> ${car.Transmission}</div>
-                </div>
-              </div>
-            </div>
+    <!-- Middle: image and content -->
+    <div class="flex flex-col sm:flex-row gap-5 flex-grow">
+      
+      <!-- Image section with AdPostedTime -->
+      <div class="flex-shrink-0 sm:w-[330px] flex flex-col overflow-hidden">
+        <div class="relative flex-grow h-full rounded-lg overflow-hidden group">
+          <img
+            src="${car.Pictures[0]}"
+            alt="${car.Name}"
+            class="w-full h-full object-cover rounded-lg transition-transform duration-500 group-hover:scale-110"
+          />
+          <!-- Badges moved to top left inside image - Updated colors for better visibility -->
+          <div class="absolute top-3 left-3 flex gap-2">
+          ${car.Verified ? `
+            <span class="bg-green-900 text-white text-[10px] font-semibold px-2 py-0.5 rounded-full border border-white-300 flex items-center shadow-sm">
+              <i class="fa-solid fa-check-circle mr-1 text-[10px] text-white"></i> ${car.Verified}
+            </span>` : ""}
+          ${car.Trusted ? `
+            <span class="bg-blue-900 text-white text-[10px] font-semibold px-2 py-0.5 rounded-full border border-blue-300 flex items-center shadow-sm">
+              <i class="fa-solid fa-shield-alt mr-1 text-[10px] text-white"></i> ${car.Trusted}
+            </span>` : ""}
+        </div>
+   <div class="absolute bottom-3 left-3 bg-gray-800/50 text-white text-xs px-2 py-1 rounded flex items-center backdrop-blur-sm">
+  <i class="fa-regular fa-clock mr-1 text-[8px] text-gray-300"></i> ${car.AdPostedTime || "Recently posted"}
+</div>
+        </div>
+      </div>
 
-            <!-- Bottom: time, price & call button -->
-            <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mt-6">
-              <p class="text-xs text-gray-500">${car.AdPostedTime || "Recently posted"}</p>
-              <div class="flex flex-col sm:flex-row sm:items-center gap-15">
-                <span class="text-lg font-bold text-gray-900">${car.Price}</span>
-                <button class=" flex bg-blue-900 text-white px-7 py-3 rounded-md text-[13px] font-medium hover:bg-opacity-90 transition">
-               <i class="fa-solid fa-phone me-3  mt-1"></i>  ${car.Phone}
-                </button>
-              </div>
-            </div>
-
+      <!-- Text content section -->
+      <div class="flex flex-col flex-grow">
+        <div class="grid grid-cols-2 gap-x-4 gap-y-3 mt-1 text-sm text-gray-700">
+          <div class="flex items-center">
+            <span class="bg-gray-200 text-gray-600 p-1.5 rounded-full mr-2 flex items-center justify-center">
+              <i class="fa-solid fa-car text-xs"></i>
+            </span>
+            <span>${car.Model}</span>
+          </div>
+          <div class="flex items-center">
+            <span class="bg-gray-200 text-gray-600 p-1.5 rounded-full mr-2 flex items-center justify-center">
+              <i class="fa-solid fa-tachometer-alt text-xs"></i>
+            </span>
+            <span>${car.KMDriven}</span>
+          </div>
+          <div class="flex items-center">
+            <span class="bg-gray-200 text-gray-600 p-1.5 rounded-full mr-2 flex items-center justify-center">
+              <i class="fa-solid fa-gas-pump text-xs"></i>
+            </span>
+            <span>${car.FuelType}</span>
+          </div>
+          <div class="flex items-center">
+            <span class="bg-gray-200 text-gray-600 p-1.5 rounded-full mr-2 flex items-center justify-center">
+              <i class="fa-solid fa-cog text-xs"></i>
+            </span>
+            <span>${car.EngineCapacity}</span>
+          </div>
+          <div class="col-span-2 flex items-center">
+            <span class="bg-gray-200 text-gray-600 p-1.5 rounded-full mr-2 flex items-center justify-center">
+              <i class="fa-solid fa-exchange-alt text-xs"></i>
+            </span>
+            <span>${car.Transmission}</span>
+          </div>
+          <div class="col-span-2 flex items-center">
+            <span class="bg-gray-200 text-gray-600 p-1.5 rounded-full mr-2 flex items-center justify-center">
+              <i class="fa-solid fa-map-marker-alt text-xs"></i>
+            </span>
+            <span> ${car.Address}</span>
           </div>
         </div>
-      `;
+
+        <!-- Bottom: Price & Phone -->
+        <div class="flex items-center justify-between mt-auto pt-4">
+          <span class="font-bold text-blue-900 text-lg">${car.Price}</span>
+          <button class="flex items-center bg-blue-900 text-white px-4 py-2.5 rounded-lg text-sm hover:opacity-90 transition-all duration-200 shadow-md">
+            <i class="fa-solid fa-phone me-2"></i> ${car.Phone}
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>`;
     });
   })
   .catch((err) => console.error("Error loading cars:", err));
