@@ -44,10 +44,10 @@ fetch("miljaega-motors.json")
             <!-- Bottom: time, price & call button -->
             <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mt-6">
               <p class="text-xs text-gray-500">${car.AdPostedTime || "Recently posted"}</p>
-              <div class="flex flex-col sm:flex-row sm:items-center gap-14">
+              <div class="flex flex-col sm:flex-row sm:items-center gap-15">
                 <span class="text-lg font-bold text-gray-900">${car.Price}</span>
                 <button class=" flex bg-blue-900 text-white px-7 py-2 rounded-md text-[13px] font-medium hover:bg-opacity-90 transition">
-               <i class="fa-solid fa-phone me-3 "></i>  ${car.Phone}
+               <i class="fa-solid fa-phone me-3  mt-1"></i>  ${car.Phone}
                 </button>
               </div>
             </div>
