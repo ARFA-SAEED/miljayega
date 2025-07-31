@@ -46,7 +46,7 @@ fetch("miljaega-motors.json")
               <p class="text-xs text-gray-500">${car.AdPostedTime || "Recently posted"}</p>
               <div class="flex flex-col sm:flex-row sm:items-center gap-15">
                 <span class="text-lg font-bold text-gray-900">${car.Price}</span>
-                <button class=" flex bg-blue-900 text-white px-7 py-2 rounded-md text-[13px] font-medium hover:bg-opacity-90 transition">
+                <button class=" flex bg-blue-900 text-white px-7 py-3 rounded-md text-[13px] font-medium hover:bg-opacity-90 transition">
                <i class="fa-solid fa-phone me-3  mt-1"></i>  ${car.Phone}
                 </button>
               </div>
