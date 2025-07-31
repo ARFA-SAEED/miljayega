@@ -52,8 +52,8 @@
             "Steering Switches",
             "Sun Roof"
         ],
-        "Details": "Documents have not checked by Miljaega. Miljaega inspected car. Inspection report attached...",
-        "Phone": "03102536584",
+        "Details": "Documents have not checked by Miljaega. Miljaega inspected car...",
+        "Phone": "Show Phone No",
         "SellerName": "Saleem",
         "MemberSince": "Apr 03, 2021"
     },
@@ -98,7 +98,7 @@
             "Key Keyless Entry"
         ],
         "Details": "Verified documents. First owner. Token tax up-to-date. Service history available.",
-        "Phone": "03011234567",
+        "Phone": "Show Phone No",
         "SellerName": "Ali Raza",
         "MemberSince": "Jan 15, 2022"
     },
@@ -248,7 +248,7 @@
             "Steering Switches"
         ],
         "Details": "Under warranty. First owner. Fully loaded variant. Token tax cleared.",
-        "Phone": "03451234567",
+        "Phone": "Show Phone No",
         "SellerName": "Usman Khalid",
         "MemberSince": "Jul 10, 2021"
     }
