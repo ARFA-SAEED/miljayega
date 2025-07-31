@@ -5,103 +5,140 @@ fetch("miljaega-motors.json")
     container.innerHTML = "";
 
     data.slice(0, 2).forEach((car) => {
-      container.innerHTML += `<div class="w-full lg:w-[48%] mb-6">
-  <div class="bg-white p-5 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 h-full flex flex-col">
+      container.innerHTML += `<div class="w-full mb-6 xl:w-[48%]">
+  <div class="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 h-full flex flex-col">
 
-    <!-- Top section with title and action buttons -->
-    <div class="flex justify-between items-start mb-2">
-      <div>
-        <h2 class="text-lg font-bold text-blue-900">${car.Name}</h2>
+    <!-- Top section with title and save button -->
+    <div class="flex justify-between items-start mb-3">
+      <div class="flex-1 min-w-0">
+        <h2 class="text-lg font-bold text-blue-900 truncate">${car.Name}</h2>
         <p class="text-sm text-gray-600 mt-1 line-clamp-2">${car.Details}</p>
       </div>
       
-      <div class="flex items-center gap-3">
-        <button class="flex items-center text-xs font-bold px-3.5 py-1.5 rounded-full bg-gradient-to-r from-gray-50 to-white text-rose-500 border border-rose-200 shadow-sm hover:shadow-md hover:bg-rose-50 hover:text-rose-600 transition-all duration-200 group">
-          <i class="fa-solid fa-heart me-2 group-hover:scale-110 transition-transform duration-200"></i> Save
-        </button>
-      </div>
+      <button class="flex-shrink-0 flex items-center text-xs font-bold px-3 py-1.5 rounded-full bg-gradient-to-r from-gray-50 to-white text-rose-500 border border-rose-200 shadow-sm hover:shadow-md hover:bg-rose-50 hover:text-rose-600 transition-all duration-200 ml-2">
+        <i class="fa-solid fa-heart me-2"></i> Save
+      </button>
     </div>
 
     <!-- Middle: image and content -->
-    <div class="flex flex-col sm:flex-row gap-5 flex-grow">
+    <div class="flex flex-col md:flex-row gap-4 flex-grow">
       
-      <!-- Image section with AdPostedTime -->
-      <div class="flex-shrink-0 sm:w-[330px] flex flex-col overflow-hidden">
-        <div class="relative flex-grow h-full rounded-lg overflow-hidden group">
+      <!-- Image section -->
+      <div class="flex-shrink-0 w-full md:w-[40%] lg:w-[37%] xl:w-[37%] flex flex-col overflow-hidden">
+        <div class="relative aspect-video rounded-lg overflow-hidden group">
           <img
             src="${car.Pictures[0]}"
             alt="${car.Name}"
             class="w-full h-full object-cover rounded-lg transition-transform duration-500 group-hover:scale-110"
           />
           <div class="absolute bottom-3 left-3 bg-gray-800/50 text-white text-xs px-2 py-1 rounded flex items-center backdrop-blur-sm">
-            <i class="fa-regular fa-clock mr-1 text-[8px] text-gray-300"></i> ${car.AdPostedTime || "Recently posted"}
+            <i class="fa-regular fa-clock mr-1 text-[8px] text-gray-300"></i> 
+            ${car.AdPostedTime || "Recently posted"}
+          </div>
+        </div>
+
+        <!-- Price & Badges - shown under image on md+ screens -->
+        <div class="md:block hidden">
+          <!-- Badges -->
+          <div class="flex flex-wrap gap-2 mt-3 [@media(max-width:1024px)]:mb-11">
+            ${car.Verified ? `
+              <span class="bg-green-900 text-white text-xs font-semibold px-2 py-0.5 rounded-full flex items-center shadow-sm whitespace-nowrap">
+                <i class="fa-solid fa-check-circle mr-1 text-[10px]"></i> ${car.Verified}
+              </span>` : ""}
+              
+            ${car.Trusted ? `
+              <span class="bg-blue-900 text-white text-xs font-semibold px-2 py-0.5 rounded-full flex items-center shadow-sm whitespace-nowrap">
+                <i class="fa-solid fa-shield-alt mr-1 text-[10px]"></i> ${car.Trusted}
+              </span>` : ""}
+          </div>
+          
+          <!-- Price -->
+          <div class="mt-5 ">
+            <span class="font-bold text-blue-900 text-lg whitespace-nowrap truncate block">
+              ${car.Price}
+            </span>
           </div>
         </div>
       </div>
 
-      <!-- Text content section -->
-      <div class="flex flex-col flex-grow">
-        <div class="grid grid-cols-2 gap-x-4 gap-y-3 mt-1 text-sm text-gray-700">
+      <!-- Content section -->
+      <div class="flex flex-col flex-grow min-w-0">
+        <div class="grid grid-cols-2 gap-x-4 gap-y-3 text-sm text-gray-700">
+          <!-- Car details -->
           <div class="flex items-center">
             <span class="bg-gray-200 text-gray-600 p-1.5 rounded-full mr-2 flex items-center justify-center">
               <i class="fa-solid fa-car text-xs"></i>
             </span>
-            <span>${car.Model}</span>
+            <span class="truncate">${car.Model}</span>
           </div>
+          
           <div class="flex items-center">
             <span class="bg-gray-200 text-gray-600 p-1.5 rounded-full mr-2 flex items-center justify-center">
               <i class="fa-solid fa-tachometer-alt text-xs"></i>
             </span>
             <span>${car.KMDriven}</span>
           </div>
+          
           <div class="flex items-center">
             <span class="bg-gray-200 text-gray-600 p-1.5 rounded-full mr-2 flex items-center justify-center">
               <i class="fa-solid fa-gas-pump text-xs"></i>
             </span>
             <span>${car.FuelType}</span>
           </div>
+          
           <div class="flex items-center">
             <span class="bg-gray-200 text-gray-600 p-1.5 rounded-full mr-2 flex items-center justify-center">
               <i class="fa-solid fa-cog text-xs"></i>
             </span>
             <span>${car.EngineCapacity}</span>
           </div>
+          
           <div class="col-span-2 flex items-center">
             <span class="bg-gray-200 text-gray-600 p-1.5 rounded-full mr-2 flex items-center justify-center">
               <i class="fa-solid fa-exchange-alt text-xs"></i>
             </span>
             <span>${car.Transmission}</span>
           </div>
+          
           <div class="col-span-2 flex items-center">
             <span class="bg-gray-200 text-gray-600 p-1.5 rounded-full mr-2 flex items-center justify-center">
               <i class="fa-solid fa-map-marker-alt text-xs"></i>
             </span>
-            <span> ${car.Address}</span>
+            <span class="truncate">${car.Address}</span>
           </div>
-           <!-- Badges moved under address -->
-          <div class="col-span-2 flex gap-2 mt-1">
+          
+          <!-- Badges - shown only on small screens -->
+          <div class="col-span-2 flex flex-wrap gap-2 mt-1 md:hidden">
             ${car.Verified ? `
-              <span class="bg-green-900 text-white text-[10px] font-semibold px-2 py-0.5 rounded-full flex items-center shadow-sm">
-                <i class="fa-solid fa-check-circle mr-1 text-[10px] text-white"></i> ${car.Verified}
+              <span class="bg-green-900 text-white text-xs font-semibold px-2 py-0.5 rounded-full flex items-center shadow-sm whitespace-nowrap">
+                <i class="fa-solid fa-check-circle mr-1 text-[10px]"></i> ${car.Verified}
               </span>` : ""}
+              
             ${car.Trusted ? `
-              <span class="bg-blue-900 text-white text-[10px] font-semibold px-2 py-0.5 rounded-full flex items-center shadow-sm">
-                <i class="fa-solid fa-shield-alt mr-1 text-[10px] text-white"></i> ${car.Trusted}
+              <span class="bg-blue-900 text-white text-xs font-semibold px-2 py-0.5 rounded-full flex items-center shadow-sm whitespace-nowrap">
+                <i class="fa-solid fa-shield-alt mr-1 text-[10px]"></i> ${car.Trusted}
               </span>` : ""}
           </div>
-         
         </div>
 
-        <!-- Bottom: Price & Phone -->
-        <div class="flex items-center justify-between mt-auto pt-4">
-          <span class="font-bold text-blue-900 text-lg">${car.Price}</span>
-          <button class="flex items-center bg-blue-900 text-white px-4 py-2.5 rounded-lg text-sm hover:opacity-90 transition-all duration-200 shadow-md">
+        <!-- Mobile: Price & Phone in row -->
+        <div class="flex flex-col sm:flex-row items-center justify-between mt-auto pt-4 gap-3 md:hidden">
+          <span class="font-bold text-blue-900 text-lg whitespace-nowrap truncate max-w-[180px] sm:max-w-none">
+            ${car.Price}
+          </span>
+          <button class="w-full sm:w-auto flex-shrink-0 bg-blue-900 text-white px-4 py-2.5 rounded-lg text-sm hover:opacity-90 transition-all duration-200 shadow-md whitespace-nowrap">
+            <i class="fa-solid fa-phone me-2"></i> ${car.Phone}
+          </button>
+        </div>
+
+        <!-- Desktop: Phone button at bottom -->
+        <div class="mt-9 hidden md:block [@media(min-width:1024px)_and_(max-width:1028px)]:mt-20">
+          <button class="w-full bg-blue-900 text-white px-4 py-2.5 rounded-lg text-sm hover:opacity-90 transition-all duration-200 shadow-md whitespace-nowrap">
             <i class="fa-solid fa-phone me-2"></i> ${car.Phone}
           </button>
         </div>
       </div>
     </div>
-
   </div>
 </div>`;
     });

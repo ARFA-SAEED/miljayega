@@ -114,3 +114,10 @@
    background-color: #ced8f3;
    /* Light gray on hover */
  }
+
+ @media (min-width: 1024px) and (max-width: 1028px) {
+   .custom-mt {
+     margin-top: 10px;
+     /* Equivalent to mt-9 */
+   }
+ }
