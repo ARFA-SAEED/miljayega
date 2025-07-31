@@ -5,7 +5,7 @@ fetch("miljaega-motors.json")
     container.innerHTML = "";
 
     data.slice(0, 2).forEach((car) => {
-      container.innerHTML += `<div class="w-full mb-6 xl:w-[48%]">
+      container.innerHTML += `<div class="w-full mb-6">
   <div class="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 h-full flex flex-col">
 
     <!-- Top section with title and save button -->
@@ -21,10 +21,10 @@ fetch("miljaega-motors.json")
     </div>
 
     <!-- Middle: image and content -->
-    <div class="flex flex-col md:flex-row gap-4 flex-grow">
+    <div class="flex flex-col sm:flex-row gap-4 flex-grow">
       
       <!-- Image section -->
-      <div class="flex-shrink-0 w-full md:w-[40%] lg:w-[37%] xl:w-[37%] flex flex-col overflow-hidden">
+      <div class="flex-shrink-0 w-full sm:w-[40%] md:w-[35%] lg:w-[30%] xl:w-[25%] flex flex-col overflow-hidden">
         <div class="relative aspect-video rounded-lg overflow-hidden group">
           <img
             src="${car.Pictures[0]}"
@@ -37,10 +37,10 @@ fetch("miljaega-motors.json")
           </div>
         </div>
 
-        <!-- Price & Badges - shown under image on md+ screens -->
-        <div class="md:block hidden">
+        <!-- Price & Badges - shown under image on sm+ screens -->
+        <div class="sm:block hidden">
           <!-- Badges -->
-          <div class="flex flex-wrap gap-2 mt-3 [@media(max-width:1024px)]:mb-11">
+          <div class="flex flex-wrap gap-2 mt-3">
             ${car.Verified ? `
               <span class="bg-green-900 text-white text-xs font-semibold px-2 py-0.5 rounded-full flex items-center shadow-sm whitespace-nowrap">
                 <i class="fa-solid fa-check-circle mr-1 text-[10px]"></i> ${car.Verified}
@@ -53,7 +53,7 @@ fetch("miljaega-motors.json")
           </div>
           
           <!-- Price -->
-          <div class="mt-5 ">
+          <div class="mt-3 sm:mt-4 md:mt-5">
             <span class="font-bold text-blue-900 text-lg whitespace-nowrap truncate block">
               ${car.Price}
             </span>
@@ -107,8 +107,8 @@ fetch("miljaega-motors.json")
             <span class="truncate">${car.Address}</span>
           </div>
           
-          <!-- Badges - shown only on small screens -->
-          <div class="col-span-2 flex flex-wrap gap-2 mt-1 md:hidden">
+          <!-- Badges - shown only on xs screens -->
+          <div class="col-span-2 flex flex-wrap gap-2 mt-1 sm:hidden">
             ${car.Verified ? `
               <span class="bg-green-900 text-white text-xs font-semibold px-2 py-0.5 rounded-full flex items-center shadow-sm whitespace-nowrap">
                 <i class="fa-solid fa-check-circle mr-1 text-[10px]"></i> ${car.Verified}
@@ -122,17 +122,17 @@ fetch("miljaega-motors.json")
         </div>
 
         <!-- Mobile: Price & Phone in row -->
-        <div class="flex flex-col sm:flex-row items-center justify-between mt-auto pt-4 gap-3 md:hidden">
-          <span class="font-bold text-blue-900 text-lg whitespace-nowrap truncate max-w-[180px] sm:max-w-none">
+        <div class="flex flex-col xs:flex-row items-center justify-between mt-auto pt-4 gap-3 sm:hidden">
+          <span class="font-bold text-blue-900 text-lg whitespace-nowrap truncate max-w-[180px] xs:max-w-none">
             ${car.Price}
           </span>
-          <button class="w-full sm:w-auto flex-shrink-0 bg-blue-900 text-white px-4 py-2.5 rounded-lg text-sm hover:opacity-90 transition-all duration-200 shadow-md whitespace-nowrap">
+          <button class="w-full xs:w-auto flex-shrink-0 bg-blue-900 text-white px-4 py-2.5 rounded-lg text-sm hover:opacity-90 transition-all duration-200 shadow-md whitespace-nowrap">
             <i class="fa-solid fa-phone me-2"></i> ${car.Phone}
           </button>
         </div>
 
         <!-- Desktop: Phone button at bottom -->
-        <div class="mt-9 hidden md:block [@media(min-width:1024px)_and_(max-width:1028px)]:mt-20">
+        <div class="mt-4 sm:mt-6 hidden sm:block">
           <button class="w-full bg-blue-900 text-white px-4 py-2.5 rounded-lg text-sm hover:opacity-90 transition-all duration-200 shadow-md whitespace-nowrap">
             <i class="fa-solid fa-phone me-2"></i> ${car.Phone}
           </button>
