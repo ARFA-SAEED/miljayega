@@ -33,20 +33,9 @@ fetch("miljaega-motors.json")
             alt="${car.Name}"
             class="w-full h-full object-cover rounded-lg transition-transform duration-500 group-hover:scale-110"
           />
-          <!-- Badges moved to top left inside image - Updated colors for better visibility -->
-          <div class="absolute top-3 left-3 flex gap-2">
-          ${car.Verified ? `
-            <span class="bg-green-900 text-white text-[10px] font-semibold px-2 py-0.5 rounded-full border border-white-300 flex items-center shadow-sm">
-              <i class="fa-solid fa-check-circle mr-1 text-[10px] text-white"></i> ${car.Verified}
-            </span>` : ""}
-          ${car.Trusted ? `
-            <span class="bg-blue-900 text-white text-[10px] font-semibold px-2 py-0.5 rounded-full border border-blue-300 flex items-center shadow-sm">
-              <i class="fa-solid fa-shield-alt mr-1 text-[10px] text-white"></i> ${car.Trusted}
-            </span>` : ""}
-        </div>
-   <div class="absolute bottom-3 left-3 bg-gray-800/50 text-white text-xs px-2 py-1 rounded flex items-center backdrop-blur-sm">
-  <i class="fa-regular fa-clock mr-1 text-[8px] text-gray-300"></i> ${car.AdPostedTime || "Recently posted"}
-</div>
+          <div class="absolute bottom-3 left-3 bg-gray-800/50 text-white text-xs px-2 py-1 rounded flex items-center backdrop-blur-sm">
+            <i class="fa-regular fa-clock mr-1 text-[8px] text-gray-300"></i> ${car.AdPostedTime || "Recently posted"}
+          </div>
         </div>
       </div>
 
@@ -89,6 +78,18 @@ fetch("miljaega-motors.json")
             </span>
             <span> ${car.Address}</span>
           </div>
+           <!-- Badges moved under address -->
+          <div class="col-span-2 flex gap-2 mt-1">
+            ${car.Verified ? `
+              <span class="bg-green-900 text-white text-[10px] font-semibold px-2 py-0.5 rounded-full flex items-center shadow-sm">
+                <i class="fa-solid fa-check-circle mr-1 text-[10px] text-white"></i> ${car.Verified}
+              </span>` : ""}
+            ${car.Trusted ? `
+              <span class="bg-blue-900 text-white text-[10px] font-semibold px-2 py-0.5 rounded-full flex items-center shadow-sm">
+                <i class="fa-solid fa-shield-alt mr-1 text-[10px] text-white"></i> ${car.Trusted}
+              </span>` : ""}
+          </div>
+         
         </div>
 
         <!-- Bottom: Price & Phone -->

@@ -52,7 +52,7 @@
             "Steering Switches",
             "Sun Roof"
         ],
-        "Details": "Documents have not checked by Miljaega. Miljaega inspected car...",
+        "Details": "Company maintained. Islamabad number. Full original paint. Tokens paid till 2025.",
         "Phone": "Show Phone No",
         "SellerName": "Saleem",
         "MemberSince": "Apr 03, 2021"
@@ -62,6 +62,8 @@
         "Name": "Honda City 1.2L CVT 2023",
         "Price": "PKR 39 lacs",
         "RegisteredIn": "Lahore",
+            "Verified": "",
+        "Trusted": "Trusted",
         "Model": 2023,
         "KMDriven": "18,500 km",
         "FuelType": "Petrol",
@@ -202,7 +204,7 @@
     {
         "AdPostedDate": "2025-07-26",
         "AdPostedTime": "4 minutes ago",
-        "Verified": "",
+        "Verified": "Trusted",
         "Trusted": "",
         "Name": "Suzuki Swift GLX CVT 2024",
         "Price": "PKR 45 lacs",
