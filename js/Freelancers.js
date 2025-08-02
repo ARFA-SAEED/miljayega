@@ -1,9 +1,9 @@
-fetch("miljaega-bikes.json")
+fetch("miljaega-freelancers.json")
   .then((response) => response.json())
   .then((data) => {
     console.log(data);
 
-    const bcardsContainer = document.getElementById("mycardsbikes");
+    const bcardsContainer = document.getElementById("mycardsfreelancers");
     for (let i = 0; i < data.length; i++) {
       const bcard = data[i];
 

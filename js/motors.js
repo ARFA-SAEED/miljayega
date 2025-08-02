@@ -6,7 +6,7 @@ fetch("miljaega-motors.json")
 
     data.slice(0, 2).forEach((car) => {
       container.innerHTML += `<div class="w-full mb-6 lg:w-[calc(48%-12px)] lg:odd:mr-3">
-  <div class="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 h-full flex flex-col">
+  <div class="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300  h-full flex flex-col">
 
     <!-- Top section with title and save button -->
     <div class="flex justify-between items-start mb-3">
