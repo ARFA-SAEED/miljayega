@@ -38,4 +38,15 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-
+     tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'fiverr-blue': '#0d084d',
+                        'fiverr-orange': '#ff643d',
+                        'fiverr-green': '#1dbf73',
+                        'light-gray': '#f5f5f5',
+                    }
+                }
+            }
+        }

@@ -1,66 +1,54 @@
 [
   {
-    "id": 1,
     "name": "Reena L.",
-    "action": "wrote a review",
-    "avatar": "./images/rl.jpg",
-    "time": "36 minutes ago",
-    "featuredImage": "./images/parrots.jpg",
-    "business": "California Academy of Sciences",
-    "rating": 5,
-    "review": "I never get tired of this place! I remember being mesmerized as a kid in elementary school comin...",
-    "badges": ["Verified", "Trusted"],
-    "stats": {
-      "comments": 12,
-      "likes": 24
-    }
+    "status": "Active now",
+    "topRated": true,
+    "image": "https://fiverr-res.cloudinary.com/t_gig_cards_web,q_auto,f_auto/gigs/428942208/original/83d8eec9f4842b2da06f63c4294a0a63924c1411.png",
+    "title": "I will build rebuild custom website development full stack front end back end developer",
+    "rating": 4.6,
+    "reviews": 282,
+    "location": "North Nazimabad, Block 10, Karachi",
+    "verified": true,
+    "trusted": true,
+    "profileImage": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1000&auto=format&fit=crop"
   },
   {
-    "id": 2,
-    "name": "Alex M.",
-    "action": "shared a project",
-    "avatar": "./images/am.jpg",
-    "time": "2 hours ago",
-    "featuredImage": "./images/design.jpg",
-    "business": "Creative Design Studio",
-    "rating": 4,
-    "review": "Amazing collaboration with this team. They delivered beyond expectations!",
-    "badges": ["Verified", "Top Rated"],
-    "stats": {
-      "comments": 8,
-      "likes": 32
-    }
+    "name": "Ali M.",
+    "status": "Active now",
+    "topRated": true,
+    "image": "https://fiverr-res.cloudinary.com/t_gig_cards_web,q_auto,f_auto/gigs/428942208/original/83d8eec9f4842b2da06f63c4294a0a63924c1411.png",
+    "title": "I will create and develop full stack custom websites using frontend backend modern tools and technologies",
+    "rating": 4.8,
+    "reviews": 350,
+    "location": "Gulshan-e-Iqbal, Block 13, Karachi",
+    "verified": true,
+    "trusted": true,
+    "profileImage": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1000&auto=format&fit=crop"
   },
   {
-    "id": 3,
-    "name": "Sarah K.",
-    "action": "posted a service",
-    "avatar": "./images/sk.jpg",
-    "time": "1 day ago",
-    "featuredImage": "./images/code.jpg",
-    "business": "Tech Solutions Inc.",
-    "rating": 5,
-    "review": "Looking for frontend developers to join our growing team of experts.",
-    "badges": ["Verified", "Featured"],
-    "stats": {
-      "comments": 15,
-      "likes": 45
-    }
+    "name": "Sara K.",
+    "status": "Active now",
+    "topRated": true,
+    "image": "https://fiverr-res.cloudinary.com/t_gig_cards_web,q_auto,f_auto/gigs/428942208/original/83d8eec9f4842b2da06f63c4294a0a63924c1411.png",
+    "title": "I will build and redesign full stack web solutions including backend API and modern frontend UI",
+    "rating": 4.7,
+    "reviews": 210,
+    "location": "Clifton Block 7, Karachi",
+    "verified": true,
+    "trusted": true,
+    "profileImage": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1000&auto=format&fit=crop"
   },
   {
-    "id": 4,
-    "name": "David P.",
-    "action": "wrote a review",
-    "avatar": "./images/dp.jpg",
-    "time": "3 days ago",
-    "featuredImage": "./images/workshop.jpg",
-    "business": "Digital Marketing Hub",
-    "rating": 4,
-    "review": "Their SEO strategies helped us double our organic traffic in just 3 months.",
-    "badges": ["Trusted", "Recommended"],
-    "stats": {
-      "comments": 5,
-      "likes": 28
-    }
+    "name": "Usman Z.",
+    "status": "Active now",
+    "topRated": true,
+    "image": "https://fiverr-res.cloudinary.com/t_gig_cards_web,q_auto,f_auto/gigs/428942208/original/83d8eec9f4842b2da06f63c4294a0a63924c1411.png",
+    "title": "I will design develop and maintain full stack web apps with clean frontend and scalable backend systems",
+    "rating": 4.9,
+    "reviews": 415,
+    "location": "DHA Phase 5, Karachi",
+    "verified": true,
+    "trusted": true,
+    "profileImage": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1000&auto=format&fit=crop"
   }
 ]
