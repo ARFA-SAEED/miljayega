@@ -50,3 +50,9 @@ document.addEventListener("click", function () {
                 }
             }
         }
+  
+          function changeMainImage(el) {
+    const newSrc = el.getAttribute('data-image');
+    const mainImg = document.getElementById('main-image');
+    mainImg.src = newSrc;
+  }

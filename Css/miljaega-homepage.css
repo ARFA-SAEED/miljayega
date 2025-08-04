@@ -253,3 +253,16 @@
      /* Equivalent to mt-9 */
    }
  }
+
+ .thumbnail {
+   transition: all 0.2s ease;
+ }
+
+ .thumbnail:hover {
+   transform: scale(1.05);
+   box-shadow: 0 0 5px rgba(59, 130, 246, 0.5);
+ }
+
+ #main-image {
+   transition: opacity 0.3s ease;
+ }
