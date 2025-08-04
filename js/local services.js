@@ -1,74 +1,86 @@
-fetch("miljaega-localservices.json")
-  .then((response) => response.json())
-  .then((data) => {
-    console.log(data);
 
-    const lcardsContainer = document.getElementById("mycardslocal");
+  fetch('miljaega-localservices.json')
+    .then(response => response.json())
+    .then(data => {
+      const container = document.getElementById('mycardslocal');
+      container.innerHTML = ''; // clear previous content if any
 
-    for (let i = 0; i < data.length; i++) {
-      const lcard = data[i];
+      data.forEach(service => {
+        const stars = Array(5)
+          .fill('')
+          .map((_, i) => {
+            return `<span class="w-[18px] h-[18px] flex items-center justify-center rounded mb-1 ${
+              i < service.stars
+                ? 'bg-[#f59e0b] text-white'
+                : 'bg-[#d1d5db] text-white'
+            }">★</span>`;
+          })
+          .join('');
 
-      lcardsContainer.innerHTML += `
+        const servicesHTML = service.services
+          .map(item => {
+            return `<span class="bg-[#e7f0fd] rounded-full text-[10px] text-blue-900 font-bold h-[24px] flex items-center justify-center px-3">${item}</span>`;
+          })
+          .join('');
 
-                <div class="card flex flex-col overflow-hidden rounded-lg shadow border border-gray-200 bg-white transform transition-transform duration-300 ease-in-out hover:scale-[1.02]">
-                    <div class="relative">
-                        <img alt="Plot for sale in Mumtaz City" class="w-full h-48 object-cover"
-                            src="${lcard.image}" />
-                        <button
-                            class="absolute top-3 right-4 inline-flex items-center gap-1 bg-white/10 text-black px-3 py-1 rounded-full shadow-lg backdrop-blur-sm hover:text-red-500 transition">
-                            <span class="material-icons text-base">favorite_border</span>
-                            <span class="text-xs font-medium">favorite</span>
-                        </button>
-                    </div>
-                    <div class="p-4 flex flex-col">
-                        <div class="flex justify-between items-start mb-1">
-                            <div>
-                                <div class="flex items-center space-x-2">
-                                    <img src="${lcard.image2}" alt="User"
-                                        class="w-6 h-6 rounded-full object-cover" />
-                                    <span class="text-sm font-medium text-gray-700">${lcard.name}</span>
-                                </div>
-                                ${getColor(lcard.level)}
-                            </div>
-                            <div class="flex items-center space-x-2">
-                                <span
-                                    class="bg-green-100 text-green-600 text-xs font-semibold px-2 py-0.5 rounded">${lcard.verified}</span>
-                                <span
-                                    class="bg-blue-100 text-blue-600 text-xs font-semibold px-2 py-0.5 rounded">${lcard.trusted}</span>
-                            </div>
-                        </div>
-                        <h3 class="text-md font-semibold text-gray-800 mt-1">Electrician</h3>
-                        <p class="text-sm text-gray-500">${lcard.address}/p>
-                        <div class="flex items-center justify-between text-[11px] text-gray-600 mt-4">
-                            <div class="flex items-center">
-                                <span>125 Orders</span>
-                                <div class="flex items-center space-x-0.5 ml-3">
-                                    <span class="material-icons text-yellow-500 text-[13px]">star</span>
-                                    <span class="font-medium">${lcard.ratings}</span>
-                                </div>
-                            </div>
+        container.innerHTML += `
+        <div class="relative w-full max-w-[360px] mx-auto bg-white rounded-lg shadow-sm overflow-hidden border border-[#e5e5e5]">
+          
+          <!-- Badge -->
+          <div class="absolute top-5 pe-4 right-0 inline-flex items-center px-2 py-[2px] border border-l-[#f6c865] border-t-[#f6c865] border-b-[#f6c865] rounded-l-full bg-[#fffcf1] text-[12px] font-medium text-[#b7791f]">
+            <img src="${service.badge.icon}" class="ms-1 me-1" alt="">
+            ${service.badge.level}
+          </div>
 
-                            <p class="text-xs text-gray-400">${lcard.day}</p>
-                        </div>
-                    </div>
+          <!-- Card Content -->
+          <div class="p-3">
+            <div class="flex gap-4">
+              <div>
+                <img src="${service.image}" alt="" class="mt-2 ms-1 object-cover rounded-full w-[130px] h-[130px] shadow-[0_0_7px_#1E3A8A] transition-transform duration-300 hover:scale-[1.04]" />
+              </div>
+              <div class="mt-10">
+                <span class="text-[18px] font-bold text-blue-900 leading-[10px] font-[Poppins]">${service.service.replace(' ', '<br>')}</span>
+                <div class="flex gap-1 mt-3">
+                  <span class="bg-[#f0f5ff] w-[84px] text-blue-900 h-[20px] px-2 py-[2px] rounded-full text-[8px] font-medium leading-[18px] flex">
+                    <img src="${service.labelIcons[0]}" class="pe-1 ps-2" alt="">${service.labels[0]}
+                  </span>
+                  <span class="bg-[#f0f9eb] w-[80px] text-[#4e9a19] px-2 py-[2px] rounded-full text-[8px] font-medium leading-[18px] flex">
+                    <img src="${service.labelIcons[1]}" class="pe-1 ps-2" alt="">${service.labels[1]}
+                  </span>
                 </div>
-`;
-    }
-  })
-  .catch((error) => {
-    console.error("Error loading cards:", error);
-  });
+              </div>
+            </div>
+          </div>
 
+          <div class="justify-between items-start ps-5">
+            <div>
+              <h3 class="text-[15px] font-bold text-blue-900 ps-1">${service.name}</h3>
+              
+              <div class="space-y-2 mt-3 mb-3">
+                <!-- Service Tags -->
+                <div class="flex flex-wrap gap-1">${servicesHTML}</div>
+              </div>
 
-function getColor(level) {
-  const colors = {
-  "Level 1": `yellow`,
-  "Level 2": `purple`,
-  "Top Rated": `green`,
-  "New": `orange`};
-  
-  return `<div class="mt-2 inline-flex items-center gap-1 text-[10px] font-semibold px-2 py-0.5 rounded-full bg-${colors[level]}-50 text-${colors[level]}-800 border border-${colors[level]}-200">
-                <i class="fa-solid fa-circle-check text-[12px] text-${colors[level]}-700"></i>
-                  ${level}
-            </div>`
-}
+              <p class="text-[12px] text-gray-600 mt-4 ps-1">${service.orders} Orders</p>
+
+              <div class="flex items-center text-[14px] font-medium">
+                <div class="flex space-x-[2px] mt-1 ps-1">${stars}</div>
+                <span class="ml-2 text-black text-[12px]">${service.rating}</span>
+              </div>
+            </div>
+
+            <p class="text-[12px] font-bold text-blue-900 ps-1">${service.location}</p>
+          </div>
+
+          <!-- Button -->
+          <button class="w-full mt-3 bg-blue-900  hover:bg-opacity-95 text-white py-4 px-4 text-[13px] font-medium leading-[20px]">
+            <i class="fa-solid fa-phone text-white me-1"></i> Show Phone Number
+          </button>
+        </div>
+        `;
+      });
+    })
+    .catch(error => {
+      console.error('Error loading services:', error);
+    });
+

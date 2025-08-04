@@ -1,54 +1,98 @@
 [
   {
-    "image": "./images/cardimage.png",
-    "image2": "https://randomuser.me/api/portraits/women/44.jpg",
-    "name": "Alisha",
-    "title": "Electirician",
-    "price": "Rs 1.10 Crore",
-    "address": "Mumtaz City - Chanab Block, Islamabad",
-    "day": "1 day ago",
-    "verified": "Verified",
-    "level": "Level 1",
-    "ratings": "4.8",
-    "trusted": "Trusted"
+    "name": "Malik Imran",
+    "service": "Home Electrician",
+    "image": "./images/lcimg.jpg",
+    "badge": {
+      "level": "Level 1",
+      "icon": "./images/tick.svg"
+    },
+    "labels": ["Verified", "Trusted"],
+    "labelIcons": ["./images/verified.svg", "./images/trusted.svg"],
+    "services": [
+      "Wiring",
+      "Repairing",
+      "Panel Installation",
+      "Fitting",
+      "UPS Aur Inverter Setup",
+      "Meter Fitting",
+      "Earthing"
+    ],
+    "orders": 125,
+    "rating": 4.8,
+    "stars": 4,
+    "location": "Mumtaz City – Chanab Block, Islamabad"
   },
-  {
-    "image": "./images/cardimage.png",
-    "image2": "https://randomuser.me/api/portraits/women/44.jpg",
-    "name": "Alisha",
-    "title": "Electirician",
-    "price": "Rs 1.10 Crore",
-    "address": "Mumtaz City - Chanab Block, Islamabad",
-    "day": "1 day ago",
-    "verified": "Verified",
-    "level": "Top Rated",
-    "ratings": "4.8",
-    "trusted": "Trusted"
+   {
+    "name": "Malik Imran",
+    "service": "Home Electrician",
+    "image": "./images/lcimg.jpg",
+    "badge": {
+      "level": "Level 1",
+      "icon": "./images/tick.svg"
+    },
+    "labels": ["Verified", "Trusted"],
+    "labelIcons": ["./images/verified.svg", "./images/trusted.svg"],
+    "services": [
+      "Wiring",
+      "Repairing",
+      "Panel Installation",
+      "Fitting",
+      "UPS Aur Inverter Setup",
+      "Meter Fitting",
+      "Earthing"
+    ],
+    "orders": 125,
+    "rating": 4.8,
+    "stars": 4,
+    "location": "Mumtaz City – Chanab Block, Islamabad"
   },
-  {
-    "image": "./images/cardimage.png",
-    "image2": "https://randomuser.me/api/portraits/women/44.jpg",
-    "name": "Alisha",
-    "title": "Electirician",
-    "price": "Rs 1.10 Crore",
-    "address": "Mumtaz City - Chanab Block, Islamabad",
-    "day": "1 day ago",
-    "verified": "Verified",
-    "level": "New",
-    "ratings": "4.8",
-    "trusted": "Trusted"
+   {
+    "name": "Malik Imran",
+    "service": "Home Electrician",
+    "image": "./images/lcimg.jpg",
+    "badge": {
+      "level": "Level 1",
+      "icon": "./images/tick.svg"
+    },
+    "labels": ["Verified", "Trusted"],
+    "labelIcons": ["./images/verified.svg", "./images/trusted.svg"],
+    "services": [
+      "Wiring",
+      "Repairing",
+      "Panel Installation",
+      "Fitting",
+      "UPS Aur Inverter Setup",
+      "Meter Fitting",
+      "Earthing"
+    ],
+    "orders": 125,
+    "rating": 4.8,
+    "stars": 4,
+    "location": "Mumtaz City – Chanab Block, Islamabad"
   },
-  {
-    "image": "./images/cardimage.png",
-    "image2": "https://randomuser.me/api/portraits/women/44.jpg",
-    "name": "Alisha",
-    "title": "Electirician",
-    "price": "Rs 1.10 Crore",
-    "address": "Mumtaz City - Chanab Block, Islamabad",
-    "day": "1 day ago",
-    "verified": "Verified",
-    "level": "Level 2",
-    "ratings": "4.8",
-    "trusted": "Trusted"
+   {
+    "name": "Malik Imran",
+    "service": "Home Electrician",
+    "image": "./images/lcimg.jpg",
+    "badge": {
+      "level": "Level 1",
+      "icon": "./images/tick.svg"
+    },
+    "labels": ["Verified", "Trusted"],
+    "labelIcons": ["./images/verified.svg", "./images/trusted.svg"],
+    "services": [
+      "Wiring",
+      "Repairing",
+      "Panel Installation",
+      "Fitting",
+      "UPS Aur Inverter Setup",
+      "Meter Fitting",
+      "Earthing"
+    ],
+    "orders": 125,
+    "rating": 4.8,
+    "stars": 4,
+    "location": "Mumtaz City – Chanab Block, Islamabad"
   }
 ]
