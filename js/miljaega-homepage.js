@@ -7,7 +7,7 @@ const btnn = document
     this.classList.toggle("text-red-500"); // Changes color when active
     // Add your voice recognition logic here
   });}
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("click", function () {
   const toggleBtn = document.getElementById("mobileMenuToggle");
   const mobileMenu = document.getElementById("mobileMenu");
 
