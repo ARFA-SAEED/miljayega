@@ -266,3 +266,11 @@
  #main-image {
    transition: opacity 0.3s ease;
  }
+
+ /* Optional custom styles, but Tailwind utilities are enough */
+ .active-thumbnail {
+   box-shadow: 0 0 10px 3px rgba(59, 130, 246, 0.7);
+   /* blue glowing shadow */
+   border-color: #3b82f6;
+   /* Tailwind blue-500 */
+ }

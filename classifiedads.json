@@ -1,0 +1,57 @@
+[
+ 
+   {
+    "title": "HP ElitePad G1",
+    "posted": "6 days ago",
+    "price": "Rs 9,500",
+    "location": "Mumtaz City - Chanab Block, Islamabad",
+    "mainImage": "./images/computers.webp",
+    "images": [
+      { "thumb": "./images/dekstop.webp", "image": "./images/dekstop.webp" },
+      { "thumb": "./images/computers.webp", "image": "./images/computers.webp" },
+      { "thumb": "./images/pics.webp", "image": "./images/pics.webp" },
+      { "thumb": "./images/Rectangle 21.png", "image": "./images/hp2.webp" }
+    ],
+    "badges": ["verified", "trusted"]
+  },
+    {
+    "title": "HP ElitePad G1",
+    "posted": "6 days ago",
+    "price": "Rs 9,500",
+    "location": "Mumtaz City - Chanab Block, Islamabad",
+    "mainImage": "./images/computers.webp",
+    "images": [
+      { "thumb": "./images/dekstop.webp", "image": "./images/dekstop.webp" },
+      { "thumb": "./images/computers.webp", "image": "./images/computers.webp" },
+      { "thumb": "./images/pics.webp", "image": "./images/pics.webp" },
+      { "thumb": "./images/Rectangle 21.png", "image": "./images/hp2.webp" }
+    ],
+    "badges": ["verified", "trusted"]
+  },  {
+    "title": "HP ElitePad G1",
+    "posted": "6 days ago",
+    "price": "Rs 9,500",
+    "location": "Mumtaz City - Chanab Block, Islamabad",
+    "mainImage": "./images/computers.webp",
+    "images": [
+      { "thumb": "./images/dekstop.webp", "image": "./images/dekstop.webp" },
+      { "thumb": "./images/computers.webp", "image": "./images/computers.webp" },
+      { "thumb": "./images/pics.webp", "image": "./images/pics.webp" },
+      { "thumb": "./images/Rectangle 21.png", "image": "./images/hp2.webp" }
+    ],
+    "badges": ["verified", "trusted"]
+  },
+  {
+    "title": "HP ElitePad G1",
+    "posted": "6 days ago",
+    "price": "Rs 9,500",
+    "location": "Mumtaz City - Chanab Block, Islamabad",
+    "mainImage": "./images/computers.webp",
+    "images": [
+      { "thumb": "./images/dekstop.webp", "image": "./images/dekstop.webp" },
+      { "thumb": "./images/computers.webp", "image": "./images/computers.webp" },
+      { "thumb": "./images/pics.webp", "image": "./images/pics.webp" },
+      { "thumb": "./images/Rectangle 21.png", "image": "./images/hp2.webp" }
+    ],
+    "badges": ["verified", "trusted"]
+  }]
