@@ -24,7 +24,7 @@
           .join('');
 
         container.innerHTML += `
-        <div class="relative w-full max-w-[360px] mx-auto bg-white rounded-lg shadow-sm overflow-hidden border border-[#e5e5e5]">
+        <div class="relative w-full max-w-[360px] mx-auto bg-white rounded-lg shadow-sm overflow-hidden border border-[#e5e5e5] transform transition-transform duration-300 ease-in-out hover:scale-[1.02]">
           
           <!-- Badge -->
           <div class="absolute top-5 pe-4 right-0 inline-flex items-center px-2 py-[2px] border border-l-[#f6c865] border-t-[#f6c865] border-b-[#f6c865] rounded-l-full bg-[#fffcf1] text-[12px] font-medium text-[#b7791f]">
@@ -34,11 +34,11 @@
 
           <!-- Card Content -->
           <div class="p-3">
-            <div class="flex gap-4">
+            <div class="flex sm:block xl:flex gap-4">
               <div>
-                <img src="${service.image}" alt="" class="mt-2 ms-1 object-cover rounded-full w-[130px] h-[130px] shadow-[0_0_7px_#1E3A8A] transition-transform duration-300 hover:scale-[1.04]" />
+                <img src="${service.image}" alt="" class="mt-2  sm:ms-10  sm:mt-10 lg:mt-10 xl:ms-2 md:ms-20 md:mt-7 lg:ms-8 ms-1 object-cover rounded-full w-[130px] h-[130px] shadow-[0_0_7px_#1E3A8A] transform transition-transform duration-300 ease-in-out hover:scale-[1.02]" />
               </div>
-              <div class="mt-10">
+              <div class="mt-9 sm:mt-2 lg:mt-[60px]">
                 <span class="text-[18px] font-bold text-blue-900 leading-[10px] font-[Poppins]">${service.service.replace(' ', '<br>')}</span>
                 <div class="flex gap-1 mt-3">
                   <span class="bg-[#f0f5ff] w-[84px] text-blue-900 h-[20px] px-2 py-[2px] rounded-full text-[8px] font-medium leading-[18px] flex">
@@ -56,7 +56,7 @@
             <div>
               <h3 class="text-[15px] font-bold text-blue-900 ps-1">${service.name}</h3>
               
-              <div class="space-y-2 mt-3 mb-3">
+              <div class="space-y-2 mt-3 mb-9">
                 <!-- Service Tags -->
                 <div class="flex flex-wrap gap-1">${servicesHTML}</div>
               </div>
