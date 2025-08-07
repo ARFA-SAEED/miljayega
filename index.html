@@ -1006,23 +1006,41 @@
                 </div>
 
                 <!-- Property Cards Grid -->
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" id="mycardsproperties">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8" id="mycardsproperties">
 
-                    <div class="transform hover:scale-[1.02] w-full max-w-sm ">
-                        <!-- Image and HOT badge -->
-                        <div class="relative">
+
+                    <div class="transform hover:scale-[1.02]  w-full max-w-sm bg-white h-[400px] shadow-xl rounded-xl">
+                        <!-- Image and  badges -->
+                        <div class="">
                             <img src="./images/properties.jpeg" alt="JS Mall"
-                                class=" rounded-lg w-full h-44 object-cover">
+                                class="relative rounded-lg w-full h-44 object-cover">
 
-                            <!-- HOT Badge -->
-                            <div
-                                class="absolute top-2 left-2 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded">
-                                HOT
+                            <div class="flex gap-2">
+                                <!-- Verified Badge -->
+                                <span
+                                    class="bg-blue-50 text-blue-600 z-20 top-3 left-3 text-xs font-medium pe-4 py-1 absolute rounded-full flex items-center badge">
+                                    <svg class="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723..."
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                    Verified
+                                </span>
+
+                                <!-- Trusted Badge -->
+                                <span
+                                    class="bg-green-50 top-3 left-24  absolute z-20 text-green-600 text-xs font-medium pe-4 py-1 rounded-full flex items-center badge">
+                                    <svg class="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265..."
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                    Trusted
+                                </span>
                             </div>
+
                         </div>
 
                         <!-- Content -->
-                        <div class="p-4">
+                        <div class="ps-4 pt-4">
                             <!-- Price Range -->
                             <p class="text-[16px]  font-bold  text-blue-900">
                                 25.5
@@ -1043,29 +1061,56 @@
                                     <i class="fa-solid fa-shop text-blue-900"></i>
                                     <span class="font-bold">Shops, Offices</span>
                                 </div>
-                                <div class="flex items-center gap-2 mt-1">
+                                <div class="flex items-center gap-2 mt-1 mb-3
+                                ">
                                     <i class="fa-solid fa-chart-area text-blue-900"></i>
                                     <span class="font-bold">34 sqft to 907 sqft</span>
+                                </div>
+                                <!-- Phone Button -->
+                                <div class="pe-4 mb-0">
+                                    <button
+                                        class="w-full bg-blue-900 text-white py-2 rounded text-[14px] transition hover:bg-opacity-95">
+                                        <i class="fa-solid fa-phone me-1 text-[13px]"></i> Show Phone Number
+                                    </button>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="transform hover:scale-[1.02] w-full max-w-sm ">
-                        <!-- Image and HOT badge -->
-                        <div class="relative">
-                            <img src="./images/properties.jpeg" alt="JS Mall"
-                                class=" rounded-lg w-full h-44 object-cover">
 
-                            <!-- HOT Badge -->
-                            <div
-                                class="absolute top-2 left-2 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded">
-                                HOT
+
+                    <div class="transform hover:scale-[1.02]  w-full max-w-sm bg-white h-[400px] shadow-xl rounded-xl">
+                        <!-- Image and  badges -->
+                        <div class="">
+                            <img src="./images/properties.jpeg" alt="JS Mall"
+                                class="relative rounded-lg w-full h-44 object-cover">
+
+                            <div class="flex gap-2">
+                                <!-- Verified Badge -->
+                                <span
+                                    class="bg-blue-50 text-blue-600 z-20 top-3 left-3 text-xs font-medium pe-4 py-1 absolute rounded-full flex items-center badge">
+                                    <svg class="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723..."
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                    Verified
+                                </span>
+
+                                <!-- Trusted Badge -->
+                                <span
+                                    class="bg-green-50 top-3 left-24  absolute z-20 text-green-600 text-xs font-medium pe-4 py-1 rounded-full flex items-center badge">
+                                    <svg class="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265..."
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                    Trusted
+                                </span>
                             </div>
+
                         </div>
 
                         <!-- Content -->
-                        <div class="p-4">
+                        <div class="ps-4 pt-4">
                             <!-- Price Range -->
                             <p class="text-[16px]  font-bold  text-blue-900">
                                 25.5
@@ -1086,29 +1131,55 @@
                                     <i class="fa-solid fa-shop text-blue-900"></i>
                                     <span class="font-bold">Shops, Offices</span>
                                 </div>
-                                <div class="flex items-center gap-2 mt-1">
+                                <div class="flex items-center gap-2 mt-1 mb-3
+                                ">
                                     <i class="fa-solid fa-chart-area text-blue-900"></i>
                                     <span class="font-bold">34 sqft to 907 sqft</span>
+                                </div>
+                                <!-- Phone Button -->
+                                <div class="pe-4 mb-0">
+                                    <button
+                                        class="w-full bg-blue-900 text-white py-2 rounded text-[14px] transition hover:bg-opacity-95">
+                                        <i class="fa-solid fa-phone me-1 text-[13px]"></i> Show Phone Number
+                                    </button>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="transform hover:scale-[1.02] w-full max-w-sm ">
-                        <!-- Image and HOT badge -->
-                        <div class="relative">
-                            <img src="./images/properties.jpeg" alt="JS Mall"
-                                class=" rounded-lg w-full h-44 object-cover">
 
-                            <!-- HOT Badge -->
-                            <div
-                                class="absolute top-2 left-2 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded">
-                                HOT
+                    <div class="transform hover:scale-[1.02]  w-full max-w-sm bg-white h-[400px] shadow-xl rounded-xl">
+                        <!-- Image and  badges -->
+                        <div class="">
+                            <img src="./images/properties.jpeg" alt="JS Mall"
+                                class="relative rounded-lg w-full h-44 object-cover">
+
+                            <div class="flex gap-2">
+                                <!-- Verified Badge -->
+                                <span
+                                    class="bg-blue-50 text-blue-600 z-20 top-3 left-3 text-xs font-medium pe-4 py-1 absolute rounded-full flex items-center badge">
+                                    <svg class="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723..."
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                    Verified
+                                </span>
+
+                                <!-- Trusted Badge -->
+                                <span
+                                    class="bg-green-50 top-3 left-24  absolute z-20 text-green-600 text-xs font-medium pe-4 py-1 rounded-full flex items-center badge">
+                                    <svg class="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265..."
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                    Trusted
+                                </span>
                             </div>
+
                         </div>
 
                         <!-- Content -->
-                        <div class="p-4">
+                        <div class="ps-4 pt-4">
                             <!-- Price Range -->
                             <p class="text-[16px]  font-bold  text-blue-900">
                                 25.5
@@ -1129,29 +1200,56 @@
                                     <i class="fa-solid fa-shop text-blue-900"></i>
                                     <span class="font-bold">Shops, Offices</span>
                                 </div>
-                                <div class="flex items-center gap-2 mt-1">
+                                <div class="flex items-center gap-2 mt-1 mb-3
+                                ">
                                     <i class="fa-solid fa-chart-area text-blue-900"></i>
                                     <span class="font-bold">34 sqft to 907 sqft</span>
+                                </div>
+                                <!-- Phone Button -->
+                                <div class="pe-4 mb-0">
+                                    <button
+                                        class="w-full bg-blue-900 text-white py-2 rounded text-[14px] transition hover:bg-opacity-95">
+                                        <i class="fa-solid fa-phone me-1 text-[13px]"></i> Show Phone Number
+                                    </button>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="transform hover:scale-[1.02] w-full max-w-sm ">
-                        <!-- Image and HOT badge -->
-                        <div class="relative">
-                            <img src="./images/properties.jpeg" alt="JS Mall"
-                                class=" rounded-lg w-full h-44 object-cover">
 
-                            <!-- HOT Badge -->
-                            <div
-                                class="absolute top-2 left-2 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded">
-                                HOT
+
+                    <div class="transform hover:scale-[1.02]  w-full max-w-sm bg-white h-[400px] shadow-xl rounded-xl">
+                        <!-- Image and  badges -->
+                        <div class="">
+                            <img src="./images/properties.jpeg" alt="JS Mall"
+                                class="relative rounded-lg w-full h-44 object-cover">
+
+                            <div class="flex gap-2">
+                                <!-- Verified Badge -->
+                                <span
+                                    class="bg-blue-50 text-blue-600 z-20 top-3 left-3 text-xs font-medium pe-4 py-1 absolute rounded-full flex items-center badge">
+                                    <svg class="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723..."
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                    Verified
+                                </span>
+
+                                <!-- Trusted Badge -->
+                                <span
+                                    class="bg-green-50 top-3 left-24  absolute z-20 text-green-600 text-xs font-medium pe-4 py-1 rounded-full flex items-center badge">
+                                    <svg class="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265..."
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                    Trusted
+                                </span>
                             </div>
+
                         </div>
 
                         <!-- Content -->
-                        <div class="p-4">
+                        <div class="ps-4 pt-4">
                             <!-- Price Range -->
                             <p class="text-[16px]  font-bold  text-blue-900">
                                 25.5
@@ -1172,19 +1270,24 @@
                                     <i class="fa-solid fa-shop text-blue-900"></i>
                                     <span class="font-bold">Shops, Offices</span>
                                 </div>
-                                <div class="flex items-center gap-2 mt-1">
+                                <div class="flex items-center gap-2 mt-1 mb-3
+                                ">
                                     <i class="fa-solid fa-chart-area text-blue-900"></i>
                                     <span class="font-bold">34 sqft to 907 sqft</span>
+                                </div>
+                                <!-- Phone Button -->
+                                <div class="pe-4 mb-0">
+                                    <button
+                                        class="w-full bg-blue-900 text-white py-2 rounded text-[14px] transition hover:bg-opacity-95">
+                                        <i class="fa-solid fa-phone me-1 text-[13px]"></i> Show Phone Number
+                                    </button>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-
-                    <!-- End Property Card -->
 
                 </div>
-            </div>
         </section>
 
         <!-- motors section start -->
