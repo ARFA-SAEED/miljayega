@@ -32,7 +32,7 @@
         const card = document.createElement('div');
         card.className = 'bg-white rounded-lg shadow-sm border border-gray-200 p-4 card-hover';
         card.innerHTML = `
-          <div class="flex justify-between items-start mb-3">
+          <div class="flex justify-between items-start mb-3 ">
             <div class="flex items-center">
               <div class="relative">
                 <div class="w-12 h-12 rounded-full bg-gray-200 mr-3 flex items-center justify-center overflow-hidden">
@@ -53,9 +53,9 @@
             }
           </div>
 
-          <div class="overflow-hidden rounded-lg mb-5 group">
-            <img src="${f.image}" class="w-full h-[150px] object-cover image-hover transition-transform duration-500 group-hover:scale-105" alt="${f.title}">
-          </div>
+       <div class="overflow-hidden rounded-lg mb-5">
+  <img src="${f.image}" class="w-full h-[150px] object-cover transform transition-transform duration-500 ease-in-out group-hover:scale-110" alt="${f.title}">
+</div>
 
           <h4 class="font-bold text-fiverr-blue mb-2" style="color: #1e3a8a;">${f.title}</h4>
 
@@ -71,14 +71,14 @@
 <div class="flex justify-between items-center pt-3 mt-2 border-t border-gray-200">
   <div class="flex gap-2">
     ${f.verified ? `
-      <span class="bg-blue-50 text-blue-600 text-xs font-medium px-2 py-1 rounded-full flex items-center badge">
+      <span class="bg-blue-50 text-blue-600 text-xs font-medium pe-4 py-1 rounded-full flex items-center badge">
         <svg class="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 20 20">
           <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723..." clip-rule="evenodd"></path>
         </svg>
         Verified
       </span>` : ''}
     ${f.trusted ? `
-      <span class="bg-green-50 text-green-600 text-xs font-medium px-2 py-1 rounded-full flex items-center badge">
+      <span class="bg-green-50 text-green-600 text-xs font-medium pe-4 py-1 rounded-full flex items-center badge">
         <svg class="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 20 20">
           <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265..." clip-rule="evenodd"></path>
         </svg>
