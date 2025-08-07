@@ -1,0 +1,12 @@
+[
+  {
+    "image": "./images/properties.jpeg",
+    "isHot": true,
+    "title": "JS Mall Top City, Islamabad",
+    "priceRange": "25.5 Lakh to 6.8 Crore",
+    "location": "Islamabad, Top City 1",
+    "type": "Shops, Offices",
+    "area": "34 sqft to 907 sqft",
+    "features": ["Commercial", "Prime Location"]
+  }
+]
