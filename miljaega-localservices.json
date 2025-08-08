@@ -1,8 +1,8 @@
 [
   {
-    "name": "Malik Imran",
-    "service": "Home Electrician",
-    "image": "./images/lcimg.jpg",
+    "name": "Ahmed Khan",
+    "service": "Expert Home Wiring",
+    "image": "https://www.seema.com/wp-content/uploads/2022/12/Pakistani-Cultural-Clothes.jpg",
     "badge": {
       "level": "Level 1",
       "icon": "./images/tick.svg"
@@ -18,15 +18,15 @@
       "Meter Fitting",
       "Earthing"
     ],
-    "orders": 125,
-    "rating": 4.8,
-    "stars": 4,
-    "location": "Mumtaz City – Chanab Block, Islamabad"
+    "orders": 210,
+    "rating": 4.9,
+    "stars": 5,
+    "location": "G-11 Markaz, Islamabad"
   },
-   {
-    "name": "Malik Imran",
-    "service": "Home Electrician",
-    "image": "./images/lcimg.jpg",
+  {
+    "name": "Rizwan Aslam",
+    "service": "Electrical Fault Fixing",
+    "image": "https://i.pinimg.com/originals/c9/59/61/c95961fe507b305f9ac551b6d99e928f.jpg",
     "badge": {
       "level": "Level 1",
       "icon": "./images/tick.svg"
@@ -42,15 +42,15 @@
       "Meter Fitting",
       "Earthing"
     ],
-    "orders": 125,
-    "rating": 4.8,
+    "orders": 178,
+    "rating": 4.7,
     "stars": 4,
-    "location": "Mumtaz City – Chanab Block, Islamabad"
+    "location": "Bahria Town Phase 7, Rawalpindi"
   },
-   {
-    "name": "Malik Imran",
-    "service": "Home Electrician",
-    "image": "./images/lcimg.jpg",
+  {
+    "name": "Shahid Mehmood",
+    "service": "Panel Installation Expert",
+    "image": "https://tse3.mm.bing.net/th/id/OIP.-5O7xxe6wFoHzxNNBDYYPQHaE8?pid=Api&P=0&h=220",
     "badge": {
       "level": "Level 1",
       "icon": "./images/tick.svg"
@@ -66,15 +66,15 @@
       "Meter Fitting",
       "Earthing"
     ],
-    "orders": 125,
+    "orders": 152,
     "rating": 4.8,
     "stars": 4,
-    "location": "Mumtaz City – Chanab Block, Islamabad"
+    "location": "F-10/2, Islamabad"
   },
-   {
-    "name": "Malik Imran",
-    "service": "Home Electrician",
-    "image": "./images/lcimg.jpg",
+  {
+    "name": "Usman Tariq",
+    "service": "UPS & Inverter Setup",
+    "image": "https://cdn.pixabay.com/photo/2022/07/05/18/31/pakistani-7303730_960_720.jpg",
     "badge": {
       "level": "Level 1",
       "icon": "./images/tick.svg"
@@ -90,9 +90,9 @@
       "Meter Fitting",
       "Earthing"
     ],
-    "orders": 125,
-    "rating": 4.8,
-    "stars": 4,
-    "location": "Mumtaz City – Chanab Block, Islamabad"
+    "orders": 199,
+    "rating": 5.0,
+    "stars": 5,
+    "location": "Satellite Town, Rawalpindi"
   }
 ]
