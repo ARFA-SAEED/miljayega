@@ -24,16 +24,8 @@
               ${blog.excerpt}
             </p>
 
-            <!-- Author Section -->
-            <div class="flex items-center justify-between mt-auto border-t-gray border-t-2 pt-4">
-              <div class="flex items-center space-x-2">
-                <img src="${blog.avatar}" alt="${blog.author}" class="w-8 h-8 rounded-full">
-                <div>
-                  <p class="text-sm font-medium text-gray-800">${blog.author}</p>
-                  <p class="text-xs text-gray-500">${blog.date}</p>
-                </div>
-              </div>
-              <a href="#" class="text-blue-900 text-sm font-semibold hover:underline">Read More →</a>
+            
+              <a href="#" class="text-blue-900 ms-55 text-sm font-semibold hover:underline">Read More →</a>
             </div>
 
           </div>
