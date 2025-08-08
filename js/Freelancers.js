@@ -11,20 +11,20 @@
             return `
               <div class="relative w-5 h-5">
                 <div class="absolute inset-0 bg-fiverr-orange rounded-sm"></div>
-                <i class="absolute text-white text-xs inset-0 flex items-center justify-center fas fa-star"></i>
+                <i class="absolute text-white ps-1 text-xs inset-0 flex items-center  fas fa-star"></i>
               </div>`;
           } else if (i === fullStars && halfStar) {
             return `
               <div class="relative w-5 h-5">
                 <div class="absolute inset-y-0 left-0 w-1/2 bg-fiverr-orange rounded-l-sm"></div>
                 <div class="absolute inset-y-0 right-0 w-1/2 bg-gray-300 rounded-r-sm"></div>
-                <i class="absolute text-white text-xs inset-0 flex items-center justify-center fas fa-star"></i>
+                <i class="absolute text-white ps-1 text-xs inset-0 flex items-center  fas fa-star"></i>
               </div>`;
           } else {
             return `
               <div class="relative w-5 h-5">
                 <div class="absolute inset-0 bg-gray-300 rounded-sm"></div>
-                <i class="absolute text-white text-xs inset-0 flex items-center justify-center fas fa-star"></i>
+                <i class="absolute text-white ps-1 text-xs inset-0 flex items-center  fas fa-star"></i>
               </div>`;
           }
         }).join('');
