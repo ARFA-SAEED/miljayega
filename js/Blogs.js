@@ -15,7 +15,7 @@
           <div class="p-5 flex flex-col justify-between flex-grow">
 
             <!-- Title -->
-            <h3 class="text-lg font-bold text-blue-900 leading-snug mb-2">
+            <h3 class="text-lg font-bold text-blue-900 leading-snug mb-8">
               ${blog.title}
             </h3>
 
