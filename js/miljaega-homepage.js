@@ -78,3 +78,32 @@ document.addEventListener("click", function () {
     function closeModal() {
         document.getElementById("loginModal").classList.add("hidden");
     }
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const dropdown = document.getElementById("categoryDropdown");
+        const button = dropdown.querySelector("button");
+        const menu = document.getElementById("categoryMenu");
+        const selectedText = document.getElementById("selectedCategory");
+
+        // Toggle menu
+        button.addEventListener("click", function (e) {
+            e.stopPropagation();
+            menu.classList.toggle("hidden");
+        });
+
+        // Select option
+        menu.querySelectorAll("a").forEach(item => {
+            item.addEventListener("click", function (e) {
+                e.preventDefault();
+                selectedText.textContent = this.getAttribute("data-value");
+                menu.classList.add("hidden");
+            });
+        });
+
+        // Close on outside click
+        document.addEventListener("click", function (e) {
+            if (!dropdown.contains(e.target)) {
+                menu.classList.add("hidden");
+            }
+        });
+    });
