@@ -56,3 +56,25 @@ document.addEventListener("click", function () {
     const mainImg = document.getElementById('main-image');
     mainImg.src = newSrc;
   }
+
+   function toggleDropdown(id) {
+        document.querySelectorAll('[id^="dropdown"]').forEach(el => {
+            if (el.id === id) {
+                el.classList.toggle('hidden');
+            } else {
+                el.classList.add('hidden');
+            }
+        });
+    }
+    window.addEventListener('click', function (e) {
+        if (!e.target.closest('.relative')) {
+            document.querySelectorAll('[id^="dropdown"]').forEach(el => el.classList.add('hidden'));
+        }
+    });
+
+    function openModal() {
+        document.getElementById("loginModal").classList.remove("hidden");
+    }
+    function closeModal() {
+        document.getElementById("loginModal").classList.add("hidden");
+    }

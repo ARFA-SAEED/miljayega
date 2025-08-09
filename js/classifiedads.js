@@ -9,7 +9,7 @@ fetch('../classifiedads.json') // Fetch the classified ad data
       const card = document.createElement("div");
 
       card.className = `
-        w-full bg-white rounded-lg shadow-md overflow-hidden 
+        w-full bg-white hover:shadow-lg rounded-lg shadow-md overflow-hidden 
         transform transition-transform duration-300 ease-in-out 
         hover:scale-[1.02]
       `.trim();
