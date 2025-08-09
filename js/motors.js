@@ -103,12 +103,12 @@ fetch("miljaega-motors.json")
           <!-- Badges - shown only on xs screens -->
           <div class="col-span-2 flex flex-wrap gap-2 mt-1 sm:hidden">
             ${car.Verified ? `
-              <span class="bg-green-900 text-white text-xs font-semibold px-2 py-0.5 rounded-full flex items-center shadow-sm whitespace-nowrap">
+              <span class="bg-green-900 text-white text-xs font-semibold px-2 py-1 rounded-full flex items-center shadow-sm whitespace-nowrap">
                 <i class="fa-solid fa-check-circle mr-1 text-[10px]"></i> ${car.Verified}
               </span>` : ""}
               
             ${car.Trusted ? `
-              <span class="bg-blue-900 text-white text-xs font-semibold px-2 py-0.5 rounded-full flex items-center shadow-sm whitespace-nowrap">
+              <span class="bg-blue-900 text-white text-xs font-semibold px-2 py-1 rounded-full flex items-center shadow-sm whitespace-nowrap">
                 <i class="fa-solid fa-shield-alt mr-1 text-[10px]"></i> ${car.Trusted}
               </span>` : ""}
           </div>
