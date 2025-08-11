@@ -19,7 +19,8 @@ fetch('../classifiedads.json') // Fetch the classified ad data
   <!-- Top Section -->
 <div class="flex justify-between items-start w-full px-4 pt-4 pb-2">
   <div>
-    <h2 class="text-lg font-semibold text-blue-900">${item.title}</h2>
+<h2 class="text-lg font-semibold text-blue-900">${item.title.length < 22 ? (item.title.includes(' ') ? item.title.replace(/ (?!.* )/, '<br>') : item.title) : item.title.slice(0, 22) + '...'}</h2>
+
     <p class="text-xs text-gray-500">${item.posted}</p>
   </div>
   <span class="flex-shrink-0 h-6 w-[90px] hover:text-red-600 hover:bg-red-100 flex items-center bg-[#f0f5ff] text-xs font-bold px-3 py-1.5 rounded-full text-blue-900 shadow-sm hover:shadow-md transition-all duration-200 ml-2">
