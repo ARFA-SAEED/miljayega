@@ -6,7 +6,7 @@ fetch('miljaega-localservices.json')
 
     data.forEach(service => {
       const card = document.createElement('div');
-      card.className = 'w-full max-w-[360px] mx-auto bg-white hover:shadow-lg rounded-lg shadow-sm overflow-hidden border border-[#e5e5e5] transform transition-transform duration-300 ease-in-out hover:scale-[1.02]';
+      card.className = 'w-full bg-white hover:shadow-lg rounded-lg shadow-sm overflow-hidden border border-[#e5e5e5] transform transition-transform duration-300 ease-in-out hover:scale-[1.02]';
 
       const stars = Array(5)
         .fill('')
@@ -21,7 +21,7 @@ fetch('miljaega-localservices.json')
 
       const servicesHTML = service.services
         .map(item => {
-          return `<span class="bg-[#e7f0fd] rounded-full text-[10px] text-blue-900 font-bold h-[24px] flex items-center justify-center px-3">${item}</span>`;
+          return `<span class="bg-[#e7f0fd] rounded-full text-[10px]  text-blue-900 font-bold h-[24px] flex items-center justify-center px-3">${item}</span>`;
         })
         .join('');
 

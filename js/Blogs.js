@@ -5,7 +5,7 @@
       const container = document.getElementById('mycardsblogs');
       blogs.forEach(blog => {
         const card = document.createElement('div');
-        card.className = 'w-88 bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden flex flex-col transform transition-transform duration-300 ease-in-out hover:scale-[1.02]' ;
+        card.className = 'w-99 bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden flex flex-col transform transition-transform duration-300 ease-in-out hover:scale-[1.02]' ;
 
         card.innerHTML = `
           <!-- Blog Image -->

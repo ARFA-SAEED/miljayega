@@ -6,7 +6,7 @@ fetch('miljaega-properties.json')
 
     properties.forEach(p => {
       container.innerHTML += `
-        <div class="w-[700px]">
+        <div class="w-[calc(48%-12px)]">
           <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden  transform transition-transform duration-300 ease-in-out hover:scale-[1.02] flex flex-col md:flex-row">
             <!-- Image Section -->
             <div class="relative w-[280px] h-[300px]">
