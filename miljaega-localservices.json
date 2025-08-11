@@ -1,7 +1,7 @@
 [
   {
     "name": "Ahmed Khan",
-    "service": "Expert Home Wiring",
+    "service": "Plumber",
     "image": "https://www.seema.com/wp-content/uploads/2022/12/Pakistani-Cultural-Clothes.jpg",
     "badge": {
       "level": "Level 1",
@@ -25,7 +25,7 @@
   },
   {
     "name": "Rizwan Aslam",
-    "service": "Electrical Fault Fixing",
+  "service": "Electrician",
     "image": "https://i.pinimg.com/originals/c9/59/61/c95961fe507b305f9ac551b6d99e928f.jpg",
     "badge": {
       "level": "Level 1",
@@ -49,7 +49,7 @@
   },
   {
     "name": "Shahid Mehmood",
-    "service": "Panel Installation Expert",
+    "service": "Machanic",
     "image": "https://tse3.mm.bing.net/th/id/OIP.-5O7xxe6wFoHzxNNBDYYPQHaE8?pid=Api&P=0&h=220",
     "badge": {
       "level": "Level 1",
@@ -73,7 +73,7 @@
   },
   {
     "name": "Usman Tariq",
-    "service": "UPS & Inverter Setup",
+    "service": "Carpenter",
     "image": "https://cdn.pixabay.com/photo/2022/07/05/18/31/pakistani-7303730_960_720.jpg",
     "badge": {
       "level": "Level 1",

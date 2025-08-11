@@ -6,7 +6,7 @@ fetch('miljaega-localservices.json')
 
     data.forEach(service => {
       const card = document.createElement('div');
-      card.className = 'w-full bg-white hover:shadow-lg rounded-lg shadow-sm overflow-hidden border border-[#e5e5e5] transform transition-transform duration-300 ease-in-out hover:scale-[1.02]';
+      card.className = 'w-full bg-white hover:shadow-lg rounded-lg shadow-sm overflow-hidden border border-[#e5e5e5] transform transition-transform duration-300 ease-in-out hover:scale-[1.02] relative';
 
       const stars = Array(5)
         .fill('')
@@ -21,7 +21,7 @@ fetch('miljaega-localservices.json')
 
       const servicesHTML = service.services
         .map(item => {
-          return `<span class="bg-[#e7f0fd] rounded-full text-[10px]  text-blue-900 font-bold h-[24px] flex items-center justify-center px-3">${item}</span>`;
+          return `<span class="bg-[#e7f0fd] rounded-full text-[10px] text-blue-900 font-bold h-[24px] flex items-center justify-center px-3">${item}</span>`;
         })
         .join('');
 
@@ -34,31 +34,28 @@ fetch('miljaega-localservices.json')
 
         <!-- Card Content -->
         <div class="p-3">
-          <div class="flex flex-col sm:flex-row gap-4">
-            <div class="flex justify-center sm:justify-start">
-              <img src="${service.image}" alt="" class="mt-2 object-cover rounded-full w-[130px] h-[130px] shadow-[0_0_7px_#1E3A8A] transform transition-transform duration-300 ease-in-out hover:scale-[1.02]" />
-            </div>
-            <div class="mt-4 sm:mt-9 text-center sm:text-left">
-              <span class="text-[18px] font-bold text-blue-900 leading-[10px] font-[Poppins]">${service.service.replace(' ', '<br>')}</span>
-              <div class="flex justify-center sm:justify-start gap-1 mt-3">
-                <span class="bg-[#f0f5ff] w-[84px] text-blue-900 h-[20px] px-2 py-[2px] rounded-full text-[8px] font-medium leading-[18px] flex">
-                  <img src="${service.labelIcons[0]}" class="pe-1 ps-2" alt="">${service.labels[0]}
-                </span>
-                <span class="bg-[#f0f9eb] w-[80px] text-[#4e9a19] px-2 py-[2px] rounded-full text-[8px] font-medium leading-[18px] flex">
-                  <img src="${service.labelIcons[1]}" class="pe-1 ps-2" alt="">${service.labels[1]}
-                </span>
-              </div>
-            </div>
+          <div class="flex flex-col items-center gap-2">
+            <img src="${service.image}" alt="" class="mt-2 object-cover rounded-full w-[120px] mt-[30px] h-[120px] shadow-[0_0_7px_#1E3A8A] transform transition-transform duration-300 ease-in-out hover:scale-[1.02]" />
+            <h3 class="text-[20px] font-bold text-blue-900 mt-4">${service.name}</h3>
+            <span class="font-semibold text-gray-600 leading-[10px] font-[Poppins] text-center">${service.service.replace(' ','')}</span>
+                <div class="flex justify-center sm:justify-start gap-1 mt-3">
+            <span class="bg-[#f0f5ff] w-[84px] text-blue-900 h-[20px] px-2 py-[2px] rounded-full text-[8px] font-medium leading-[18px] flex items-center justify-center">
+              <img src="${service.labelIcons[0]}" class="pe-1 ps-2" alt="">${service.labels[0]}
+            </span>
+            <span class="bg-[#f0f9eb] w-[80px] text-[#4e9a19] px-2 py-[2px] rounded-full text-[8px] font-medium leading-[18px] flex items-center justify-center">
+              <img src="${service.labelIcons[1]}" class="pe-1 ps-2" alt="">${service.labels[1]}
+            </span>
           </div>
         </div>
+            </div>
 
-        <div class="justify-between items-start ps-5">
+  
+
+        <div class="ps-5">
           <div>
-            <h3 class="text-[15px] font-bold text-blue-900 ps-1">${service.name}</h3>
-            
-            <div class="space-y-2 mt-3 mb-9">
+            <div class="space-y- mt-3 mb-9">
               <!-- Service Tags -->
-              <div class="flex flex-wrap gap-1 justify-center sm:justify-start">${servicesHTML}</div>
+              <div class="flex flex-wrap gap-3 justify-center sm:justify-start">${servicesHTML}</div>
             </div>
 
             <p class="text-[12px] text-gray-600 mt-4 ps-1 text-center sm:text-left">${service.orders} Orders</p>
@@ -69,7 +66,7 @@ fetch('miljaega-localservices.json')
             </div>
           </div>
 
-          <p class="text-[12px] font-bold text-blue-900 ps-1 text-center sm:text-left mt-2 ">${service.location}</p>
+          <p class="text-[12px] font-bold text-blue-900 ps-1 text-center sm:text-left mt-2">${service.location}</p>
         </div>
 
         <!-- Button -->
