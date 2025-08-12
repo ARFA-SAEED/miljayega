@@ -277,3 +277,38 @@
    -ms-overflow-style: none;
    scrollbar-width: none;
  }
+
+ .search-dropdown {
+   display: none;
+   position: absolute;
+   top: 100%;
+   /* directly below input */
+   left: 0;
+   width: 100%;
+   max-height: 400px;
+   overflow-y: auto;
+   /* only scroll when necessary */
+   z-index: 999999;
+   /* way above all site content */
+   background: white;
+   border: 1px solid #e5e7eb;
+   border-radius: 0.5rem;
+   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+     0 2px 4px -1px rgba(0, 0, 0, 0.06);
+ }
+
+ .search-dropdown-section {
+   padding: 0.75rem;
+   border-bottom: 1px solid #e5e7eb;
+ }
+
+ .search-dropdown-section:last-child {
+   border-bottom: none;
+ }
+
+ .search-dropdown-item {
+   padding: 0.5rem;
+   cursor: pointer;
+   border-radius: 0.25rem;
+   background-color: white;
+ }

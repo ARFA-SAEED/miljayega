@@ -29,18 +29,16 @@
 <body class="bg-gray-50">
     <!-- Header -->
     <header class="bg-white shadow-sm fixed top-0 z-50 w-full">
-        <div class="mx-auto relative py-3 container px-4 sm:px-6">
-            <div class="flex justify-between items-center py-3">
+        <div class=" lg:mx-auto 2xl:mx-20 relative py-3 container px-4 sm:px-6">
+            <div class="flex justify-between items-center py-3 ">
                 <!-- Left: Logo -->
                 <div class="flex-shrink-0">
-                    <a class="text-2xl font-bold text-primary-green" href="#"
-                        style="font-family: 'Poppins', sans-serif;">
-                        <img src="./images/logo.svg" alt="Logo" class="h-8 sm:h-10" />
+                    <img src="./images/logo.svg" alt="Logo" class="h-8 sm:h-10" />
                     </a>
                 </div>
 
                 <!-- Center: Nav Bar (Visible only on XL and above) -->
-                <nav class="hidden 2xl:flex absolute lg:ms-80 left-1/2 transform -translate-x-1/2 space-x-6 text-sm font-medium text-gray-600"
+                <nav class="hidden xl:flex absolute ms-80 2xl:ms-[500px] left-1/2 transform -translate-x-1/2 space-x-6 text-sm font-medium text-gray-600"
                     style="max-width: 100%; overflow-x: auto; white-space: nowrap;">
                     <div class="flex justify-center mt-2">
                         <div class="inline-flex rounded-lg shadow-md bg-white overflow-hidden">
@@ -100,7 +98,7 @@
 
                 <!-- Right: Hamburger Menu (Visible on sm and md) -->
                 <button id="mobileMenuToggle"
-                    class="block 2xl:hidden text-gray-700 hover:text-primary-green focus:outline-none"
+                    class="block xl:hidden text-gray-700 hover:text-primary-green focus:outline-none"
                     aria-label="Toggle menu">
                     <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
@@ -112,10 +110,10 @@
 
     <!-- Mobile Menu Dropdown -->
     <div id="mobileMenu"
-        class=" hidden bg-white shadow-md fixed top-[72px] left-0 right-0 z-40 max-h-[calc(100vh-72px)] overflow-y-auto">
+        class="xl:hidden hidden flex bg-white shadow-md fixed top-[72px] left-0 right-0 z-40 max-h-[calc(100vh-72px)] overflow-y-auto">
         <div class="px-4 py-4 space-y-4 text-sm font-medium text-gray-700">
             <!-- Center Nav Items -->
-            <div class="flex justify-around text-center gap-2 flex-wrap mt-7">
+            <div class="flex justify-around text-center gap-2 flex-wrap mt-">
                 <a href="#" class="flex flex-col items-center gap-1 hover:text-primary-green">
                     <img src="./images/second-hand.png" alt="Used Items" class="w-6 h-6 object-contain" /> Used
                 </a>
@@ -226,12 +224,12 @@
     <!-- Spacer to avoid content under fixed header -->
     <div class="pt-[72px]"></div>
     <!-- Tailwind Only - No AlpineJS -->
-    <div class="bg-white shadow-sm fixed top-[72px] z-[100] w-full hidden 2xl:block translate-z-0">
-        <div class="mx-auto relative py-3 container px-4 sm:px-6">
-            <div class="flex items-center justify-between flex-wrap">
+    <div class="bg-white shadow-sm fixed top-[72px] z-[100] w-full hidden xl:block translate-z-0">
+        <div class="mx-2 2xl:mx-20 sm:px-6">
+            <div class="flex">
 
                 <!-- Categories -->
-                <div class="flex flex-wrap items-center gap-6 flex-1">
+                <div class="flex items-center gap-6 flex-1">
 
                     <!-- Dropdown Template -->
                     <div class="relative">
@@ -491,81 +489,139 @@
                         Miljaega!
                     </h2>
                 </div>
+                <!-- Search Bar Container -->
+                <div class="bg-white rounded-lg shadow p-4 w-[900px] relative">
+                    <!-- Top Row -->
+                    <div class="flex items-center gap-2 border p-2 rounded-50">
+                        <div class="relative inline-block text-left">
+                            <!-- Button -->
+                            <button id="locationButton"
+                                class="flex items-center px-8 py-2 bg-white border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none">
+                                <img src="./images/location.PNG" alt="" class="me-10 h-8 w-8">
+                                <span id="selectedLocation">Malir, Karachi</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="ml-10 h-5 w-5 text-gray-400"
+                                    viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd"
+                                        d="M5.23 7.21a.75.75 0 011.06-.02L10 10.67l3.71-3.48a.75.75 0 111.04 1.08l-4.25 4a.75.75 0 01-1.04 0l-4.25-4a.75.75 0 01-.02-1.06z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </button>
 
-                <!-- Search Bar -->
-                <div class="flex flex-col md:flex-row gap-3 w-full max-w-4xl items-center justify-center">
-                    <!-- Location Dropdown -->
-                    <div class="relative w-full md:w-1/3">
-                        <span
-                            class="material-icons absolute left-4 top-10 -translate-y-1/2 text-[#0C3168] text-2xl">location_on</span>
-                        <select
-                            class="w-full pl-12 pr-4 py-3 text-sm bg-white  text-gray-700 rounded-lg focus:outline-none  ">
-                            <option selected>Pakistan</option>
-                            <option>India</option>
-                            <option>UAE</option>
-                        </select>
-                    </div>
+                            <!-- Dropdown -->
+                            <div id="locationDropdown"
+                                class="hidden absolute mt-2 w-72 bg-white border border-gray-200 rounded-lg shadow-lg z-100">
+                                <div class="p-2">
+                                    <div class="flex"><button
+                                            class="w-full flex text-left px-3 py-2 text-xs text-blue-900 hover:bg-gray-100 rounded-md items-center">
+                                            <i class="fa-solid fa-location-dot me-3 text-[18px] text-blue-900"></i>
+                                            Use Current Location
+                                        </button><a href=""><span class="m text-xs py-2 text-gray-500">See all in
+                                                Pakistan</span></a>
+                                    </div>
+                                    <p class="px-3 py-1 text-lg font-semibold text-blue-900">Popular</p>
 
-                    <!-- New Category Dropdown (No AlpineJS) -->
-                    <div class="relative w-full md:w-1/4" id="categoryDropdown">
-                        <!-- Button -->
-                        <button type="button"
-                            class="w-full flex pl-3 pr-2 py-3 text-sm bg-white border border-gray-300 text-gray-400 font-semibold rounded-lg justify-between items-center">
-                            <span id="selectedCategory" class="text-center">All</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mt-1 text-gray-900" fill="none"
-                                viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M19 9l-7 7-7-7" />
-                            </svg>
-                        </button>
+                                    <!-- Selectable options -->
+                                    <button
+                                        class="location-option w-full text-xs border-t text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">
+                                        Malir, Karachi
+                                    </button>
+                                    <button
+                                        class="location-option w-full text-xs border-t text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">
+                                        Lahore, Punjab
+                                    </button>
+                                    <button
+                                        class="location-option w-full text-xs border-t text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">
+                                        Karachi, Sindh
+                                    </button>
+                                    <button
+                                        class="location-option w-full text-xs border-t text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">
+                                        Islamabad, Islamabad Capital Territory
+                                    </button>
+                                    <button
+                                        class="location-option w-full text-xs border-t text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">
+                                        Rawalpindi, Punjab
+                                    </button>
+                                    <button
+                                        class="location-option w-full text-xs border-t text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">
+                                        Faisalabad, Punjab
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
 
-                        <!-- Dropdown Menu -->
-                        <div id="categoryMenu"
-                            class="hidden absolute w-full mt-1 text-center bg-white shadow-lg rounded-md overflow-hidden z-30 border border-gray-200">
-                            <a href="#" data-value="All"
-                                class="block px-4 py-2 text-sm text-gray-700 text-left hover:bg-blue-50 hover:text-blue-900">
-                                <i class="fas fa-box-open text-blue-900 mr-2"></i> All
-                            </a>
-                            <a href="#" data-value="New"
-                                class="block px-4 py-2 text-sm text-gray-700 text-left hover:bg-blue-50 hover:text-blue-900">
-                                <i class="fas fa-tag text-green-600 mr-2"></i> New
-                            </a>
-                            <a href="#" data-value="Used"
-                                class="block px-4 py-2 text-sm text-gray-700 text-left hover:bg-blue-50 hover:text-blue-900">
-                                <i class="fas fa-history text-yellow-600 mr-2"></i> Used
-                            </a>
-                            <a href="#" data-value="Exchange"
-                                class="block px-4 py-2 text-sm text-gray-700 text-left hover:bg-blue-50 hover:text-blue-900">
-                                <i class="fas fa-exchange-alt text-purple-600 mr-2"></i> Exchange
-                            </a>
+                        <!-- Search Input with Ask AI -->
+                        <div class="relative flex-1">
+                            <div
+                                class="flex items-center bg-gray-100 bg-opacity-50 flex-1 border rounded-md overflow-hidden">
+                                <div class="flex items-center px-3 border-r border-gray-300">
+                                    <img src="./images/ai search.PNG" class="mt-1">
+                                    <span class="ml-2 text-sm font-medium text-gray-700">Ask AI</span>
+                                </div>
+                                <input type="text" id="searchInput" placeholder="Samsung S24 Ultra..."
+                                    class="flex-1 bg-gray-100 bg-opacity-50 px-3 py-3 border-0 focus:border-0 focus:outline-none focus:ring-0 text-sm" />
+                                <i class="fa-solid fa-microphone text-lg pe-7 text-blue-900"></i>
+                            </div>
+
+
+                            <!-- Search Dropdown -->
+                            <div id="searchDropdown" class="search-dropdown">
+
+                                <!-- First Item -->
+                                <div class="search-dropdown-section">
+                                    <div class="search-dropdown-item flex items-center gap-3">
+                                        <img src="https://tse2.mm.bing.net/th/id/OIP.uB47EW1iiS0rsNzIJTnOOgHaE8?pid=Api&P=0&h=220"
+                                            class="h-[70px] rounded-[13px]" alt="">
+                                        <div class="flex flex-col">
+                                            <span class="text-blue-900 font-bold">Samsung</span>
+                                            <span class="text-gray-500 flex items-center">
+                                                Samsung S22 Ultra Spot
+                                                <i class="fa-solid fa-circle text-[9px] text-blue-900 ms-3"></i>
+                                                <span class="text-blue-900 font-bold ms-3">NEW</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Second Item with Arrow -->
+                                <div class="search-dropdown-section">
+                                    <div class="search-dropdown-item flex items-center gap-3">
+                                        <img src="https://tse2.mm.bing.net/th/id/OIP.uB47EW1iiS0rsNzIJTnOOgHaE8?pid=Api&P=0&h=220"
+                                            class="h-[70px] rounded-[13px]" alt="">
+                                        <div class="flex flex-col">
+                                            <span class="text-blue-900 font-bold">Samsung</span>
+                                            <span class="text-gray-500 flex items-center">
+                                                Samsung S22 Ultra Spot
+                                                <i class="fa-solid fa-circle text-[9px] text-blue-900 ms-3"></i>
+                                                <span class="text-blue-900 font-bold ms-3">USED</span>
+                                            </span>
+                                        </div>
+                                        <i class="fa-solid fa-arrow-right text-blue-900 ms-auto"></i>
+                                    </div>
+                                </div>
+
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Search Input -->
-                    <div class="relative w-full flex-grow">
-                        <input
-                            class="w-full py-3 pl-4 pr-28 text-sm text-gray-700 bg-white border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-green"
-                            placeholder="Find Cars, Mobile Phones and more…" type="text" />
-
-                        <!-- Voice Search Button -->
-                        <button type="button"
-                            class="absolute right-28 top-9 -translate-y-1/2 p-1 text-gray-500 hover:text-blue-600 transition-colors">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20"
-                                fill="currentColor">
-                                <path fill-rule="evenodd"
-                                    d="M7 4a3 3 0 016 0v4a3 3 0 11-6 0V4zm4 10.93A7.001 7.001 0 0017 8a1 1 0 10-2 0A5 5 0 015 8a1 1 0 00-2 0 7.001 7.001 0 006 6.93V17H6a1 1 0 100 2h8a1 1 0 100-2h-3v-2.07z"
-                                    clip-rule="evenodd" />
-                            </svg>
-                        </button>
-
-                        <!-- Search Button -->
-                        <button
-                            class="absolute right-0 top-0 h-full px-5 bg-[#0C3168] text-white text-sm font-semibold rounded-r-[6px] flex items-center justify-center hover:bg-opacity-70">
-                            <span class="material-icons text-white text-base mr-1">search</span>Search
-                        </button>
+                    <span class="text-sm text-blue-900 absolute left-5 mt-3 font-medium">Recent Search</span>
+                    <!-- Recent Search -->
+                    <div class="mt-10">
+                        <div class="mt-2 flex flex-wrap gap-3">
+                            <span
+                                class="px-5 py-2 bg-gray-100 bg-opacity-50 rounded-lg text-sm text-gray-700 cursor-pointer hover:bg-gray-200 shadow-lg">Plumber
+                                Near me</span>
+                            <span
+                                class="px-5 py-2 bg-gray-100 bg-opacity-50 rounded-lg text-sm text-gray-700 cursor-pointer hover:bg-gray-200 shadow-lg">Samsung
+                                S24</span>
+                            <span
+                                class="px-5 py-2 bg-gray-100 bg-opacity-50 shadow-lg rounded-lg text-sm text-gray-700 cursor-pointer hover:bg-gray-200 shadow-lg">Toyota
+                                Corolla Axio</span>
+                            <span
+                                class="px-5 py-2 bg-gray-100 bg-opacity-50 shadow-lg rounded-lg text-sm text-gray-700 cursor-pointer hover:bg-gray-200 shadow-lg">WordPress
+                                Developer</span>
+                        </div>
                     </div>
                 </div>
-
                 <div
                     class="relative z-20 max-w-7xl mx-auto flex flex-col lg:flex-row items-center px- sm:px-6 lg:px-20">
                     <div class="mt-8 flex items-center">
@@ -592,7 +648,7 @@
 
 
     <!-- Banner Section -->
-    <section class="mb-5 pt-4">
+    <section class="mb-5 pt-4 ">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
             <!-- Card -->
             <div class="flex flex-col items-center text-center mt-1">
@@ -631,9 +687,8 @@
         </div>
     </section>
 
-
     <section>
-        <div class="px-4 sm:px-6  md:ms-0 lg:ms-10 xl:mx-[12px] 2xl:ms-[75px] relative container mt-10 mb-10">
+        <div class="px-4 sm:px-6 md:ms-17 relative container mt-10 mb-10">
             <!-- Responsive Tabs Container -->
             <div class="w-full overflow-x-auto  mx-2 scrollbar-hide">
                 <div class="flex flex-nowrap items-center mb-4 min-w-max" id="tabContainer">
@@ -683,7 +738,7 @@
         </div>
 
         <div
-            class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 mx-6  md:mx-15 lg:mx-8 xl:mx-[40px] 2xl:mx-24 lg:grid-cols-6 gap-2 md:gap-6 pb-4 bg-gray-50">
+            class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 mx-6  md:mx-24 lg:grid-cols-6 gap-2 md:gap-6 pb-4 bg-gray-50">
 
             <!-- Category Card -->
             <a href="#"
@@ -877,7 +932,7 @@
         </div>
         </div>
     </section>
-    <main class="mx-4 sm:mx-6 lg:mx-24 xl:mx-[40px] 2xl:mx-24 relative py-3">
+    <main class="mx-4 sm:mx-6 lg:mx-24 relative py-3">
 
         <!-- Local Services Section -->
         <section class="mb-4">
@@ -1015,7 +1070,7 @@
                 <div class="w-full flex   gap-8">
                     <!-- ABOUT US -->
                     <div class="w-full ms-10 md:ms-0 sm:w-1/2 text-left">
-                        <ul class="leading-10 cursor-pointer">
+                        <ul class="leading-10">
                             <li class="font-bold text-xl mb-3">ABOUT US</li>
                             <li>FAQ</li>
                             <li>Anti Scam</li>
@@ -1027,7 +1082,7 @@
                     </div>
                     <!-- MY ACCOUNT -->
                     <div class="w-full ms-20 md:ms-60 sm:w-1/2 text-left">
-                        <ul class="leading-10 cursor-pointer">
+                        <ul class="leading-10">
                             <li class="font-bold text-xl mb-3">MY ACCOUNT</li>
                             <li>Login</li>
                             <li>Register</li>
@@ -1039,7 +1094,7 @@
                 <div class="w-full flex gap-8 mt-5">
                     <!-- Miljaega -->
                     <div class="w-full sm:w-1/2 ms-10 md:ms-0 text-left">
-                        <ul class="leading-10 cursor-pointer">
+                        <ul class="leading-10">
                             <li class="font-bold text-xl mb-3">Miljaega</li>
                             <li>Inspected by miljaega</li>
                             <li>Featured by miljaega</li>
@@ -1047,7 +1102,7 @@
                         </ul>
                     </div>
                     <!-- Social -->
-                    <div class="w-full ms-20 md:ms-60  sm:w-1/2 text-left leading-15" cursor-pointer>
+                    <div class="w-full ms-20 md:ms-60  sm:w-1/2 text-left leading-15">
                         <ul>
                             <li class="font-bold text-xl  mb-3">FOLLOW US</li>
                         </ul>
@@ -1065,7 +1120,7 @@
             <div class="hidden lg:block lg:flex lg:justify-between xl:gap-8">
                 <!-- ABOUT US -->
                 <div class="w-full sm:w-1/2 xl:w-auto mb-5 xl:mb-0  xl:text-left">
-                    <ul class="leading-10 cursor-pointer">
+                    <ul class="leading-10">
                         <li class="font-bold text-xl mb-3">ABOUT US</li>
                         <li>FAQ</li>
                         <li>Anti Scam</li>
@@ -1077,7 +1132,7 @@
                 </div>
                 <!-- MY ACCOUNT -->
                 <div class="w-full sm:w-1/2 xl:w-auto text-left mb-5 xl:mb-0">
-                    <ul class="leading-10 cursor-pointer">
+                    <ul class="leading-10">
                         <li class="font-bold text-xl mb-3">MY ACCOUNT</li>
                         <li>Login</li>
                         <li>Register</li>
@@ -1085,7 +1140,7 @@
                 </div>
                 <!-- Miljaega -->
                 <div class="w-full sm:w-1/2 xl:w-auto mb-5 xl:mb-0 text-left">
-                    <ul class="leading-10 cursor-pointer">
+                    <ul class="leading-10">
                         <li class="font-bold text-xl mb-3">Miljaega</li>
                         <li>Inspected by miljaega</li>
                         <li>Featured by miljaega</li>
@@ -1093,7 +1148,7 @@
                     </ul>
                 </div>
                 <!-- Social -->
-                <div class="w-full sm:w-1/2 xl:w-auto text-left mb-5 xl:mb-0 leading-15 cursor-pointer">
+                <div class="w-full sm:w-1/2 xl:w-auto text-left mb-5 xl:mb-0 leading-15">
                     <ul>
                         <li class="font-bold text-xl mb-3">FOLLOW US</li>
                     </ul>
@@ -1107,7 +1162,7 @@
             </div>
 
             <!-- Footer bottom -->
-            <div class="text-center border-t-2 border-white mt-10 pt-5 text-sm cursor-pointer">
+            <div class="text-center border-t-2 border-white mt-10 pt-5 text-sm">
                 <p>© Copyright 2025 Miljaega <br>Powered by The Tech Creators</p>
             </div>
         </div>
