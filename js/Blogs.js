@@ -1,36 +1,32 @@
+fetch('miljaega-Blogs.json')
+  .then(res => res.json())
+  .then(blogs => {
+    const container = document.getElementById('mycardsblogs');
+    blogs.forEach(blog => {
+      const card = document.createElement('div');
+      card.className =
+        'bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden flex flex-col transform hover:scale-[1.02]';
 
-  fetch('miljaega-Blogs.json')
-    .then(res => res.json())
-    .then(blogs => {
-      const container = document.getElementById('mycardsblogs');
-      blogs.forEach(blog => {
-        const card = document.createElement('div');
-        card.className = 'w-99 bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden flex flex-col transform transition-transform duration-300 ease-in-out hover:scale-[1.02]' ;
+      card.innerHTML = `
+        <!-- Blog Image -->
+        <img src="${blog.image}" alt="${blog.title}" class="w-full h-48 object-cover">
 
-        card.innerHTML = `
-          <!-- Blog Image -->
-          <img src="${blog.image}" alt="${blog.title}" class="w-full h-48 object-cover">
+        <!-- Blog Content -->
+        <div class="p-5 flex flex-col justify-between flex-grow">
 
-          <!-- Blog Content -->
-          <div class="p-5 flex flex-col justify-between flex-grow">
+          <!-- Title -->
+          <h3 class="text-lg font-bold text-blue-900 leading-snug mb-8">
+            ${blog.title}
+          </h3>
 
-            <!-- Title -->
-            <h3 class="text-lg font-bold text-blue-900 leading-snug mb-8">
-              ${blog.title}
-            </h3>
+          <!-- Excerpt -->
+          <p class="text-sm text-gray-600 mb-4">
+            ${blog.excerpt}
+          </p>
 
-            <!-- Excerpt -->
-            <p class="text-sm text-gray-600 mb-4">
-              ${blog.excerpt}
-            </p>
-
-            
-              <a href="#" class="text-blue-900 ms-55 text-sm font-semibold hover:underline">Read More →</a>
-            </div>
-
-          </div>
-        `;
-        container.appendChild(card);
-      });
+          <a href="#" class="text-blue-900 ms-55 text-sm font-semibold hover:underline">Read More →</a>
+        </div>
+      `;
+      container.appendChild(card);
     });
-
+  });

@@ -39,11 +39,11 @@ fetch('miljaega-localservices.json')
             <h3 class="text-[20px] font-bold text-blue-900 mt-4">${service.name}</h3>
             <span class="font-semibold text-gray-600 leading-[10px] font-[Poppins] text-center">${service.service.replace(' ','')}</span>
                 <div class="flex justify-center sm:justify-start gap-1 mt-3">
-            <span class="bg-[#f0f5ff] w-[84px] text-blue-900 h-[20px] px-2 py-[2px] rounded-full text-[8px] font-medium leading-[18px] flex items-center justify-center">
-              <img src="${service.labelIcons[0]}" class="pe-1 ps-2" alt="">${service.labels[0]}
+            <span class="bg-blue-900 text-white text-xs font-semibold px-2 py-0.5 rounded-full flex items-center shadow-sm whitespace-nowrap">
+               <i class="fa-solid fa-check-circle mr-1 text-[10px]"></i> ${service.labels[0]}
             </span>
-            <span class="bg-[#f0f9eb] w-[80px] text-[#4e9a19] px-2 py-[2px] rounded-full text-[8px] font-medium leading-[18px] flex items-center justify-center">
-              <img src="${service.labelIcons[1]}" class="pe-1 ps-2" alt="">${service.labels[1]}
+            <span class="bg-green-900 text-white text-xs font-semibold px-2 py-0.5 rounded-full flex items-center shadow-sm whitespace-nowrap">
+               <i class="fa-solid fa-shield-alt mr-1 text-[10px]"></i>${service.labels[1]}
             </span>
           </div>
         </div>
