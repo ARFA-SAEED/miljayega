@@ -24,7 +24,7 @@ fetch('miljaega-Blogs.json')
             ${blog.excerpt}
           </p>
 
-          <a href="#" class="text-blue-900 ms-55 text-sm font-semibold hover:underline">Read More →</a>
+          <a href="#" class="text-blue-900 xl:ms-55 text-sm font-semibold hover:underline">Read More →</a>
         </div>
       `;
       container.appendChild(card);
