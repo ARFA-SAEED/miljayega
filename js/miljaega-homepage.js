@@ -7,7 +7,7 @@ const btnn = document
     this.classList.toggle("text-red-500"); // Changes color when active
     // Add your voice recognition logic here
   });}
-document.addEventListener("click", function () {
+document.addEventListener("DOMContentLoaded", function () {
   const toggleBtn = document.getElementById("mobileMenuToggle");
   const mobileMenu = document.getElementById("mobileMenu");
 
@@ -20,6 +20,7 @@ document.addEventListener("click", function () {
     mobileMenu.classList.toggle("hidden");
   });
 });
+
   document.addEventListener('DOMContentLoaded', function() {
         const tabs = document.querySelectorAll('.arrow-tab');
         
