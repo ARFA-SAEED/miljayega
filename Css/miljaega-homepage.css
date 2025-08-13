@@ -298,8 +298,10 @@
  }
 
  .search-dropdown-section {
-   padding: 0.75rem;
-   border-bottom: 1px solid #e5e7eb;
+   padding-left: 13px;
+   padding-right: 13px;
+   padding-bottom: 10px;
+
  }
 
  .search-dropdown-section:last-child {
