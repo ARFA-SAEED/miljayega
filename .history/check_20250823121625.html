@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Price Range Slider</title>
+    <style>
+        .range-container {
+            width: 300px;
+            margin: 50px auto;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        .slider {
+            position: relative;
+            width: 100%;
+        }
+
+        .slider input[type=range] {
+            position: absolute;
+            left: 0;
+            top: -10px;
+            width: 100%;
+            pointer-events: none;
+            /* let both sliders overlap */
+            -webkit-appearance: none;
+            background: none;
+        }
+
+        input[type=range]::-webkit-slider-thumb {
+            pointer-events: all;
+            /* allow dragging */
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            margin-right: 5px;
+            background-color: orange;
+            cursor: pointer;
+            -webkit-appearance: none;
+        }
+
+        input[type=range]::-moz-range-thumb {
+            pointer-events: all;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .slider-track {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 2px;
+            background: #ddd;
+            width: 100%;
+            border-radius: 2px;
+        }
+
+        .range-highlight {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 2px;
+            background: rgba(0, 0, 0, 0.719);
+            border-radius: 2px;
+        }
+
+        .values {
+            margin-top: 50px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="inline-block">
+        <p class="font-semibold">Discard</p>
+        <div class="bg-black h-[2px] mt-1 w-full"></div>
+    </div>
+
+    <div class="range-container">
+        <h3>Price Range</h3>
+
+        <div class="values">
+            Min: $<span>2000</span> –
+            Max: $<span>8000</span>
+        </div>
+    </div>
+
+    <script>
+
+    </script>
+</body>
+
+</html>

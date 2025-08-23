@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Filter System</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="bg-gray-50 p-4">
+
+    <div class="max-w-4xl mx-auto">
+        <h1 class="text-2xl font-bold mb-6 text-center">Car Filter System</h1>
+
+        <!-- Filter Form -->
+        <form id="filterForm" class="space-y-6">
+
+            <!-- Row 1: KM's Driven and Year -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- KM's Driven -->
+                <div class="bg-white p-4 rounded-lg border shadow-sm" data-filter="kmsDriven">
+                    <h3 class="font-semibold mb-3">KM's driven</h3>
+                    <div class="flex gap-3">
+                        <input type="number" name="kmsMin" value="1"
+                            class="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                            placeholder="1" />
+                        <input type="number" name="kmsMax" value="999999"
+                            class="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                            placeholder="999,999" />
+                    </div>
+                </div>
+
+                <!-- Year -->
+                <div class="bg-white p-4 rounded-lg border shadow-sm" data-filter="year">
+                    <h3 class="font-semibold mb-3">Year</h3>
+                    <div class="flex gap-3">
+                        <input type="number" name="yearMin" value="1900"
+                            class="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                            placeholder="1900" />
+                        <input type="number" name="yearMax" value="2025"
+                            class="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                            placeholder="2025" />
+                    </div>
+                </div>
+            </div>
+
+            <!-- Row 2: Fuel and Transmission -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Fuel -->
+                <div class="bg-white p-4 rounded-lg border shadow-sm" data-filter="fuel">
+                    <h3 class="font-semibold mb-3">Fuel</h3>
+                    <div class="grid grid-cols-2 gap-2 text-sm">
+                        <label class="flex items-center space-x-2">
+                            <input type="checkbox" name="fuel" value="Petrol"
+                                class="rounded text-blue-600 focus:ring-blue-500" />
+                            <span>Petrol</span>
+                        </label>
+                        <label class="flex items-center space-x-2">
+                            <input type="checkbox" name="fuel" value="CNG"
+                                class="rounded text-blue-600 focus:ring-blue-500" />
+                            <span>CNG</span>
+                        </label>
+                        <label class="flex items-center space-x-2">
+                            <input type="checkbox" name="fuel" value="Hybrid"
+                                class="rounded text-blue-600 focus:ring-blue-500" />
+                            <span>Hybrid</span>
+                        </label>
+                        <label class="flex items-center space-x-2">
+                            <input type="checkbox" name="fuel" value="LPG"
+                                class="rounded text-blue-600 focus:ring-blue-500" />
+                            <span>LPG</span>
+                        </label>
+                        <label class="flex items-center space-x-2">
+                            <input type="checkbox" name="fuel" value="Diesel"
+                                class="rounded text-blue-600 focus:ring-blue-500" />
+                            <span>Diesel</span>
+                        </label>
+                        <label class="flex items-center space-x-2">
+                            <input type="checkbox" name="fuel" value="Electric"
+                                class="rounded text-blue-600 focus:ring-blue-500" />
+                            <span>Electric</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Transmission -->
+                <div class="bg-white p-4 rounded-lg border shadow-sm" data-filter="transmission">
+                    <h3 class="font-semibold mb-3">Transmission</h3>
+                    <div class="space-y-2 text-sm">
+                        <label class="flex items-center space-x-2">
+                            <input type="checkbox" name="transmission" value="Automatic"
+                                class="rounded text-blue-600 focus:ring-blue-500" />
+                            <span>Automatic</span>
+                        </label>
+                        <label class="flex items-center space-x-2">
+                            <input type="checkbox" name="transmission" value="Manual"
+                                class="rounded text-blue-600 focus:ring-blue-500" />
+                            <span>Manual</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Row 3: Body Type -->
+            <div class="bg-white p-4 rounded-lg border shadow-sm" data-filter="bodyType">
+                <h3 class="font-semibold mb-3">Body Type</h3>
+                <div class="grid grid-cols-3 gap-2 text-sm">
+                    <label class="flex items-center space-x-2">
+                        <input type="checkbox" name="bodyType" value="Sedan"
+                            class="rounded text-blue-600 focus:ring-blue-500" />
+                        <span>Sedan</span>
+                    </label>
+                    <label class="flex items-center space-x-2">
+                        <input type="checkbox" name="bodyType" value="SUV"
+                            class="rounded text-blue-600 focus:ring-blue-500" />
+                        <span>SUV</span>
+                    </label>
+                    <label class="flex items-center space-x-2">
+                        <input type="checkbox" name="bodyType" value="Hatchback"
+                            class="rounded text-blue-600 focus:ring-blue-500" />
+                        <span>Hatchback</span>
+                    </label>
+                    <label class="flex items-center space-x-2">
+                        <input type="checkbox" name="bodyType" value="Other"
+                            class="rounded text-blue-600 focus:ring-blue-500" />
+                        <span>Other</span>
+                    </label>
+                    <label class="flex items-center space-x-2">
+                        <input type="checkbox" name="bodyType" value="Sport"
+                            class="rounded text-blue-600 focus:ring-blue-500" />
+                        <span>Sport</span>
+                    </label>
+                    <label class="flex items-center space-x-2">
+                        <input type="checkbox" name="bodyType" value="Small city car"
+                            class="rounded text-blue-600 focus:ring-blue-500" />
+                        <span>Small city car</span>
+                    </label>
+                    <label class="flex items-center space-x-2">
+                        <input type="checkbox" name="bodyType" value="Pickup"
+                            class="rounded text-blue-600 focus:ring-blue-500" />
+                        <span>Pickup</span>
+                    </label>
+                    <label class="flex items-center space-x-2">
+                        <input type="checkbox" name="bodyType" value="Estate"
+                            class="rounded text-blue-600 focus:ring-blue-500" />
+                        <span>Estate</span>
+                    </label>
+                    <label class="flex items-center space-x-2">
+                        <input type="checkbox" name="bodyType" value="Convertible"
+                            class="rounded text-blue-600 focus:ring-blue-500" />
+                        <span>Convertible</span>
+                    </label>
+                    <label class="flex items-center space-x-2">
+                        <input type="checkbox" name="bodyType" value="Van/Bus"
+                            class="rounded text-blue-600 focus:ring-blue-500" />
+                        <span>Van/Bus</span>
+                    </label>
+                    <label class="flex items-center space-x-2">
+                        <input type="checkbox" name="bodyType" value="MPV"
+                            class="rounded text-blue-600 focus:ring-blue-500" />
+                        <span>MPV</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Row 4: Features -->
+            <div class="bg-white p-4 rounded-lg border shadow-sm" data-filter="features">
+                <h3 class="font-semibold mb-3">Features</h3>
+                <div class="grid grid-cols-2 gap-2 text-sm">
+                    <label class="flex items-center space-x-2">
+                        <input type="checkbox" name="features" value="AM/FM radio"
+                            class="rounded text-blue-600 focus:ring-blue-500" />
+                        <span>AM/FM radio</span>
+                    </label>
+                    <label class="flex items-center space-x-2">
+                        <input type="checkbox" name="features" value="Power Steering"
+                            class="rounded text-blue-600 focus:ring-blue-500" />
+                        <span>Power Steering</span>
+                    </label>
+                    <label class="flex items-center space-x-2">
+                        <input type="checkbox" name="features" value="Power Windows"
+                            class="rounded text-blue-600 focus:ring-blue-500" />
+                        <span>Power Windows</span>
+                    </label>
+                    <label class="flex items-center space-x-2">
+                        <input type="checkbox" name="features" value="USB Charger"
+                            class="rounded text-blue-600 focus:ring-blue-500" />
+                        <span>USB Charger</span>
+                    </label>
+                    <label class="flex items-center space-x-2">
+                        <input type="checkbox" name="features" value="Bluetooth"
+                            class="rounded text-blue-600 focus:ring-blue-500" />
+                        <span>Bluetooth</span>
+                    </label>
+                    <label class="flex items-center space-x-2">
+                        <input type="checkbox" name="features" value="Power Mirrors"
+                            class="rounded text-blue-600 focus:ring-blue-500" />
+                        <span>Power Mirrors</span>
+                    </label>
+                    <label class="flex items-center space-x-2">
+                        <input type="checkbox" name="features" value="Font Speaker"
+                            class="rounded text-blue-600 focus:ring-blue-500" />
+                        <span>Font Speaker</span>
+                    </label>
+                    <label class="flex items-center space-x-2">
+                        <input type="checkbox" name="features" value="ABS"
+                            class="rounded text-blue-600 focus:ring-blue-500" />
+                        <span>ABS</span>
+                    </label>
+                </div>
+                <div class="mt-3">
+                    <button type="button" id="viewMoreBtn" class="text-purple-500 text-sm hover:underline">
+                        View more
+                    </button>
+                </div>
+            </div>
+
+            <!-- Row 5: Car Documents and Assembly -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Car Documents -->
+                <div class="bg-white p-4 rounded-lg border shadow-sm" data-filter="carDocuments">
+                    <h3 class="font-semibold mb-3">Car Documents</h3>
+                    <div class="space-y-2 text-sm">
+                        <label class="flex items-center space-x-2">
+                            <input type="checkbox" name="carDocuments" value="Original"
+                                class="rounded text-blue-600 focus:ring-blue-500" />
+                            <span>Original</span>
+                        </label>
+                        <label class="flex items-center space-x-2">
+                            <input type="checkbox" name="carDocuments" value="Duplicate"
+                                class="rounded text-blue-600 focus:ring-blue-500" />
+                            <span>Duplicate</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Assembly -->
+                <div class="bg-white p-4 rounded-lg border shadow-sm" data-filter="assembly">
+                    <h3 class="font-semibold mb-3">Assembly</h3>
+                    <div class="space-y-2 text-sm">
+                        <label class="flex items-center space-x-2">
+                            <input type="checkbox" name="assembly" value="Imported"
+                                class="rounded text-blue-600 focus:ring-blue-500" />
+                            <span>Imported</span>
+                        </label>
+                        <label class="flex items-center space-x-2">
+                            <input type="checkbox" name="assembly" value="Local"
+                                class="rounded text-blue-600 focus:ring-blue-500" />
+                            <span>Local</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Registration City -->
+            <div class="bg-white p-4 rounded-lg border shadow-sm" data-filter="registrationCity">
+                <h3 class="font-semibold mb-3">Registration City</h3>
+                <div class="grid grid-cols-4 gap-2 text-sm">
+                    <label class="flex items-center space-x-2">
+                        <input type="checkbox" name="registrationCity" value="Lahore"
+                            class="rounded text-blue-600 focus:ring-blue-500" />
+                        <span>Lahore</span>
+                    </label>
+                    <label class="flex items-center space-x-2">
+                        <input type="checkbox" name="registrationCity" value="Unregistered"
+                            class="rounded text-blue-600 focus:ring-blue-500" />
+                        <span>Unregistered</span>
+                    </label>
+                    <label class="flex items-center space-x-2">
+                        <input type="checkbox" name="registrationCity" value="Sargodha"
+                            class="rounded text-blue-600 focus:ring-blue-500" />
+                        <span>Sargodha</span>
+                    </label>
+                    <label class="flex items-center space-x-2">
+                        <input type="checkbox" name="registrationCity" value="Karachi"
+                            class="rounded text-blue-600 focus:ring-blue-500" />
+                        <span>Karachi</span>
+                    </label>
+                    <label class="flex items-center space-x-2">
+                        <input type="checkbox" name="registrationCity" value="Pindi"
+                            class="rounded text-blue-600 focus:ring-blue-500" />
+                        <span>Pindi</span>
+                    </label>
+                    <label class="flex items-center space-x-2">
+                        <input type="checkbox" name="registrationCity" value="Quetta"
+                            class="rounded text-blue-600 focus:ring-blue-500" />
+                        <span>Quetta</span>
+                    </label>
+                    <label class="flex items-center space-x-2">
+                        <input type="checkbox" name="registrationCity" value="Multan"
+                            class="rounded text-blue-600 focus:ring-blue-500" />
+                        <span>Multan</span>
+                    </label>
+                    <label class="flex items-center space-x-2">
+                        <input type="checkbox" name="registrationCity" value="Sialkot"
+                            class="rounded text-blue-600 focus:ring-blue-500" />
+                        <span>Sialkot</span>
+                    </label>
+                    <label class="flex items-center space-x-2">
+                        <input type="checkbox" name="registrationCity" value="Gujrat"
+                            class="rounded text-blue-600 focus:ring-blue-500" />
+                        <span>Gujrat</span>
+                    </label>
+                    <label class="flex items-center space-x-2">
+                        <input type="checkbox" name="registrationCity" value="Islamabad"
+                            class="rounded text-blue-600 focus:ring-blue-500" />
+                        <span>Islamabad</span>
+                    </label>
+                    <label class="flex items-center space-x-2">
+                        <input type="checkbox" name="registrationCity" value="Hyderabad"
+                            class="rounded text-blue-600 focus:ring-blue-500" />
+                        <span>Hyderabad</span>
+                    </label>
+                    <label class="flex items-center space-x-2">
+                        <input type="checkbox" name="registrationCity" value="Abbottabad"
+                            class="rounded text-blue-600 focus:ring-blue-500" />
+                        <span>Abbottabad</span>
+                    </label>
+                    <label class="flex items-center space-x-2">
+                        <input type="checkbox" name="registrationCity" value="Sindh"
+                            class="rounded text-blue-600 focus:ring-blue-500" />
+                        <span>Sindh</span>
+                    </label>
+                    <label class="flex items-center space-x-2">
+                        <input type="checkbox" name="registrationCity" value="Gujranwala"
+                            class="rounded text-blue-600 focus:ring-blue-500" />
+                        <span>Gujranwala</span>
+                    </label>
+                    <label class="flex items-center space-x-2">
+                        <input type="checkbox" name="registrationCity" value="Peshawar"
+                            class="rounded text-blue-600 focus:ring-blue-500" />
+                        <span>Peshawar</span>
+                    </label>
+                    <label class="flex items-center space-x-2">
+                        <input type="checkbox" name="registrationCity" value="Punjab"
+                            class="rounded text-blue-600 focus:ring-blue-500" />
+                        <span>Punjab</span>
+                    </label>
+                    <label class="flex items-center space-x-2">
+                        <input type="checkbox" name="registrationCity" value="Sahiwal"
+                            class="rounded text-blue-600 focus:ring-blue-500" />
+                        <span>Sahiwal</span>
+                    </label>
+                    <label class="flex items-center space-x-2">
+                        <input type="checkbox" name="registrationCity" value="Bahawalpur"
+                            class="rounded text-blue-600 focus:ring-blue-500" />
+                        <span>Bahawalpur</span>
+                    </label>
+                    <label class="flex items-center space-x-2">
+                        <input type="checkbox" name="registrationCity" value="Faisalabad"
+                            class="rounded text-blue-600 focus:ring-blue-500" />
+                        <span>Faisalabad</span>
+                    </label>
+                    <label class="flex items-center space-x-2">
+                        <input type="checkbox" name="registrationCity" value="Rahimyar Khan"
+                            class="rounded text-blue-600 focus:ring-blue-500" />
+                        <span>Rahimyar Khan</span>
+                    </label>
+                </div>
+            </div>
+
+        </form>
+
+        <!-- Action Buttons -->
+        <div
+            class="flex flex-col sm:flex-row justify-between items-center gap-4 mt-8 bg-white p-4 rounded-lg border shadow-sm">
+            <button type="button" id="cancelBtn"
+                class="w-full sm:w-auto px-6 py-2 border border-gray-300 rounded-lg bg-white hover:bg-gray-50 text-sm font-medium transition-colors">
+                CANCEL
+            </button>
+
+            <div class="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
+                <!-- More Filter Button -->
+                <button type="button" id="moreFilterBtn"
+                    class="w-full sm:w-auto px-6 py-2 border border-gray-300 rounded-lg bg-white hover:bg-gray-50 text-sm font-medium flex items-center justify-center gap-2 transition-colors">
+                    <i class="fa-solid fa-filter text-orange-500"></i>
+                    More Filter
+                </button>
+
+                <button type="button" id="applyBtn"
+                    class="w-full sm:w-auto px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 text-sm font-medium transition-colors">
+                    APPLY
+                </button>
+            </div>
+        </div>
+
+        <!-- Results Display -->
+        <div id="resultsSection" class="mt-6 bg-white p-4 rounded-lg border shadow-sm hidden">
+            <h3 class="font-semibold mb-3">Filter Results:</h3>
+            <pre id="resultsDisplay" class="bg-gray-100 p-3 rounded text-sm overflow-auto"></pre>
+        </div>
+
+    </div>
+
+    <script>
+        // Filter References - Store references to all filter sections
+        const FilterRefs = {
+            form: document.getElementById('filterForm'),
+            sections: {
+                kmsDriven: document.querySelector('[data-filter="kmsDriven"]'),
+                year: document.querySelector('[data-filter="year"]'),
+                fuel: document.querySelector('[data-filter="fuel"]'),
+                transmission: document.querySelector('[data-filter="transmission"]'),
+                bodyType: document.querySelector('[data-filter="bodyType"]'),
+                features: document.querySelector('[data-filter="features"]'),
+                carDocuments: document.querySelector('[data-filter="carDocuments"]'),
+                assembly: document.querySelector('[data-filter="assembly"]'),
+                registrationCity: document.querySelector('[data-filter="registrationCity"]')
+            },
+            buttons: {
+                moreFilter: document.getElementById('moreFilterBtn'),
+                apply: document.getElementById('applyBtn'),
+                cancel: document.getElementById('cancelBtn'),
+                viewMore: document.getElementById('viewMoreBtn')
+            }
+        };
+
+        // Filter Data Manager
+        const FilterManager = {
+            // Get all current filter values
+            getAllValues: function () {
+                const formData = new FormData(FilterRefs.form);
+                const filters = {};
+
+                // Get range values (KMs and Year)
+                filters.kmsDriven = {
+                    min: formData.get('kmsMin') || '1',
+                    max: formData.get('kmsMax') || '999999'
+                };
+
+                filters.year = {
+                    min: formData.get('yearMin') || '1900',
+                    max: formData.get('yearMax') || '2025'
+                };
+
+                // Get checkbox values
+                const checkboxFields = ['fuel', 'transmission', 'bodyType', 'features', 'carDocuments', 'assembly', 'registrationCity'];
+
+                checkboxFields.forEach(field => {
+                    filters[field] = formData.getAll(field);
+                });
+
+                return filters;
+            },
+
+            // Get values from specific filter section
+            getSpecificValues: function (sectionName) {
+                const section = FilterRefs.sections[sectionName];
+                if (!section) {
+                    console.warn(`Filter section "${sectionName}" not found`);
+                    return null;
+                }
+
+                const result = {};
+
+                // Handle range inputs (KMs, Year)
+                if (sectionName === 'kmsDriven' || sectionName === 'year') {
+                    const inputs = section.querySelectorAll('input[type="number"]');
+                    result.min = inputs[0]?.value || '';
+                    result.max = inputs[1]?.value || '';
+                } else {
+                    // Handle checkboxes
+                    const checkboxes = section.querySelectorAll('input[type="checkbox"]:checked');
+                    result.selected = Array.from(checkboxes).map(cb => cb.value);
+                    result.count = result.selected.length;
+                }
+
+                return result;
+            },
+
+            // Reset all filters
+            resetAll: function () {
+                // Reset form
+                FilterRefs.form.reset();
+
+                // Set default values
+                document.querySelector('input[name="kmsMin"]').value = '1';
+                document.querySelector('input[name="kmsMax"]').value = '999999';
+                document.querySelector('input[name="yearMin"]').value = '1900';
+                document.querySelector('input[name="yearMax"]').value = '2025';
+
+                console.log('All filters reset to default values');
+            },
+
+            // Display results
+            displayResults: function (data) {
+                const resultsSection = document.getElementById('resultsSection');
+                const resultsDisplay = document.getElementById('resultsDisplay');
+
+                resultsDisplay.textContent = JSON.stringify(data, null, 2);
+                resultsSection.classList.remove('hidden');
+
+                // Scroll to results
+                resultsSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        };
+
+        // Event Handlers
+        const EventHandlers = {
+            // More Filter Button Click
+            moreFilter: function () {
+                console.log('More Filter button clicked!');
+
+                // Get all current filter values
+                const currentFilters = FilterManager.getAllValues();
+                console.log('Current Filter Values:', currentFilters);
+
+                // Display results
+                FilterManager.displayResults({
+                    action: 'More Filter Clicked',
+                    timestamp: new Date().toLocaleString(),
+                    filters: currentFilters
+                });
+
+                // Example: Get specific section data
+                const fuelData = FilterManager.getSpecificValues('fuel');
+                console.log('Fuel Filter Data:', fuelData);
+
+                const bodyTypeData = FilterManager.getSpecificValues('bodyType');
+                console.log('Body Type Filter Data:', bodyTypeData);
+            },
+
+            // Apply Filters
+            apply: function () {
+                console.log('Apply button clicked!');
+
+                const appliedFilters = FilterManager.getAllValues();
+                console.log('Applied Filters:', appliedFilters);
+
+                // Display results
+                FilterManager.displayResults({
+                    action: 'Filters Applied',
+                    timestamp: new Date().toLocaleString(),
+                    filters: appliedFilters
+                });
+
+                // Here you would typically send the data to your backend
+                // Example: sendFiltersToServer(appliedFilters);
+
+                alert('Filters Applied! Check the results section below.');
+            },
+
+            // Cancel/Reset Filters
+            cancel: function () {
+                console.log('Cancel button clicked!');
+
+                if (confirm('Are you sure you want to reset all filters?')) {
+                    FilterManager.resetAll();
+
+                    // Hide results section
+                    document.getElementById('resultsSection').classList.add('hidden');
+
+                    alert('All filters have been reset to default values.');
+                }
+            },
+
+            // View More Features
+            viewMore: function () {
+                alert('View More Features clicked!\nThis would expand to show additional car features.');
+                console.log('View More Features clicked');
+            }
+        };
+
+        // Initialize Event Listeners
+        function initializeEventListeners() {
+            // Button event listeners
+            FilterRefs.buttons.moreFilter.addEventListener('click', EventHandlers.moreFilter);
+            FilterRefs.buttons.apply.addEventListener('click', EventHandlers.apply);
+            FilterRefs.buttons.cancel.addEventListener('click', EventHandlers.cancel);
+            FilterRefs.buttons.viewMore.addEventListener('click', EventHandlers.viewMore);
+
+            // Form change listener (optional - for real-time updates)
+            FilterRefs.form.addEventListener('change', function (e) {
+                console.log(`Filter changed: ${e.target.name} = ${e.target.value}`);
+
+                // Optional: Update results in real-time
+                // const currentFilters = FilterManager.getAllValues();
+                // console.log('Updated filters:', currentFilters);
+            });
+        }
+
+        // Utility Functions
+        const Utils = {
+            // Export filter data as JSON
+            exportFilters: function () {
+                const filters = FilterManager.getAllValues();
+                const dataStr = JSON.stringify(filters, null, 2);
+                const dataBlob = new Blob([dataStr], { type: 'application/json' });
+                const url = URL.createObjectURL(dataBlob);
+                const link = document.createElement('a');
+                link.href = url;
+                link.download = 'car-filters.json';
+                link.click();
+            },
+
+            // Get filter summary
+            getFilterSummary: function () {
+                const filters = FilterManager.getAllValues();
+                let summary = [];
+
+                if (filters.fuel.length > 0) summary.push(`Fuel: ${filters.fuel.join(', ')}`);
+                if (filters.transmission.length > 0) summary.push(`Transmission: ${filters.transmission.join(', ')}`);
+                if (filters.bodyType.length > 0) summary.push(`Body Type: ${filters.bodyType.join(', ')}`);
+
+                return summary.length > 0 ? summary.join(' | ') : 'No filters applied';
+            }
+        };
+
+        // Initialize the application
+        document.addEventListener('DOMContentLoaded', function () {
+            console.log('Car Filter System initialized');
+            initializeEventListeners();
+
+            // Optional: Load saved filters from localStorage
+            // const savedFilters = localStorage.getItem('carFilters');
+            // if (savedFilters) {
+            //     // Load saved filters
+            // }
+        });
+
+        // Make FilterManager and Utils globally accessible for debugging
+        window.FilterManager = FilterManager;
+        window.FilterRefs = FilterRefs;
+        window.Utils = Utils;
+
+        // Example usage in console:
+        // FilterManager.getAllValues() - Get all current filter values
+        // FilterManager.getSpecificValues('fuel') - Get fuel filter data
+        // FilterManager.resetAll() - Reset all filters
+        // Utils.exportFilters() - Export filters as JSON
+        // Utils.getFilterSummary() - Get filter summary string
+
+    </script>
+</body>
+
+</html>

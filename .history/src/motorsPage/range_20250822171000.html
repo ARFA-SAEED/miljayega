@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Range Slider -->
+    <div class="mb-6 w-full relative h-10">
+        <!-- Custom Track -->
+        <div class="absolute top-1/2 -translate-y-1/2 w-full h-[4px] bg-gray-300 rounded"></div>
+
+        <!-- Hidden Inputs (only used for value/drag) -->
+        <input type="range" id="minRange" min="500000" max="10000000" step="500000" value="500000"
+            class="absolute w-full h-full opacity-0 cursor-pointer z-20">
+        <input type="range" id="maxRange" min="500000" max="10000000" step="500000" value="10000000"
+            class="absolute w-full h-full opacity-0 cursor-pointer z-20">
+
+        <!-- Custom Handles -->
+        <div id="minHandle"
+            class="absolute top-1/2 -translate-y-1/2 w-5 h-5 rounded-full border border-gray-400 bg-white shadow z-10 pointer-events-none">
+        </div>
+        <div id="maxHandle"
+            class="absolute top-1/2 -translate-y-1/2 w-5 h-5 rounded-full border border-gray-400 bg-white shadow z-10 pointer-events-none">
+        </div>
+    </div>
+</body>
+<script>const minRange = document.getElementById('minRange');
+    const maxRange = document.getElementById('maxRange');
+    const minHandle = document.getElementById('minHandle');
+    const maxHandle = document.getElementById('maxHandle');
+    const minValueBtn = document.getElementById('minValueBtn');
+    const maxValueBtn = document.getElementById('maxValueBtn');
+
+    function updateHandles() {
+        const minPercent = ((minRange.value - minRange.min) / (minRange.max - minRange.min)) * 100;
+        const maxPercent = ((maxRange.value - maxRange.min) / (maxRange.max - maxRange.min)) * 100;
+
+        // Update positions of custom handles
+        minHandle.style.left = `calc(${minPercent}% - 10px)`;
+        maxHandle.style.left = `calc(${maxPercent}% - 10px)`;
+
+        // Update button text
+        minValueBtn.textContent = `Min: ${parseInt(minRange.value).toLocaleString()}`;
+        maxValueBtn.textContent = `Max: ${parseInt(maxRange.value).toLocaleString()}`;
+    }
+
+    // Min cannot go above Max
+    minRange.addEventListener('input', () => {
+        if (parseInt(minRange.value) > parseInt(maxRange.value)) minRange.value = maxRange.value;
+        updateHandles();
+    });
+
+    // Max cannot go below Min
+    maxRange.addEventListener('input', () => {
+        if (parseInt(maxRange.value) < parseInt(minRange.value)) maxRange.value = minRange.value;
+        updateHandles();
+    });
+
+    // Initialize
+    updateHandles();</script>
+
+</html>
