@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Miljaega.pk -Motors</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Lalezar&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="./Css/miljaega-homepage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    body {
+        background-color: rgb(220, 228, 245);
+    }
+</style>
+
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-sm fixed top-0 z-50 w-full">
+        <div class=" lg:mx-auto 2xl:mx-20 relative py-3 container px-4 sm:px-6">
+            <div class="flex justify-between items-center py-3 ">
+                <!-- Left: Logo -->
+                <div class="flex-shrink-0">
+                    <img src="../../../assets/images/logo.svg" alt="Logo" class="h-8 sm:h-10" />
+                    </a>
+                </div>
+
+                <!-- Center: Nav Bar (Visible only on XL and above) -->
+                <nav class="hidden xl:flex absolute m 2xl:ms-[440px] left-1/2 transform -translate-x-1/2 space-x-6 text-sm font-medium text-gray-600"
+                    style="max-width: 100%; overflow-x: auto; white-space: nowrap;">
+                    <div class="flex justify-center mt-2">
+                        <div class="inline-flex rounded-lg shadow-md bg-white overflow-hidden">
+                            <a href="#"
+                                class="px-8 py-3 text-sm font-medium text-white bg-blue-900 hover:bg-blue-900 transition duration-300 flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20"
+                                    fill="currentColor">
+                                    <path fill-rule="evenodd"
+                                        d="M3 5a2 2 0 012-2h10a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V5zm11 1H6v8l4-2 4 2V6z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                ALL
+                            </a>
+                            <a href="#"
+                                class="px-8 py-3 text-sm font-medium text-pak-green hover:bg-[rgb(220,228,245)] transition duration-300 flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20"
+                                    fill="currentColor">
+                                    <path fill-rule="evenodd"
+                                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 1.414L10.586 9H7a1 1 0 100 2h3.586l-1.293 1.293a1 1 0 101.414 1.414l3-3a1 1 0 000-1.414z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                NEW
+                            </a>
+                            <a href="#"
+                                class="px-8 py-3 text-sm font-medium text-pak-green hover:bg-[rgb(220,228,245)] transition duration-300 flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20"
+                                    fill="currentColor">
+                                    <path fill-rule="evenodd"
+                                        d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                USED
+                            </a>
+                            <a href="#"
+                                class="px-8 py-3 text-sm font-medium text-pak-green hover:bg-[rgb(220,228,245)] transition duration-300 flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20"
+                                    fill="currentColor">
+                                    <path fill-rule="evenodd"
+                                        d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 00-2-2H4zm2 6a2 2 0 012-2h8a2 2 0 012 2v4a2 2 0 01-2 2H8a2 2 0 01-2-2v-4zm6 4a2 2 0 100-4 2 2 0 000 4z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                RENT
+                            </a>
+                            <a href="#"
+                                class="px-8 py-3 text-sm font-medium text-pak-green hover:bg-[rgb(220,228,245)] transition duration-300 flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20"
+                                    fill="currentColor">
+                                    <path fill-rule="evenodd"
+                                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                Exchange
+                            </a>
+                        </div>
+                    </div>
+                </nav>
+
+                <!-- Right: Hamburger Menu (Visible on sm and md) -->
+                <button id="mobileMenuToggle"
+                    class="block xl:hidden text-gray-700 hover:text-primary-green focus:outline-none"
+                    aria-label="Toggle menu">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Dropdown -->
+    <div id="mobileMenu"
+        class="xl:hidden hidden flex bg-white shadow-md fixed top-[72px] left-0 right-0 z-40 max-h-[calc(100vh-72px)] overflow-y-auto">
+        <div class="px-4 py-4 space-y-4 text-sm font-medium text-gray-700">
+            <!-- Center Nav Items -->
+            <div class="flex justify-around text-center gap-2 flex-wrap mt-">
+                <a href="#" class="flex flex-col items-center gap-1 hover:text-primary-green">
+                    <img src="./images/second-hand.png" alt="Used Items" class="w-6 h-6 object-contain" /> Used
+                </a>
+                <a href="#" class="flex flex-col items-center gap-1 hover:text-primary-green">
+                    <img src="./images/new.png" alt="New Items" class="w-6 h-6 object-contain" /> New
+                </a>
+                <a href="#" class="flex flex-col items-center gap-1 hover:text-primary-green">
+                    <img src="./images/exchange.png" alt="Exchange" class="w-6 h-6 object-contain" /> Exchange
+                </a>
+                <a href="#" class="flex flex-col items-center gap-1 hover:text-primary-green">
+                    <img src="./images/rent.png" alt="Rentals" class="w-6 h-6 object-contain" /> Rentals
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Spacer to avoid content under fixed header -->
+    <div class="pt-[72px]"></div>
+
+
+
+
+    <div class="flex gap-3 mt-20 mt-[90px] justify-center">
+        <div><img class="h-[513px] w-[700px] object-cover rounded-l-[10px]"
+                src="https://images.zameen.com/w1600_h900/7/1601/oasis_park_residencia_33357.jpg" alt=""></div>
+        <div><img class="h-[250px] w-[500px] mb-3 rounded-tr-[10px]"
+                src="https://images.zameen.com/w1600_h900/7/1601/oasis_park_residencia_33200.jpg" alt=""> <img
+                class="h-[250px] w-[500px] rounded-br-[10px]"
+                src="https://images.zameen.com/w1600_h900/7/1601/oasis_park_residencia_33198.jpg" alt=""></div>
+    </div>
+    <div class="flex mt-8 mb-3 justify-center gap-[200px]">
+        <div>
+            <h1 class="font-bold text-blue-900 text-2xl">120 Sq. Yd house for sale In Scheme 33, Karachi</h1>
+        </div>
+        <div class="flex gap-3 mt-2">
+            <button
+                class="border border-[#F08B0B] border-1 text-[#F08B0B] font-semibold rounded-[7px] px-7 h-[35px] flex pt-1">
+                <i class="fa-solid fa-phone  pt-[4px] me-2 "></i>Call</button>
+            <button class=" hover:bg-blue-800 bg-blue-900 text-white rounded-[7px] px-7 h-[35px] flex pt-1"> <i
+                    class="fa-solid fa-comment text-white pt-[3px] me-2 font-bold  text-sm"></i> Chat Now</button>
+            <button class="bg-[#4ABD7A] text-white rounded-[7px] px-3 h-[35px] "><i
+                    class="fa-brands fa-whatsapp text-lg"></i></button>
+            <div class="flex"><img class="rounded-[100px] h-[45px] w-[45px]"
+                    src="https://tse3.mm.bing.net/th/id/OIP.WpIMP_W3gb5bZ81rA-K2YgHaHa?pid=Api&P=0&h=220" alt="">
+                <span class="text-[#F08B0B] ml-3 mt-2">See Profile</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="flex gap-3 ml-[350px] mb-6">
+        <div class="flex gap-2 "> <i class="fa-solid fa-bed text-blue-900 mt-1 text-xl"></i><span
+                class="mt-[6px] font-semibold me-4">4</span>
+        </div>
+        <div class="flex gap-2"> <i class="fa-solid fa-bath text-blue-900 mt-1 text-xl"></i></i><span
+                class="mt-[6px] font-semibold me-4">4</span>
+        </div>
+        <div class="flex gap-2"> <i class="fa-solid fa-chart-area text-blue-900 mt-1 text-xl"></i><span
+                class="mt-[6px] font-semibold me-4">120
+                sqyd</span>
+        </div>
+        <div class="flex gap-3">
+            <div class="h-4 w-4 mt-[10px] bg-red-600"> </div><span class="mt-[6px] font-bold">House</span>
+        </div>
+    </div>
+    <div class="flex-col ml-[350px] mb-1">
+        <div>
+            <h1 class="text-blue-900 font-bold  text-2xl"><span
+                    class="text-lg font-bold text-[#F08B0B] me-2">PKR</span>2.5
+                LAC
+            </h1>
+        </div>
+        <div>
+            <span class="text-gray-600 text-sm">Added 3 days ago</span>
+        </div>
+    </div>
+    <div class="flex  ml-[350px] gap-75 mb-4">
+        <div class=" h-[2px] w-[700px] mt-5  bg-gray-500 ">
+        </div>
+        <div class="flex gap-3"> <i class="fa-solid fa-flag text-red-600 mt-2"></i><span
+                class="mt-[3px] font-semibold">Report this property</span> <i
+                class="fa-solid fa-circle-exclamation text-blue-900  mt-2"></i>
+        </div>
+    </div>
+
+    <div class="flex-col  ml-[350px] mb-7">
+        <h1 class="text-blue-900 font-bold text-xl mb-4">Description</h1>
+        <p class="text-sm text-gray-600 w-[450px] mb-6">Sale in saadi town block 04 scheme 33. brand new untouch120
+            square
+            yards g+1
+            westopen4 bed ddleased and
+            approval near too markets schools restaurants banks and hospitalsno issue sweet water and electric available
+            demand 2 crore further details please contact number.
+        </p>
+        <div class=" h-[2px] w-[700px] mt-5  bg-gray-500 ">
+        </div>
+    </div>
+    <div class="flex-col ml-[350px] mb-7">
+        <h1 class="text-2xl text-blue-900 font-bold">Condition</h1>
+        <span class="text-gray-600 text-sm">Brand New</span>
+        <div class="shadow-xl rounded-[10px] h-20 w-20 flex-col">
+
+        </div>
+    </div>
+    <footer class="bg-[#0C3168] text-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-10">
+
+            <!-- ✅ Mobile/Tablet (sm, md, lg): 2 Rows Layout -->
+            <div class="flex  flex-wrap gap-8 lg:hidden">
+                <!-- Row 1: ABOUT US + MY ACCOUNT -->
+                <div class="w-full flex   gap-8">
+                    <!-- ABOUT US -->
+                    <div class="w-full ms-10 md:ms-0 sm:w-1/2 text-left">
+                        <ul class="leading-10">
+                            <li class="font-bold text-xl mb-3">ABOUT US</li>
+                            <li>FAQ</li>
+                            <li>Anti Scam</li>
+                            <li>Term of use</li>
+                            <li>Privacy Policy</li>
+                            <li>Contact Us</li>
+                            <li>Sitemap</li>
+                        </ul>
+                    </div>
+                    <!-- MY ACCOUNT -->
+                    <div class="w-full ms-20 md:ms-60 sm:w-1/2 text-left">
+                        <ul class="leading-10">
+                            <li class="font-bold text-xl mb-3">MY ACCOUNT</li>
+                            <li>Login</li>
+                            <li>Register</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Row 2: Miljaega + Social -->
+                <div class="w-full flex gap-8 mt-5">
+                    <!-- Miljaega -->
+                    <div class="w-full sm:w-1/2 ms-10 md:ms-0 text-left">
+                        <ul class="leading-10">
+                            <li class="font-bold text-xl mb-3">Miljaega</li>
+                            <li>Inspected by miljaega</li>
+                            <li>Featured by miljaega</li>
+                            <li>Recomended by miljaega</li>
+                        </ul>
+                    </div>
+                    <!-- Social -->
+                    <div class="w-full ms-20 md:ms-60  sm:w-1/2 text-left leading-15">
+                        <ul>
+                            <li class="font-bold text-xl  mb-3">FOLLOW US</li>
+                        </ul>
+                        <div class=" ms-8 md:ms-0 sm:flex-wrap md:flex mt-3 gap-5">
+                            <img src="./images/fb.svg" class="h-10 mb-2" alt="">
+                            <img src="./images/insta.svg" class="h-10 mb-2" alt="">
+                            <img src="./images/twitter.svg" class="h-10 mb-2" alt="">
+                            <img src="./images/youtube.svg" class="h-10 mb-2" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ✅ XL and Up: Original 4-column Layout -->
+            <div class="hidden lg:block lg:flex lg:justify-between xl:gap-8">
+                <!-- ABOUT US -->
+                <div class="w-full sm:w-1/2 xl:w-auto mb-5 xl:mb-0  xl:text-left">
+                    <ul class="leading-10">
+                        <li class="font-bold text-xl mb-3">ABOUT US</li>
+                        <li>FAQ</li>
+                        <li>Anti Scam</li>
+                        <li>Term of use</li>
+                        <li>Privacy Policy</li>
+                        <li>Contact Us</li>
+                        <li>Sitemap</li>
+                    </ul>
+                </div>
+                <!-- MY ACCOUNT -->
+                <div class="w-full sm:w-1/2 xl:w-auto text-left mb-5 xl:mb-0">
+                    <ul class="leading-10">
+                        <li class="font-bold text-xl mb-3">MY ACCOUNT</li>
+                        <li>Login</li>
+                        <li>Register</li>
+                    </ul>
+                </div>
+                <!-- Miljaega -->
+                <div class="w-full sm:w-1/2 xl:w-auto mb-5 xl:mb-0 text-left">
+                    <ul class="leading-10">
+                        <li class="font-bold text-xl mb-3">Miljaega</li>
+                        <li>Inspected by miljaega</li>
+                        <li>Featured by miljaega</li>
+                        <li>Recomended by miljaega</li>
+                    </ul>
+                </div>
+                <!-- Social -->
+                <div class="w-full sm:w-1/2 xl:w-auto text-left mb-5 xl:mb-0 leading-15">
+                    <ul>
+                        <li class="font-bold text-xl mb-3">FOLLOW US</li>
+                    </ul>
+                    <div class="flex  ustify-start mt-3 gap-5">
+                        <img src="./images/fb.svg" class="h-10" alt="">
+                        <img src="./images/insta.svg" class="h-10" alt="">
+                        <img src="./images/twitter.svg" class="h-10" alt="">
+                        <img src="./images/youtube.svg" class="h-10" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer bottom -->
+            <div class="text-center border-t-2 border-white mt-10 pt-5 text-sm">
+                <p>© Copyright 2025 Miljaega <br>Powered by The Tech Creators</p>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+</body>
+<script src="../../assets/js/homepage/miljaega-homepage.js"></script>
+<script src="../../assets/js/homepage/motors.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+<script>fetch('../../../assets/json/miljaega-properties.json')
+        .then(res => res.json())
+        .then(properties => {
+            const container = document.getElementById('mycardspropertiesmain');
+            container.innerHTML = '';
+
+            properties.forEach(p => {
+                container.innerHTML += `
+        <div class="w-full sm:w-[48%] md:w-[calc(48%-18px)] lg:w-[calc(48%-15px)] ">
+          <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden transform transition-transform duration-300 ease-in-out hover:scale-[1.02] flex flex-col md:flex-row">
+            <!-- Image Section -->
+            <div class="relative w-full md:w-[280px] h-[200px] md:h-auto flex-shrink-0">
+              <img src="${p.image}" alt="Property Image" class="w-full h-full object-cover">
+              <div class="absolute bottom-2 left-2 flex gap-2">
+                <span class="bg-black/70 text-white text-xs px-2 py-1 rounded flex items-center gap-1">
+                  <i class="fa-solid fa-camera"></i> ${p.cameraCount}
+                </span>
+              </div>
+              <div class="absolute bottom-2 right-2 flex gap-2">
+                <span class="bg-black/70 text-white text-xs px-2 py-1 rounded flex items-center gap-1">
+                  <i class="fa-solid fa-location-dot"></i><i class="fa-solid fa-heart"></i>
+                </span>
+              </div>
+            </div>
+
+            <!-- Content Section -->
+            <div class="p-4 flex flex-col justify-between w-full">
+              <div>
+                <div class="flex mt-2 md:mt-5 items-baseline gap-1">
+                  <span class="text-lg font-semibold">PKR</span>
+                  <span class="text-2xl font-bold">${p.price}</span>
+                </div>
+                <div class="text-gray-500 text-sm mt-1">${p.location}</div>
+
+                <!-- Property Details -->
+                <div class="flex gap-4 mt-2 text-gray-600 text-sm flex-wrap">
+                  <span class="flex items-center gap-1 text-blue-900 font-semibold">
+                    <i class="fa-solid fa-bed text-blue-900"></i> ${p.bedrooms}
+                  </span>
+                  <span class="flex items-center gap-1 text-blue-900 font-semibold">
+                    <i class="fa-solid fa-bath text-blue-900"></i> ${p.bathrooms}
+                  </span>
+                  <span class="flex items-center gap-1 text-blue-900 font-semibold">
+                    <i class="fa-solid fa-chart-area text-blue-900"></i> ${p.area}
+                  </span>
+                </div>
+
+                <!-- Title -->
+                <div class="mt-2 text-lg font-semibold text-gray-800">
+                  ${p.title}
+                </div>
+                <div class="text-gray-500 text-sm mb-1">
+                  ${p.description} <a href="#" class="text-blue-900">More</a>
+                </div>
+                <span class="text-xs text-gray-400">Added: ${p.added}</span>
+              </div>
+
+              <!-- Buttons -->
+              <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mt-6 gap-2">
+                <div class="flex gap-2">
+                  <button class="px-3 py-1 text-sm bg-white border rounded border-blue-900 flex items-center gap-1">
+                    <i class="fa-solid fa-envelope text-lg text-blue-900"></i>
+                  </button>
+                  <button class="px-3 py-1 text-sm bg-white border text-green-700 rounded border-green-700 font-bold flex items-center gap-1">
+                    <i class="fa-brands fa-whatsapp text-green-700 text-lg"></i> WhatsApp
+                  </button>
+                  <button class="bg-blue-900 hover:bg-opacity-95 text-white py-2 rounded-lg px-4 text-[13px] font-medium leading-[20px]">
+                    <i class="fa-solid fa-phone text-white me-1"></i> Show Phone Number
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+            });
+        })
+        .catch(err => console.error('Error loading properties:', err));
+
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const tabs = document.querySelectorAll('.arrow-tab');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', function () {
+                // Remove active class from all tabs
+                tabs.forEach(t => t.classList.remove('active', 'bg-blue-900', 'text-white'));
+
+                // Add active class to clicked tab
+                this.classList.add('active', 'bg-blue-900', 'text-white');
+                this.classList.remove('bg-wsite', 'text-black');
+
+                // Ensure z-index is proper for the active tab
+                this.style.zIndex = '10';
+            });
+        });
+    });
+
+    // filter dropdowns
+
+    function toggleDropdown(id) {
+        // Close all dropdowns
+        document.querySelectorAll('[id$="Dropdown"]').forEach(drop => {
+            if (drop.id !== id) drop.classList.add("hidden");
+        });
+
+        // Toggle selected dropdown
+        document.getElementById(id).classList.toggle("hidden");
+    }
+
+    // Close when clicking outside
+    document.addEventListener("click", function (e) {
+        if (!e.target.closest(".relative")) {
+            document.querySelectorAll('[id$="Dropdown"]').forEach(drop => drop.classList.add("hidden"));
+        }
+    });
+
+    // filter more section
+
+    const moreFilterBtn = document.getElementById("moreFilterBtn");
+    const filterSection = document.getElementById("filterSection");
+    const cancelBtn = document.getElementById("cancelBtn");
+
+    // Toggle dropdown
+    moreFilterBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        filterSection.classList.toggle("hidden");
+    });
+
+    // Cancel button closes
+    cancelBtn.addEventListener("click", () => {
+        filterSection.classList.add("hidden");
+    });
+
+    // Close if clicked outside
+    document.addEventListener("click", (e) => {
+        if (!filterSection.contains(e.target) && !moreFilterBtn.contains(e.target)) {
+            filterSection.classList.add("hidden");
+        }
+    });
+</script>
+
+</html>
