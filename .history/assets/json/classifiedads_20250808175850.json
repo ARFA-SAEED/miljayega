@@ -1,0 +1,58 @@
+[
+  {
+    "title": "Dell Latitude 5400 Business Laptop",
+    "posted": "2 days ago",
+    "price": "Rs 78,000",
+    "location": "Blue Area, Islamabad",
+    "mainImage": "https://tse3.mm.bing.net/th/id/OIP.nR_GqWwI5GBS47-huwWLoAHaHa?pid=Api&P=0&h=220",
+    "images": [
+      { "thumb": "https://i.dell.com/sites/imagecontent/products/publishingimages/latitude-5400-laptop.png", "image": "https://i.dell.com/sites/imagecontent/products/publishingimages/latitude-5400-laptop.png" },
+      { "thumb": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8", "image": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8" },
+      { "thumb": "https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04", "image": "https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04" },
+      { "thumb": "https://images.unsplash.com/photo-1616628182504-b6cf323cd01e", "image": "https://images.unsplash.com/photo-1616628182504-b6cf323cd01e" }
+    ],
+    "badges": ["verified", "trusted"]
+  },
+  {
+    "title": "Apple MacBook Air M2 2023",
+    "posted": "5 hours ago",
+    "price": "Rs 325,000",
+    "location": "F-6 Markaz, Islamabad",
+    "mainImage": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8",
+    "images": [
+      { "thumb": "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/macbook-air-m2-chip-2023", "image": "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/macbook-air-m2-chip-2023" },
+      { "thumb": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8", "image": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8" },
+      { "thumb": "https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04", "image": "https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04" },
+      { "thumb": "https://images.unsplash.com/photo-1616628182504-b6cf323cd01e", "image": "https://images.unsplash.com/photo-1616628182504-b6cf323cd01e" }
+    ],
+    "badges": ["verified", "trusted"]
+  },
+  {
+    "title": "Lenovo ThinkPad X1 Carbon Gen 9",
+    "posted": "1 week ago",
+    "price": "Rs 245,000",
+    "location": "G-11 Markaz, Islamabad",
+    "mainImage": "https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04",
+    "images": [
+      { "thumb": "https://p1-ofp.static.pub/medias/24468055807_Lenovo_ThinkPad_X1_Carbon_Gen_9_Hero.png", "image": "https://p1-ofp.static.pub/medias/24468055807_Lenovo_ThinkPad_X1_Carbon_Gen_9_Hero.png" },
+      { "thumb": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8", "image": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8" },
+      { "thumb": "https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04", "image": "https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04" },
+      { "thumb": "https://images.unsplash.com/photo-1616628182504-b6cf323cd01e", "image": "https://images.unsplash.com/photo-1616628182504-b6cf323cd01e" }
+    ],
+    "badges": ["verified", "trusted"]
+  },
+  {
+    "title": "HP Spectre x360 Convertible 14",
+    "posted": "3 days ago",
+    "price": "Rs 285,000",
+    "location": "Bahria Town Phase 4, Rawalpindi",
+    "mainImage": "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c08108605.png",
+    "images": [
+      { "thumb": "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c08108605.png", "image": "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c08108605.png" },
+      { "thumb": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8", "image": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8" },
+      { "thumb": "https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04", "image": "https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04" },
+      { "thumb": "https://images.unsplash.com/photo-1616628182504-b6cf323cd01e", "image": "https://images.unsplash.com/photo-1616628182504-b6cf323cd01e" }
+    ],
+    "badges": ["verified", "trusted"]
+  }
+]

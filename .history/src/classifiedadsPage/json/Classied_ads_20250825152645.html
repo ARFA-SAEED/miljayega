@@ -1,0 +1,1155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Miljaega.pk - Classifieds ads</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Lalezar&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="./Css/miljaega-homepage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    body {
+        background-color: rgb(220, 228, 245);
+    }
+
+    .range-container {
+        width: 300px;
+        margin: 50px auto;
+        text-align: center;
+        font-family: Arial, sans-serif;
+    }
+
+    .slider {
+        position: relative;
+        width: 100%;
+    }
+
+    .slider input[type=range] {
+        position: absolute;
+        left: 0;
+        top: -10px;
+        width: 100%;
+        pointer-events: none;
+        /* let both sliders overlap */
+        -webkit-appearance: none;
+        background: none;
+    }
+
+    input[type=range]::-webkit-slider-thumb {
+        pointer-events: all;
+        /* allow dragging */
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        margin-right: 5px;
+        background-color: orange;
+        cursor: pointer;
+        -webkit-appearance: none;
+    }
+
+    input[type=range]::-moz-range-thumb {
+        pointer-events: all;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+
+    .slider-track {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 2px;
+        background: #ddd;
+        width: 100%;
+        border-radius: 2px;
+    }
+
+    .range-highlight {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 2px;
+        background: rgba(0, 0, 0, 0.719);
+        border-radius: 2px;
+    }
+
+    .values {
+        margin-top: 50px;
+        font-size: 16px;
+    }
+</style>
+
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-sm fixed top-0 z-50 w-full">
+        <div class=" lg:mx-auto 2xl:mx-20 relative py-3 container px-4 sm:px-6">
+            <div class="flex justify-between items-center py-3 ">
+                <!-- Left: Logo -->
+                <div class="flex-shrink-0">
+                    <img src="../../../assets/images/logo.svg" alt="Logo" class="h-8 sm:h-10" />
+                    </a>
+                </div>
+
+                <!-- Center: Nav Bar (Visible only on XL and above) -->
+                <nav class="hidden xl:flex absolute m 2xl:ms-[440px] left-1/2 transform -translate-x-1/2 space-x-6 text-sm font-medium text-gray-600"
+                    style="max-width: 100%; overflow-x: auto; white-space: nowrap;">
+                    <div class="flex justify-center mt-2">
+                        <div class="inline-flex rounded-lg shadow-md bg-white overflow-hidden">
+                            <a href="#"
+                                class="px-8 py-3 text-sm font-medium text-white bg-blue-900 hover:bg-blue-900 transition duration-300 flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20"
+                                    fill="currentColor">
+                                    <path fill-rule="evenodd"
+                                        d="M3 5a2 2 0 012-2h10a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V5zm11 1H6v8l4-2 4 2V6z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                ALL
+                            </a>
+                            <a href="#"
+                                class="px-8 py-3 text-sm font-medium text-pak-green hover:bg-[rgb(220,228,245)] transition duration-300 flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20"
+                                    fill="currentColor">
+                                    <path fill-rule="evenodd"
+                                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 1.414L10.586 9H7a1 1 0 100 2h3.586l-1.293 1.293a1 1 0 101.414 1.414l3-3a1 1 0 000-1.414z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                NEW
+                            </a>
+                            <a href="#"
+                                class="px-8 py-3 text-sm font-medium text-pak-green hover:bg-[rgb(220,228,245)] transition duration-300 flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20"
+                                    fill="currentColor">
+                                    <path fill-rule="evenodd"
+                                        d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                USED
+                            </a>
+                            <a href="#"
+                                class="px-8 py-3 text-sm font-medium text-pak-green hover:bg-[rgb(220,228,245)] transition duration-300 flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20"
+                                    fill="currentColor">
+                                    <path fill-rule="evenodd"
+                                        d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 00-2-2H4zm2 6a2 2 0 012-2h8a2 2 0 012 2v4a2 2 0 01-2 2H8a2 2 0 01-2-2v-4zm6 4a2 2 0 100-4 2 2 0 000 4z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                RENT
+                            </a>
+                            <a href="#"
+                                class="px-8 py-3 text-sm font-medium text-pak-green hover:bg-[rgb(220,228,245)] transition duration-300 flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20"
+                                    fill="currentColor">
+                                    <path fill-rule="evenodd"
+                                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                Exchange
+                            </a>
+                        </div>
+                    </div>
+                </nav>
+
+                <!-- Right: Hamburger Menu (Visible on sm and md) -->
+                <button id="mobileMenuToggle"
+                    class="block xl:hidden text-gray-700 hover:text-primary-green focus:outline-none"
+                    aria-label="Toggle menu">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Dropdown -->
+    <div id="mobileMenu"
+        class="xl:hidden hidden flex bg-white shadow-md fixed top-[72px] left-0 right-0 z-40 max-h-[calc(100vh-72px)] overflow-y-auto">
+        <div class="px-4 py-4 space-y-4 text-sm font-medium text-gray-700">
+            <!-- Center Nav Items -->
+            <div class="flex justify-around text-center gap-2 flex-wrap mt-">
+                <a href="#" class="flex flex-col items-center gap-1 hover:text-primary-green">
+                    <img src="./images/second-hand.png" alt="Used Items" class="w-6 h-6 object-contain" /> Used
+                </a>
+                <a href="#" class="flex flex-col items-center gap-1 hover:text-primary-green">
+                    <img src="./images/new.png" alt="New Items" class="w-6 h-6 object-contain" /> New
+                </a>
+                <a href="#" class="flex flex-col items-center gap-1 hover:text-primary-green">
+                    <img src="./images/exchange.png" alt="Exchange" class="w-6 h-6 object-contain" /> Exchange
+                </a>
+                <a href="#" class="flex flex-col items-center gap-1 hover:text-primary-green">
+                    <img src="./images/rent.png" alt="Rentals" class="w-6 h-6 object-contain" /> Rentals
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Spacer to avoid content under fixed header -->
+    <div class="pt-[72px]"></div>
+
+
+
+
+
+
+    <section>
+        <div class="px-4 sm:px-6 md:ms-17 relative container mt-[60px] mb-[17px]">
+            <!-- Responsive Tabs Container -->
+            <div class="w-full overflow-x-auto mx-2 scrollbar-hide">
+                <div class="flex flex-nowrap items-center mb-4 min-w-max" id="tabContainer">
+
+                    <!-- Active Tab -->
+                    <div class="arrow-tab bg-blue-900 text-white relative flex items-center h-12 px-4 flex-shrink-0">
+                        <span class="z-10 me-5 relative text-xs font-bold">ALL</span>
+                        <div
+                            class="absolute right-0 top-0 w-0 h-0 border-l-[12px] border-l-blue-900 border-y-[16px] border-y-transparent translate-x-full">
+                        </div>
+                    </div>
+
+                    <!-- Inactive Tab -->
+                    <div class="arrow-tab bg-gray-200 text-black relative flex items-center h-12 px-6 flex-shrink-0">
+                        <span class="z-10 relative text-xs font-semibold">NEW</span>
+                        <div
+                            class="absolute right-0 top-0 w-0 h-0 border-l-[12px] border-l-gray-200 border-y-[16px] border-y-transparent translate-x-full">
+                        </div>
+                    </div>
+
+                    <div class="arrow-tab bg-gray-200 text-black relative flex items-center h-12 px-6 flex-shrink-0">
+                        <span class="z-10 relative text-xs font-semibold">USED</span>
+                        <div
+                            class="absolute right-0 top-0 w-0 h-0 border-l-[12px] border-l-gray-200 border-y-[16px] border-y-transparent translate-x-full">
+                        </div>
+                    </div>
+
+                    <div class="arrow-tab bg-gray-200 text-black relative flex items-center h-12 px-6 flex-shrink-0">
+                        <span class="z-10 relative text-xs font-semibold">RENT</span>
+                        <div
+                            class="absolute right-0 top-0 w-0 h-0 border-l-[12px] border-l-gray-200 border-y-[16px] border-y-transparent translate-x-full">
+                        </div>
+                    </div>
+
+                    <div class="arrow-tab bg-gray-200 text-black relative flex items-center h-12 px-6 flex-shrink-0">
+                        <span class="z-10 relative text-xs font-semibold">EXCHANGE</span>
+                        <div
+                            class="absolute right-0 top-0 w-0 h-0 border-l-[12px] border-l-gray-200 border-y-[16px] border-y-transparent translate-x-full">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="mx-23 py-5 ">
+        <!-- Heading -->
+        <div class="flex items-center justify-between mb-6 pb-4 border-b border-b-1 border-b-black">
+            <h2 class="text-2xl font-semibold">
+                Mobiles in Pakistan
+            </h2>
+        </div>
+
+        <!-- Filters -->
+        <div class="flex flex-wrap items-center ">
+
+            <!-- All Dropdown -->
+            <div class="me-2 relative">
+                <button onclick="toggleDropdown('allDropdown')"
+                    class="px-6  py-3 border border-gray-300 rounded-xl bg-white hover:bg-gray-50 text-gray-700 font-medium flex items-center transition-all duration-200 shadow-sm">
+                    All <img src="../../assets/images/arrow down.png" class="h-4 ml-2" alt="">
+                </button>
+                <div id="allDropdown" class="hidden absolute mt-5 w-40 bg-white border rounded-md shadow z-10">
+
+                    <a href="#"
+                        class="block px-3 justify-center flex border border-b-gray  py-2 hover:bg-gray-100 text-sm">Buy/Sell</a>
+                    <a href="#"
+                        class="block px-3 justify-center flex border border-b-gray  py-2 hover:bg-gray-100 text-sm">Rent</a>
+                </div>
+
+            </div>
+
+            <!-- All Model Dropdown -->
+            <div class="relative">
+
+                <div class="me-2 relative">
+
+                    <button onclick="toggleDropdown('brandDropdown')" id="filterToggle"
+                        class="px-6  py-3 border border-gray-300 rounded-xl bg-white hover:bg-gray-50 text-gray-700 font-medium flex items-center transition-all duration-200 shadow-sm">
+                        All Model
+                        <svg class="h-5 w-5 ml-2 text-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                            fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </button>
+
+                    <!-- Dropdown -->
+                    <div id="filterDropdown"
+                        class="absolute top-16 mt-2 left-0 w-[480px] bg-white shadow-lg rounded-lg p-4 hidden z-50">
+                        <!-- Tags -->
+                        <div class=" gap-2">
+                            <div class="flex gap-2 mb-3"> <span class="tag px-5 py-1 h-[30px] bg-white border border-gray-200 rounded-[20px] 
+                   text-sm font-semibold text-gray-700 cursor-pointer transition-colors whitespace-nowrap">
+                                    Vivo
+                                </span>
+                                <span class="tag px-5 py-1 h-[30px] bg-white border border-gray-200 rounded-[20px] 
+                   text-sm font-semibold text-gray-700 cursor-pointer transition-colors whitespace-nowrap">
+                                    Oopo
+                                </span>
+                                <span class="tag px-5 py-1 h-[30px] bg-white border border-gray-200 rounded-[20px] 
+                   text-sm font-semibold text-gray-700 cursor-pointer transition-colors whitespace-nowrap">
+                                    Nokia
+                                </span>
+                                <span class="tag px-5 py-1 h-[30px] bg-white border border-gray-200 rounded-[20px] 
+                   text-sm font-semibold text-gray-700 cursor-pointer transition-colors whitespace-nowrap">
+                                    Moto
+                                </span>
+                                <span class="tag px-5 py-1 h-[30px] bg-white border border-gray-200 rounded-[20px] 
+                   text-sm font-semibold text-gray-700 cursor-pointer transition-colors whitespace-nowrap">
+                                    Infinix
+                                </span>
+                            </div>
+                            <div class="flex gap-2 mb-3"> <span class="tag px-5 py-1 h-[30px] bg-white border border-gray-200 rounded-[20px] 
+                   text-sm font-semibold text-gray-700 cursor-pointer transition-colors whitespace-nowrap">
+                                    Apple
+                                </span>
+                                <span class="tag px-5 py-1 h-[30px] bg-white border border-gray-200 rounded-[20px] 
+                   text-sm font-semibold text-gray-700 cursor-pointer transition-colors whitespace-nowrap">
+                                    Rino
+                                </span>
+                                <span class="tag px-5 py-1 h-[30px] bg-white border border-gray-200 rounded-[20px] 
+                   text-sm font-semibold text-gray-700 cursor-pointer transition-colors whitespace-nowrap">
+                                    Samsung
+                                </span>
+                                <span class="tag px-5 py-1 h-[30px] bg-white border border-gray-200 rounded-[20px] 
+                   text-sm font-semibold text-gray-700 cursor-pointer transition-colors whitespace-nowrap">
+                                    Hawauai
+                                </span>
+
+                            </div>
+                            <div class="flex gap-2">
+                                <span class="tag px-5 py-1 h-[30px] bg-white border border-gray-200 rounded-[20px] 
+                   text-sm font-semibold text-gray-700 cursor-pointer transition-colors whitespace-nowrap">
+                                    Redme
+                                </span>
+                                <span class="tag px-5 py-1 h-[30px] bg-white border border-gray-200 rounded-[20px] 
+                   text-sm font-semibold text-gray-700 cursor-pointer transition-colors whitespace-nowrap">
+                                    Others
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Cancel button -->
+                        <div class="mt-4 flex gap-2 justify-end text-right">
+                            <button id="filterCancel"
+                                class="px-4 py-2 bg-orange-500 text-white rounded-md hover:bg-orange-400">
+                                Cancel
+                            </button>
+                            <button id="filterCancel"
+                                class="px-4 py-2 bg-blue-900 text-white rounded-md hover:bg-blue-800">
+                                Apply
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Price Dropdown -->
+            <div class="me-2 relative">
+                <button id="priceBtn"
+                    class="px-6 py-3 border border-gray-300 rounded-xl bg-white hover:bg-gray-50 text-gray-700 font-medium flex items-center transition-all duration-200 shadow-sm">
+                    Price
+                    <svg class="h-5 w-5 ml-2 text-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                        fill="currentColor">
+                        <path fill-rule="evenodd"
+                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Dropdown -->
+            <div id="PriceDropdown"
+                class="range-container hidden absolute top-82 left-70 w-[330px] bg-white border rounded-md shadow-lg z-10 p-3">
+                <div class="flex items-center gap-2">
+                    <div class="flex items-center gap-2 values" style="display:flex;align-items:center;gap:12px;">
+                        <!-- Min Price -->
+                        <div>
+                            <span class="text-sm font-medium mb-2 block">Price Range</span>
+                            <input id="minVal" placeholder="0" class="w-[100px] h-[30px] text-xs border rounded ps-2"
+                                type="number">
+                        </div>
+
+                        <span class="font-semibold text-sm mt-7 mx-8">TO</span>
+
+                        <!-- Max Price -->
+                        <div>
+                            <span class="text-sm font-medium mb-2 block">PKR</span>
+                            <input id="maxVal" placeholder="Any" class="w-[100px] h-[30px] text-xs border rounded ps-2"
+                                type="number">
+                        </div>
+                    </div>
+                </div>
+                <div class="slider mt-5">
+                    <div class="slider-track"></div>
+                    <div class="range-highlight" id="rangeHighlight"></div>
+
+                    <input type="range" id="minRange" min="0" max="10000" step="100" value="2000">
+                    <input type="range" id="maxRange" min="0" max="10000" step="100" value="8000">
+                </div>
+
+
+                <!-- Cancel button -->
+                <div class="mt-10 flex gap-2 justify-end text-right">
+                    <button id="filterCancel" class="px-4 py-2 bg-orange-500 text-white rounded-md hover:bg-orange-400">
+                        Cancel
+                    </button>
+                    <button id="filterCancel" class="px-4 py-2 bg-blue-900 text-white rounded-md hover:bg-blue-800">
+                        Apply
+                    </button>
+                </div>
+            </div>
+
+            <!-- Colors Dropdown -->
+            <div class="relative me-2">
+                <!-- Button -->
+                <button id="colorDropdownBtn" type="button"
+                    class="px-6 py-3 border border-gray-300 rounded-xl bg-white hover:bg-gray-50 text-gray-700 font-medium flex items-center transition-all duration-200 shadow-sm">
+                    <span id="selectedColor" class="w-5 h-5 rounded-full bg-gray-400 mr-2 inline-block"></span>
+                    <span id="selectedText">Colors</span>
+                    <svg class="h-5 w-5 ml-2 text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+
+                <!-- Dropdown -->
+                <div id="colorDropdown"
+                    class="hidden absolute mt-2 w-64 bg-white border rounded-md shadow-lg z-10 p-4 flex flex-col gap-4">
+
+                    <!-- Swatches -->
+                    <div id="swatches" class="grid grid-cols-6 gap-3">
+                        <div class="w-8 h-8 rounded-full bg-red-500 cursor-pointer border" data-color="Red"></div>
+                        <div class="w-8 h-8 rounded-full bg-blue-500 cursor-pointer border" data-color="Blue"></div>
+                        <div class="w-8 h-8 rounded-full bg-green-500 cursor-pointer border" data-color="Green"></div>
+                        <div class="w-8 h-8 rounded-full bg-yellow-400 cursor-pointer border" data-color="Yellow"></div>
+                        <div class="w-8 h-8 rounded-full bg-black cursor-pointer border" data-color="Black"></div>
+                        <div class="w-8 h-8 rounded-full bg-white cursor-pointer border" data-color="White"></div>
+                        <div class="w-8 h-8 rounded-full bg-purple-500 cursor-pointer border" data-color="Purple"></div>
+                        <div class="w-8 h-8 rounded-full bg-pink-500 cursor-pointer border" data-color="Pink"></div>
+                        <div class="w-8 h-8 rounded-full bg-orange-500 cursor-pointer border" data-color="Orange"></div>
+                        <div class="w-8 h-8 rounded-full bg-gray-600 cursor-pointer border" data-color="Gray"></div>
+
+                        <!-- Custom Color (+) -->
+                        <label for="customColorInput"
+                            class="w-8 h-8 rounded-full flex items-center justify-center border cursor-pointer bg-gray-200 hover:bg-gray-300">
+                            <span class="text-xl font-bold text-gray-600">+</span>
+                        </label>
+                        <input type="color" id="customColorInput" class="hidden">
+                    </div>
+
+                    <!-- Buttons -->
+                    <div class="flex gap-2 justify-end">
+                        <button id="cancelBtn"
+                            class="px-4 py-2 bg-orange-500 text-white rounded-md hover:bg-orange-400">
+                            Cancel
+                        </button>
+                        <button id="applyBtn" class="px-4 py-2 bg-blue-900 text-white rounded-md hover:bg-blue-800">
+                            Apply
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Verified -->
+            <span
+                class=" me-2 bg-blue-900 text-white text-sm font-semibold px-6  py-4  rounded-xl  hover:bg-blue-800 text-gray-700  flex items-center transition-all duration-200 shadow-sm">
+                <i class="fa-solid fa-check-circle mr-1 text-[13px]"></i> Verified
+            </span>
+            <!-- Wrapper for Button + Dropdown -->
+            <div class="ml-auto relative">
+                <!-- Trigger Button -->
+                <button id="moreFilterBtn"
+                    class="px-3 py-1 border px-7 py-2 rounded-[10px] bg-white hover:bg-gray-100 text-sm flex items-center">
+                    <img src="../../../assets/images/sort icon.png " class="me-3 h-4 mt-1" alt=""> Sort By
+                </button>
+
+                <!-- Filter Section (Hidden initially, dropdown style) -->
+                <div id="filterSection"
+                    class="absolute right-0 mt-2 hidden z-50 w-[840px] bg-white rounded-[10px] border border-gray-200 shadow-lg">
+
+                    <!-- KM's Driven & Year -->
+                    <div class="flex gap-4 p-4">
+                        <div class="bg-white p-4 rounded-lg border" id="kmsDrivenSection">
+                            <h3 class="font-semibold mb-3">KM's driven</h3>
+                            <div class="flex gap-4">
+                                <input id="kmsMin" type="number" value="1"
+                                    class="flex-1 w-[173px] p-2 border rounded-lg" placeholder="Min KMs" />
+                                <input id="kmsMax" type="number" value="999999"
+                                    class="flex-1 p-2 w-[173px] border rounded-lg" placeholder="Max KMs" />
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-4 rounded-lg border" id="yearSection">
+                            <h3 class="font-semibold mb-3">Year</h3>
+                            <div class="flex gap-4">
+                                <input id="yearMin" type="number" value="1900"
+                                    class="flex-1 p-2 w-[173px] border rounded-lg" placeholder="From Year" />
+                                <input id="yearMax" type="number" value="2025"
+                                    class="flex-1 p-2 w-[173px] border rounded-lg" placeholder="To Year" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Fuel + Transmission + Body Type -->
+                    <div class="flex gap-4 px-4 pb-4">
+                        <div class="flex gap-4">
+                            <div class="bg-white p-4 rounded-lg border w-[200px]" id="fuelSection">
+                                <h3 class="font-semibold mb-3">Fuel</h3>
+                                <div class="grid grid-cols-2 gap-2">
+                                    <label><input type="checkbox" value="Petrol" name="fuel" /> Petrol</label>
+                                    <label><input type="checkbox" value="CNG" name="fuel" /> CNG</label>
+                                    <label><input type="checkbox" value="Hybrid" name="fuel" /> Hybrid</label>
+                                    <label><input type="checkbox" value="LPG" name="fuel" /> LPG</label>
+                                    <label><input type="checkbox" value="Diesel" name="fuel" /> Diesel</label>
+                                    <label><input type="checkbox" value="Electric" name="fuel" /> Electric</label>
+                                </div>
+                            </div>
+
+                            <div class="bg-white p-4 rounded-lg border w-[180px]" id="transmissionSection">
+                                <h3 class="font-semibold mb-3">Transmission</h3>
+                                <div class="space-y-2">
+                                    <label><input type="checkbox" value="Automatic" name="transmission" />
+                                        Automatic</label>
+                                    <label><br><input type="checkbox" value="Manual" name="transmission" />
+                                        Manual</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-white w-[400px] p-4 rounded-lg border" id="bodyTypeSection">
+                            <h3 class="font-semibold mb-3">Body Type</h3>
+                            <div class="grid grid-cols-2 gap-2">
+                                <label><input type="checkbox" value="Sedan" name="bodyType" /> Sedan</label>
+                                <label><input type="checkbox" value="SUV" name="bodyType" /> SUV</label>
+                                <label><input type="checkbox" value="Other" name="bodyType" /> Other</label>
+                                <label><input type="checkbox" value="Sport" name="bodyType" /> Sport</label>
+                                <label><input type="checkbox" value="Pickup" name="bodyType" /> Pickup</label>
+                                <label><input type="checkbox" value="Estate" name="bodyType" /> Estate</label>
+                                <label><input type="checkbox" value="Van/Bus" name="bodyType" /> Van/Bus</label>
+                                <label><input type="checkbox" value="MPV" name="bodyType" /> MPV</label>
+                                <label><input type="checkbox" value="Hatchback" name="bodyType" /> Hatchback</label>
+                                <label><input type="checkbox" value="Small city car" name="bodyType" /> Small city
+                                    car</label>
+                                <label><input type="checkbox" value="Convertible" name="bodyType" /> Convertible</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Features + Car Docs + Assembly -->
+                    <div class="flex gap-4 px-4 pb-4">
+                        <div class="bg-white p-4 w-[400px] rounded-lg border" id="featuresSection">
+                            <h3 class="font-semibold mb-3">Features</h3>
+                            <div class="grid grid-cols-2 gap-2">
+                                <label><input type="checkbox" value="AM/FM radio" name="features" /> AM/FM radio</label>
+                                <label><input type="checkbox" value="Power Steering" name="features" /> Power
+                                    Steering</label>
+                                <label><input type="checkbox" value="Power Windows" name="features" /> Power
+                                    Windows</label>
+                                <label><input type="checkbox" value="USB Charger" name="features" /> USB Charger</label>
+                                <label><input type="checkbox" value="Bluetooth" name="features" /> Bluetooth</label>
+                                <label><input type="checkbox" value="Power Mirrors" name="features" /> Power
+                                    Mirrors</label>
+                                <label><input type="checkbox" value="Front Speaker" name="features" /> Front
+                                    Speaker</label>
+                                <label><input type="checkbox" value="ABS" name="features" /> ABS</label>
+                            </div>
+                            <div class="mt-2">
+                                <button id="viewMoreFeatures" class="text-purple-500 text-sm hover:underline">View
+                                    more</button>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4">
+                            <div class="bg-white p-4 rounded-lg w-[193px] border" id="carDocumentsSection">
+                                <h3 class="font-semibold mb-3">Car Documents</h3>
+                                <div class="space-y-2">
+                                    <label><input type="checkbox" value="Original" name="carDocuments" />
+                                        Original</label>
+                                    <label><br><input type="checkbox" value="Duplicate" name="carDocuments" />
+                                        Duplicate</label>
+                                </div>
+                            </div>
+
+                            <div class="bg-white p-4 rounded-lg w-[193px] border" id="assemblySection">
+                                <h3 class="font-semibold mb-3">Assembly</h3>
+                                <div class="space-y-2">
+                                    <label><input type="checkbox" value="Imported" name="assembly" /> Imported</label>
+                                    <label><br><input type="checkbox" value="Local" name="assembly" /> Local</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Registration City + Notes -->
+                    <div class="flex gap-4 px-4 pb-4">
+                        <div class="bg-white p-4 rounded-lg w-[400px] border col-span-full"
+                            id="registrationCitySection">
+                            <h3 class="font-semibold mb-3">Registration City</h3>
+                            <div class="grid grid-cols-3 gap-2">
+                                <label><input type="checkbox" value="Lahore" name="registrationCity" /> Lahore</label>
+                                <label><input type="checkbox" value="Unregistered" name="registrationCity" />
+                                    Unregistered</label>
+                                <label><input type="checkbox" value="Sargodha" name="registrationCity" />
+                                    Sargodha</label>
+                                <label><input type="checkbox" value="Karachi" name="registrationCity" /> Karachi</label>
+                                <label><input type="checkbox" value="Pindi" name="registrationCity" /> Pindi</label>
+                                <label><input type="checkbox" value="Quetta" name="registrationCity" /> Quetta</label>
+                                <label><input type="checkbox" value="Multan" name="registrationCity" /> Multan</label>
+                                <label><input type="checkbox" value="Sialkot" name="registrationCity" /> Sialkot</label>
+                                <label><input type="checkbox" value="Gujrat" name="registrationCity" /> Gujrat</label>
+                                <label><input type="checkbox" value="Islamabad" name="registrationCity" />
+                                    Islamabad</label>
+                                <label><input type="checkbox" value="Hyderabad" name="registrationCity" />
+                                    Hyderabad</label>
+                                <label><input type="checkbox" value="Abbottabad" name="registrationCity" />
+                                    Abbottabad</label>
+                                <label><input type="checkbox" value="Sindh" name="registrationCity" /> Sindh</label>
+                                <label><input type="checkbox" value="Gujranwala" name="registrationCity" />
+                                    Gujranwala</label>
+                                <label><input type="checkbox" value="Peshawar" name="registrationCity" />
+                                    Peshawar</label>
+                                <label><input type="checkbox" value="Punjab" name="registrationCity" /> Punjab</label>
+                                <label><input type="checkbox" value="Sahiwal" name="registrationCity" /> Sahiwal</label>
+                                <label><input type="checkbox" value="Bahawalpur" name="registrationCity" />
+                                    Bahawalpur</label>
+                                <label><input type="checkbox" value="Faisalabad" name="registrationCity" />
+                                    Faisalabad</label>
+                                <label class="whitespace-nowrap">
+                                    <input type="checkbox" value="Rahim Yar Khan" name="registrationCity" />
+                                    Rahim Yar Khan
+                                </label>
+                            </div>
+                        </div>
+
+                        <textarea
+                            class="bg-white p-4 rounded-lg w-[400px] border-gray-200 h-[275px] col-span-full"></textarea>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="flex justify-end gap-3 items-center p-4 border-t">
+                        <button id="cancelBtn"
+                            class="px-6 py-2 border rounded-lg bg-white hover:bg-gray-100 text-sm">CANCEL</button>
+                        <button id="applyBtn"
+                            class="px-6 py-2 bg-blue-900 text-white rounded-lg hover:bg-blue-800 text-sm">APPLY</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+        </div>
+    </section>
+
+    <main class="mx-4 sm:mx-6 lg:mx-24 relative py-3">
+
+        <!-- Classified Ads Section -->
+        <section class="mb-7">
+            <div class="py-3">
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" id="mycardsclassifiedmain"></div>
+            </div>
+        </section>
+
+    </main>
+
+
+
+
+    <!-- Footer -->
+    <footer class="bg-[#0C3168] text-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-10">
+
+            <!-- Mobile / Tablet -->
+            <div class="flex flex-wrap gap-8 lg:hidden">
+                <!-- ABOUT + ACCOUNT -->
+                <div class="w-full flex gap-8">
+                    <div class="w-1/2 text-left">
+                        <ul class="leading-10">
+                            <li class="font-bold text-xl mb-3">ABOUT US</li>
+                            <li>FAQ</li>
+                            <li>Anti Scam</li>
+                            <li>Term of use</li>
+                            <li>Privacy Policy</li>
+                            <li>Contact Us</li>
+                            <li>Sitemap</li>
+                        </ul>
+                    </div>
+                    <div class="w-1/2 text-left">
+                        <ul class="leading-10">
+                            <li class="font-bold text-xl mb-3">MY ACCOUNT</li>
+                            <li>Login</li>
+                            <li>Register</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Miljaega + Social -->
+                <div class="w-full flex gap-8 mt-5">
+                    <div class="w-1/2 text-left">
+                        <ul class="leading-10">
+                            <li class="font-bold text-xl mb-3">Miljaega</li>
+                            <li>Inspected by miljaega</li>
+                            <li>Featured by miljaega</li>
+                            <li>Recomended by miljaega</li>
+                        </ul>
+                    </div>
+                    <div class="w-1/2 text-left">
+                        <ul>
+                            <li class="font-bold text-xl mb-3">FOLLOW US</li>
+                        </ul>
+                        <div class="flex mt-3 gap-5">
+                            <img src="../../../assets/images/fb.svg" class="h-10" alt="">
+                            <img src="../../../assets/images/insta.svg" class="h-10" alt="">
+                            <img src="../../../assets/images/twitter.svg" class="h-10" alt="">
+                            <img src="../../../assets/images/youtube.svg" class="h-10" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Desktop -->
+            <div class="hidden lg:flex lg:justify-between xl:gap-8">
+                <div>
+                    <ul class="leading-10">
+                        <li class="font-bold text-xl mb-3">ABOUT US</li>
+                        <li>FAQ</li>
+                        <li>Anti Scam</li>
+                        <li>Term of use</li>
+                        <li>Privacy Policy</li>
+                        <li>Contact Us</li>
+                        <li>Sitemap</li>
+                    </ul>
+                </div>
+                <div>
+                    <ul class="leading-10">
+                        <li class="font-bold text-xl mb-3">MY ACCOUNT</li>
+                        <li>Login</li>
+                        <li>Register</li>
+                    </ul>
+                </div>
+                <div>
+                    <ul class="leading-10">
+                        <li class="font-bold text-xl mb-3">Miljaega</li>
+                        <li>Inspected by miljaega</li>
+                        <li>Featured by miljaega</li>
+                        <li>Recomended by miljaega</li>
+                    </ul>
+                </div>
+                <div>
+                    <ul>
+                        <li class="font-bold text-xl mb-3">FOLLOW US</li>
+                    </ul>
+                    <div class="flex mt-3 gap-5">
+                        <img src="../../../assets/images/fb.svg" class="h-10" alt="">
+                        <img src="../../../assets/images/insta.svg" class="h-10" alt="">
+                        <img src="../../../assets/images/twitter.svg" class="h-10" alt="">
+                        <img src="../../../assets/images/youtube.svg" class="h-10" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer bottom -->
+            <div class="text-center border-t-2 border-white mt-10 pt-5 text-sm">
+                <p>© Copyright 2025 Miljaega <br>Powered by The Tech Creators</p>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+</body>
+<script src="../../assets/js/homepage/miljaega-homepage.js"></script>
+<script src="../../assets/js/homepage/motors.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+<script>
+    fetch('../../../assets/json/classifiedads.json') // Fetch the classified ad data
+        .then(res => res.json())
+        .then(data => {
+            const container = document.getElementById("mycardsclassifiedmain");
+
+            data.forEach((item, index) => {
+                const cardId = `card-${index}`;
+                const card = document.createElement("div");
+
+                card.className = `
+        w-full bg-white hover:shadow-lg rounded-lg shadow-md overflow-hidden 
+        transform transition-transform duration-300 ease-in-out 
+        hover:scale-[1.02]
+      `.trim();
+                card.id = cardId;
+
+                card.innerHTML = `
+  <!-- Top Section -->
+<div class="flex justify-between items-start w-full px-4 pt-4 pb-2">
+  <div>
+<h2 class="text-lg font-semibold text-blue-900">${item.title.length < 22 ? (item.title.includes(' ') ? item.title.replace(/ (?!.* )/, '<br>') : item.title) : item.title.slice(0, 22) + '...'}</h2>
+
+    <p class="text-xs text-gray-500">${item.posted}</p>
+  </div>
+  <span class="flex-shrink-0 h-6 w-[90px] hover:text-red-600 hover:bg-red-100 flex items-center bg-[#f0f5ff] text-xs font-bold px-3 py-1.5 rounded-full text-blue-900 shadow-sm hover:shadow-md transition-all duration-200 ml-2">
+    <i class="fa-solid fa-heart me-3 ps-1"></i> Save
+  </span>
+</div>
+
+<!-- Main Image -->
+<div class=" px-4 mb-4"> <!-- Removed any bottom spacing -->
+  <div class=" rounded-md overflow-hidden">
+    <img 
+      src="${item.mainImage}" 
+      alt="Main Image" 
+      class="main-image w-full h-[150px] object-cover" 
+    />
+  </div>
+</div>
+
+<!-- Thumbnails (Aligned + Responsive) -->
+<div class="mt-[-4px] mb-3"> <!-- Removed top spacing -->
+  <div class="flex gap-2 flex-wrap justify-start ms-4">
+    ${item.images.slice(0, 4).map((img, imgIndex) => `
+      <div 
+        onclick="toggleThumbnailOverlay(this, '${cardId}')"
+        class="relative w-[99px] sm:w-[55px] md:w-[72px] lg:w-[41px] xl:w-[73px] h-12 rounded-md overflow-hidden cursor-pointer flex-shrink-0"
+        data-active="false"
+      >
+        <img 
+          src="${img.thumb}" 
+          data-image="${img.image}" 
+          class="w-full h-full object-cover rounded-md" 
+        />
+            <div class="thumbnail-overlay absolute inset-0 bg-black bg-opacity-60"></div>
+        ${imgIndex === 3 ? ` <!-- Always show +2 on the 4th thumbnail -->
+          <span class="absolute top-4 left-10 sm:top-4 sm:left-4 md:top-4 md:left-2 xl:top-4 xl:left-6 text-white text-sm font-bold z-10">+2</span>
+        ` : ''}
+      </div>
+    `).join('')}
+  </div>
+</div>
+
+<!-- Badges -->
+<div class="flex ps-4 mb-4 gap-2 flex-wrap">
+  ${item.badges.includes("verified") ? `
+    <span class="bg-[#f0f5ff] text-blue-900 h-[20px] px-2 py-[2px] rounded-full text-[10px] font-bold flex items-center">
+      <img src="./images/verified.svg" class="me-1" alt="">Verified
+    </span>` : ''}
+  ${item.badges.includes("trusted") ? `
+    <span class="bg-[#f0f9eb] text-[#4e9a19] px-2 py-[2px] rounded-full text-[10px] font-bold flex items-center">
+      <img src="./images/trusted.svg" class="me-1" alt="">Trusted
+    </span>` : ''}
+</div>
+
+<!-- Price -->
+<div class="flex justify-between px-4 items-center mb-2">
+  <p class="text-lg font-bold text-blue-900">${item.price}</p>
+  <img src="./images/vector.jpg" class="h-10" alt="vector" />
+</div>
+
+<!-- Location -->
+<div class="px-4 pb-2">
+  <p class="text-sm text-gray-600">Fix Price</p>
+  <p class="text-sm text-blue-900 font-bold mt-1">${item.location}</p>
+</div>
+
+<!-- Phone Button -->
+<div class="px-4 pb-4">
+  <button class="w-full bg-blue-900 text-white py-2 rounded text-[14px] transition hover:bg-opacity-95">
+    <i class="fa-solid fa-phone me-1 text-[13px]"></i> Show Phone Number
+  </button>
+</div>
+
+      `;
+
+                container.appendChild(card);
+            });
+        })
+        .catch(err => console.error("Failed to load cards:", err));
+
+
+    // Function: Toggle Thumbnail Overlay & Update Main Image
+    function toggleThumbnailOverlay(element, cardId) {
+        const thumbnails = document.querySelectorAll(`#${cardId} .thumbnail-overlay`);
+
+        thumbnails.forEach(overlay => {
+            overlay.classList.remove('hidden');
+            overlay.parentElement.setAttribute('data-active', 'false');
+        });
+
+        const overlay = element.querySelector('.thumbnail-overlay');
+        overlay.classList.add('hidden');
+        element.setAttribute('data-active', 'true');
+
+        changeMainImage(element.querySelector('img'), cardId);
+    }
+
+    function changeMainImage(thumbnail, cardId) {
+        const mainImage = document.querySelector(`#${cardId} .main-image`);
+        const newSrc = thumbnail.getAttribute("data-image");
+        if (mainImage) mainImage.src = newSrc;
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const tabs = document.querySelectorAll('.arrow-tab');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', function () {
+                // Remove active class from all tabs
+                tabs.forEach(t => t.classList.remove('active', 'bg-blue-900', 'text-white'));
+
+                // Add active class to clicked tab
+                this.classList.add('active', 'bg-blue-900', 'text-white');
+                this.classList.remove('bg-wsite', 'text-black');
+
+                // Ensure z-index is proper for the active tab
+                this.style.zIndex = '10';
+            });
+        });
+    });
+
+    // filter dropdowns
+
+    function toggleDropdown(id) {
+        // Close all dropdowns
+        document.querySelectorAll('[id$="Dropdown"]').forEach(drop => {
+            if (drop.id !== id) drop.classList.add("hidden");
+        });
+
+        // Toggle selected dropdown
+        document.getElementById(id).classList.toggle("hidden");
+    }
+
+    // Close when clicking outside
+    document.addEventListener("click", function (e) {
+        if (!e.target.closest(".relative")) {
+            document.querySelectorAll('[id$="Dropdown"]').forEach(drop => drop.classList.add("hidden"));
+        }
+    });
+
+    // filter more section
+
+    const moreFilterBtn = document.getElementById("moreFilterBtn");
+    const filterSection = document.getElementById("filterSection");
+    const cancelBtn = document.getElementById("cancelBtn");
+
+    // Toggle dropdown
+    moreFilterBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        filterSection.classList.toggle("hidden");
+    });
+
+    // Cancel button closes
+    cancelBtn.addEventListener("click", () => {
+        filterSection.classList.add("hidden");
+    });
+
+    // Close if clicked outside
+    document.addEventListener("click", (e) => {
+        if (!filterSection.contains(e.target) && !moreFilterBtn.contains(e.target)) {
+            filterSection.classList.add("hidden");
+        }
+    });
+
+
+
+
+
+
+    // for brand dropdown
+
+
+    function toggleDropdown(id) {
+        const dropdown = document.getElementById(id);
+        dropdown.classList.toggle('hidden');
+
+        // Close other dropdowns when one is opened
+        const allDropdowns = document.querySelectorAll('[id$="Dropdown"]');
+        allDropdowns.forEach(item => {
+            if (item.id !== id && !item.classList.contains('hidden')) {
+                item.classList.add('hidden');
+            }
+        });
+    }
+
+    // Close dropdowns when clicking outside
+    document.addEventListener('click', function (event) {
+        const isDropdownButton = event.target.closest('[onclick*="toggleDropdown"]');
+        const isDropdownContent = event.target.closest('[id$="Dropdown"]');
+
+        if (!isDropdownButton && !isDropdownContent) {
+            const allDropdowns = document.querySelectorAll('[id$="Dropdown"]');
+            allDropdowns.forEach(item => {
+                item.classList.add('hidden');
+            });
+        }
+    });
+    // Toggle Dropdown
+    const filterToggle = document.getElementById("filterToggle");
+    const filterDropdown = document.getElementById("filterDropdown");
+    const filterCancel = document.getElementById("filterCancel");
+    const tags = document.querySelectorAll(".tag");
+
+    filterToggle.addEventListener("click", () => {
+        filterDropdown.classList.toggle("hidden");
+    });
+
+    filterCancel.addEventListener("click", () => {
+        filterDropdown.classList.add("hidden");
+    });
+
+    // Tag Click Selection
+    tags.forEach(tag => {
+        tag.addEventListener("click", () => {
+            tag.classList.toggle("bg-orange-50");
+            tag.classList.toggle("border-orange-300");
+        });
+    });
+
+    // price dropdown
+    const priceBtn = document.getElementById("priceBtn");
+    const priceDropdown = document.getElementById("PriceDropdown");
+
+    priceBtn.addEventListener("click", function (e) {
+        e.stopPropagation(); // prevent closing instantly
+        priceDropdown.classList.toggle("hidden");
+    });
+
+    // Close dropdown if click outside
+    document.addEventListener("click", function (e) {
+        if (!priceDropdown.contains(e.target) && !priceBtn.contains(e.target)) {
+            priceDropdown.classList.add("hidden");
+        }
+    });
+
+    // price range
+
+    const minRange = document.getElementById("minRange");
+    const maxRange = document.getElementById("maxRange");
+    const minVal = document.getElementById("minVal");
+    const maxVal = document.getElementById("maxVal");
+    const rangeHighlight = document.getElementById("rangeHighlight");
+
+    function updateRange() {
+        let min = parseInt(minRange.value);
+        let max = parseInt(maxRange.value);
+
+        if (min > max - 500) { // minimum gap
+            minRange.value = max - 500;
+            min = max - 500;
+        }
+        if (max < min + 500) {
+            maxRange.value = min + 500;
+            max = min + 500;
+        }
+
+        minVal.textContent = min;
+        maxVal.textContent = max;
+
+        const range = parseInt(minRange.max) - parseInt(minRange.min);
+        const minPercent = ((min - minRange.min) / range) * 100;
+        const maxPercent = ((max - minRange.min) / range) * 100;
+
+        rangeHighlight.style.left = minPercent + "%";
+        rangeHighlight.style.width = (maxPercent - minPercent) + "%";
+    }
+
+    minRange.addEventListener("input", updateRange);
+    maxRange.addEventListener("input", updateRange);
+
+    updateRange();
+
+    const btn = document.getElementById("colorDropdownBtn");
+    const dropdown = document.getElementById("colorDropdown");
+    const selected = document.getElementById("selectedColor");
+
+    // Toggle dropdown
+    btn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        dropdown.classList.toggle("hidden");
+    });
+
+    const btnn = document.getElementById("colorDropdownBtn");
+    const dropdownn = document.getElementById("colorDropdown");
+    const selectedCircle = document.getElementById("selectedColor");
+    const selectedText = document.getElementById("selectedText");
+    const customColorInput = document.getElementById("customColorInput");
+
+    let chosenColor = "bg-gray-400";
+    let chosenColorName = "Colors";
+    let customHex = null;
+
+    // Toggle dropdown
+    btnn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        dropdownn.classList.toggle("hidden");
+    });
+
+    // Pick preset color
+    document.querySelectorAll("#swatches div").forEach((swatch) => {
+        swatch.addEventListener("click", () => {
+            chosenColor = swatch.classList[3]; // tailwind color class
+            chosenColorName = swatch.dataset.color;
+            customHex = null; // reset custom
+        });
+    });
+
+    // Pick custom color
+    customColorInput.addEventListener("input", (e) => {
+        customHex = e.target.value;
+        chosenColor = null;
+        chosenColorName = customHex;
+    });
+
+    // Cancel
+    document.getElementById("cancelBtn").addEventListener("click", () => {
+        chosenColor = "bg-gray-400";
+        chosenColorName = "Colors";
+        customHex = null;
+        selectedCircle.className = `w-5 h-5 rounded-full mr-2 inline-block ${chosenColor}`;
+        selectedText.textContent = chosenColorName;
+        dropdown.classList.add("hidden");
+    });
+
+    // Apply
+    document.getElementById("applyBtn").addEventListener("click", () => {
+        if (customHex) {
+            selectedCircle.className = "w-5 h-5 rounded-full mr-2 inline-block";
+            selectedCircle.style.backgroundColor = customHex;
+            selectedText.textContent = customHex;
+        } else {
+            selectedCircle.className = `w-5 h-5 rounded-full mr-2 inline-block ${chosenColor}`;
+            selectedText.textContent = chosenColorName;
+            selectedCircle.style.backgroundColor = "";
+        }
+        dropdown.classList.add("hidden");
+    });
+
+    // Close if clicked outside
+    window.addEventListener("click", () => dropdown.classList.add("hidden"));
+</script>
+
+</html>
