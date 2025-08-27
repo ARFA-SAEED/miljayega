@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Dropdown</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 flex justify-center items-start min-h-screen p-8">
+
+    <!-- Dropdown Trigger -->
+    <div class="relative">
+        <button id="residentialDropdownBtn"
+            class="px-6 py-3 border border-gray-300 rounded-xl bg-white hover:bg-gray-50 text-gray-700 font-medium flex items-center shadow-sm">
+            All Residentials
+            <svg class="h-5 w-5 ml-2 text-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                fill="currentColor">
+                <path fill-rule="evenodd"
+                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                    clip-rule="evenodd" />
+            </svg>
+        </button>
+
+        <!-- Dropdown Content -->
+        <div id="residentialDropdown"
+            class="absolute mt-2 w-full max-w-lg bg-white rounded-lg shadow-lg hidden z-50 p-4 sm:p-6">
+
+            <!-- Tabs -->
+            <div class="flex border-b border-gray-200 mb-6 text-center flex-wrap">
+                <button
+                    class="flex-1 py-2 sm:py-3 text-gray-900 font-semibold border-b-2 border-blue-600 focus:outline-none"
+                    data-tab="residential">
+                    Residential
+                </button>
+                <button class="flex-1 py-2 sm:py-3 text-gray-500 font-semibold hover:text-gray-900 focus:outline-none"
+                    data-tab="plot">
+                    Plot
+                </button>
+                <button class="flex-1 py-2 sm:py-3 text-gray-500 font-semibold hover:text-gray-900 focus:outline-none"
+                    data-tab="commercial">
+                    Commercial
+                </button>
+            </div>
+
+            <!-- Residential Content -->
+            <div id="residential-content" class="hidden">
+                <div class="px-1 sm:px-2 gap-2 sm:gap-3 flex flex-wrap mt-3">
+                    <div class="flex gap-2 px-3 sm:px-[15px] border-2 border-gray-200 rounded-lg p-1 items-center">
+                        <img src="../Assest/images/All_Symbol.svg" alt="" class="w-5 h-5 sm:w-6 sm:h-6">
+                        <span class="text-sm sm:text-base">All</span>
+                    </div>
+                    <div class="flex gap-2 px-3 sm:px-[15px] border-2 border-gray-200 rounded-lg p-1 items-center">
+                        <img src="../Assest/images/office.svg" alt="" class="w-5 h-5 sm:w-6 sm:h-6">
+                        <span class="text-sm sm:text-base">Home</span>
+                    </div>
+                    <div class="flex gap-2 px-3 sm:px-[15px] border-2 border-gray-200 rounded-lg p-1 items-center">
+                        <img src="../Assest/images/shop.svg" alt="" class="w-5 h-5 sm:w-6 sm:h-6">
+                        <span class="text-sm sm:text-base">Flat</span>
+                    </div>
+                </div>
+                <!-- Add other Residential items similarly -->
+            </div>
+
+            <!-- Plot Content -->
+            <div id="plot-content" class="hidden">
+                <div class="px-1 sm:px-2 gap-2 sm:gap-3 flex flex-wrap mt-3">
+                    <div class="flex gap-2 px-3 sm:px-[15px] border-2 border-gray-200 rounded-lg p-1 items-center">
+                        <img src="../Assest/images/All_Symbol.svg" alt="" class="w-5 h-5 sm:w-6 sm:h-6">
+                        <span class="text-sm sm:text-base">All</span>
+                    </div>
+                    <div class="flex gap-2 px-2 border-2 border-gray-200 rounded-lg p-1 items-center">
+                        <img src="../Assest/images/office.svg" alt="" class="w-5 h-5 sm:w-6 sm:h-6">
+                        <span class="text-sm sm:text-base">Residential Plot</span>
+                    </div>
+                </div>
+                <!-- Add remaining Plot items similarly -->
+            </div>
+
+            <!-- Commercial Content -->
+            <div id="commercial-content" class="hidden">
+                <div class="px-1 sm:px-2 gap-2 sm:gap-3 flex flex-wrap mt-3">
+                    <div class="flex gap-2 px-3 sm:px-[15px] border-2 border-gray-200 rounded-lg p-1 items-center">
+                        <img src="../Assest/images/All_Symbol.svg" alt="" class="w-5 h-5 sm:w-6 sm:h-6">
+                        <span class="text-sm sm:text-base">All</span>
+                    </div>
+                    <div class="flex gap-2 px-3 sm:px-[15px] border-2 border-gray-200 rounded-lg p-1 items-center">
+                        <img src="../Assest/images/office.svg" alt="" class="w-5 h-5 sm:w-6 sm:h-6">
+                        <span class="text-sm sm:text-base">Office</span>
+                    </div>
+                    <div class="flex gap-2 px-3 sm:px-[15px] border-2 border-gray-200 rounded-lg p-1 items-center">
+                        <img src="../Assest/images/shop.svg" alt="" class="w-5 h-5 sm:w-6 sm:h-6">
+                        <span class="text-sm sm:text-base">Shop</span>
+                    </div>
+                </div>
+                <!-- Add remaining Commercial items similarly -->
+            </div>
+
+            <!-- Apply / Cancel Buttons -->
+            <div class="flex justify-end mt-8 gap-2 sm:gap-4 flex-wrap">
+                <button id="cancelDropdown" class="px-6 py-2 text-gray-500 font-semibold rounded-lg">
+                    CANCEL
+                </button>
+                <button class="px-6 py-2 bg-blue-900 hover:bg-blue-700 text-white font-semibold rounded-lg shadow-md">
+                    APPLY
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        const dropdownBtn = document.getElementById('residentialDropdownBtn');
+        const dropdown = document.getElementById('residentialDropdown');
+        const cancelBtn = document.getElementById('cancelDropdown');
+
+        // Toggle dropdown
+        dropdownBtn.addEventListener('click', () => {
+            dropdown.classList.toggle('hidden');
+        });
+
+        // Cancel button closes dropdown
+        cancelBtn.addEventListener('click', () => {
+            dropdown.classList.add('hidden');
+        });
+
+        // Close dropdown if clicking outside
+        document.addEventListener('click', (e) => {
+            if (!dropdown.contains(e.target) && !dropdownBtn.contains(e.target)) {
+                dropdown.classList.add('hidden');
+            }
+        });
+
+        // Tabs functionality
+        const tabs = document.querySelectorAll('[data-tab]');
+        const contentDivs = {
+            'residential': document.getElementById('residential-content'),
+            'plot': document.getElementById('plot-content'),
+            'commercial': document.getElementById('commercial-content')
+        };
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const tabName = tab.dataset.tab;
+
+                // Deactivate all tabs
+                tabs.forEach(t => {
+                    t.classList.remove('text-gray-900', 'border-b-2', 'border-blue-600');
+                    t.classList.add('text-gray-500');
+                });
+
+                // Hide all content divs
+                Object.values(contentDivs).forEach(div => div.classList.add('hidden'));
+
+                // Activate clicked tab
+                tab.classList.remove('text-gray-500');
+                tab.classList.add('text-gray-900', 'border-b-2', 'border-blue-600');
+
+                // Show corresponding content
+                contentDivs[tabName].classList.remove('hidden');
+            });
+        });
+
+        // Show Residential tab by default
+        contentDivs['residential'].classList.remove('hidden');
+    </script>
+
+</body>
+
+</html>

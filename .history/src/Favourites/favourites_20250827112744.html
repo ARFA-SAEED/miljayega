@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Miljaega.pk-Blogs</title>
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Lalezar&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu&display=swap" rel="stylesheet">
+
+    <!-- Alpine.js -->
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+
+    <!-- Font Awesome (Correct version) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./Css/miljaega-homepage.css">
+
+
+</head>
+
+<body class=" pt-[72px]">
+    <!-- Header -->
+    <header class="bg-white shadow-sm fixed top-0 z-50 w-full">
+        <div class="container mx-auto px-4 sm:px-6 relative py-3">
+            <div class="flex justify-between items-center py-3">
+                <!-- Left: Logo -->
+                <div class="flex-shrink-0">
+                    <img src="../../assets/images/logo.svg" alt="Logo" class="h-8 sm:h-10" />
+                </div>
+
+                <!-- Center: Nav (Desktop only) -->
+                <nav
+                    class="hidden xl:flex absolute left-1/2 transform -translate-x-1/2 space-x-6 text-sm font-medium text-gray-600">
+                    <div class="inline-flex rounded-lg shadow-md bg-white overflow-hidden">
+                        <a href="#"
+                            class="px-6 py-3 text-sm font-medium text-white bg-blue-900 hover:bg-blue-800 transition duration-300 flex items-center">
+                            <i class="fa-solid fa-list mr-2"></i> ALL
+                        </a>
+                        <a href="#"
+                            class="px-6 py-3 text-sm font-medium text-pak-green hover:bg-[rgb(220,228,245)] transition duration-300 flex items-center">
+                            <i class="fa-solid fa-circle-plus mr-2"></i> NEW
+                        </a>
+                        <a href="#"
+                            class="px-6 py-3 text-sm font-medium text-pak-green hover:bg-[rgb(220,228,245)] transition duration-300 flex items-center">
+                            <i class="fa-solid fa-recycle mr-2"></i> USED
+                        </a>
+                        <a href="#"
+                            class="px-6 py-3 text-sm font-medium text-pak-green hover:bg-[rgb(220,228,245)] transition duration-300 flex items-center">
+                            <i class="fa-solid fa-key mr-2"></i> RENT
+                        </a>
+                        <a href="#"
+                            class="px-6 py-3 text-sm font-medium text-pak-green hover:bg-[rgb(220,228,245)] transition duration-300 flex items-center">
+                            <i class="fa-solid fa-exchange-alt mr-2"></i> EXCHANGE
+                        </a>
+                    </div>
+                </nav>
+
+                <!-- Right: Hamburger (Mobile only) -->
+                <button id="mobileMenuToggle"
+                    class="block xl:hidden text-gray-700 hover:text-primary-green focus:outline-none">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu"
+        class="xl:hidden hidden bg-white shadow-md fixed top-[72px] left-0 right-0 z-40 max-h-[calc(100vh-72px)] overflow-y-auto">
+        <div class="px-4 py-4 space-y-4 text-sm font-medium text-gray-700">
+            <div class="flex justify-around text-center gap-4 flex-wrap">
+                <a href="#" class="flex flex-col items-center gap-1 hover:text-primary-green">
+                    <img src="./images/second-hand.png" class="w-6 h-6" /> Used
+                </a>
+                <a href="#" class="flex flex-col items-center gap-1 hover:text-primary-green">
+                    <img src="./images/new.png" class="w-6 h-6" /> New
+                </a>
+                <a href="#" class="flex flex-col items-center gap-1 hover:text-primary-green">
+                    <img src="./images/exchange.png" class="w-6 h-6" /> Exchange
+                </a>
+                <a href="#" class="flex flex-col items-center gap-1 hover:text-primary-green">
+                    <img src="./images/rent.png" class="w-6 h-6" /> Rentals
+                </a>
+            </div>
+        </div>
+    </div> <!-- Spacer to avoid content under fixed header -->
+    <div class="pt-[40px]"></div>
+    <div class="px-4 sm:px-6 md:px-20 lg:px-36">
+        <h1 class="font-bold text-blue-900 text-4xl text-center mt-5">Favourites</h1>
+    </div>
+
+    <div
+        class="flex flex-col items-center justify-center bg-[#F7FAFF] min-h-[300px] sm:min-h-[350px] md:min-h-[400px] w-full mt-5 px-4">
+        <img src="../../assets/images/favourite.svg" class="mb-3 h-20 sm:h-24 md:h-28" alt="">
+        <span class="text-2xl sm:text-3xl font-bold text-blue-900 text-center">No favourite yet</span>
+    </div>
+
+    <footer class="bg-[#0C3168] text-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-10">
+
+            <!-- ✅ Mobile/Tablet (sm, md, lg): 2 Rows Layout -->
+            <div class="flex  flex-wrap gap-8 lg:hidden">
+                <!-- Row 1: ABOUT US + MY ACCOUNT -->
+                <div class="w-full flex   gap-8">
+                    <!-- ABOUT US -->
+                    <div class="w-full ms-10 md:ms-0 sm:w-1/2 text-left">
+                        <ul class="leading-10">
+                            <li class="font-bold text-xl mb-3">ABOUT US</li>
+                            <li>FAQ</li>
+                            <li>Anti Scam</li>
+                            <li>Term of use</li>
+                            <li>Privacy Policy</li>
+                            <li>Contact Us</li>
+                            <li>Sitemap</li>
+                        </ul>
+                    </div>
+                    <!-- MY ACCOUNT -->
+                    <div class="w-full ms-20 md:ms-60 sm:w-1/2 text-left">
+                        <ul class="leading-10">
+                            <li class="font-bold text-xl mb-3">MY ACCOUNT</li>
+                            <li>Login</li>
+                            <li>Register</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Row 2: Miljaega + Social -->
+                <div class="w-full flex gap-8 mt-5">
+                    <!-- Miljaega -->
+                    <div class="w-full sm:w-1/2 ms-10 md:ms-0 text-left">
+                        <ul class="leading-10">
+                            <li class="font-bold text-xl mb-3">Miljaega</li>
+                            <li>Inspected by miljaega</li>
+                            <li>Featured by miljaega</li>
+                            <li>Recomended by miljaega</li>
+                        </ul>
+                    </div>
+                    <!-- Social -->
+                    <div class="w-full ms-20 md:ms-60  sm:w-1/2 text-left leading-15">
+                        <ul>
+                            <li class="font-bold text-xl  mb-3">FOLLOW US</li>
+                        </ul>
+                        <div class=" ms-8 md:ms-0 sm:flex-wrap md:flex mt-3 gap-5">
+                            <img src="../../assets/images/fb.svg" class="h-10" alt="">
+                            <img src="../../assets/images/insta.svg" class="h-10" alt="">
+                            <img src="../../assets/images/twitter.svg" class="h-10" alt="">
+                            <img src="../../assets/images/youtube.svg" class="h-10" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ✅ XL and Up: Original 4-column Layout -->
+            <div class="hidden lg:block lg:flex lg:justify-between xl:gap-8">
+                <!-- ABOUT US -->
+                <div class="w-full sm:w-1/2 xl:w-auto mb-5 xl:mb-0  xl:text-left">
+                    <ul class="leading-10">
+                        <li class="font-bold text-xl mb-3">ABOUT US</li>
+                        <li>FAQ</li>
+                        <li>Anti Scam</li>
+                        <li>Term of use</li>
+                        <li>Privacy Policy</li>
+                        <li>Contact Us</li>
+                        <li>Sitemap</li>
+                    </ul>
+                </div>
+                <!-- MY ACCOUNT -->
+                <div class="w-full sm:w-1/2 xl:w-auto text-left mb-5 xl:mb-0">
+                    <ul class="leading-10">
+                        <li class="font-bold text-xl mb-3">MY ACCOUNT</li>
+                        <li>Login</li>
+                        <li>Register</li>
+                    </ul>
+                </div>
+                <!-- Miljaega -->
+                <div class="w-full sm:w-1/2 xl:w-auto mb-5 xl:mb-0 text-left">
+                    <ul class="leading-10">
+                        <li class="font-bold text-xl mb-3">Miljaega</li>
+                        <li>Inspected by miljaega</li>
+                        <li>Featured by miljaega</li>
+                        <li>Recomended by miljaega</li>
+                    </ul>
+                </div>
+                <!-- Social -->
+                <div class="w-full sm:w-1/2 xl:w-auto text-left mb-5 xl:mb-0 leading-15">
+                    <ul>
+                        <li class="font-bold text-xl mb-3">FOLLOW US</li>
+                    </ul>
+                    <div class="flex  ustify-start mt-3 gap-5">
+                        <img src="../../assets/images/fb.svg" class="h-10" alt="">
+                        <img src="../../assets/images/insta.svg" class="h-10" alt="">
+                        <img src="../../assets/images/twitter.svg" class="h-10" alt="">
+                        <img src="../../assets/images/youtube.svg" class="h-10" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer bottom -->
+            <div class="text-center border-t-2 border-white mt-10 pt-5 text-sm">
+                <p>© Copyright 2025 Miljaega <br>Powered by The Tech Creators</p>
+            </div>
+        </div>
+    </footer>
+    <!-- Scripts -->
+    <script src="../../assets/js/homepage/miljaega-homepage.js"></script>
+</body>
+
+</html>

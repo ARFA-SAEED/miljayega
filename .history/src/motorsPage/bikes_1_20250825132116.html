@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Miljaega.pk - Bikes 1</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Lalezar&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="./Css/miljaega-homepage.css">
+    <!-- Font Awesome CDN -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="bg-gray-50">
+
+    <!-- Header -->
+    <header class="bg-white shadow-sm fixed top-0 z-50 w-full">
+        <div class="lg:mx-auto 2xl:mx-20 relative py-3 container px-4 sm:px-6">
+            <div class="flex justify-between items-center py-3">
+                <!-- Left: Logo -->
+                <div class="flex-shrink-0">
+                    <img src="../../../assets/images/logo.svg" alt="Logo" class="h-8 sm:h-10" />
+                </div>
+
+                <!-- Center Nav (Desktop) -->
+                <nav
+                    class="hidden xl:flex absolute 2xl:ms-[440px] left-1/2 transform -translate-x-1/2 space-x-6 text-sm font-medium text-gray-600">
+                    <div class="flex justify-center mt-2">
+                        <div class="inline-flex rounded-lg shadow-md bg-white overflow-hidden">
+                            <a href="#"
+                                class="px-6 py-3 text-sm font-medium text-white bg-blue-900 hover:bg-blue-900 transition duration-300 flex items-center">
+                                <i class="fa-solid fa-list mr-2"></i> ALL
+                            </a>
+                            <a href="#"
+                                class="px-6 py-3 text-sm font-medium text-pak-green hover:bg-[rgb(220,228,245)] flex items-center">
+                                <i class="fa-solid fa-circle-plus mr-2"></i> NEW
+                            </a>
+                            <a href="#"
+                                class="px-6 py-3 text-sm font-medium text-pak-green hover:bg-[rgb(220,228,245)] flex items-center">
+                                <i class="fa-solid fa-recycle mr-2"></i> USED
+                            </a>
+                            <a href="#"
+                                class="px-6 py-3 text-sm font-medium text-pak-green hover:bg-[rgb(220,228,245)] flex items-center">
+                                <i class="fa-solid fa-key mr-2"></i> RENT
+                            </a>
+                            <a href="#"
+                                class="px-6 py-3 text-sm font-medium text-pak-green hover:bg-[rgb(220,228,245)] flex items-center">
+                                <i class="fa-solid fa-arrow-right-arrow-left mr-2"></i> Exchange
+                            </a>
+                        </div>
+                    </div>
+                </nav>
+
+                <!-- Mobile Hamburger -->
+                <button id="mobileMenuToggle" class="block xl:hidden text-gray-700 hover:text-primary-green">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu"
+        class="xl:hidden hidden bg-white shadow-md fixed top-[72px] left-0 right-0 z-40 max-h-[calc(100vh-72px)] overflow-y-auto">
+        <div class="px-4 py-4 space-y-4 text-sm font-medium text-gray-700">
+            <div class="flex justify-around text-center gap-2 flex-wrap">
+                <a href="#" class="flex flex-col items-center gap-1 hover:text-primary-green">
+                    <img src="./images/second-hand.png" class="w-6 h-6" /> Used
+                </a>
+                <a href="#" class="flex flex-col items-center gap-1 hover:text-primary-green">
+                    <img src="./images/new.png" class="w-6 h-6" /> New
+                </a>
+                <a href="#" class="flex flex-col items-center gap-1 hover:text-primary-green">
+                    <img src="./images/exchange.png" class="w-6 h-6" /> Exchange
+                </a>
+                <a href="#" class="flex flex-col items-center gap-1 hover:text-primary-green">
+                    <img src="./images/rent.png" class="w-6 h-6" /> Rentals
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Spacer -->
+    <div class="pt-[72px]"></div>
+
+    <!-- Images Section -->
+    <div class="container mx-auto px-4 mt-12">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-3">
+            <div>
+                <img class="w-full h-[250px] sm:h-[400px] lg:h-[513px] object-cover rounded-lg lg:rounded-l-[10px]"
+                    src="https://auto.yugatech.com/wp-content/uploads/2022/09/2023-Honda-BRV-Main-2048x1024.jpg" alt="">
+            </div>
+            <div class="flex flex-col gap-3">
+                <img class="w-full h-[200px] sm:h-[250px] object-cover rounded-lg lg:rounded-tr-[10px]"
+                    src="https://hondaotodalat.com.vn/wp-content/uploads/2020/02/honda_BRV_hondaotovovankiet_vn_15.jpg"
+                    alt="">
+                <img class="w-full h-[200px] sm:h-[250px] object-cover rounded-lg lg:rounded-br-[10px]"
+                    src="https://d31sro4iz4ob5n.cloudfront.net/upload/car/br-v-2024/feature/interior/br-v-2024-lhd-amplio-confort-y-versatilidad.jpg"
+                    alt="">
+            </div>
+        </div>
+    </div>
+
+    <!-- Title & Buttons -->
+    <div class="container mx-auto px-4 mt-6 flex flex-col lg:flex-row justify-between items-start gap-4">
+        <h1 class="font-bold text-blue-900 text-xl lg:text-2xl">
+            Honda BR-V (2022) MODEL | 7-Seater Crossover
+        </h1>
+        <div class="flex flex-wrap gap-3">
+            <button class="border border-[#F08B0B] text-[#F08B0B] font-semibold rounded px-5 py-2 flex items-center">
+                <i class="fa-solid fa-phone me-2"></i> Call
+            </button>
+            <button class="bg-blue-900 hover:bg-blue-800 text-white rounded px-5 py-2 flex items-center">
+                <i class="fa-solid fa-comment me-2"></i> Chat Now
+            </button>
+            <button class="bg-[#4ABD7A] text-white rounded px-3 py-2 flex items-center">
+                <i class="fa-brands fa-whatsapp text-lg"></i>
+            </button>
+            <div class="flex items-center gap-2">
+                <img class="rounded-full h-10 w-10"
+                    src="https://tse3.mm.bing.net/th/id/OIP.WpIMP_W3gb5bZ81rA-K2YgHaHa?pid=Api&P=0&h=220" alt="">
+                <span class="text-[#F08B0B]">See Profile</span>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Price -->
+    <div class="container mx-auto px-4 mt-4">
+        <h1 class="text-blue-900 font-bold text-xl lg:text-2xl">
+            <span class="text-lg text-[#F08B0B]">PKR</span> 1,250,000
+        </h1>
+        <p class="text-gray-600 text-sm mt-5 pb-3 border-b border-gray-400 border-b-2 w-[900px]">Added 3 days ago</p>
+    </div>
+
+    <!-- Description -->
+    <div class="container mx-auto px-4 mt-3">
+        <h1 class="text-blue-900 font-bold text-xl mb-2">Description</h1>
+        <p class="text-sm text-gray-600 max-w-2xl">
+            Sale in saadi town block 04 scheme 33. Brand new untouch 120 square yards g+1 west open 4 bed dd leased and
+            approval near markets, schools, restaurants, banks and hospitals. No issue sweet water and electric
+            available.
+            Demand 2 crore. Further details please contact number.
+        </p>
+    </div>
+
+    <!-- Condition -->
+    <div class="container mx-auto px-4 mt-6">
+        <h1 class="text-blue-900 font-bold text-xl">Condition</h1>
+        <span class="text-gray-600 text-sm">Brand New</span>
+        <div class="relative mt-4 shadow rounded-lg h-20 w-[110px] bg-white p-3">
+            <i class="fa-solid fa-couch text-blue-900 text-2xl absolute top-1 left-2"></i>
+            <span class="absolute bottom-2 right-2 text-sm font-medium">Furnished</span>
+        </div>
+    </div>
+
+    <!-- Location -->
+    <div class="container mx-auto px-4 mt-6">
+        <h1 class="text-blue-900 font-bold text-xl mb-3">Location and nearby facilities</h1>
+        <div class="flex flex-wrap gap-4 mb-5">
+            <button class="flex items-center gap-2 px-4 py-2 bg-white rounded-lg shadow-md">
+                <i class="fa-solid fa-border-all text-[#F08B0B]"></i> All
+            </button>
+            <button class="flex items-center gap-2 px-4 py-2 bg-white rounded-lg shadow-md">
+                <i class="fa-solid fa-school text-[#F08B0B]"></i> School
+            </button>
+            <button class="flex items-center gap-2 px-4 py-2 bg-white rounded-lg shadow-md">
+                <i class="fa-solid fa-hospital text-[#F08B0B]"></i> Hospitals
+            </button>
+            <button class="flex items-center gap-2 px-4 py-2 bg-white rounded-lg shadow-md">
+                <i class="fa-solid fa-utensils text-[#F08B0B]"></i> Restaurant
+            </button>
+        </div>
+        <img src="https://png.pngtree.com/png-clipart/20230315/original/pngtree-map-location-pin-with-red-png-image_8989833.png"
+            class="h-[300px] sm:h-[400px] mx-auto" alt="">
+    </div>
+    <footer class="bg-[#0C3168] text-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-10">
+
+            <!-- ✅ Mobile/Tablet (sm, md, lg): 2 Rows Layout -->
+            <div class="flex  flex-wrap gap-8 lg:hidden">
+                <!-- Row 1: ABOUT US + MY ACCOUNT -->
+                <div class="w-full flex   gap-8">
+                    <!-- ABOUT US -->
+                    <div class="w-full ms-10 md:ms-0 sm:w-1/2 text-left">
+                        <ul class="leading-10">
+                            <li class="font-bold text-xl mb-3">ABOUT US</li>
+                            <li>FAQ</li>
+                            <li>Anti Scam</li>
+                            <li>Term of use</li>
+                            <li>Privacy Policy</li>
+                            <li>Contact Us</li>
+                            <li>Sitemap</li>
+                        </ul>
+                    </div>
+                    <!-- MY ACCOUNT -->
+                    <div class="w-full ms-20 md:ms-60 sm:w-1/2 text-left">
+                        <ul class="leading-10">
+                            <li class="font-bold text-xl mb-3">MY ACCOUNT</li>
+                            <li>Login</li>
+                            <li>Register</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Row 2: Miljaega + Social -->
+                <div class="w-full flex gap-8 mt-5">
+                    <!-- Miljaega -->
+                    <div class="w-full sm:w-1/2 ms-10 md:ms-0 text-left">
+                        <ul class="leading-10">
+                            <li class="font-bold text-xl mb-3">Miljaega</li>
+                            <li>Inspected by miljaega</li>
+                            <li>Featured by miljaega</li>
+                            <li>Recomended by miljaega</li>
+                        </ul>
+                    </div>
+                    <!-- Social -->
+                    <div class="w-full ms-20 md:ms-60  sm:w-1/2 text-left leading-15">
+                        <ul>
+                            <li class="font-bold text-xl  mb-3">FOLLOW US</li>
+                        </ul>
+                        <div class=" ms-8 md:ms-0 sm:flex-wrap md:flex mt-3 gap-5">
+                            <img src="../../assets/images/fb.svg" class="h-10" alt="">
+                            <img src="../../assets/images/insta.svg" class="h-10" alt="">
+                            <img src="../../assets/images/twitter.svg" class="h-10" alt="">
+                            <img src="../../assets/images/youtube.svg" class="h-10" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ✅ XL and Up: Original 4-column Layout -->
+            <div class="hidden lg:block lg:flex lg:justify-between xl:gap-8">
+                <!-- ABOUT US -->
+                <div class="w-full sm:w-1/2 xl:w-auto mb-5 xl:mb-0  xl:text-left">
+                    <ul class="leading-10">
+                        <li class="font-bold text-xl mb-3">ABOUT US</li>
+                        <li>FAQ</li>
+                        <li>Anti Scam</li>
+                        <li>Term of use</li>
+                        <li>Privacy Policy</li>
+                        <li>Contact Us</li>
+                        <li>Sitemap</li>
+                    </ul>
+                </div>
+                <!-- MY ACCOUNT -->
+                <div class="w-full sm:w-1/2 xl:w-auto text-left mb-5 xl:mb-0">
+                    <ul class="leading-10">
+                        <li class="font-bold text-xl mb-3">MY ACCOUNT</li>
+                        <li>Login</li>
+                        <li>Register</li>
+                    </ul>
+                </div>
+                <!-- Miljaega -->
+                <div class="w-full sm:w-1/2 xl:w-auto mb-5 xl:mb-0 text-left">
+                    <ul class="leading-10">
+                        <li class="font-bold text-xl mb-3">Miljaega</li>
+                        <li>Inspected by miljaega</li>
+                        <li>Featured by miljaega</li>
+                        <li>Recomended by miljaega</li>
+                    </ul>
+                </div>
+                <!-- Social -->
+                <div class="w-full sm:w-1/2 xl:w-auto text-left mb-5 xl:mb-0 leading-15">
+                    <ul>
+                        <li class="font-bold text-xl mb-3">FOLLOW US</li>
+                    </ul>
+                    <div class="flex  ustify-start mt-3 gap-5">
+                        <img src="../../assets/images/fb.svg" class="h-10" alt="">
+                        <img src="../../assets/images/insta.svg" class="h-10" alt="">
+                        <img src="../../assets/images/twitter.svg" class="h-10" alt="">
+                        <img src="../../assets/images/youtube.svg" class="h-10" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer bottom -->
+            <div class="text-center border-t-2 border-white mt-10 pt-5 text-sm">
+                <p>© Copyright 2025 Miljaega <br>Powered by The Tech Creators</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.addEventListener("DOMContentLoaded", () => {
+            const toggleBtn = document.getElementById("mobileMenuToggle");
+            const mobileMenu = document.getElementById("mobileMenu");
+            toggleBtn.addEventListener("click", () => {
+                mobileMenu.classList.toggle("hidden");
+            });
+        });
+    </script>
+
+</body>
+
+</html>

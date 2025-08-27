@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Miljaega.pk - Local Classifieds and Services</title>
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Lalezar&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu&display=swap" rel="stylesheet">
+
+    <!-- Alpine.js -->
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+
+    <!-- Font Awesome (Correct version) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./Css/miljaega-homepage.css">
+
+    <style>
+        body {
+            background-color: rgb(220, 228, 245);
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 pt-[72px]">
+    <!-- Header -->
+    <header class="bg-white shadow-sm fixed top-0 z-50 w-full">
+        <div class="container mx-auto px-4 sm:px-6 relative py-3">
+            <div class="flex justify-between items-center py-3">
+                <!-- Left: Logo -->
+                <div class="flex-shrink-0">
+                    <img src="../../assets/images/logo.svg" alt="Logo" class="h-8 sm:h-10" />
+                </div>
+
+                <!-- Center: Nav (Desktop only) -->
+                <nav
+                    class="hidden xl:flex absolute left-1/2 transform -translate-x-1/2 space-x-6 text-sm font-medium text-gray-600">
+                    <div class="inline-flex rounded-lg shadow-md bg-white overflow-hidden">
+                        <a href="#"
+                            class="px-6 py-3 text-sm font-medium text-white bg-blue-900 hover:bg-blue-800 transition duration-300 flex items-center">
+                            <i class="fa-solid fa-list mr-2"></i> ALL
+                        </a>
+                        <a href="#"
+                            class="px-6 py-3 text-sm font-medium text-pak-green hover:bg-[rgb(220,228,245)] transition duration-300 flex items-center">
+                            <i class="fa-solid fa-circle-plus mr-2"></i> NEW
+                        </a>
+                        <a href="#"
+                            class="px-6 py-3 text-sm font-medium text-pak-green hover:bg-[rgb(220,228,245)] transition duration-300 flex items-center">
+                            <i class="fa-solid fa-recycle mr-2"></i> USED
+                        </a>
+                        <a href="#"
+                            class="px-6 py-3 text-sm font-medium text-pak-green hover:bg-[rgb(220,228,245)] transition duration-300 flex items-center">
+                            <i class="fa-solid fa-key mr-2"></i> RENT
+                        </a>
+                        <a href="#"
+                            class="px-6 py-3 text-sm font-medium text-pak-green hover:bg-[rgb(220,228,245)] transition duration-300 flex items-center">
+                            <i class="fa-solid fa-exchange-alt mr-2"></i> EXCHANGE
+                        </a>
+                    </div>
+                </nav>
+
+                <!-- Right: Hamburger (Mobile only) -->
+                <button id="mobileMenuToggle"
+                    class="block xl:hidden text-gray-700 hover:text-primary-green focus:outline-none">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu"
+        class="xl:hidden hidden bg-white shadow-md fixed top-[72px] left-0 right-0 z-40 max-h-[calc(100vh-72px)] overflow-y-auto">
+        <div class="px-4 py-4 space-y-4 text-sm font-medium text-gray-700">
+            <div class="flex justify-around text-center gap-4 flex-wrap">
+                <a href="#" class="flex flex-col items-center gap-1 hover:text-primary-green">
+                    <img src="./images/second-hand.png" class="w-6 h-6" /> Used
+                </a>
+                <a href="#" class="flex flex-col items-center gap-1 hover:text-primary-green">
+                    <img src="./images/new.png" class="w-6 h-6" /> New
+                </a>
+                <a href="#" class="flex flex-col items-center gap-1 hover:text-primary-green">
+                    <img src="./images/exchange.png" class="w-6 h-6" /> Exchange
+                </a>
+                <a href="#" class="flex flex-col items-center gap-1 hover:text-primary-green">
+                    <img src="./images/rent.png" class="w-6 h-6" /> Rentals
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Blog Section -->
+    <div class="container mx-auto px-4 py-16 flex flex-col-reverse lg:flex-row items-center gap-10">
+        <!-- Left -->
+        <div class="lg:w-1/2">
+            <h1 class="text-blue-900 font-bold text-3xl lg:text-4xl mb-5">Blog</h1>
+            <p class="text-lg mb-3">Hyundai Sonata N Line Facelift Launched in Pakistan</p>
+            <p class="text-gray-700">After the launch of the new Elantra Hybrid last year, Hyundai has surprised
+                Sonata...</p>
+            <button class="bg-blue-900 hover:bg-blue-800 text-white font-bold py-3 px-8 rounded-md mt-6 transition">Show
+                More</button>
+        </div>
+        <!-- Right -->
+        <div class="lg:w-1/2">
+            <img class="w-full max-h-[450px] object-cover rounded-2xl shadow-xl"
+                src="https://www.creativefabrica.com/wp-content/uploads/2023/01/22/Personal-blog-landing-page-Design-ui-Graphics-58556081-1.png"
+                alt="">
+        </div>
+    </div>
+
+    <!-- Blogs Section -->
+    <main class="container mx-auto px-4">
+        <section class="mb-12">
+            <h1 class="text-blue-900 font-bold text-3xl lg:text-4xl mb-6">Recent Articles</h1>
+            <div id="mycardsblogsmain" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"></div>
+        </section>
+        <section class="mb-16">
+            <h1 class="text-blue-900 font-bold text-3xl lg:text-4xl mb-6">Popular</h1>
+            <div id="mycardsblogsmain2" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"></div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#0C3168] text-white">
+        <div class="container mx-auto px-4 py-10">
+            <div class="flex flex-wrap gap-8 justify-between">
+                <div>
+                    <h2 class="font-bold text-xl mb-3">ABOUT US</h2>
+                    <ul class="space-y-2 text-sm">
+                        <li>FAQ</li>
+                        <li>Anti Scam</li>
+                        <li>Term of use</li>
+                        <li>Privacy Policy</li>
+                        <li>Contact Us</li>
+                        <li>Sitemap</li>
+                    </ul>
+                </div>
+                <div>
+                    <h2 class="font-bold text-xl mb-3">MY ACCOUNT</h2>
+                    <ul class="space-y-2 text-sm">
+                        <li>Login</li>
+                        <li>Register</li>
+                    </ul>
+                </div>
+                <div>
+                    <h2 class="font-bold text-xl mb-3">Miljaega</h2>
+                    <ul class="space-y-2 text-sm">
+                        <li>Inspected by miljaega</li>
+                        <li>Featured by miljaega</li>
+                        <li>Recommended by miljaega</li>
+                    </ul>
+                </div>
+                <div>
+                    <h2 class="font-bold text-xl mb-3">FOLLOW US</h2>
+                    <div class="flex gap-4">
+                        <img src="../../assets/images/fb.svg" class="h-10" alt="">
+                        <img src="../../assets/images/insta.svg" class="h-10" alt="">
+                        <img src="../../assets/images/twitter.svg" class="h-10" alt="">
+                        <img src="../../assets/images/youtube.svg" class="h-10" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="text-center border-t border-white mt-8 pt-4 text-sm">
+                <p>© Copyright 2025 Miljaega <br>Powered by The Tech Creators</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../../assets/js/homepage/miljaega-homepage.js"></script>
+    <script src="../../assets/js/homepage/motors.js"></script>
+    <script>
+        fetch('../../assets/json/miljaega-Blogs.json')
+            .then(res => res.json())
+            .then(blogs => {
+                const container = document.getElementById('mycardsblogsmain');
+                blogs.forEach(blog => {
+                    const card = document.createElement('div');
+                    card.className =
+                        'bg-white rounded-xl shadow-md hover:shadow-lg transition duration-300 overflow-hidden flex flex-col';
+                    card.innerHTML = `
+            <img src="${blog.image}" alt="${blog.title}" class="w-full h-48 object-cover">
+            <div class="p-5 flex flex-col flex-grow">
+              <h3 class="text-lg font-bold text-blue-900 mb-3">${blog.title}</h3>
+              <p class="text-sm text-gray-600 flex-grow">${blog.excerpt}</p>
+              <a href="#" class="mt-3 text-blue-900 text-sm font-semibold hover:underline">Read More →</a>
+            </div>`;
+                    container.appendChild(card);
+                });
+            });
+
+        fetch('../../assets/json/miljaega-Blogs.json')
+            .then(res => res.json())
+            .then(blogs => {
+                const container = document.getElementById('mycardsblogsmain2');
+                blogs.forEach(blog => {
+                    const card = document.createElement('div');
+                    card.className =
+                        'bg-white rounded-xl shadow-md hover:shadow-lg transition duration-300 overflow-hidden flex flex-col';
+                    card.innerHTML = `
+            <img src="${blog.image}" alt="${blog.title}" class="w-full h-48 object-cover">
+            <div class="p-5 flex flex-col flex-grow">
+              <h3 class="text-lg font-bold text-blue-900 mb-3">${blog.title}</h3>
+              <p class="text-sm text-gray-600 flex-grow">${blog.excerpt}</p>
+              <a href="#" class="mt-3 text-blue-900 text-sm font-semibold hover:underline">Read More →</a>
+            </div>`;
+                    container.appendChild(card);
+                });
+            });
+    </script>
+</body>
+
+</html>

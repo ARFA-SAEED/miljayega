@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Profile</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100 text-gray-800 min-h-screen">
+
+    <!-- Full Page Wrapper -->
+    <div class="min-h-screen">
+
+        <!-- Top Section (Full Width Grid) -->
+        <div class="grid md:grid-cols-3 gap-4 p-4">
+
+            <!-- Left: Profile Info -->
+            <div class="relative bg-white p-5 rounded-xl shadow">
+                <!-- Badge -->
+                <span class="absolute top-[355px] right-4 inline-flex items-center px-3 py-1.5 
+            bg-gradient-to-r from-amber-400 via-yellow-500 to-amber-600 
+            text-white text-[12px] font-semibold rounded-full shadow-md tracking-wide">
+                    <i class="fa-solid fa-crown mr-1 text-[11px]"></i>
+                    Level 1
+                </span>
+
+                <!-- Profile Image -->
+                <img src="https://tse1.mm.bing.net/th/id/OIP.OM7kDDw488nJCeqM8MJHCQHaF1?pid=Api&P=0&h=220"
+                    alt="Profile Image" class="rounded-lg w-full h-[320px] object-cover">
+
+                <!-- Name -->
+                <h2 class="mt-4 text-xl font-bold text-blue-900">Arsalan Ali Shah</h2>
+
+                <!-- Job -->
+                <p class="mt-1 text-base">Electrician</p>
+
+                <!-- Status Badges -->
+                <div class="flex gap-2 mt-3">
+                    <span
+                        class="bg-blue-900 text-white text-xs font-semibold px-2 py-1 rounded-full flex items-center shadow-sm">
+                        <i class="fa-solid fa-check-circle mr-1 text-[10px]"></i> Trusted
+                    </span>
+                    <span
+                        class="bg-green-900 text-white text-xs font-semibold px-2 py-1 rounded-full flex items-center shadow-sm">
+                        <i class="fa-solid fa-shield-alt mr-1 text-[10px]"></i> Verified
+                    </span>
+                </div>
+
+                <!-- Location -->
+                <p class="mt-6 text-sm text-gray-600 flex items-start">
+                    <i class="fa-solid fa-location-dot text-blue-900 text-lg mr-2"></i>
+                    R85, Khalid Aziz Town, Malir, Karachi
+                </p>
+            </div>
+
+
+            <!-- Right: Description -->
+            <div class="md:col-span-2 bg-white p-6 rounded-xl shadow flex flex-col">
+                <h3 class="font-bold text-xl mb-2 text-blue-900">Description</h3>
+
+                <p class="text-base text-gray-700 leading-7 flex-1">
+                    Experienced and reliable electrician offering professional services in residential, commercial, and
+                    industrial electrical work. With years of hands-on expertise, I specialize in the installation,
+                    maintenance, and repair of electrical systems ranging from simple household wiring to complex
+                    commercial projects. Skilled in setting up lights, ceiling fans, power outlets, and appliances, as
+                    well as troubleshooting electrical faults to provide quick and effective solutions.
+                    <br><br>
+                    Whether you are renovating your home, opening a new office, or maintaining an industrial facility,
+                    I provide cost-effective solutions tailored to your needs. My goal is to deliver safe, efficient,
+                    and high-quality services with attention to detail and customer satisfaction.
+                </p>
+
+                <!-- Skills -->
+                <div class="mt-4 flex flex-wrap gap-2">
+                    <span class="px-3 py-1 bg-gray-200 rounded-full text-xs">Wiring</span>
+                    <span class="px-3 py-1 bg-gray-200 rounded-full text-xs">Lighting</span>
+                    <span class="px-3 py-1 bg-gray-200 rounded-full text-xs">Repair</span>
+                    <span class="px-3 py-1 bg-gray-200 rounded-full text-xs">Installation</span>
+                </div>
+
+                <!-- Button aligned at bottom -->
+                <div class="mt-6">
+                    <button
+                        class="px-6 py-2 bg-blue-900 text-white font-semibold rounded-lg hover:bg-blue-800 transition">
+                        <i class="fa-solid fa-phone mr-2"></i> Make a Phone Call
+                    </button>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- Reviews Section (Full Width) -->
+        <div class="bg-white p-6 rounded-xl shadow mt-2 mx-6">
+            <h3 class="font-bold text-blue-900 text-2xl mb-2">Reviews</h3>
+            <div class="flex justify-between">
+                <p class="text-gray-600 text-md">197 reviews for this Gig</p>
+                <span class="text-blue-900 font-bold text-md">
+                    <i class="fa-solid fa-star text-yellow-400"></i>
+                    <i class="fa-solid fa-star text-yellow-400"></i>
+                    <i class="fa-solid fa-star text-yellow-400"></i>
+                    <i class="fa-solid fa-star text-yellow-400"></i>
+                    <i class="fa-solid fa-star text-yellow-400 me-2"></i>4.8
+                </span>
+            </div>
+
+            <div class="grid md:grid-cols-2 h-[240px] gap-10 mt-6 items-start">
+                <!-- Left: Stars Breakdown -->
+                <div class="flex flex-col justify-between space-y-8">
+                    <div class="flex items-center text-sm">
+                        <span class="w-20 font-semibold">5 Stars</span>
+                        <div class="flex-1 bg-gray-200 h-2 rounded mx-2">
+                            <div class="bg-blue-900 h-2 rounded" style="width:90%"></div>
+                        </div>
+                        <span class="font-semibold ">(187)</span>
+                    </div>
+                    <div class="flex items-center text-sm">
+                        <span class="w-20 font-semibold">4 Stars</span>
+                        <div class="flex-1 bg-gray-200 h-2 rounded mx-2">
+                            <div class="bg-blue-900 h-2 rounded" style="width:10%"></div>
+                        </div>
+                        <span class="font-semibold">(7)</span>
+                    </div>
+                    <div class="flex items-center text-sm">
+                        <span class="w-20 font-semibold">3 Stars</span>
+                        <div class="flex-1 bg-gray-200 h-2 rounded mx-2">
+                            <div class="bg-blue-900 h-2 rounded" style="width:5%"></div>
+                        </div>
+                        <span class="font-semibold">(1)</span>
+                    </div>
+                    <div class="flex items-center text-sm">
+                        <span class="w-20 font-semibold">2 Stars</span>
+                        <div class="flex-1 bg-gray-200 h-2 rounded mx-2">
+                            <div class="bg-blue-900 h-2 rounded" style="width:3%"></div>
+                        </div>
+                        <span class="font-semibold">(2)</span>
+                    </div>
+                    <div class="flex items-center text-sm">
+                        <span class="w-20 font-semibold">1 Star</span>
+                        <div class="flex-1 bg-gray-200 h-2 rounded mx-2"></div>
+                        <span class="font-semibold">(0)</span>
+                    </div>
+                </div>
+
+                <!-- Right: Rating Breakdown -->
+                <div class="bg-white rounded-xl shadow p-6">
+                    <h4 class="text-xl text-blue-900 font-bold mb-4">Rating Breakdown</h4>
+
+                    <!-- Row -->
+                    <div class="flex justify-between items-center py-2 border-b">
+                        <span class="text-gray-600 text-sm">Seller communication level</span>
+                        <div class="flex items-center font-semibold text-blue-900">
+                            <i class="fa-solid fa-star text-yellow-400 mr-1"></i>
+                            4.9
+                        </div>
+                    </div>
+
+                    <!-- Row -->
+                    <div class="flex justify-between items-center py-2 border-b">
+                        <span class="text-gray-600 text-sm">Quality of delivery</span>
+                        <div class="flex items-center font-semibold text-blue-900">
+                            <i class="fa-solid fa-star text-yellow-400 mr-1"></i>
+                            4.8
+                        </div>
+                    </div>
+
+                    <!-- Row -->
+                    <div class="flex justify-between items-center py-2">
+                        <span class="text-gray-600 text-sm">Value of delivery</span>
+                        <div class="flex items-center font-semibold text-blue-900">
+                            <i class="fa-solid fa-star text-yellow-400 mr-1"></i>
+                            4.7
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

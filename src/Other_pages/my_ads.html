@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>milaega.pk-my ads</title>
+     <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+</head>
+<body>
+       <header class="bg-white shadow-sm fixed top-0 z-50 w-full">
+        <div class="container mx-auto px-4 sm:px-6 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex-shrink-0">
+                    <img src="../../assets/images/logo.svg" alt="Logo" class="h-8 sm:h-10" />
+                </div>
+
+                <!-- Main Navigation - Hidden on small, visible on large -->
+                <nav class="hidden lg:flex flex-grow justify-center">
+                    <div class="flex justify-center">
+                        <div
+                            class="inline-flex flex-wrap rounded-lg shadow-md bg-white overflow-hidden main-nav-buttons">
+                            <a href="#"
+                                class="px-3 sm:px-5 py-3 text-sm font-medium text-white bg-blue-900 hover:bg-blue-800 transition duration-300 flex items-center justify-center whitespace-nowrap">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1 sm:mr-2" viewBox="0 0 20 20"
+                                    fill="currentColor">
+                                    <path fill-rule="evenodd"
+                                        d="M3 5a2 2 0 012-2h10a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V5zm11 1H6v8l4-2 4 2V6z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                ALL
+                            </a>
+                            <a href="#"
+                                class="px-3 sm:px-5 py-3 text-sm font-medium text-gray-600 hover:bg-gray-100 transition duration-300 flex items-center justify-center whitespace-nowrap">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1 sm:mr-2" viewBox="0 0 20 20"
+                                    fill="currentColor">
+                                    <path fill-rule="evenodd"
+                                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 1.414L10.586 9H7a1 1 0 100 2h3.586l-1.293 1.293a1 1 0 101.414 1.414l3-3a1 1 0 000-1.414z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                NEW
+                            </a>
+                            <a href="#"
+                                class="px-3 sm:px-5 py-3 text-sm font-medium text-gray-600 hover:bg-gray-100 transition duration-300 flex items-center justify-center whitespace-nowrap">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1 sm:mr-2" viewBox="0 0 20 20"
+                                    fill="currentColor">
+                                    <path fill-rule="evenodd"
+                                        d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                USED
+                            </a>
+                            <a href="#"
+                                class="px-3 sm:px-5 py-3 text-sm font-medium text-gray-600 hover:bg-gray-100 transition duration-300 flex items-center justify-center whitespace-nowrap">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1 sm:mr-2" viewBox="0 0 20 20"
+                                    fill="currentColor">
+                                    <path fill-rule="evenodd"
+                                        d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 00-2-2H4zm2 6a2 2 0 012-2h8a2 2 0 012 2v4a2 2 0 01-2 2H8a2 2 0 01-2-2v-4zm6 4a2 2 0 100-4 2 2 0 000 4z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                RENT
+                            </a>
+                            <a href="#"
+                                class="px-3 sm:px-5 py-3 text-sm font-medium text-gray-600 hover:bg-gray-100 transition duration-300 flex items-center justify-center whitespace-nowrap">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1 sm:mr-2" viewBox="0 0 20 20"
+                                    fill="currentColor">
+                                    <path fill-rule="evenodd"
+                                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                Exchange
+                            </a>
+                        </div>
+                    </div>
+                </nav>
+
+                <!-- Mobile Menu Toggle -->
+                <button id="mobileMenuToggle"
+                    class="block lg:hidden text-gray-700 hover:text-blue-900 focus:outline-none p-2 rounded-md"
+                    aria-label="Toggle menu">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <nav id="mobile-menu" class="mobile-nav lg:hidden">
+                <div class="flex flex-col p-4 space-y-2">
+                    <a href="#"
+                        class="px-4 py-3 text-sm font-medium text-blue-900 bg-gray-100 rounded-md flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20"
+                            fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M3 5a2 2 0 012-2h10a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V5zm11 1H6v8l4-2 4 2V6z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        ALL
+                    </a>
+                    <a href="#"
+                        class="px-4 py-3 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20"
+                            fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 1.414L10.586 9H7a1 1 0 100 2h3.586l-1.293 1.293a1 1 0 101.414 1.414l3-3a1 1 0 000-1.414z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        NEW
+                    </a>
+                    <a href="#"
+                        class="px-4 py-3 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20"
+                            fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        USED
+                    </a>
+                    <a href="#"
+                        class="px-4 py-3 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20"
+                            fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 00-2-2H4zm2 6a2 2 0 012-2h8a2 2 0 012 2v4a2 2 0 01-2 2H8a2 2 0 01-2-2v-4zm6 4a2 2 0 100-4 2 2 0 000 4z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        RENT
+                    </a>
+                    <a href="#"
+                        class="px-4 py-3 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20"
+                            fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        Exchange
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+ <!-- Spacer to avoid content under fixed header -->
+    <div class="pt-[130px] "></div>
+<!-- Top Section: Heading + Search -->
+<div class="flex flex-col lg:flex-row items-center justify-between px-4 sm:px-8 lg:px-24 gap-6 mt-8">
+  <!-- Heading -->
+  <h1 class="font-bold text-2xl sm:text-3xl text-blue-900 text-center lg:text-left">
+    Manage and view your Ads
+  </h1>
+
+  <!-- Search Bar -->
+  <div class="w-full max-w-md">
+    <div class="relative">
+      <input
+        type="text"
+        placeholder="Search By Ad Title"
+        class="w-full px-4 py-3 text-gray-700 border-2 border-blue-300 rounded-lg pr-14 focus:outline-none"
+      />
+      <button
+        class="absolute top-1/2  right-0 transform -translate-y-1/2 bg-blue-900 text-white px-6 py-[12px] rounded-l-2xl hover:bg-blue-800 transition"
+      >
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </button>
+    </div>
+  </div>
+</div>
+
+    <main class="mx-4 sm:mx-6 lg:mx-24 relative py-3">
+        <!-- Classified Ads Section -->
+        <section class="mb-7">
+            <div class="py-3">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 space-x-[100px]" id="mycardsclassifiedmain"></div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-[#0C3168] text-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-10">
+
+            <!-- ✅ Mobile/Tablet (sm, md, lg): 2 Rows Layout -->
+            <div class="flex  flex-wrap gap-8 lg:hidden">
+                <!-- Row 1: ABOUT US + MY ACCOUNT -->
+                <div class="w-full flex   gap-8">
+                    <!-- ABOUT US -->
+                    <div class="w-full ms-10 md:ms-0 sm:w-1/2 text-left">
+                        <ul class="leading-10">
+                            <li class="font-bold text-xl mb-3">ABOUT US</li>
+                            <li>FAQ</li>
+                            <li>Anti Scam</li>
+                            <li>Term of use</li>
+                            <li>Privacy Policy</li>
+                            <li>Contact Us</li>
+                            <li>Sitemap</li>
+                        </ul>
+                    </div>
+                    <!-- MY ACCOUNT -->
+                    <div class="w-full ms-20 md:ms-60 sm:w-1/2 text-left">
+                        <ul class="leading-10">
+                            <li class="font-bold text-xl mb-3">MY ACCOUNT</li>
+                            <li>Login</li>
+                            <li>Register</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Row 2: Miljaega + Social -->
+                <div class="w-full flex gap-8 mt-5">
+                    <!-- Miljaega -->
+                    <div class="w-full sm:w-1/2 ms-10 md:ms-0 text-left">
+                        <ul class="leading-10">
+                            <li class="font-bold text-xl mb-3">Miljaega</li>
+                            <li>Inspected by miljaega</li>
+                            <li>Featured by miljaega</li>
+                            <li>Recomended by miljaega</li>
+                        </ul>
+                    </div>
+                    <!-- Social -->
+                    <div class="w-full ms-20 md:ms-60  sm:w-1/2 text-left leading-15">
+                        <ul>
+                            <li class="font-bold text-xl  mb-3">FOLLOW US</li>
+                        </ul>
+                        <div class=" ms-8 md:ms-0 sm:flex-wrap md:flex mt-3 gap-5">
+                            <img src="../../assets/images/fb.svg" class="h-10" alt="">
+                            <img src="../../assets/images/insta.svg" class="h-10" alt="">
+                            <img src="../../assets/images/twitter.svg" class="h-10" alt="">
+                            <img src="../../assets/images/youtube.svg" class="h-10" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ✅ XL and Up: Original 4-column Layout -->
+            <div class="hidden lg:block lg:flex lg:justify-between xl:gap-8">
+                <!-- ABOUT US -->
+                <div class="w-full sm:w-1/2 xl:w-auto mb-5 xl:mb-0  xl:text-left">
+                    <ul class="leading-10">
+                        <li class="font-bold text-xl mb-3">ABOUT US</li>
+                        <li>FAQ</li>
+                        <li>Anti Scam</li>
+                        <li>Term of use</li>
+                        <li>Privacy Policy</li>
+                        <li>Contact Us</li>
+                        <li>Sitemap</li>
+                    </ul>
+                </div>
+                <!-- MY ACCOUNT -->
+                <div class="w-full sm:w-1/2 xl:w-auto text-left mb-5 xl:mb-0">
+                    <ul class="leading-10">
+                        <li class="font-bold text-xl mb-3">MY ACCOUNT</li>
+                        <li>Login</li>
+                        <li>Register</li>
+                    </ul>
+                </div>
+                <!-- Miljaega -->
+                <div class="w-full sm:w-1/2 xl:w-auto mb-5 xl:mb-0 text-left">
+                    <ul class="leading-10">
+                        <li class="font-bold text-xl mb-3">Miljaega</li>
+                        <li>Inspected by miljaega</li>
+                        <li>Featured by miljaega</li>
+                        <li>Recomended by miljaega</li>
+                    </ul>
+                </div>
+                <!-- Social -->
+                <div class="w-full sm:w-1/2 xl:w-auto text-left mb-5 xl:mb-0 leading-15">
+                    <ul>
+                        <li class="font-bold text-xl mb-3">FOLLOW US</li>
+                    </ul>
+                    <div class="flex  ustify-start mt-3 gap-5">
+                        <img src="../../assets/images/fb.svg" class="h-10" alt="">
+                        <img src="../../assets/images/insta.svg" class="h-10" alt="">
+                        <img src="../../assets/images/twitter.svg" class="h-10" alt="">
+                        <img src="../../assets/images/youtube.svg" class="h-10" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer bottom -->
+            <div class="text-center border-t-2 border-white mt-10 pt-5 text-sm">
+                <p>© Copyright 2025 Miljaega <br>Powered by The Tech Creators</p>
+            </div>
+        </div>
+    </footer></body><script src="../../assets/js/homepage/my_ads.js"></script>
+    <script>
+    fetch('../../assets/json/classifiedads.json')
+  .then(res => res.json())
+  .then(data => {
+    const container = document.getElementById("mycardsclassifiedmain");
+      const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('open');
+        });
+
+        // Close mobile menu when a link is clicked
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('open');
+            });
+        });
+
+    // ✅ Limit to 2 cards only
+    data.slice(0, 2).forEach((item, index) => {
+      const cardId = `card-${index}`;
+      const card = document.createElement("div");
+
+    card.className = `
+w-[400px]  bg-white hover:shadow-lg rounded-lg shadow-md overflow-hidden 
+  transform transition-transform duration-300 ease-in-out 
+  hover:scale-[1.02]
+`.trim();
+      card.id = cardId;
+
+      card.innerHTML = `
+<!-- Top Section -->
+<div class="flex justify-between items-start w-full px-4 pt-4 pb-2">
+  <div>
+    <h2 class="text-lg font-semibold text-blue-900">${item.title.length < 22 ? (item.title.includes(' ') ? item.title.replace(/ (?!.* )/, '<br>') : item.title) : item.title.slice(0, 22) + '...'}</h2>
+    <p class="text-xs text-gray-500">${item.posted}</p>
+  </div>
+  <span class="flex-shrink-0 h-6 w-[90px] hover:text-red-600 hover:bg-red-100 flex items-center bg-[#f0f5ff] text-xs font-bold px-3 py-1.5 rounded-full text-blue-900 shadow-sm hover:shadow-md transition-all duration-200 ml-2">
+    <i class="fa-solid fa-heart me-3 ps-1"></i> Save
+  </span>
+</div>
+
+<!-- Main Image -->
+<div class="px-4 mb-4">
+  <div class="rounded-md overflow-hidden">
+    <img src="${item.mainImage}" alt="Main Image" class="main-image w-full h-[150px] object-cover" />
+  </div>
+</div>
+
+<!-- Thumbnails -->
+<div class="mt-[-4px] mb-3">
+  <div class="flex gap-2 flex-wrap justify-start ms-4">
+    ${item.images.slice(0, 4).map((img, imgIndex) => `
+      <div 
+        onclick="toggleThumbnailOverlay(this, '${cardId}')"
+        class="relative w-[80px] sm:w-[60px] md:w-[70px] lg:w-[60px] xl:w-[72px] h-12 rounded-md overflow-hidden cursor-pointer flex-shrink-0"
+        data-active="false"
+      >
+        <img src="${img.thumb}" data-image="${img.image}" class="w-full h-full object-cover rounded-md" />
+        <div class="thumbnail-overlay absolute inset-0 bg-black bg-opacity-60"></div>
+        ${imgIndex === 3 ? `<span class="absolute top-4 left-10 text-white text-sm font-bold z-10">+2</span>` : ''}
+      </div>
+    `).join('')}
+  </div>
+</div>
+
+<!-- Badges -->
+<div class="flex ps-4 mb-4 gap-2 flex-wrap">
+  ${item.badges.includes("verified") ? `
+    <span class="bg-[#f0f5ff] text-blue-900 h-[20px] px-2 py-[2px] rounded-full text-[10px] font-bold flex items-center">
+      <img src="./images/verified.svg" class="me-1" alt="">Verified
+    </span>` : ''}
+  ${item.badges.includes("trusted") ? `
+    <span class="bg-[#f0f9eb] text-[#4e9a19] px-2 py-[2px] rounded-full text-[10px] font-bold flex items-center">
+      <img src="./images/trusted.svg" class="me-1" alt="">Trusted
+    </span>` : ''}
+</div>
+
+<!-- Price -->
+<div class="flex justify-between px-4 items-center mb-2">
+  <p class="text-lg font-bold text-blue-900">${item.price}</p>
+  <img src="./images/vector.jpg" class="h-10" alt="vector" />
+</div>
+
+<!-- Location -->
+<div class="px-4 pb-2">
+  <p class="text-sm text-gray-600">Fix Price</p>
+  <p class="text-sm text-blue-900 font-bold mt-1">${item.location}</p>
+</div>
+
+<!-- Phone Button -->
+<div class="px-4 pb-3">
+  <button class="w-full bg-blue-900 text-white py-2 rounded text-[14px] transition hover:bg-opacity-95">
+    <i class="fa-solid fa-phone me-1 text-[13px]"></i> Show Phone Number
+  </button>
+</div>
+
+<!-- Edit/Delete Buttons -->
+<div class="px-4 pb-4">
+  <div class="flex gap-2">
+    <button class="w-1/2 bg-yellow-400 py-2 hover:bg-yellow-300 rounded text-[14px] transition hover:bg-opacity-95">
+      <i class="fa-solid fa-pen-to-square me-2"></i> Edit
+    </button>
+    <button class="w-1/2 bg-red-600 text-white py-2 hover:bg-red-700 rounded text-[14px] transition hover:bg-opacity-95">
+      <i class="fa-solid fa-trash me-2"></i> Delete
+    </button>
+  </div>
+</div>
+`;
+
+      container.appendChild(card);
+    });
+  })
+  .catch(err => console.error("Failed to load cards:", err));
+
+
+</script>
+</html>

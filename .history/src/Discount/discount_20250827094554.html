@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Discount Card</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="min-h-screen ">
+    <!-- Header -->
+    <header class="bg-white shadow-sm fixed top-0 z-50 w-full">
+        <div class=" lg:mx-auto 2xl:mx-20 relative py-3 container px-4 sm:px-6">
+            <div class="flex justify-between items-center py-3 ">
+                <!-- Left: Logo -->
+                <div class="flex-shrink-0">
+                    <img src=".././../assets/images/logo.svg" alt="Logo" class="h-8 sm:h-10" />
+                    </a>
+                </div>
+
+                <!-- Center: Nav Bar (Visible only on XL and above) -->
+                <nav class="hidden xl:flex absolute m 2xl:ms-[440px] left-1/2 transform -translate-x-1/2 space-x-6 text-sm font-medium text-gray-600"
+                    style="max-width: 100%; overflow-x: auto; white-space: nowrap;">
+                    <div class="flex justify-center mt-2">
+                        <div class="inline-flex rounded-lg shadow-md bg-white overflow-hidden">
+                            <a href="#"
+                                class="px-8 py-3 text-sm font-medium text-white bg-blue-900 hover:bg-blue-900 transition duration-300 flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20"
+                                    fill="currentColor">
+                                    <path fill-rule="evenodd"
+                                        d="M3 5a2 2 0 012-2h10a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V5zm11 1H6v8l4-2 4 2V6z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                ALL
+                            </a>
+                            <a href="#"
+                                class="px-8 py-3 text-sm font-medium text-pak-green hover:bg-[rgb(220,228,245)] transition duration-300 flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20"
+                                    fill="currentColor">
+                                    <path fill-rule="evenodd"
+                                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 1.414L10.586 9H7a1 1 0 100 2h3.586l-1.293 1.293a1 1 0 101.414 1.414l3-3a1 1 0 000-1.414z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                NEW
+                            </a>
+                            <a href="#"
+                                class="px-8 py-3 text-sm font-medium text-pak-green hover:bg-[rgb(220,228,245)] transition duration-300 flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20"
+                                    fill="currentColor">
+                                    <path fill-rule="evenodd"
+                                        d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                USED
+                            </a>
+                            <a href="#"
+                                class="px-8 py-3 text-sm font-medium text-pak-green hover:bg-[rgb(220,228,245)] transition duration-300 flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20"
+                                    fill="currentColor">
+                                    <path fill-rule="evenodd"
+                                        d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 00-2-2H4zm2 6a2 2 0 012-2h8a2 2 0 012 2v4a2 2 0 01-2 2H8a2 2 0 01-2-2v-4zm6 4a2 2 0 100-4 2 2 0 000 4z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                RENT
+                            </a>
+                            <a href="#"
+                                class="px-8 py-3 text-sm font-medium text-pak-green hover:bg-[rgb(220,228,245)] transition duration-300 flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20"
+                                    fill="currentColor">
+                                    <path fill-rule="evenodd"
+                                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                Exchange
+                            </a>
+                        </div>
+                    </div>
+                </nav>
+
+                <!-- Right: Hamburger Menu (Visible on sm and md) -->
+                <button id="mobileMenuToggle"
+                    class="block xl:hidden text-gray-700 hover:text-primary-green focus:outline-none"
+                    aria-label="Toggle menu">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Dropdown -->
+    <div id="mobileMenu"
+        class="xl:hidden hidden flex bg-white shadow-md fixed top-[72px] left-0 right-0 z-40 max-h-[calc(100vh-72px)] overflow-y-auto">
+        <div class="px-4 py-4 space-y-4 text-sm font-medium text-gray-700">
+            <!-- Center Nav Items -->
+            <div class="flex justify-around text-center gap-2 flex-wrap mt-">
+                <a href="#" class="flex flex-col items-center gap-1 hover:text-primary-green">
+                    <img src="./images/second-hand.png" alt="Used Items" class="w-6 h-6 object-contain" /> Used
+                </a>
+                <a href="#" class="flex flex-col items-center gap-1 hover:text-primary-green">
+                    <img src="./images/new.png" alt="New Items" class="w-6 h-6 object-contain" /> New
+                </a>
+                <a href="#" class="flex flex-col items-center gap-1 hover:text-primary-green">
+                    <img src="./images/exchange.png" alt="Exchange" class="w-6 h-6 object-contain" /> Exchange
+                </a>
+                <a href="#" class="flex flex-col items-center gap-1 hover:text-primary-green">
+                    <img src="./images/rent.png" alt="Rentals" class="w-6 h-6 object-contain" /> Rentals
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="bg-[#D3E5FF] h-[300px] w-[full] flex gap-[480px] px-[380px] items-center mt-20">
+        <div>
+            <h1 class="font-bold text-blue-900 text-5xl mb-3">Discounts on Bundles</h1>
+            <span class="text-lg text-gray-600 ">Buy in bundles and pay less</span>
+        </div>
+        <div><img src="../../assets/images/discount.png" alt=""></div>
+    </div>
+    <!-- Discount Card -->
+    <div class="flex-col mx-[380px] mt-10">
+        <div>
+            <h1 class="text-3xl text-blue-900 font-bold mb-10">Post more Ads </h1>
+        </div>
+        <div class="flex gap-20 mt-10">
+            <div class="w-[330px] bg-white border rounded-md shadow-sm overflow-hidden shadow-xl">
+
+                <!-- Top Section with 4-color gradient -->
+                <div class="relative h-[157px] p-4"
+                    style="background: linear-gradient(to left, #0C9799, #06AAAD, #57D3BC, #B3FFD3);">
+                    <h3 class="text-green-=800 font-semibold text-2xl">Basic</h3>
+
+                    <!-- Discount Badge -->
+                    <span class="absolute top-5 right-5 bg-orange-400 text-white text-xs px-3 py-1 rounded-full">
+                        - 35
+                    </span>
+
+                    <!-- Circle Decoration -->
+                    <div class="absolute top-[100px] left-[0] w-[120px] h-14 bg-[#B3FFD3CF] rounded-t-full opacity-80">
+                    </div>
+                    <div
+                        class="absolute top-[156px] left-[208px] w-[120px] h-14 bg-[#0C9799D6] rounded-b-full opacity-80">
+                    </div>
+
+                    <!-- Price Circle -->
+                    <div class="absolute flex justify-center">
+                        <div
+                            class="bg-white shadow-md w-[110px] h-[110px] mt-[60px] ms-[95px] shadow-xl flex items-center justify-center rounded-full text-center font-bold text-2xl">
+                            <span>2000<sub class="text-sm font-medium text-orange-500 ms-1">PKR</sub></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Features -->
+                <div class="p-4 mt-20 mb-8 space-y-2">
+                    <p class="flex items-center text-gray-700">
+                        <i class="fa-solid fa-check text-orange-500 me-2"></i>Post ads for 7 days
+                    </p>
+                    <p class="flex items-center text-gray-700">
+                        <i class="fa-solid fa-check text-orange-500 me-2"></i>Post Active 3 Featured Ads
+                    </p>
+                </div>
+
+                <!-- Button -->
+                <div class="p-4">
+                    <button
+                        class="w-full bg-blue-900 text-white py-2 rounded-md font-medium hover:bg-blue-800 transition">
+                        Buy now
+                    </button>
+                </div>
+            </div>
+
+            <!-- Discount Card -->
+            <div class="w-[330px] bg-white border rounded-md shadow-sm overflow-hidden shadow-xl">
+
+                <!-- Top Section with 4-color gradient -->
+                <div class="relative h-[157px] p-4"
+                    style="background: linear-gradient(to left, #8C2056, #894768, #B55F8A, #FFBFDF);">
+                    <h3 class="text-blue-900 font-semibold text-2xl ">Standard</h3>
+
+                    <!-- Discount Badge -->
+                    <span class="absolute top-5 right-5 bg-orange-400 text-white text-xs px-3 py-1 rounded-full">
+                        - 28
+                    </span>
+
+                    <!-- Circle Decoration -->
+                    <div class="absolute top-[100px] left-[0] w-[120px] h-14  bg-[#FFBFDFCF] rounded-t-full opacity-80">
+                    </div>
+                    <div
+                        class="absolute top-[156px] left-[208px] w-[120px] h-14 bg-[#8C2056D6] rounded-b-full opacity-80">
+                    </div>
+
+                    <!-- Price Circle -->
+                    <div class="absolute flex justify-center">
+                        <div
+                            class="bg-white shadow-md w-[110px] h-[110px] mt-[60px] ms-[95px] shadow-xl flex items-center justify-center rounded-full text-center font-bold text-2xl">
+                            <span>4000<sub class="text-sm font-medium text-orange-500 ms-1">PKR</sub></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Features -->
+                <div class="p-4 mt-20 mb-8 space-y-2">
+                    <p class="flex items-center font-semibold text-gray-700">
+                        <i class="fa-solid fa-check  text-orange-500 me-2"></i>Post ads for 14 days
+                    </p>
+                    <p class="flex items-center font-semibold text-gray-700">
+                        <i class="fa-solid fa-check text-orange-500 me-2"></i> Post Active 5 Featured Ads
+                    </p>
+                </div>
+
+                <!-- Button -->
+                <div class="p-4">
+                    <button
+                        class="w-full bg-blue-900 text-white py-2 rounded-md font-medium hover:bg-blue-800 transition">
+                        Buy now
+                    </button>
+                </div>
+            </div>
+
+            <!-- Discount Card -->
+            <div class="w-[330px] bg-white border rounded-md shadow-sm overflow-hidden shadow-xl">
+
+                <!-- Top Section with 4-color gradient -->
+                <div class="relative h-[157px] p-4"
+                    style="background: linear-gradient(to left, #A97900, #B28616, #F6D88D, #FFF5DD);">
+                    <h3 class="text-orange-400 font-semibold text-2xl">Premium</h3>
+
+
+                    <!-- Discount Badge -->
+                    <span class="absolute top-5 right-5 bg-orange-400 text-white text-xs px-3 py-1 rounded-full">
+                        - 15
+                    </span>
+
+                    <!-- Circle Decoration -->
+                    <div class="absolute top-[100px] left-[0] w-[120px] h-14 bg-[#FFF5DDCF] rounded-t-full opacity-80">
+                    </div>
+                    <div
+                        class="absolute top-[156px] left-[208px] w-[120px] h-14 bg-[#A97900D6] rounded-b-full opacity-80">
+                    </div>
+
+                    <!-- Price Circle -->
+                    <div class="absolute flex justify-center">
+                        <div
+                            class="bg-white shadow-md w-[110px] h-[110px] mt-[60px] ms-[95px] shadow-xl flex items-center justify-center rounded-full text-center font-bold text-2xl">
+                            <span>6000<sub class="text-sm font-medium text-orange-500 ms-1">PKR</sub></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Features -->
+                <div class="p-4 mt-20 mb-8 space-y-2">
+                    <p class="flex items-center text-gray-700">
+                        <i class="fa-solid fa-check text-orange-500 me-2"></i>Post ads for 30 days
+                    </p>
+                    <p class="flex items-center text-gray-700">
+                        <i class="fa-solid fa-check text-orange-500 me-2"></i>Post Active 10 Featured Ads
+                    </p>
+                </div>
+
+                <!-- Button -->
+                <div class="p-4">
+                    <button
+                        class="w-full bg-blue-900 text-white py-2 rounded-md font-medium hover:bg-blue-800 transition">
+                        Buy now
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Discount Card -->
+    <div class="flex-col mx-[380px] mt-10">
+        <div class="flex-col ">
+            <h1 class="text-3xl text-blue-900 font-bold">Featured service </h1>
+            <span class="flex text-orange-400 mb-10 mt-2"><i
+                    class="fa-solid fa-circle-exclamation text-orange-5400 flex items-center  me-2 "></i>
+                Post ads for 7 days</span>
+
+        </div>
+        <div class="flex gap-20">
+            <div class="w-[330px] bg-white border rounded-md shadow-sm overflow-hidden shadow-xl">
+
+                <!-- Top Section with 4-color gradient -->
+                <div class="relative h-[157px] p-4"
+                    style="background: linear-gradient(to left, #0C9799, #06AAAD, #57D3BC, #B3FFD3);">
+                    <h3 class="text-white font-semibold text-2xl">Basic</h3>
+
+                    <!-- Discount Badge -->
+                    <span class="absolute top-5 right-5 bg-orange-400 text-white text-xs px-3 py-1 rounded-full">
+                        - 35
+                    </span>
+
+                    <!-- Circle Decoration -->
+                    <div class="absolute top-[100px] left-[0] w-[120px] h-14 bg-[#B3FFD3CF] rounded-t-full opacity-80">
+                    </div>
+                    <div
+                        class="absolute top-[156px] left-[208px] w-[120px] h-14 bg-[#0C9799D6] rounded-b-full opacity-80">
+                    </div>
+
+                    <!-- Price Circle -->
+                    <div class="absolute flex justify-center">
+                        <div
+                            class="bg-white shadow-md w-[110px] h-[110px] mt-[60px] ms-[95px] shadow-xl flex items-center justify-center rounded-full text-center font-bold text-2xl">
+                            <span>2000<sub class="text-sm font-medium text-orange-500 ms-1">PKR</sub></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Features -->
+                <div class="p-4 mt-20 mb-8 space-y-2">
+                    <p class="flex items-center text-gray-700">
+                        <i class="fa-solid fa-check text-orange-500 me-2"></i>Post ads for 7 days
+                    </p>
+                    <p class="flex items-center text-gray-700">
+                        <i class="fa-solid fa-check text-orange-500 me-2"></i>Post Active 3 Featured Ads
+                    </p>
+                </div>
+
+                <!-- Button -->
+                <div class="p-4">
+                    <button
+                        class="w-full bg-blue-900 text-white py-2 rounded-md font-medium hover:bg-blue-800 transition">
+                        Buy now
+                    </button>
+                </div>
+            </div>
+
+            <!-- Discount Card -->
+            <div class="w-[330px] bg-white border rounded-md shadow-sm overflow-hidden shadow-xl">
+
+                <!-- Top Section with 4-color gradient -->
+                <div class="relative h-[157px] p-4"
+                    style="background: linear-gradient(to left, #8C2056, #894768, #B55F8A, #FFBFDF);">
+                    <h3 class="text-white font-semibold text-2xl">Standard</h3>
+
+                    <!-- Discount Badge -->
+                    <span class="absolute top-5 right-5 bg-orange-400 text-white text-xs px-3 py-1 rounded-full">
+                        - 28
+                    </span>
+
+                    <!-- Circle Decoration -->
+                    <div class="absolute top-[100px] left-[0] w-[120px] h-14  bg-[#FFBFDFCF] rounded-t-full opacity-80">
+                    </div>
+                    <div
+                        class="absolute top-[156px] left-[208px] w-[120px] h-14 bg-[#8C2056D6] rounded-b-full opacity-80">
+                    </div>
+
+                    <!-- Price Circle -->
+                    <div class="absolute flex justify-center">
+                        <div
+                            class="bg-white shadow-md w-[110px] h-[110px] mt-[60px] ms-[95px] shadow-xl flex items-center justify-center rounded-full text-center font-bold text-2xl">
+                            <span>5000<sub class="text-sm font-medium text-orange-500 ms-1">PKR</sub></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Features -->
+                <div class="p-4 mt-20 mb-8 space-y-2">
+                    <p class="flex items-center font-semibold text-gray-700">
+                        <i class="fa-solid fa-check  text-orange-500 me-2"></i>Post ads for 14 days
+                    </p>
+                    <p class="flex items-center font-semibold text-gray-700">
+                        <i class="fa-solid fa-check text-orange-500 me-2"></i> Post Active 5 Featured Ads
+                    </p>
+                </div>
+
+                <!-- Button -->
+                <div class="p-4">
+                    <button
+                        class="w-full bg-blue-900 text-white py-2 rounded-md font-medium hover:bg-blue-800 transition">
+                        Buy now
+                    </button>
+                </div>
+            </div>
+
+            <!-- Discount Card -->
+            <div class="w-[330px] bg-white border rounded-md shadow-sm overflow-hidden shadow-xl">
+
+                <!-- Top Section with 4-color gradient -->
+                <div class="relative h-[157px] p-4"
+                    style="background: linear-gradient(to left, #A97900, #B28616, #F6D88D, #FFF5DD);">
+                    <h3 class="text-white font-semibold text-2xl">Premium</h3>
+
+
+                    <!-- Discount Badge -->
+                    <span class="absolute top-5 right-5 bg-orange-400 text-white text-xs px-3 py-1 rounded-full">
+                        - 15
+                    </span>
+
+                    <!-- Circle Decoration -->
+                    <div class="absolute top-[100px] left-[0] w-[120px] h-14 bg-[#FFF5DDCF] rounded-t-full opacity-80">
+                    </div>
+                    <div
+                        class="absolute top-[156px] left-[208px] w-[120px] h-14 bg-[#A97900D6] rounded-b-full opacity-80">
+                    </div>
+
+                    <!-- Price Circle -->
+                    <div class="absolute flex justify-center">
+                        <div
+                            class="bg-white shadow-md w-[110px] h-[110px] mt-[60px] ms-[95px] shadow-xl flex items-center justify-center rounded-full text-center font-bold text-2xl">
+                            <span>7000<sub class="text-sm font-medium text-orange-500 ms-1">PKR</sub></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Features -->
+                <div class="p-4 mt-20 mb-8 space-y-2">
+                    <p class="flex items-center text-gray-700">
+                        <i class="fa-solid fa-check text-orange-500 me-2"></i>Post ads for 30 days
+                    </p>
+                    <p class="flex items-center text-gray-700">
+                        <i class="fa-solid fa-check text-orange-500 me-2"></i>Post Active 10 Featured Ads
+                    </p>
+                </div>
+
+                <!-- Button -->
+                <div class="p-4">
+                    <button
+                        class="w-full bg-blue-900 text-white py-2 rounded-md font-medium hover:bg-blue-800 transition">
+                        Buy now
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Discount Card -->
+    <div class="flex-col mx-[380px] mt-10">
+        <div class="flex-col">
+            <h1 class="text-3xl text-blue-900 font-bold ">Post more Ads and Get Featured </h1>
+            <span class="flex text-orange-400 mb-10 mt-2"><i
+                    class="fa-solid fa-circle-exclamation text-orange-5400 flex items-center  me-2 "></i>
+                Post ads for 7 days</span>
+        </div>
+        <div class="flex gap-20">
+            <div class="w-[330px] bg-white border rounded-md shadow-sm overflow-hidden shadow-xl">
+
+                <!-- Top Section with 4-color gradient -->
+                <div class="relative h-[157px] p-4"
+                    style="background: linear-gradient(to left, #0C9799, #06AAAD, #57D3BC, #B3FFD3);">
+                    <h3 class="text-white font-semibold text-2xl">Basic</h3>
+
+                    <!-- Discount Badge -->
+                    <span class="absolute top-5 right-5 bg-orange-400 text-white text-xs px-3 py-1 rounded-full">
+                        - 35
+                    </span>
+
+                    <!-- Circle Decoration -->
+                    <div class="absolute top-[100px] left-[0] w-[120px] h-14 bg-[#B3FFD3CF] rounded-t-full opacity-80">
+                    </div>
+                    <div
+                        class="absolute top-[156px] left-[208px] w-[120px] h-14 bg-[#0C9799D6] rounded-b-full opacity-80">
+                    </div>
+
+                    <!-- Price Circle -->
+                    <div class="absolute flex justify-center">
+                        <div
+                            class="bg-white shadow-md w-[110px] h-[110px] mt-[60px] ms-[95px] shadow-xl flex items-center justify-center rounded-full text-center font-bold text-2xl">
+                            <span>2000<sub class="text-sm font-medium text-orange-500 ms-1">PKR</sub></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Features -->
+                <div class="p-4 mt-20 mb-8 space-y-2">
+                    <p class="flex items-center text-gray-700">
+                        <i class="fa-solid fa-check text-orange-500 me-2"></i>Post ads for 7 days
+                    </p>
+                    <p class="flex items-center text-gray-700">
+                        <i class="fa-solid fa-check text-orange-500 me-2"></i> Post 1 Active Ads
+                    </p>
+                </div>
+
+                <!-- Button -->
+                <div class="p-4">
+                    <button
+                        class="w-full bg-blue-900 text-white py-2 rounded-md font-medium hover:bg-blue-800 transition">
+                        Buy now
+                    </button>
+                </div>
+            </div>
+
+            <!-- Discount Card -->
+            <div class="w-[330px] bg-white border rounded-md shadow-sm overflow-hidden shadow-xl">
+
+                <!-- Top Section with 4-color gradient -->
+                <div class="relative h-[157px] p-4"
+                    style="background: linear-gradient(to left, #8C2056, #894768, #B55F8A, #FFBFDF);">
+                    <h3 class="text-white font-semibold text-2xl">Standard</h3>
+
+                    <!-- Discount Badge -->
+                    <span class="absolute top-5 right-5 bg-orange-400 text-white text-xs px-3 py-1 rounded-full">
+                        - 28
+                    </span>
+
+                    <!-- Circle Decoration -->
+                    <div class="absolute top-[100px] left-[0] w-[120px] h-14  bg-[#FFBFDFCF] rounded-t-full opacity-80">
+                    </div>
+                    <div
+                        class="absolute top-[156px] left-[208px] w-[120px] h-14 bg-[#8C2056D6] rounded-b-full opacity-80">
+                    </div>
+
+                    <!-- Price Circle -->
+                    <div class="absolute flex justify-center">
+                        <div
+                            class="bg-white shadow-md w-[110px] h-[110px] mt-[60px] ms-[95px] shadow-xl flex items-center justify-center rounded-full text-center font-bold text-2xl">
+                            <span>5000<sub class="text-sm font-medium text-orange-500 ms-1">PKR</sub></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Features -->
+                <div class="p-4 mt-20 mb-8 space-y-2">
+                    <p class="flex items-center font-semibold text-gray-700">
+                        <i class="fa-solid fa-check  text-orange-500 me-2"></i>Post ads for 14 days
+                    </p>
+                    <p class="flex items-center font-semibold text-gray-700">
+                        <i class="fa-solid fa-check text-orange-500 me-2"></i> Post 2 Active Ads
+                    </p>
+                </div>
+
+                <!-- Button -->
+                <div class="p-4">
+                    <button
+                        class="w-full bg-blue-900 text-white py-2 rounded-md font-medium hover:bg-blue-800 transition">
+                        Buy now
+                    </button>
+                </div>
+            </div>
+
+            <!-- Discount Card -->
+            <div class="w-[330px] bg-white border rounded-md shadow-sm overflow-hidden shadow-xl">
+
+                <!-- Top Section with 4-color gradient -->
+                <div class="relative h-[157px] p-4"
+                    style="background: linear-gradient(to left, #A97900, #B28616, #F6D88D, #FFF5DD);">
+                    <h3 class="text-white font-semibold text-2xl">Premium</h3>
+                    <!-- Discount Badge -->
+                    <span class="absolute top-5 right-5 bg-orange-400 text-white text-xs px-3 py-1 rounded-full">
+                        - 15
+                    </span>
+
+
+
+                    <!-- Circle Decoration -->
+                    <div class="absolute top-[100px] left-[0] w-[120px] h-14 bg-[#FFF5DDCF] rounded-t-full opacity-80">
+                    </div>
+                    <div
+                        class="absolute top-[156px] left-[208px] w-[120px] h-14 bg-[#A97900D6] rounded-b-full opacity-80">
+                    </div>
+
+                    <!-- Price Circle -->
+                    <div class="absolute flex justify-center">
+                        <div
+                            class="bg-white shadow-md w-[110px] h-[110px] mt-[60px] ms-[95px] shadow-xl flex items-center justify-center rounded-full text-center font-bold text-2xl">
+                            <span>7000<sub class="text-sm font-medium text-orange-500 ms-1">PKR</sub></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Features -->
+                <div class="p-4 mt-20 mb-8 space-y-2">
+                    <p class="flex items-center text-gray-700">
+                        <i class="fa-solid fa-check text-orange-500 me-2"></i>Post ads for 30 days
+                    </p>
+                    <p class="flex items-center text-gray-700">
+                        <i class="fa-solid fa-check text-orange-500 me-2"></i>Post 3 Active Ads
+                    </p>
+                </div>
+
+                <!-- Button -->
+                <div class="p-4">
+                    <button
+                        class="w-full bg-blue-900 text-white py-2 rounded-md font-medium hover:bg-blue-800 transition">
+                        Buy now
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Discount Card -->
+    <div class="flex-col mx-[380px] mt-10 mb-12 ">
+        <div class="flex-col">
+            <h1 class="text-3xl text-blue-900 font-bold">Boost on top</h1>
+            <span class="flex text-orange-400 mb-10 mt-2"><i
+                    class="fa-solid fa-circle-exclamation text-orange-5400 flex items-center  me-2 "></i>
+                Post ads for 7 days</span>
+        </div>
+        <div class="flex gap-20 mt-10 ">
+            <div class="w-[330px] bg-white border rounded-md  shadow-sm overflow-hidden shadow-xl">
+
+                <!-- Top Section with 4-color gradient -->
+                <div class="relative h-[157px] p-4 "
+                    style="background: linear-gradient(to left, #0C9799, #06AAAD, #57D3BC, #B3FFD3);">
+                    <h3 class="text-white font-semibold text-2xl">Basic</h3>
+
+
+                    <!-- Circle Decoration -->
+                    <div class="absolute top-[100px] left-[0] w-[120px] h-14 bg-[#B3FFD3CF] rounded-t-full opacity-80">
+                    </div>
+                    <div
+                        class="absolute top-[156px] left-[208px] w-[120px] h-14 bg-[#0C9799D6] rounded-b-full opacity-80">
+                    </div>
+
+                    <!-- Price Circle -->
+                    <div class="absolute flex justify-center">
+                        <div
+                            class="bg-white shadow-md w-[110px] h-[110px] mt-[60px] ms-[95px] shadow-xl flex items-center justify-center rounded-full text-center font-bold text-2xl">
+                            <span>500<sub class="text-sm font-medium text-orange-500 ms-1">PKR</sub></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Features -->
+                <div class="p-4 mt-20 mb-8 space-y-2">
+                    <p class="flex items-center text-gray-700">
+                        <i class="fa-solid fa-check text-orange-500 me-2"></i>Post ads for 7 days
+                    </p>
+                    <p class="flex items-center text-gray-700">
+                        <i class="fa-solid fa-check text-orange-500 me-2"></i> Post Active 3 Featured Ads
+                    </p>
+                </div>
+
+                <!-- Button -->
+                <div class="p-4">
+                    <button
+                        class="w-full bg-blue-900 text-white py-2 rounded-md font-medium hover:bg-blue-800 transition">
+                        Buy now
+                    </button>
+                </div>
+            </div>
+
+            <!-- Discount Card -->
+            <div class="w-[330px] bg-white border rounded-md shadow-xl overflow-hidden shadow-xl">
+
+                <!-- Top Section with 4-color gradient -->
+                <div class="relative h-[157px] p-4"
+                    style="background: linear-gradient(to left, #8C2056, #894768, #B55F8A, #FFBFDF);">
+                    <h3 class="text-white font-semibold text-2xl">Standard</h3>
+
+
+                    <!-- Circle Decoration -->
+                    <div class="absolute top-[100px] left-[0] w-[120px] h-14  bg-[#FFBFDFCF] rounded-t-full opacity-80">
+                    </div>
+                    <div
+                        class="absolute top-[156px] left-[208px] w-[120px] h-14 bg-[#8C2056D6] rounded-b-full opacity-80">
+                    </div>
+
+                    <!-- Price Circle -->
+                    <div class="absolute flex justify-center">
+                        <div
+                            class="bg-white shadow-md w-[110px] h-[110px] mt-[60px] ms-[95px] shadow-xl flex items-center justify-center rounded-full text-center font-bold text-2xl">
+                            <span>1500<sub class="text-sm font-medium text-orange-500 ms-1">PKR</sub></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Features -->
+                <div class="p-4 mt-20 mb-8 space-y-2">
+                    <p class="flex items-center font-semibold text-gray-700">
+                        <i class="fa-solid fa-check  text-orange-500 me-2"></i>Post ads for 14 days
+                    </p>
+                    <p class="flex items-center font-semibold text-gray-700">
+                        <i class="fa-solid fa-check text-orange-500 me-2"></i> Active 10 Ads
+                    </p>
+                </div>
+
+                <!-- Button -->
+                <div class="p-4">
+                    <button
+                        class="w-full bg-blue-900 text-white py-2 rounded-md font-medium hover:bg-blue-800 transition">
+                        Buy now
+                    </button>
+                </div>
+            </div>
+
+            <!-- Discount Card -->
+            <div class="w-[330px] bg-white border rounded-md shadow-sm overflow-hidden shadow-xl">
+
+                <!-- Top Section with 4-color gradient -->
+                <div class="relative h-[157px] p-4"
+                    style="background: linear-gradient(to left, #A97900, #B28616, #F6D88D, #FFF5DD);">
+                    <h3 class="text-white font-semibold text-2xl">Premium</h3>
+
+
+                    <!-- Circle Decoration -->
+                    <div class="absolute top-[100px] left-[0] w-[120px] h-14 bg-[#FFF5DDCF] rounded-t-full opacity-80">
+                    </div>
+                    <div
+                        class="absolute top-[156px] left-[208px] w-[120px] h-14 bg-[#A97900D6] rounded-b-full opacity-80">
+                    </div>
+
+                    <!-- Price Circle -->
+                    <div class="absolute flex justify-center">
+                        <div
+                            class="bg-white shadow-md w-[110px] h-[110px] mt-[60px] ms-[95px] shadow-xl flex items-center justify-center rounded-full text-center font-bold text-2xl">
+                            <span>3000<sub class="text-sm font-medium text-orange-500 ms-1">PKR</sub></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Features -->
+                <div class="p-4 mt-20 mb-8 space-y-2">
+                    <p class="flex items-center text-gray-700">
+                        <i class="fa-solid fa-check text-orange-500 me-2"></i>Post ads for 30 days
+                    </p>
+                    <p class="flex items-center text-gray-700">
+                        <i class="fa-solid fa-check text-orange-500 me-2"></i>Active 20 Ads
+                    </p>
+                </div>
+
+                <!-- Button -->
+                <div class="p-4">
+                    <button
+                        class="w-full bg-blue-900 text-white py-2 rounded-md font-medium hover:bg-blue-800 transition">
+                        Buy now
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="bg-[#0C3168] text-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-10">
+
+            <!-- ✅ Mobile/Tablet (sm, md, lg): 2 Rows Layout -->
+            <div class="flex  flex-wrap gap-8 lg:hidden">
+                <!-- Row 1: ABOUT US + MY ACCOUNT -->
+                <div class="w-full flex   gap-8">
+                    <!-- ABOUT US -->
+                    <div class="w-full ms-10 md:ms-0 sm:w-1/2 text-left">
+                        <ul class="leading-10">
+                            <li class="font-bold text-xl mb-3">ABOUT US</li>
+                            <li>FAQ</li>
+                            <li>Anti Scam</li>
+                            <li>Term of use</li>
+                            <li>Privacy Policy</li>
+                            <li>Contact Us</li>
+                            <li>Sitemap</li>
+                        </ul>
+                    </div>
+                    <!-- MY ACCOUNT -->
+                    <div class="w-full ms-20 md:ms-60 sm:w-1/2 text-left">
+                        <ul class="leading-10">
+                            <li class="font-bold text-xl mb-3">MY ACCOUNT</li>
+                            <li>Login</li>
+                            <li>Register</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Row 2: Miljaega + Social -->
+                <div class="w-full flex gap-8 mt-5">
+                    <!-- Miljaega -->
+                    <div class="w-full sm:w-1/2 ms-10 md:ms-0 text-left">
+                        <ul class="leading-10">
+                            <li class="font-bold text-xl mb-3">Miljaega</li>
+                            <li>Inspected by miljaega</li>
+                            <li>Featured by miljaega</li>
+                            <li>Recomended by miljaega</li>
+                        </ul>
+                    </div>
+                    <!-- Social -->
+                    <div class="w-full ms-20 md:ms-60  sm:w-1/2 text-left leading-15">
+                        <ul>
+                            <li class="font-bold text-xl  mb-3">FOLLOW US</li>
+                        </ul>
+                        <div class=" ms-8 md:ms-0 sm:flex-wrap md:flex mt-3 gap-5">
+                            <img src="../../assets/images/fb.svg" class="h-10" alt="">
+                            <img src="../../assets/images/insta.svg" class="h-10" alt="">
+                            <img src="../../assets/images/twitter.svg" class="h-10" alt="">
+                            <img src="../../assets/images/youtube.svg" class="h-10" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ✅ XL and Up: Original 4-column Layout -->
+            <div class="hidden lg:block lg:flex lg:justify-between xl:gap-8">
+                <!-- ABOUT US -->
+                <div class="w-full sm:w-1/2 xl:w-auto mb-5 xl:mb-0  xl:text-left">
+                    <ul class="leading-10">
+                        <li class="font-bold text-xl mb-3">ABOUT US</li>
+                        <li>FAQ</li>
+                        <li>Anti Scam</li>
+                        <li>Term of use</li>
+                        <li>Privacy Policy</li>
+                        <li>Contact Us</li>
+                        <li>Sitemap</li>
+                    </ul>
+                </div>
+                <!-- MY ACCOUNT -->
+                <div class="w-full sm:w-1/2 xl:w-auto text-left mb-5 xl:mb-0">
+                    <ul class="leading-10">
+                        <li class="font-bold text-xl mb-3">MY ACCOUNT</li>
+                        <li>Login</li>
+                        <li>Register</li>
+                    </ul>
+                </div>
+                <!-- Miljaega -->
+                <div class="w-full sm:w-1/2 xl:w-auto mb-5 xl:mb-0 text-left">
+                    <ul class="leading-10">
+                        <li class="font-bold text-xl mb-3">Miljaega</li>
+                        <li>Inspected by miljaega</li>
+                        <li>Featured by miljaega</li>
+                        <li>Recomended by miljaega</li>
+                    </ul>
+                </div>
+                <!-- Social -->
+                <div class="w-full sm:w-1/2 xl:w-auto text-left mb-5 xl:mb-0 leading-15">
+                    <ul>
+                        <li class="font-bold text-xl mb-3">FOLLOW US</li>
+                    </ul>
+                    <div class="flex  ustify-start mt-3 gap-5">
+                        <img src="../../assets/images/fb.svg" class="h-10" alt="">
+                        <img src="../../assets/images/insta.svg" class="h-10" alt="">
+                        <img src="../../assets/images/twitter.svg" class="h-10" alt="">
+                        <img src="../../assets/images/youtube.svg" class="h-10" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer bottom -->
+            <div class="text-center border-t-2 border-white mt-10 pt-5 text-sm">
+                <p>© Copyright 2025 Miljaega <br>Powered by The Tech Creators</p>
+            </div>
+        </div>
+    </footer>
+</body>
+<script>document.addEventListener("DOMContentLoaded", function () {
+        const toggleBtn = document.getElementById("mobileMenuToggle");
+        const mobileMenu = document.getElementById("mobileMenu");
+
+        if (!toggleBtn || !mobileMenu) {
+            console.error("mobileMenuToggle or mobileMenu not found.");
+            return;
+        }
+
+        toggleBtn.addEventListener("click", function () {
+            mobileMenu.classList.toggle("hidden");
+        });
+    });
+</script>
+
+</html>
