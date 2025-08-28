@@ -6,6 +6,7 @@
     "badge": { "level": "Level 1", "icon": "./images/tick.svg" },
     "labels": ["Verified", "Trusted"],
     "labelIcons": ["./images/verified.svg", "./images/trusted.svg"],
+<<<<<<< HEAD
     "services": [
       "Wiring",
       "Repairing",
@@ -15,6 +16,9 @@
       "Meter Fitting",
       "Earthing"
     ],
+=======
+    "services": ["Wiring", "Repairing", "Panel Installation", "Fitting", "UPS Aur Inverter Setup", "Meter Fitting", "Earthing"],
+>>>>>>> afad26b6945e61a3e41d1b249c9cc3a6380508e0
     "orders": 210,
     "rating": 4.9,
     "stars": 5,
@@ -27,6 +31,7 @@
     "badge": { "level": "Level 1", "icon": "./images/tick.svg" },
     "labels": ["Verified", "Trusted"],
     "labelIcons": ["./images/verified.svg", "./images/trusted.svg"],
+<<<<<<< HEAD
     "services": [
       "Wiring",
       "Repairing",
@@ -36,6 +41,9 @@
       "Meter Fitting",
       "Earthing"
     ],
+=======
+    "services": ["Wiring", "Repairing", "Panel Installation", "Fitting", "UPS Aur Inverter Setup", "Meter Fitting", "Earthing"],
+>>>>>>> afad26b6945e61a3e41d1b249c9cc3a6380508e0
     "orders": 178,
     "rating": 4.7,
     "stars": 4,
@@ -48,6 +56,7 @@
     "badge": { "level": "Level 1", "icon": "./images/tick.svg" },
     "labels": ["Verified", "Trusted"],
     "labelIcons": ["./images/verified.svg", "./images/trusted.svg"],
+<<<<<<< HEAD
     "services": [
       "Wiring",
       "Repairing",
@@ -57,6 +66,9 @@
       "Meter Fitting",
       "Earthing"
     ],
+=======
+    "services": ["Wiring", "Repairing", "Panel Installation", "Fitting", "UPS Aur Inverter Setup", "Meter Fitting", "Earthing"],
+>>>>>>> afad26b6945e61a3e41d1b249c9cc3a6380508e0
     "orders": 152,
     "rating": 4.8,
     "stars": 4,
@@ -69,6 +81,7 @@
     "badge": { "level": "Level 1", "icon": "./images/tick.svg" },
     "labels": ["Verified", "Trusted"],
     "labelIcons": ["./images/verified.svg", "./images/trusted.svg"],
+<<<<<<< HEAD
     "services": [
       "Wiring",
       "Repairing",
@@ -78,6 +91,9 @@
       "Meter Fitting",
       "Earthing"
     ],
+=======
+    "services": ["Wiring", "Repairing", "Panel Installation", "Fitting", "UPS Aur Inverter Setup", "Meter Fitting", "Earthing"],
+>>>>>>> afad26b6945e61a3e41d1b249c9cc3a6380508e0
     "orders": 199,
     "rating": 5.0,
     "stars": 5,
@@ -88,6 +104,7 @@
     "service": "Painter",
     "image": "http://4.bp.blogspot.com/-_xY7qEZJm64/U0kZDAzle6I/AAAAAAAABUc/XAcSS7CLM24/s1600/Black+Balochi+Dress+for+Man.jpg",
     "badge": { "level": "Level 2", "icon": "./images/tick.svg" },
+<<<<<<< HEAD
     "labels": ["Verified", "Trusted"],
     "labelIcons": ["./images/verified.svg"],
     "services": [
@@ -96,6 +113,11 @@
       "Wall Design",
       "Polishing"
     ],
+=======
+    "labels": ["Verified"],
+    "labelIcons": ["./images/verified.svg"],
+    "services": ["Interior Painting", "Exterior Painting", "Wall Design", "Polishing"],
+>>>>>>> afad26b6945e61a3e41d1b249c9cc3a6380508e0
     "orders": 134,
     "rating": 4.6,
     "stars": 4,
@@ -119,7 +141,11 @@
     "service": "Driver",
     "image": "https://sd-hegemone-production.sdcdns.com/dictionary-images/900/6da167f7-fe20-41b2-a84a-2d9cefcbaa21.jpg",
     "badge": { "level": "Level 1", "icon": "./images/tick.svg" },
+<<<<<<< HEAD
     "labels": ["Verified", "Trusted"],
+=======
+    "labels": ["Trusted"],
+>>>>>>> afad26b6945e61a3e41d1b249c9cc3a6380508e0
     "labelIcons": ["./images/trusted.svg"],
     "services": ["Personal Driver", "Office Driver", "Outstation"],
     "orders": 87,
@@ -132,7 +158,11 @@
     "service": "Cleaner",
     "image": "https://live.staticflickr.com/3871/14916269429_65ec8ae765_b.jpg",
     "badge": { "level": "Level 3", "icon": "./images/tick.svg" },
+<<<<<<< HEAD
     "labels": ["Verified", "Trusted"],
+=======
+    "labels": ["Verified"],
+>>>>>>> afad26b6945e61a3e41d1b249c9cc3a6380508e0
     "labelIcons": ["./images/verified.svg"],
     "services": ["Home Cleaning", "Office Cleaning", "Deep Cleaning"],
     "orders": 312,
@@ -145,7 +175,11 @@
     "service": "Cook",
     "image": "https://tse4.mm.bing.net/th/id/OIP.oO9_FJ8Npk5G2LjNiufs0AHaF-?pid=Api&P=0&h=220",
     "badge": { "level": "Level 1", "icon": "./images/tick.svg" },
+<<<<<<< HEAD
     "labels": ["Verified", "Trusted"],
+=======
+    "labels": ["Verified"],
+>>>>>>> afad26b6945e61a3e41d1b249c9cc3a6380508e0
     "labelIcons": ["./images/verified.svg"],
     "services": ["Pakistani Food", "BBQ", "Fast Food", "Chinese"],
     "orders": 160,
@@ -171,7 +205,11 @@
     "service": "Tailor",
     "image": "https://c.stocksy.com/a/Lt2700/z9/1679415.jpg",
     "badge": { "level": "Level 1", "icon": "./images/tick.svg" },
+<<<<<<< HEAD
     "labels": ["Verified", "Trusted"],
+=======
+    "labels": ["Trusted"],
+>>>>>>> afad26b6945e61a3e41d1b249c9cc3a6380508e0
     "labelIcons": ["./images/trusted.svg"],
     "services": ["Men's Clothing", "Women's Clothing", "Alterations"],
     "orders": 96,
@@ -184,7 +222,11 @@
     "service": "Barber",
     "image": "https://thumbs.dreamstime.com/b/portrait-indian-man-local-morning-market-hospet-karnata-karnataka-south-india-125686849.jpg",
     "badge": { "level": "Level 2", "icon": "./images/tick.svg" },
+<<<<<<< HEAD
     "labels": ["Verified", "Trusted"],
+=======
+    "labels": ["Verified"],
+>>>>>>> afad26b6945e61a3e41d1b249c9cc3a6380508e0
     "labelIcons": ["./images/verified.svg"],
     "services": ["Haircut", "Beard Styling", "Facial"],
     "orders": 203,
@@ -241,7 +283,11 @@
     "services": ["Wiring", "Fitting", "Panel Setup", "Earthing"],
     "orders": 275,
     "rating": 5.0,
+<<<<<<< HEAD
     "stars": 5.0,
+=======
+    "stars": 5,
+>>>>>>> afad26b6945e61a3e41d1b249c9cc3a6380508e0
     "location": "Iqbal Town, Lahore"
   }
 ]
