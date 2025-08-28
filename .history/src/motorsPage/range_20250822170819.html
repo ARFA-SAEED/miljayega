@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Range Slider -->
+    <div class="mb-6 w-full relative h-10">
+        <!-- Track -->
+        <div class="absolute top-1/2 transform -translate-y-1/2 w-full h-[4px] bg-gray-300 rounded"></div>
+
+        <!-- Inputs -->
+        <input type="range" id="minRange" min="500000" max="10000000" step="500000" value="500000"
+            class="absolute w-full h-6 bg-transparent appearance-none z-20 pointer-events-auto">
+        <input type="range" id="maxRange" min="500000" max="10000000" step="500000" value="10000000"
+            class="absolute w-full h-6 bg-transparent appearance-none z-20 pointer-events-auto">
+
+        <!-- Custom Handles -->
+        <div id="minHandle"
+            class="absolute top-1/2 transform -translate-y-1/2 w-5 h-5 rounded-full border border-gray-400 bg-white shadow z-10 pointer-events-none">
+        </div>
+        <div id="maxHandle"
+            class="absolute top-1/2 transform -translate-y-1/2 w-5 h-5 rounded-full border border-gray-400 bg-white shadow z-10 pointer-events-none">
+        </div>
+    </div>
+
+</body>
+
+</html>

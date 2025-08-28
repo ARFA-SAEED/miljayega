@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miljaega-public_profile</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .mobile-nav {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background-color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+            transform: translateY(-150%);
+            z-index: 40;
+            overflow-y: auto;
+            /* Added for scrollability if content overflows */
+            max-height: calc(100vh - 64px);
+            /* Adjust based on header height */
+        }
+
+        .mobile-nav.open {
+            transform: translateY(0);
+        }
+
+        /* Adjustments for smaller screens on the main navigation */
+        @media (max-width: 1023px) {
+            .main-nav-buttons {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .main-nav-buttons a {
+                flex-grow: 1;
+                text-align: center;
+                margin: 4px;
+            }
+        }
+
+        /* Further refine main nav for very small screens if necessary */
+        @media (max-width: 640px) {
+            .main-nav-buttons a {
+                padding-left: 1rem;
+                /* px-4 */
+                padding-right: 1rem;
+                /* px-4 */
+                font-size: 0.875rem;
+                /* text-sm */
+            }
+        }
+    </style>
+</head>
+
+<body class=" min-h-screen flex flex-col pt-16">
+
+    <header class="bg-white shadow-sm fixed top-0 z-50 w-full">
+        <div class="container mx-auto px-4 sm:px-6 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex-shrink-0">
+                    <img src="../../assets/images/logo.svg" alt="Logo" class="h-8 sm:h-10" />
+                </div>
+
+                <!-- Main Navigation - Hidden on small, visible on large -->
+                <nav class="hidden lg:flex flex-grow justify-center">
+                    <div class="flex justify-center">
+                        <div
+                            class="inline-flex flex-wrap rounded-lg shadow-md bg-white overflow-hidden main-nav-buttons">
+                            <a href="#"
+                                class="px-3 sm:px-5 py-3 text-sm font-medium text-white bg-blue-900 hover:bg-blue-800 transition duration-300 flex items-center justify-center whitespace-nowrap">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1 sm:mr-2" viewBox="0 0 20 20"
+                                    fill="currentColor">
+                                    <path fill-rule="evenodd"
+                                        d="M3 5a2 2 0 012-2h10a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V5zm11 1H6v8l4-2 4 2V6z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                ALL
+                            </a>
+                            <a href="#"
+                                class="px-3 sm:px-5 py-3 text-sm font-medium text-gray-600 hover:bg-gray-100 transition duration-300 flex items-center justify-center whitespace-nowrap">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1 sm:mr-2" viewBox="0 0 20 20"
+                                    fill="currentColor">
+                                    <path fill-rule="evenodd"
+                                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 1.414L10.586 9H7a1 1 0 100 2h3.586l-1.293 1.293a1 1 0 101.414 1.414l3-3a1 1 0 000-1.414z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                NEW
+                            </a>
+                            <a href="#"
+                                class="px-3 sm:px-5 py-3 text-sm font-medium text-gray-600 hover:bg-gray-100 transition duration-300 flex items-center justify-center whitespace-nowrap">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1 sm:mr-2" viewBox="0 0 20 20"
+                                    fill="currentColor">
+                                    <path fill-rule="evenodd"
+                                        d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                USED
+                            </a>
+                            <a href="#"
+                                class="px-3 sm:px-5 py-3 text-sm font-medium text-gray-600 hover:bg-gray-100 transition duration-300 flex items-center justify-center whitespace-nowrap">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1 sm:mr-2" viewBox="0 0 20 20"
+                                    fill="currentColor">
+                                    <path fill-rule="evenodd"
+                                        d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 00-2-2H4zm2 6a2 2 0 012-2h8a2 2 0 012 2v4a2 2 0 01-2 2H8a2 2 0 01-2-2v-4zm6 4a2 2 0 100-4 2 2 0 000 4z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                RENT
+                            </a>
+                            <a href="#"
+                                class="px-3 sm:px-5 py-3 text-sm font-medium text-gray-600 hover:bg-gray-100 transition duration-300 flex items-center justify-center whitespace-nowrap">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1 sm:mr-2" viewBox="0 0 20 20"
+                                    fill="currentColor">
+                                    <path fill-rule="evenodd"
+                                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                Exchange
+                            </a>
+                        </div>
+                    </div>
+                </nav>
+
+                <!-- Mobile Menu Toggle -->
+                <button id="mobileMenuToggle"
+                    class="block lg:hidden text-gray-700 hover:text-blue-900 focus:outline-none p-2 rounded-md"
+                    aria-label="Toggle menu">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <nav id="mobile-menu" class="mobile-nav lg:hidden">
+                <div class="flex flex-col p-4 space-y-2">
+                    <a href="#"
+                        class="px-4 py-3 text-sm font-medium text-blue-900 bg-gray-100 rounded-md flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20"
+                            fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M3 5a2 2 0 012-2h10a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V5zm11 1H6v8l4-2 4 2V6z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        ALL
+                    </a>
+                    <a href="#"
+                        class="px-4 py-3 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20"
+                            fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 1.414L10.586 9H7a1 1 0 100 2h3.586l-1.293 1.293a1 1 0 101.414 1.414l3-3a1 1 0 000-1.414z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        NEW
+                    </a>
+                    <a href="#"
+                        class="px-4 py-3 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20"
+                            fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        USED
+                    </a>
+                    <a href="#"
+                        class="px-4 py-3 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20"
+                            fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 00-2-2H4zm2 6a2 2 0 012-2h8a2 2 0 012 2v4a2 2 0 01-2 2H8a2 2 0 01-2-2v-4zm6 4a2 2 0 100-4 2 2 0 000 4z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        RENT
+                    </a>
+                    <a href="#"
+                        class="px-4 py-3 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20"
+                            fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        Exchange
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <div class="max-w-3xl mx-auto  rounded-lg p-6 w-full mt-4 sm:mt-6">
+        <!-- Added w-full and adjusted mt for better spacing -->
+        <div class="border border-gray-300 rounded-lg transform transition-transform duration-300 hover:scale-[0.9] p-4 bg-[#F7FAFF] shadow-lg">
+            <div class="flex flex-col sm:flex-row items-center sm:justify-between mb-4">
+                <!-- Adjusted for better stacking on small screens -->
+                <div class="flex items-center space-x-4 mb-4 sm:mb-0">
+                    <img src="../../assets/images/profilepic.svg" alt="Profile Picture" class="rounded-full h-20 w-20">
+                    <!-- Using placeholder for image.svg -->
+                    <h2 class="text-2xl font-bold text-blue-900 whitespace-nowrap">The Tech Creators</h2>
+                </div>
+                <button
+                    class="flex items-center space-x-2 hover:shadow-lg px-4 py-2 border border-gray-600 shadow-md rounded-md text-gray-600 hover:bg-gray-50 text-sm w-full sm:w-auto justify-center">
+                    <!-- Added w-full sm:w-auto justify-center for better mobile button display -->
+                    <i class="fa-solid fa-share-nodes text-blue-900 text-lg"></i>
+                    <span>Share Profile</span>
+                </button>
+            </div>
+
+            <div
+                class="flex flex-col sm:flex-row justify-between items-center bg-gray-50 rounded-md p-4 mb-2 border border-gray-400">
+           
+                <div class="flex space-x-2 flex-wrap justify-center sm:justify-end">
+                    <!-- Added flex-wrap justify-center for buttons on small screens -->
+                    <button
+                        class="px-3 py-2 bg-blue-600  text-md text-white  rounded-md text-gray-700 text-sm hover:bg-blue-500  shadow-lg mb-2 sm:mb-0 flex items-center"> <i class="fa-solid fa-circle-exclamation text-white text-md me-2"></i> Report
+                        User</button>
+                    <button
+                        class="px-3 py-2 rounded-md text-gray-700 text-sm  bg-red-600 text-white text-md hover:bg-red-500 shadow-lg flex items-center"> <i class="fa-solid fa-ban text-white text-md me-2 "></i> Block
+                        User</button>
+                </div>
+            </div>
+        </div>
+        <div class="mt-8">
+            <p class="text-md font-semibold  ms-2 text-gray-500 mb-6">0 Published ads</p>
+
+            <div class="flex flex-col items-center justify-center text-center py-10">
+                <img src="../../assets/images/public profile.svg" alt="No Ads" class="mb-4">
+                <!-- Using placeholder for sad_emoji.svg -->
+                <h2 class="text-xl font-semibold text-blue-900 mb-2">There are no ads</h2>
+                <p class="text-sm text-gray-500 px-4">When users post ads, they will appear here</p>
+                <!-- Added px-4 to prevent text from touching screen edges on very small screens -->
+            </div>
+        </div>
+
+    </div>
+    <main class="flex justify-center items-start pt-12 flex-1 px-4 sm:px-6 lg:px-8">
+        <!-- The main content area, already fairly responsive due to flex-1 and px- values -->
+    </main>
+
+  <footer class="bg-[#0C3168] text-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-10">
+
+            <!-- ✅ Mobile/Tablet (sm, md, lg): 2 Rows Layout -->
+            <div class="flex  flex-wrap gap-8 lg:hidden">
+                <!-- Row 1: ABOUT US + MY ACCOUNT -->
+                <div class="w-full flex   gap-8">
+                    <!-- ABOUT US -->
+                    <div class="w-full ms-10 md:ms-0 sm:w-1/2 text-left">
+                        <ul class="leading-10">
+                            <li class="font-bold text-xl mb-3">ABOUT US</li>
+                            <li>FAQ</li>
+                            <li>Anti Scam</li>
+                            <li>Term of use</li>
+                            <li>Privacy Policy</li>
+                            <li>Contact Us</li>
+                            <li>Sitemap</li>
+                        </ul>
+                    </div>
+                    <!-- MY ACCOUNT -->
+                    <div class="w-full ms-20 md:ms-60 sm:w-1/2 text-left">
+                        <ul class="leading-10">
+                            <li class="font-bold text-xl mb-3">MY ACCOUNT</li>
+                            <li>Login</li>
+                            <li>Register</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Row 2: Miljaega + Social -->
+                <div class="w-full flex gap-8 mt-5">
+                    <!-- Miljaega -->
+                    <div class="w-full sm:w-1/2 ms-10 md:ms-0 text-left">
+                        <ul class="leading-10">
+                            <li class="font-bold text-xl mb-3">Miljaega</li>
+                            <li>Inspected by miljaega</li>
+                            <li>Featured by miljaega</li>
+                            <li>Recomended by miljaega</li>
+                        </ul>
+                    </div>
+                    <!-- Social -->
+                    <div class="w-full ms-20 md:ms-60  sm:w-1/2 text-left leading-15">
+                        <ul>
+                            <li class="font-bold text-xl  mb-3">FOLLOW US</li>
+                        </ul>
+                        <div class=" ms-8 md:ms-0 sm:flex-wrap md:flex mt-3 gap-5">
+                            <img src="../../assets/images/fb.svg" class="h-10" alt="">
+                            <img src="../../assets/images/insta.svg" class="h-10" alt="">
+                            <img src="../../assets/images/twitter.svg" class="h-10" alt="">
+                            <img src="../../assets/images/youtube.svg" class="h-10" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ✅ XL and Up: Original 4-column Layout -->
+            <div class="hidden lg:block lg:flex lg:justify-between xl:gap-8">
+                <!-- ABOUT US -->
+                <div class="w-full sm:w-1/2 xl:w-auto mb-5 xl:mb-0  xl:text-left">
+                    <ul class="leading-10">
+                        <li class="font-bold text-xl mb-3">ABOUT US</li>
+                        <li>FAQ</li>
+                        <li>Anti Scam</li>
+                        <li>Term of use</li>
+                        <li>Privacy Policy</li>
+                        <li>Contact Us</li>
+                        <li>Sitemap</li>
+                    </ul>
+                </div>
+                <!-- MY ACCOUNT -->
+                <div class="w-full sm:w-1/2 xl:w-auto text-left mb-5 xl:mb-0">
+                    <ul class="leading-10">
+                        <li class="font-bold text-xl mb-3">MY ACCOUNT</li>
+                        <li>Login</li>
+                        <li>Register</li>
+                    </ul>
+                </div>
+                <!-- Miljaega -->
+                <div class="w-full sm:w-1/2 xl:w-auto mb-5 xl:mb-0 text-left">
+                    <ul class="leading-10">
+                        <li class="font-bold text-xl mb-3">Miljaega</li>
+                        <li>Inspected by miljaega</li>
+                        <li>Featured by miljaega</li>
+                        <li>Recomended by miljaega</li>
+                    </ul>
+                </div>
+                <!-- Social -->
+                <div class="w-full sm:w-1/2 xl:w-auto text-left mb-5 xl:mb-0 leading-15">
+                    <ul>
+                        <li class="font-bold text-xl mb-3">FOLLOW US</li>
+                    </ul>
+                    <div class="flex  ustify-start mt-3 gap-5">
+                        <img src="../../assets/images/fb.svg" class="h-10" alt="">
+                        <img src="../../assets/images/insta.svg" class="h-10" alt="">
+                        <img src="../../assets/images/twitter.svg" class="h-10" alt="">
+                        <img src="../../assets/images/youtube.svg" class="h-10" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer bottom -->
+            <div class="text-center border-t-2 border-white mt-10 pt-5 text-sm">
+                <p>© Copyright 2025 Miljaega <br>Powered by The Tech Creators</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('open');
+        });
+
+        // Close mobile menu when a link is clicked
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('open');
+            });
+        });
+
+        // Close mobile menu if clicked outside (optional)
+        document.addEventListener('click', (event) => {
+            if (!mobileMenu.contains(event.target) && !mobileMenuToggle.contains(event.target) && mobileMenu.classList.contains('open')) {
+                mobileMenu.classList.remove('open');
+            }
+        });
+    </script>
+</body>
+
+</html>

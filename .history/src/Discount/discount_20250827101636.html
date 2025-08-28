@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Discount Card</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="min-h-screen bg-gray-50">
+    <!-- Hero Section -->
+    <div class="bg-[#D3E5FF] flex flex-col md:flex-row items-center justify-between 
+              px-6 sm:px-12 lg:px-20 py-12 mt-20 rounded-lg max-w-7xl mx-auto">
+        <div class="text-center md:text-left">
+            <h1 class="font-bold text-blue-900 text-3xl sm:text-4xl lg:text-5xl mb-3">Discounts on Bundles</h1>
+            <p class="text-base sm:text-lg font-semibold text-gray-600">Buy in bundles and pay less</p>
+        </div>
+        <div class="mt-6 md:mt-0">
+            <img src="../../assets/images/discount.png" alt="Discounts" class="max-h-48 md:max-h-60">
+        </div>
+    </div>
+
+    <!-- Card Section -->
+    <div class="max-w-7xl mx-auto px-6 sm:px-12 lg:px-20 mt-12">
+        <h2 class="text-2xl sm:text-3xl text-blue-900 font-bold mb-8">Post More Ads</h2>
+
+        <!-- Responsive Grid -->
+        <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            <!-- Card -->
+            <div class="bg-white border rounded-lg shadow-lg overflow-hidden">
+                <!-- Gradient Header -->
+                <div class="relative h-40 p-4 bg-gradient-to-l from-[#0C9799] via-[#06AAAD] via-[#57D3BC] to-[#B3FFD3]">
+                    <h3 class="text-white font-semibold text-xl">Basic</h3>
+                    <span
+                        class="absolute top-4 right-4 bg-orange-400 text-white text-xs px-3 py-1 rounded-full">-35%</span>
+
+                    <!-- Price Circle -->
+                    <div class="absolute left-1/2 transform -translate-x-1/2 top-20">
+                        <div
+                            class="bg-white shadow-lg w-24 h-24 flex items-center justify-center rounded-full font-bold text-lg">
+                            2000<sub class="text-sm font-medium text-orange-500 ms-1">PKR</sub>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Features -->
+                <div class="p-6 pt-20 space-y-2">
+                    <p class="flex items-center text-gray-700">
+                        <i class="fa-solid fa-check text-orange-500 mr-2"></i> Post ads for 7 days
+                    </p>
+                    <p class="flex items-center text-gray-700">
+                        <i class="fa-solid fa-check text-orange-500 mr-2"></i> Post Active 3 Featured Ads
+                    </p>
+                </div>
+
+                <!-- Button -->
+                <div class="p-6">
+                    <button
+                        class="w-full bg-blue-900 text-white py-2 rounded-md font-medium hover:bg-blue-800 transition">
+                        Buy now
+                    </button>
+                </div>
+            </div>
+
+            <!-- Duplicate this card for Standard / Premium with different colors & prices -->
+        </div>
+    </div>
+</body>
+
+</html>

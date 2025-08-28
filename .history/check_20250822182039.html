@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Price Range Slider</title>
+    <style>
+        .range-container {
+            width: 300px;
+            margin: 50px auto;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        .slider {
+            position: relative;
+            width: 100%;
+        }
+
+        .slider input[type=range] {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            pointer-events: none;
+            /* let both sliders overlap */
+            -webkit-appearance: none;
+            background: none;
+        }
+
+        input[type=range]::-webkit-slider-thumb {
+            pointer-events: all;
+            /* allow dragging */
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: #007bff;
+            cursor: pointer;
+            -webkit-appearance: none;
+        }
+
+        input[type=range]::-moz-range-thumb {
+            pointer-events: all;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: #007bff;
+            cursor: pointer;
+        }
+
+        .slider-track {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 4px;
+            background: #ddd;
+            width: 100%;
+            border-radius: 2px;
+        }
+
+        .range-highlight {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 4px;
+            background: #007bff;
+            border-radius: 2px;
+        }
+
+        .values {
+            margin-top: 50px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="range-container">
+        <h3>Price Range</h3>
+        <div class="slider">
+            <div class="slider-track"></div>
+            <div class="range-highlight" id="rangeHighlight"></div>
+
+            <input type="range" id="minRange" min="0" max="10000" step="100" value="2000">
+            <input type="range" id="maxRange" min="0" max="10000" step="100" value="8000">
+        </div>
+        <div class="values">
+            Min: $<span id="minVal">2000</span> –
+            Max: $<span id="maxVal">8000</span>
+        </div>
+    </div>
+
+    <script>
+        const minRange = document.getElementById("minRange");
+        const maxRange = document.getElementById("maxRange");
+        const minVal = document.getElementById("minVal");
+        const maxVal = document.getElementById("maxVal");
+        const rangeHighlight = document.getElementById("rangeHighlight");
+
+        function updateRange() {
+            let min = parseInt(minRange.value);
+            let max = parseInt(maxRange.value);
+
+            if (min > max - 500) { // minimum gap
+                minRange.value = max - 500;
+                min = max - 500;
+            }
+            if (max < min + 500) {
+                maxRange.value = min + 500;
+                max = min + 500;
+            }
+
+            minVal.textContent = min;
+            maxVal.textContent = max;
+
+            const range = parseInt(minRange.max) - parseInt(minRange.min);
+            const minPercent = ((min - minRange.min) / range) * 100;
+            const maxPercent = ((max - minRange.min) / range) * 100;
+
+            rangeHighlight.style.left = minPercent + "%";
+            rangeHighlight.style.width = (maxPercent - minPercent) + "%";
+        }
+
+        minRange.addEventListener("input", updateRange);
+        maxRange.addEventListener("input", updateRange);
+
+        updateRange();
+    </script>
+</body>
+
+</html>

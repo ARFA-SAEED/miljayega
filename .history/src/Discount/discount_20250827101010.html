@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Discount Card</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="min-h-screen bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-sm fixed top-0 z-50 w-full">
+        <div class="container mx-auto px-4 sm:px-6 relative py-3">
+            <div class="flex justify-between items-center py-3">
+                <!-- Left: Logo -->
+                <div class="flex-shrink-0">
+                    <img src="../../assets/images/logo.svg" alt="Logo" class="h-8 sm:h-10" />
+                </div>
+
+                <!-- Nav for XL+ -->
+                <nav
+                    class="hidden xl:flex absolute left-1/2 transform -translate-x-1/2 space-x-6 text-sm font-medium text-gray-600">
+                    <div class="flex justify-center mt-2">
+                        <div class="inline-flex rounded-lg shadow-md bg-white overflow-hidden">
+                            <a href="#"
+                                class="px-6 py-3 text-sm font-medium text-white bg-blue-900 hover:bg-blue-900 transition flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20"
+                                    fill="currentColor">
+                                    <path fill-rule="evenodd"
+                                        d="M3 5a2 2 0 012-2h10a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V5zm11 1H6v8l4-2 4 2V6z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                ALL
+                            </a>
+                            <a href="#"
+                                class="px-6 py-3 text-sm font-medium text-pak-green hover:bg-[rgb(220,228,245)] transition flex items-center">
+                                NEW
+                            </a>
+                            <a href="#"
+                                class="px-6 py-3 text-sm font-medium text-pak-green hover:bg-[rgb(220,228,245)] transition flex items-center">
+                                USED
+                            </a>
+                            <a href="#"
+                                class="px-6 py-3 text-sm font-medium text-pak-green hover:bg-[rgb(220,228,245)] transition flex items-center">
+                                RENT
+                            </a>
+                            <a href="#"
+                                class="px-6 py-3 text-sm font-medium text-pak-green hover:bg-[rgb(220,228,245)] transition flex items-center">
+                                Exchange
+                            </a>
+                        </div>
+                    </div>
+                </nav>
+
+                <!-- Hamburger -->
+                <button id="mobileMenuToggle"
+                    class="block xl:hidden text-gray-700 hover:text-primary-green focus:outline-none">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="bg-[#D3E5FF] w-full flex flex-col lg:flex-row justify-between items-center px-6 lg:px-20 py-12 mt-20">
+        <div class="text-center lg:text-left mb-6 lg:mb-0">
+            <h1 class="font-bold text-blue-900 text-3xl sm:text-5xl mb-3">Discounts on Bundles</h1>
+            <span class="text-lg font-semibold text-gray-600">Buy in bundles and pay less</span>
+        </div>
+        <div>
+            <img src="../../assets/images/discount.png" alt="discount" class="w-40 sm:w-56 lg:w-72" />
+        </div>
+    </div>
+
+    <!-- Discount Cards -->
+    <div class="max-w-7xl mx-auto px-6 mt-10">
+        <h1 class="text-3xl text-blue-900 font-bold mb-10">Post more Ads</h1>
+        <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            <!-- Single Card -->
+            <div class="bg-white border rounded-md shadow-lg overflow-hidden">
+                <div class="relative h-[157px] p-4"
+                    style="background: linear-gradient(to left, #0C9799, #06AAAD, #57D3BC, #B3FFD3);">
+                    <h3 class="text-white font-semibold text-2xl">Basic</h3>
+                    <span
+                        class="absolute top-5 right-5 bg-orange-400 text-white text-xs px-3 py-1 rounded-full">-35</span>
+                    <!-- Decorations -->
+                    <div class="absolute top-[100px] left-0 w-[120px] h-14 bg-[#B3FFD3CF] rounded-t-full opacity-80">
+                    </div>
+                    <div
+                        class="absolute top-[156px] left-[208px] w-[120px] h-14 bg-[#0C9799D6] rounded-b-full opacity-80">
+                    </div>
+                    <!-- Price -->
+                    <div class="absolute flex justify-center w-full">
+                        <div
+                            class="bg-white shadow-md w-[110px] h-[110px] mt-[60px] shadow-xl flex items-center justify-center rounded-full text-2xl font-bold">
+                            <span>2000<sub class="text-sm font-medium text-orange-500 ms-1">PKR</sub></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4 mt-20 mb-8 space-y-2">
+                    <p class="flex items-center text-gray-700"><i
+                            class="fa-solid fa-check text-orange-500 me-2"></i>Post ads for
+                        7 days</p>
+                    <p class="flex items-center text-gray-700"><i
+                            class="fa-solid fa-check text-orange-500 me-2"></i>Post Active 3
+                        Featured Ads</p>
+                </div>
+                <div class="p-4">
+                    <button
+                        class="w-full bg-blue-900 text-white py-2 rounded-md font-medium hover:bg-blue-800 transition">Buy
+                        now</button>
+                </div>
+            </div>
+
+            <!-- Repeat your other cards here with the same structure -->
+        </div>
+    </div>
+</body>
+
+</html>

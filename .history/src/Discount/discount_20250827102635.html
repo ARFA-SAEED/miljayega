@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Discount Card</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="min-h-screen">
+    <!-- Header -->
+    <header class="bg-white shadow-sm fixed top-0 z-50 w-full">
+        <div class="lg:mx-auto 2xl:mx-20 relative py-3 container px-4 sm:px-6">
+            <div class="flex justify-between items-center py-3">
+                <!-- Left: Logo -->
+                <div class="flex-shrink-0">
+                    <img src=".././../assets/images/logo.svg" alt="Logo" class="h-8 sm:h-10" />
+                </div>
+
+                <!-- Center: Nav Bar (Visible only on XL and above) -->
+                <nav
+                    class="hidden xl:flex absolute left-1/2 transform -translate-x-1/2 space-x-6 text-sm font-medium text-gray-600">
+                    <!-- Your nav content remains the same -->
+                </nav>
+
+                <!-- Right: Hamburger Menu (Visible on sm and md) -->
+                <button id="mobileMenuToggle"
+                    class="block xl:hidden text-gray-700 hover:text-primary-green focus:outline-none"
+                    aria-label="Toggle menu">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Dropdown -->
+    <div id="mobileMenu"
+        class="xl:hidden hidden flex bg-white shadow-md fixed top-[72px] left-0 right-0 z-40 max-h-[calc(100vh-72px)] overflow-y-auto">
+        <div class="px-4 py-4 space-y-4 text-sm font-medium text-gray-700">
+            <!-- Your mobile nav items remain the same -->
+        </div>
+    </div>
+
+    <!-- Top Banner -->
+    <div
+        class="bg-[#D3E5FF] h-[300px] flex flex-col md:flex-row md:gap-10 md:items-center px-4 sm:px-10 md:px-20 mt-20">
+        <div class="md:w-1/2">
+            <h1 class="font-bold text-blue-900 text-4xl sm:text-5xl mb-3">Discounts on Bundles</h1>
+            <span class="text-lg text-gray-600">Buy in bundles and pay less</span>
+        </div>
+        <div class="md:w-1/2 mt-4 md:mt-0">
+            <img src="../../assets/images/discount.png" alt="" class="w-full h-auto">
+        </div>
+    </div>
+
+    <!-- Discount Cards Section -->
+    <div class="flex flex-col items-center mt-10 px-4 sm:px-6 lg:px-20">
+        <h1 class="text-3xl text-blue-900 font-bold mb-10 text-center">Post more Ads</h1>
+        <div class="flex flex-wrap justify-center gap-6">
+            <!-- Card 1 -->
+            <div class="w-full sm:w-[300px] md:w-[330px] bg-white border rounded-md shadow-xl overflow-hidden">
+                <!-- Card content unchanged -->
+            </div>
+
+            <!-- Card 2 -->
+            <div class="w-full sm:w-[300px] md:w-[330px] bg-white border rounded-md shadow-xl overflow-hidden">
+                <!-- Card content unchanged -->
+            </div>
+
+            <!-- Card 3 -->
+            <div class="w-full sm:w-[300px] md:w-[330px] bg-white border rounded-md shadow-xl overflow-hidden">
+                <!-- Card content unchanged -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Repeat other card sections similarly -->
+    <div class="flex flex-col items-center mt-10 px-4 sm:px-6 lg:px-20">
+        <h1 class="text-3xl text-blue-900 font-bold mb-10 text-center">Featured service</h1>
+        <div class="flex flex-wrap justify-center gap-6">
+            <!-- Your 3 cards for this section -->
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-[#0C3168] text-white mt-10">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-10">
+            <!-- Footer content unchanged -->
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const toggleBtn = document.getElementById("mobileMenuToggle");
+            const mobileMenu = document.getElementById("mobileMenu");
+            toggleBtn.addEventListener("click", function () {
+                mobileMenu.classList.toggle("hidden");
+            });
+        });
+    </script>
+</body>
+
+</html>
